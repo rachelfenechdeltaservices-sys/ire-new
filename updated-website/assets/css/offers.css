@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------
-    Top in Ireland — site additions on top of the Agenko theme
+    Top 10 Irish Casino — site styles
     (offer cards, compliance bar, legal pages, reviews)
     Uses the theme tokens defined in style.css (:root)
 -----------------------------------------------------------------------------------*/
@@ -26,12 +26,12 @@
   color: var(--primary-color);
   text-decoration: underline;
 }
-.agenko-page-banner {
+.t10ic-page-banner {
   padding-top: 215px;
 }
 @media (max-width: 767px) {
   .site-topbar p { font-size: 12px; }
-  .agenko-page-banner { padding-top: 230px; }
+  .t10ic-page-banner { padding-top: 230px; }
 }
 
 /*====== Age badge ======*/
@@ -321,7 +321,7 @@
   height: calc(100% - 30px);
 }
 .agk-trust .trust-box,
-.agenko-service-details .contact-card {
+.t10ic-service-details .contact-card {
   background-color: var(--gray-dark);
 }
 .criteria-box .icon,
@@ -605,7 +605,7 @@
 
 /*====== Overrides ======*/
 /* detail pages use a flat background instead of the template's image band */
-.agenko-service-details:after { display: none; }
+.t10ic-service-details:after { display: none; }
 /* 18+ ring replaces the template's placeholder circle image in banners */
 .age-ring {
   position: relative;

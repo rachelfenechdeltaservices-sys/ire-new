@@ -1,11 +1,11 @@
 
 @use "./../abstract";
 
-/* Agenko Eotate Image */
+/* T10ic Eotate Image */
 
-.agenko-rotate-image{
+.t10ic-rotate-image{
     text-align: center;
-    & .agenko-image{
+    & .t10ic-image{
         & img{
             transform: rotate(-10deg);
             border-radius: 20px;
@@ -13,9 +13,9 @@
     }
 }
 
-/* Agenko Dot */
+/* T10ic Dot */
 
-.agenko-dot{
+.t10ic-dot{
     position: relative;
     z-index: 1;
     width: 8px;
@@ -24,7 +24,7 @@
     background-color: $primary-color;
 }
 
-/* Agenko Icon Button */
+/* T10ic Icon Button */
 
 .icon-btn{
     &.style-one{
@@ -42,9 +42,9 @@
     }
 }
 
-/* Agenko Setp */
+/* T10ic Setp */
 
-.agenko-step{
+.t10ic-step{
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -55,9 +55,9 @@
     line-height: 20px;
 }
 
-/* Agenko Iconic Box */
+/* T10ic Iconic Box */
 
-.agenko-iconic-box{
+.t10ic-iconic-box{
     &.style-one{
         padding: 23px 20px;
         display: flex;
@@ -243,7 +243,7 @@
         }
     }
     &.style-eight{
-        & .agenko-dot{
+        & .t10ic-dot{
             @include respond(medium){
                 display: none;
             }
@@ -269,9 +269,9 @@
     }
 }
 
-/* Agenko Card Item */
+/* T10ic Card Item */
 
-.agenko-card-item{
+.t10ic-card-item{
     &.style-one{
         padding: 40px;
         display: flex;
@@ -418,9 +418,9 @@
     }
 }
 
-/* Agenko Client Item */ 
+/* T10ic Client Item */ 
 
-.agenko-client-item{
+.t10ic-client-item{
     &.style-one{
         padding: 60px 20px;
         text-align: center;
@@ -475,9 +475,9 @@
     }
 }
 
-/* Agenko Experince Box */ 
+/* T10ic Experince Box */ 
 
-.agenko-experince-box{
+.t10ic-experince-box{
     &.style-one{
         display: inline-block;
         background-color: $primary-color;
@@ -497,9 +497,9 @@
     }
 }
 
-/* Agenko Skill Item */ 
+/* T10ic Skill Item */ 
 
-.agenko-skill-item{
+.t10ic-skill-item{
     &.style-one{
         & .progress-title{
             margin-bottom: 15px;
@@ -521,9 +521,9 @@
     }
 }
 
-/* Agenko Award Box */ 
+/* T10ic Award Box */ 
 
-.agenko-award-box{
+.t10ic-award-box{
     &.style-one{
         display: flex;
         flex-wrap: wrap;
@@ -580,9 +580,9 @@
     }
 }
 
-/* Agenko Counter Box */ 
+/* T10ic Counter Box */ 
 
-.agenko-counter-box{
+.t10ic-counter-box{
     &.style-one{
         & .content{
             & h2{
@@ -602,7 +602,7 @@
     }
 }
 
-.agenko-info-box{
+.t10ic-info-box{
     & .content{
         & h3{
             margin-bottom: 15px;

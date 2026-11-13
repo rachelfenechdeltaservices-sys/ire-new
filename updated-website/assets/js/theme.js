@@ -1,15 +1,10 @@
 /*-----------------------------------------------------------------------------------
-    
-    Template Name: Agenko - Creative Digital Agency HTML Template
-    URI: pixelfit.agency
-    Description: Agenko is a fully responsive, high-performance HTML template crafted for digital agencies, startups, creative firms, and more. Designed with modern web standards in mind, Agenko provides an elegant foundation for building visually striking websites.
-    Author: Pixelfit
-    Author URI: https://themeforest.net/user/pixelfit
-    Version: 1.0 
 
-    Note: This is Main Js file
+    Top 10 Irish Casino — main script
+    top10irishcasino.site
 
------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------
     ===================
     Js INDEX
     ===================

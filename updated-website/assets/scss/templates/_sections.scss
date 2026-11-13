@@ -1,7 +1,7 @@
 
 @use "./../abstract";
 
-.agenko-content-box{
+.t10ic-content-box{
     & > p{
         margin-bottom: 30px;
     }
@@ -61,7 +61,7 @@
             margin: 0 auto 50px;
             max-width: 550px;
         }
-        & .agenko-experince-box{
+        & .t10ic-experince-box{
             position: absolute;
             top: 37%;
             left: -80px;
@@ -136,7 +136,7 @@
     }
 }
 
-/* Agenko Process Wrapper */
+/* T10ic Process Wrapper */
 
 .testimonial-wrapper{
     padding: 0 70px;
@@ -183,7 +183,7 @@
     }
 }
 
-/* Agenko Process Wrapper */
+/* T10ic Process Wrapper */
 
 .agk-process-wrapper{
     position: relative;
@@ -203,7 +203,7 @@
     }
 }
 
-/* Agenko Testimoial */
+/* T10ic Testimoial */
 
 .agk-testimonial-ca{
     position: relative;
@@ -250,9 +250,9 @@
     }
 }
 
-/* Agenko Service Details */ 
+/* T10ic Service Details */ 
 
-.agenko-service-details{
+.t10ic-service-details{
     position: relative;
     z-index: 1;
     &:after{
@@ -267,9 +267,9 @@
     }
 }
 
-/* Agenko join Team */ 
+/* T10ic join Team */ 
 
-.agenko-join-team{
+.t10ic-join-team{
     & .big-text{
         font-size: 140px;
         font-weight: 700;
@@ -298,7 +298,7 @@
             font-size: 80px;
         }
     }
-    & .agenko-team-image{
+    & .t10ic-team-image{
         max-width: 490px;
         @include respond(medium){
             margin: 0 auto 50px;
@@ -343,7 +343,7 @@
 
 /* Project Page */ 
 
-.agenko-project{
+.t10ic-project{
     & .container-fluid{
         padding-left: 30px;
         padding-right: 30px;
@@ -357,7 +357,7 @@
 /* Project Details Wrapper */ 
 
 .project-details-wrapper{
-    & .agenko-content-box{
+    & .t10ic-content-box{
         & h2{
             margin-bottom: 30px;
             max-width: 650px;
@@ -399,9 +399,9 @@
     }
 }
 
-/* Agenko CTA Wrapper */ 
+/* T10ic CTA Wrapper */ 
 
-.agenko-cta-wrappper{
+.t10ic-cta-wrappper{
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -447,7 +447,7 @@
 }
 
 
-.agenko-process-wrapper-two{
+.t10ic-process-wrapper-two{
     position: relative;
     & .process-line{
         position: absolute;
@@ -484,7 +484,7 @@
     @include respond(medium){
         padding-right: 0;
     }
-    & .agenko-post-item{
+    & .t10ic-post-item{
         & .post-thumbnail{
             margin-bottom: 35px;
             & img{
@@ -817,7 +817,7 @@
                     margin-bottom: 10px;
                 }
             }
-            & .agenko-contact-form{
+            & .t10ic-contact-form{
                 &.style-one{
                     & .form_control{
                         padding: 13px 20px;

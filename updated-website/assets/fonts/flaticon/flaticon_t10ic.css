@@ -10,16 +10,14 @@
 */
 
 @font-face {
-    font-family: "flaticon_agenko";
-    src: url("./flaticon_agenko.woff2?7426fa73335dcb65ec2f8016e25c2267") format("woff2"),
-url("./flaticon_agenko.woff?7426fa73335dcb65ec2f8016e25c2267") format("woff"),
-url("./flaticon_agenko.eot?7426fa73335dcb65ec2f8016e25c2267#iefix") format("embedded-opentype"),
-url("./flaticon_agenko.ttf?7426fa73335dcb65ec2f8016e25c2267") format("truetype"),
-url("./flaticon_agenko.svg?7426fa73335dcb65ec2f8016e25c2267#flaticon_agenko") format("svg")
+    font-family: "flaticon_t10ic";
+    src: url("./flaticon_t10ic.woff2?7426fa73335dcb65ec2f8016e25c2267") format("woff2"),
+url("./flaticon_t10ic.woff?7426fa73335dcb65ec2f8016e25c2267") format("woff"),
+url("./flaticon_t10ic.ttf?7426fa73335dcb65ec2f8016e25c2267") format("truetype")
 }
 
 i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
-    font-family: flaticon_agenko !important;
+    font-family: flaticon_t10ic !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
