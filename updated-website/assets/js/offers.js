@@ -1,21 +1,22 @@
 /*
  * Outbound offer link tracking.
- * If the visitor arrived from a Google Ads click (?gclid=...), pass the gclid
- * through to every operator link that goes via the /visit/ redirect.
- *  - Links ending in "?c=" or "?subid=" expect the value appended directly.
- *  - Other links get "?gclid=" / "&gclid=" added.
+ * Every operator button carries a data-offer="..." label (e.g. data-offer="netbet-sportsbook").
+ * If the visitor arrived from a Google Ads click (?gclid=...), the gclid is passed through to
+ * those links once they point at a real offer URL:
+ *  - URLs ending in "?c=" or "?subid=" get the value appended directly.
+ *  - Other URLs get "?gclid=" / "&gclid=" added.
+ * Buttons still pointing at the homepage placeholder are left untouched.
  */
 (function () {
     'use strict';
+    var PLACEHOLDER = /^https?:\/\/(www\.)?top10irishcasino\.site\/?$/i;
     document.addEventListener('DOMContentLoaded', function () {
-        var params = new URLSearchParams(window.location.search);
-        var gclid = params.get('gclid');
+        var gclid = new URLSearchParams(window.location.search).get('gclid');
         if (!gclid) return;
         var value = encodeURIComponent(gclid);
-
-        document.querySelectorAll('a[href*="topinireland.online/visit/"]').forEach(function (link) {
+        document.querySelectorAll('a[data-offer]').forEach(function (link) {
             var url = link.getAttribute('href');
-            if (!url || url.indexOf('javascript:') === 0) return;
+            if (!url || url.indexOf('javascript:') === 0 || PLACEHOLDER.test(url)) return;
             if (/[?&](c|subid)=$/.test(url)) {
                 link.setAttribute('href', url + value);
             } else {
