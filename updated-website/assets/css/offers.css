@@ -56,21 +56,6 @@
   margin-right: 6px;
 }
 
-/*====== Wordmark logo ======*/
-.site-wordmark {
-  font: 800 28px/1 var(--heading-font);
-  color: var(--white-color);
-  letter-spacing: -0.5px;
-  white-space: nowrap;
-}
-.site-wordmark em {
-  font-style: normal;
-  color: var(--primary-color);
-}
-.footer-logo .site-wordmark { font-size: 30px; }
-@media (max-width: 1199px) and (min-width: 992px) { .header-navigation .site-wordmark { font-size: 22px; } }
-@media (max-width: 400px) { .site-wordmark { font-size: 23px; } }
-
 
 /*====== Offers section ======*/
 .offers-intro p {
@@ -660,24 +645,35 @@
 @keyframes ageRingSpin { to { transform: rotate(360deg); } }
 @media (max-width: 991px) { .age-ring { display: none; } }
 
-/*====== Header fit for the "Top 10 Irish Casino" wordmark ======*/
+/*====== Logo (image) ======*/
 .header-navigation .site-branding {
   max-width: none;
   flex: 0 0 auto;
-  padding: 6px 16px;
+  border: 0;
+  padding: 0;
+  border-radius: 0;
 }
-.header-navigation .site-wordmark { font-size: 24px; }
-.header-navigation .pf-nav-menu { margin-left: 20px; }
+.site-logo { display: block; line-height: 0; }
+.site-logo img { display: block; width: auto; height: 64px; }
+.header-navigation .pf-nav-menu { margin-left: 24px; }
 .header-navigation .nav-right-item { margin-left: auto; padding-left: 20px; }
+.header-navigation .nav-button .theme-btn { white-space: nowrap; }
+.pf-nav-menu .site-logo-mobile { display: inline-block; }
+.pf-nav-menu .site-logo-mobile img { height: 96px; margin: 0 auto; }
+.footer-logo .site-logo img { height: 84px; }
 @media (min-width: 992px) and (max-width: 1399px) {
   .header-navigation .main-menu ul > li > a { padding: 11px 14px; }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .header-navigation .site-wordmark { font-size: 20px; }
-  .header-navigation .site-branding { padding: 6px 12px; }
+  .site-logo img { height: 50px; }
   .header-navigation .pf-nav-menu { margin-left: 12px; }
   .header-navigation .main-menu ul > li > a { padding: 11px 9px; font-size: 15px; }
   .header-navigation .nav-right-item { padding-left: 12px; }
-  .header-navigation .nav-button .theme-btn { padding: 10px 18px; white-space: nowrap; }
+  .header-navigation .nav-button .theme-btn { padding: 10px 18px; }
 }
-.header-navigation .nav-button .theme-btn { white-space: nowrap; }
+@media (max-width: 991px) {
+  .header-navigation .site-branding .site-logo img { height: 62px; }
+}
+@media (max-width: 991px) {
+  .header-navigation .pf-nav-menu .site-branding .site-logo-mobile img { height: 110px; }
+}
