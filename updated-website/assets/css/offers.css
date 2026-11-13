@@ -320,7 +320,6 @@
   border-radius: 16px;
   height: calc(100% - 30px);
 }
-.agk-trust .trust-box,
 .t10ic-service-details .contact-card {
   background-color: var(--gray-dark);
 }
@@ -701,3 +700,4 @@
   .loading-container, .loading { width: 160px; height: 160px; }
   #loading-icon { max-width: 120px; width: 120px; }
 }
+.principle-box { background-color: var(--gray-dark); height: calc(100% - 40px); }
