@@ -1014,3 +1014,8 @@
   .t10ic-page-banner.page-404 .page-title.big-404 { font-size: 88px; line-height: 1; margin-bottom: 14px; }
   .page-404 { padding-bottom: 60px !important; }
 }
+@media (min-width: 576px) and (max-width: 991px) {
+  .offer-features { grid-template-columns: 1fr; gap: 4px; }
+  .offer-licence { font-size: 11px; white-space: nowrap; }
+  .offer-grid { grid-template-columns: 180px 1fr 120px; }
+}
