@@ -677,3 +677,27 @@
 @media (max-width: 991px) {
   .header-navigation .pf-nav-menu .site-branding .site-logo-mobile img { height: 110px; }
 }
+
+/*====== Preloader (Top 10 Irish Casino logo) ======*/
+.loading-container,
+.loading {
+  width: 200px;
+  height: 200px;
+}
+.loading {
+  border-width: 2px;
+  border-color: transparent var(--primary-color) transparent var(--primary-color);
+}
+#loading-icon {
+  max-width: 150px;
+  width: 150px;
+}
+#loading-icon img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 575px) {
+  .loading-container, .loading { width: 160px; height: 160px; }
+  #loading-icon { max-width: 120px; width: 120px; }
+}
