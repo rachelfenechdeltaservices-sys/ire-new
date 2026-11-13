@@ -25,3 +25,23 @@
         });
     });
 })();
+
+/*
+ * Mobile offer cards: "More info" toggle reveals the licence, extra
+ * advantages, full terms and review link (desktop always shows them).
+ */
+(function () {
+    'use strict';
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('.offer-toggle') : null;
+        if (!btn) return;
+        var card = btn.closest('.offer-card');
+        if (!card) return;
+        var open = card.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        // keep GSAP ScrollSmoother / ScrollTrigger in sync with the new height
+        if (window.ScrollTrigger && typeof window.ScrollTrigger.refresh === 'function') {
+            setTimeout(function () { window.ScrollTrigger.refresh(); }, 50);
+        }
+    });
+})();
