@@ -1,0 +1,154 @@
+{
+  "subtitle": "Sportsbook Offers",
+  "heading": "Top Irish betting sites this month",
+  "intro": "Finding a betting site you can trust isn't easy — too many hide the real conditions behind bold headlines. Our rankings give you an honest starting point, based on real accounts and real results.",
+  "offers": [
+    {
+      "enabled": true,
+      "brand": "3et",
+      "logo": "/assets/images/brands/3etlogo.svg",
+      "invert_logo": false,
+      "licence": "GRAI-1021-RB-26-000",
+      "review": "",
+      "rating": 9.9,
+      "tag": "",
+      "headline": "Bet €10",
+      "highlight": "Get €50 In Free Bets",
+      "features": [
+        "Competitive odds for major sports and European soccer",
+        "24/7 customer support",
+        "Good selection of sports and events",
+        "Rewarding Welcome Offer"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "sport3et-sportsbook",
+      "terms": "18+. New Players only. Deposit and place a bet of €10 or more at minimum odds of 1.8. Once your bet is settled, you will receive 5 x €10 free bets.T&Cs apply. Please Gamble Responsibly. gamblingcare.ie"
+    },
+    {
+      "enabled": true,
+      "brand": "QuinnBet",
+      "logo": "/assets/images/brands/quinn-2.png",
+      "invert_logo": false,
+      "licence": "GRAI-0633-RB-26-0001",
+      "review": "",
+      "rating": 9.8,
+      "tag": "Mobile Exclusive",
+      "headline": "Bet €10",
+      "highlight": "Get €50",
+      "features": [
+        "Competitive odds",
+        "Fast transactions & wide payment options",
+        "User-friendly interface",
+        "Good selection of sports and events"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "quinn-sportsbook",
+      "terms": "18+ New Customers Only. Sign up, deposit & bet €10+ on any sportsbook market at odds of evens (2.00) or greater, within 7 days of registration. Each Way bets min €10 stake on win. Get 5x €10 in Free Bets, valid for 7 days. ROI T&Cs Apply. Gamble Responsibly. GamblingCare.ie"
+    },
+    {
+      "enabled": true,
+      "brand": "Novibet",
+      "logo": "/assets/images/brands/novibetlogo.png",
+      "invert_logo": false,
+      "licence": "GRAI-0397-RB-26-0001",
+      "review": "novibet-review",
+      "rating": 9.7,
+      "tag": "",
+      "headline": "Bet €70",
+      "highlight": "in Free Bets",
+      "features": [
+        "Strong football and GAA coverage",
+        "Live racing streams",
+        "Fast e-wallet payouts",
+        "Easy welcome offer. Bet €10 at odds of 1.70 or higher!"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "novibet-sportsbook",
+      "terms": "18+| New customers only | GRAI Registration No: GRAI-0397-RB-26-0001 | Promo code: 70FREEBET | Max €70 free bet | Valid Until 31.12.26 | No rollover requirements apply to free bet winnings | T&Cs Apply | GamblingCare.ie"
+    },
+    {
+      "enabled": true,
+      "brand": "NetBet",
+      "logo": "/assets/images/brands/netbet-logo.png",
+      "invert_logo": false,
+      "licence": "GRAI-1195-RB-26-0001",
+      "review": "netbet-review",
+      "rating": 9.6,
+      "tag": "",
+      "headline": "Bet €10 Get €40",
+      "highlight": "in Free Bets",
+      "features": [
+        "Wide-ranging sports markets",
+        "Same-Day Withdrawals",
+        "Bet Builder",
+        "Odds Boosts"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "netbet-sportsbook",
+      "terms": "New players only; first deposit only; no opt-in required; €100–€400+ unlocks €100–€400 Bonus + 25–100 Free Spins; Bonus 10x wagering; Free Spins 0x wagering; max wins apply; claim in Missions within 7 days; T&Cs apply."
+    },
+    {
+      "enabled": true,
+      "brand": "LiveScore Bet",
+      "logo": "/assets/images/brands/livescorebet-logo.svg",
+      "invert_logo": false,
+      "licence": "GRAI-0724-RB-26-0001",
+      "review": "livescorebet-review",
+      "rating": 9.6,
+      "tag": "",
+      "headline": "Bet €10 Get €50",
+      "highlight": "in Free Bets",
+      "features": [
+        "Large selection of bets & odds",
+        "Robust market coverage",
+        "In-Play/Live Betting",
+        "Live Streaming"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "livescorebet-sportsbook",
+      "terms": "New Livescore Bet members only. €10 min deposit & bet on sportsbook (ex. virtuals), placed & settled at 1.50 min odds in 14 days of sign-up. Win part of E/W bets. Free Bets: accept in 7 days, valid for 7 days on select sportsbook markets, stakes not returned. T&Cs and deposit exclusions apply. Bet Responsibly. GamblingCare.ie. 18+."
+    },
+    {
+      "enabled": true,
+      "brand": "Midnite",
+      "logo": "/assets/images/brands/midnite.svg",
+      "invert_logo": true,
+      "licence": "GRAI-0767-RB-26-0001",
+      "review": "midnite-review",
+      "rating": 9.4,
+      "tag": "",
+      "headline": "Bet €5",
+      "highlight": "Get €30",
+      "features": [
+        "Extensive Horse & Greyhound Racing",
+        "High-Profile Sports Event Partnerships",
+        "Esports & Competitive Gaming",
+        "Ireland-Specific Welcome Offer"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "midnite-sportsbook",
+      "terms": "18+ | New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. Get 100 Free Spins for selected games, valued at 10 cents and valid for 7 days. T&Cs apply. BeGambleAware.org"
+    },
+    {
+      "enabled": true,
+      "brand": "TonyBet",
+      "logo": "/assets/images/brands/tonybet-logo.png",
+      "invert_logo": false,
+      "licence": "GRAI-0191-RB-26-0001",
+      "review": "",
+      "rating": 8.9,
+      "tag": "",
+      "headline": "Get 100%",
+      "highlight": "up to €100",
+      "features": [
+        "Fast withdrawals",
+        "Most innovative Sportsbook",
+        "Comprehensive sports coverage",
+        "In-Play Betting"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "tonybet-sportsbook",
+      "terms": "18+. New Players only.T&Cs apply. Please Gamble Responsibly. gamblingcare.ie"
+    }
+  ]
+}

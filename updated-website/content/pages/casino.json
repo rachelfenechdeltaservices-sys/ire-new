@@ -1,0 +1,55 @@
+{
+  "seo": {
+    "title": "Best Online Casino Offers in Ireland 2026 | {{site_name}}",
+    "description": "Compare the best licensed online casino bonuses in Ireland. Hybrid sportsbook & casino brands ranked on bonuses, games and payouts."
+  },
+  "banner_title": "Ireland's Best Casino & Sportsbook Brands",
+  "banner_text": "Licensed hybrid operators, reviewed by experts — one account for betting, slots and live casino.",
+  "guide": {
+    "subtitle": "Our 2026 Casino Guide",
+    "heading": "Why we focus on hybrid casinos",
+    "body": "The Irish online casino market is crowded with bold promises, inflated bonuses and wagering rules buried in the small print. Our independent team of analysts and former industry insiders cuts through it, so you only see platforms that are licensed, tested and proven to pay out.\n\nThe brands on this page all combine a full sportsbook with a full casino, so you can jump from in-play betting to live roulette or a slots session without opening a second account. Whether you want live blackjack, a shot at a jackpot or just somewhere safe to play between bets, our rankings are based on real testing — never on sponsored placement.",
+    "checklist": [
+      "One login and one wallet for sports and casino",
+      "Licence numbers shown on every listing",
+      "Real-money testing of games and withdrawals"
+    ]
+  },
+  "how_we_rate": {
+    "subtitle": "How We Rate",
+    "heading": "How we score online casinos in Ireland",
+    "intro": "Each casino goes through the same detailed process. Our specialists create real accounts, make real deposits, play real-money sessions across slots and live tables, test withdrawals and contact support. No brand can pay to be listed or to improve its score.",
+    "criteria": [
+      {
+        "icon": "shield-check",
+        "title": "Licensing & compliance",
+        "text": "Every casino we list must hold a licence from a recognised authority such as the GRAI, MGA or UKGC, with robust age verification and AML procedures in place. Any brand we can't verify is left out — no exceptions."
+      },
+      {
+        "icon": "gift",
+        "title": "Bonus value & wagering",
+        "text": "We look past the headline number to the playthrough multiplier, game weightings, maximum bet rules, free-spin values and expiry windows, then judge how realistic the offer is to clear. Transparent, low-wagering deals rank highest."
+      },
+      {
+        "icon": "dice",
+        "title": "Game library & providers",
+        "text": "We count the titles, check the range — slots, jackpots, live dealer, table games and game shows — and look at who supplies them. Studios like Evolution, Pragmatic Play and NetEnt are a strong sign of quality, and casinos that publish RTP figures earn extra credit."
+      },
+      {
+        "icon": "credit-card",
+        "title": "Payments & withdrawals",
+        "text": "We fund real accounts and cash out, recording payment options, fees and actual payout times. Casinos that release funds within 24 hours outscore those with long pending periods."
+      },
+      {
+        "icon": "mobile-alt",
+        "title": "Mobile & live streaming",
+        "text": "We test the apps and mobile site for loading speed, stability and how well live-dealer streams perform on a phone. If the casino only really works on desktop, it won't score well with us."
+      },
+      {
+        "icon": "hands-helping",
+        "title": "Player protection",
+        "text": "Deposit limits, session reminders, reality checks and self-exclusion should be easy to set up. We reward casinos that treat safer gambling as a core feature rather than a box-ticking exercise."
+      }
+    ]
+  }
+}

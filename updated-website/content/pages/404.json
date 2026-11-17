@@ -1,0 +1,9 @@
+{
+  "seo": {
+    "title": "Page Not Found | {{site_name}}",
+    "description": "Page not found."
+  },
+  "heading": "This page has gone offside.",
+  "text": "The page you're looking for doesn't exist or has moved. Head back to our latest offers instead.",
+  "button_label": "Back to homepage"
+}

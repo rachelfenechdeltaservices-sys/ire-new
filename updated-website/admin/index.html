@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Top 10 Irish Casino CMS</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png" />
+    <!-- Collections and fields -->
+    <link href="config.yml" type="application/yaml" rel="cms-config-url" />
+    <!-- GitHub repository, branch and username/password login, read from the private cms-config.php -->
+    <link href="backend.php" type="application/json" rel="cms-config-url" />
+  </head>
+  <body>
+    <!-- Sveltia CMS 0.268.0, self-hosted (see sveltia/VERSION.txt) -->
+    <script src="sveltia/sveltia-cms.js"></script>
+    <script>
+      // The sign-in button opens our own username & password login (auth.php), so label it that way.
+      (function () {
+        var FROM = /^Sign In with [\u2068\u2069\u200e\u200f]*GitHub[\u2068\u2069\u200e\u200f]*$/;
+        var TO = 'Sign In with Username & Password';
+        function relabel(root) {
+          var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+          var node;
+          while ((node = walker.nextNode())) {
+            if (FROM.test(node.nodeValue.trim())) node.nodeValue = TO;
+          }
+        }
+        new MutationObserver(function (records) {
+          records.forEach(function (r) {
+            r.addedNodes.forEach(function (n) {
+              if (n.nodeType === 1) relabel(n);
+              else if (n.nodeType === 3 && FROM.test(n.nodeValue.trim())) n.nodeValue = TO;
+            });
+          });
+        }).observe(document.documentElement, { childList: true, subtree: true });
+      })();
+    </script>
+  </body>
+</html>

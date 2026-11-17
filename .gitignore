@@ -1,0 +1,10 @@
+# Private CMS settings (GitHub token + login password hashes) – never commit
+cms-config.php
+cms-private/*
+!cms-private/cms-config.example.php
+!cms-private/.htaccess
+.cms-login-attempts.json
+
+# Python build cache
+__pycache__/
+*.pyc

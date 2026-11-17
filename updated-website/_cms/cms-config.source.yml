@@ -1,0 +1,554 @@
+# Sveltia CMS configuration for Top 10 Irish Casino
+#
+# The `backend` part (GitHub repository, branch and login URL) is NOT in this file: it is served by
+# backend.php from your private settings file (cms-config.php), so the GitHub account details live
+# in one place only. See CMS-SETUP.md.
+
+backend:
+  name: github
+  # repo, branch, base_url and auth_endpoint are added by backend.php
+  root_dir: updated-website
+  auth_methods: [oauth]
+  commit_messages:
+    create: 'CMS: create {{collection}} "{{slug}}"'
+    update: 'CMS: update {{collection}} "{{slug}}"'
+    delete: 'CMS: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'CMS: upload "{{path}}"'
+    deleteMedia: 'CMS: delete "{{path}}"'
+
+media_folder: assets/images/brands
+public_folder: /assets/images/brands
+
+app_title: Top 10 Irish Casino CMS
+logo:
+  src: /assets/images/favicon.png
+show_preview_links: false
+
+# ------------------------------------------------------------------------------------------------
+# Reusable field definitions
+# ------------------------------------------------------------------------------------------------
+x-hints:
+  tokens: &tokens "Tip: {{site_name}}, {{email}}, {{domain}} and {{helpline}} are replaced with the values from Site settings."
+  inline_md: &inline_md "You can use **bold** and [link text](page.html). {{site_name}}, {{email}}, {{domain}} and {{helpline}} are filled in automatically."
+
+x-icon: &icon_field
+  name: icon
+  label: Icon
+  widget: select
+  default: star
+  options:
+    - { label: "Badge with tick", value: badge-check }
+    - { label: "Balance / scales", value: balance-scale }
+    - { label: "Bolt", value: bolt }
+    - { label: "Briefcase", value: briefcase }
+    - { label: "Building", value: building }
+    - { label: "Bullseye", value: bullseye-arrow }
+    - { label: "Chart (bars)", value: chart-bar }
+    - { label: "Chart (line)", value: chart-line }
+    - { label: "Chat bubbles", value: comments }
+    - { label: "Clipboard checklist", value: clipboard-list-check }
+    - { label: "Credit card", value: credit-card }
+    - { label: "Dice", value: dice }
+    - { label: "Euro sign", value: euro-sign }
+    - { label: "Flag", value: flag }
+    - { label: "Football", value: futbol }
+    - { label: "Gamepad", value: gamepad }
+    - { label: "Gift", value: gift }
+    - { label: "Globe (Europe)", value: globe-europe }
+    - { label: "Hand with money", value: hand-holding-usd }
+    - { label: "Helping hands", value: hands-helping }
+    - { label: "Hockey sticks (GAA)", value: hockey-sticks }
+    - { label: "Horse (racing)", value: horse-head }
+    - { label: "ID card", value: id-card }
+    - { label: "Landmark", value: landmark }
+    - { label: "Layers", value: layer-group }
+    - { label: "Lock", value: lock }
+    - { label: "Medal", value: medal }
+    - { label: "Microchip", value: microchip }
+    - { label: "Mobile phone", value: mobile-alt }
+    - { label: "Moon", value: moon }
+    - { label: "Rocket", value: rocket }
+    - { label: "Shield with tick", value: shield-check }
+    - { label: "Star", value: star }
+    - { label: "Sync arrows", value: sync }
+    - { label: "Trophy", value: trophy }
+    - { label: "TV / streaming", value: tv }
+    - { label: "User with tick", value: user-check }
+    - { label: "User with shield", value: user-shield }
+    - { label: "User in tie (dealer)", value: user-tie }
+    - { label: "Users / group", value: users }
+    - { label: "Wallet", value: wallet }
+
+x-icon-box: &icon_box_fields
+  - *icon_field
+  - { name: title, label: Title, widget: string }
+  - { name: text, label: Text, widget: text, hint: *inline_md }
+
+x-seo: &seo_field
+  name: seo
+  label: Search engine (SEO)
+  widget: object
+  collapsed: true
+  fields:
+    - { name: title, label: Browser tab / Google title, widget: string, hint: *tokens }
+    - { name: description, label: Google description, widget: text, hint: *tokens }
+
+x-banner-title: &banner_title { name: banner_title, label: Page heading, widget: string }
+x-banner-text: &banner_text { name: banner_text, label: Text under the heading, widget: text, hint: *inline_md }
+
+x-stats: &stats_field
+  name: stats
+  label: Number boxes
+  widget: list
+  label_singular: number box
+  summary: "{{fields.value}} — {{fields.label}}"
+  fields:
+    - { name: value, label: "Number (e.g. 40+, 100%, 0%)", widget: string }
+    - { name: label, label: Label, widget: string }
+
+x-body: &body_md
+  name: body
+  label: Text
+  widget: markdown
+  buttons: [bold, italic, link, bulleted-list, numbered-list]
+  editor_components: []
+  hint: *tokens
+
+x-offer-fields: &offer_fields
+  - name: enabled
+    label: Show on the website
+    widget: boolean
+    default: true
+    hint: Switch off to hide this offer without deleting it.
+  - { name: brand, label: Brand name, widget: string }
+  - name: logo
+    label: Logo
+    widget: image
+    hint: Transparent PNG or SVG works best. Shown on a dark background.
+  - { name: invert_logo, label: Invert logo colours (for dark logos), widget: boolean, default: false, required: false }
+  - { name: licence, label: Licence number, widget: string, hint: "e.g. GRAI-1195-RB-26-0001" }
+  - name: review
+    label: Review page
+    widget: relation
+    collection: reviews
+    value_field: "{{slug}}"
+    search_fields: [title, brand]
+    display_fields: [title]
+    required: false
+    hint: Optional. Adds a "Read review" link and shows this offer on that review page.
+  - name: rating
+    label: Rating (out of 10)
+    widget: number
+    value_type: float
+    min: 0
+    max: 10
+    step: 0.1
+  - { name: tag, label: Badge (optional), widget: string, required: false, hint: "e.g. Mobile Exclusive, Web Exclusive" }
+  - { name: headline, label: Offer headline, widget: string, hint: "White part, e.g. Bet €10" }
+  - { name: highlight, label: Offer highlight, widget: string, hint: "Green part, e.g. Get €50 in Free Bets" }
+  - name: features
+    label: Advantages
+    widget: list
+    hint: The first 3 are shown on mobile; the rest appear under "More info".
+    field: { name: feature, label: Advantage, widget: string }
+  - { name: url, label: Visit link (affiliate URL), widget: string }
+  - name: tracking_id
+    label: Tracking label
+    widget: string
+    required: false
+    hint: "Optional. Used for analytics (data-offer attribute), e.g. netbet-sportsbook. Leave empty to generate one."
+  - name: terms
+    label: Operator terms (significant T&Cs)
+    widget: text
+    hint: Copy the operator's terms exactly as provided by the operator.
+
+x-offers-file-fields: &offers_file_fields
+  - { name: subtitle, label: Section label, widget: string }
+  - { name: heading, label: Section heading, widget: string }
+  - { name: intro, label: Section intro, widget: text, hint: *inline_md }
+  - name: offers
+    label: "Offers (drag to change the order — #1 is the Top Pick)"
+    label_singular: offer
+    widget: list
+    collapsed: true
+    allow_reorder: true
+    summary: "{{fields.brand}} — {{fields.headline}} {{fields.highlight}}"
+    fields: *offer_fields
+
+x-criteria: &criteria_object
+  name: how_we_rate
+  label: How we rate section
+  widget: object
+  collapsed: true
+  fields:
+    - { name: subtitle, label: Section label, widget: string }
+    - { name: heading, label: Heading, widget: string }
+    - { name: intro, label: Intro, widget: text, hint: *inline_md }
+    - name: criteria
+      label: Criteria
+      label_singular: criterion
+      widget: list
+      summary: "{{fields.title}}"
+      fields: *icon_box_fields
+
+x-document-fields: &document_fields
+  - *seo_field
+  - *banner_title
+  - *banner_text
+  - { name: show_updated, label: 'Show "Last updated" date', widget: boolean, default: false, required: false }
+  - { name: sidebar_title, label: Table of contents title, widget: string, default: On this page }
+  - { name: intro, label: Introduction, widget: text, hint: *inline_md }
+  - name: sections
+    label: Sections
+    label_singular: section
+    widget: list
+    collapsed: true
+    summary: "{{fields.heading}}"
+    fields:
+      - { name: heading, label: Heading, widget: string }
+      - { name: anchor, label: "Anchor (short id for links, e.g. contact)", widget: string, required: false }
+      - *body_md
+      - { name: note, label: Highlighted note (optional), widget: string, required: false }
+      - { name: link_label, label: Link label (optional), widget: string, required: false }
+      - { name: link_url, label: Link URL (optional), widget: string, required: false }
+      - name: stats
+        label: Number boxes (optional)
+        widget: list
+        required: false
+        summary: "{{fields.value}} — {{fields.label}}"
+        fields:
+          - { name: value, label: Number, widget: string }
+          - { name: label, label: Label, widget: string }
+
+# ------------------------------------------------------------------------------------------------
+# Collections
+# ------------------------------------------------------------------------------------------------
+collections:
+  # ---------------------------------------------------------------------------- Offers
+  - name: offers
+    label: Offers
+    label_singular: Offer list
+    icon: local_offer
+    description: Sportsbook and casino offer lists. Drag offers to change their ranking.
+    files:
+      - name: sportsbook
+        label: Sportsbook offers (homepage)
+        file: content/offers-sportsbook.json
+        fields: *offers_file_fields
+      - name: casino
+        label: Casino offers (casino page)
+        file: content/offers-casino.json
+        fields: *offers_file_fields
+
+  # ---------------------------------------------------------------------------- Reviews
+  - name: reviews
+    label: Reviews
+    label_singular: Review
+    icon: rate_review
+    description: Operator review pages. Each review gets its own page and appears in the menu and footer.
+    folder: content/reviews
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: title
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [menu_order, title]
+    fields:
+      - { name: published, label: Published, widget: boolean, default: true, required: false }
+      - { name: title, label: "Page title (e.g. NetBet Review)", widget: string, hint: "The page address is made from this title, e.g. netbet-review.html" }
+      - { name: brand, label: Brand name, widget: string }
+      - { name: menu_order, label: Position in menu, widget: number, value_type: int, default: 10, required: false }
+      - *seo_field
+      - { name: month, label: "Review date (e.g. September 2026)", widget: string }
+      - { name: tagline, label: Text under the page heading, widget: string }
+      - { name: logo, label: Logo, widget: image }
+      - { name: invert_logo, label: Invert logo colours, widget: boolean, default: false, required: false }
+      - { name: licence, label: Licence number, widget: string }
+      - { name: lead, label: Introduction, widget: text, hint: *inline_md }
+      - { name: visit_url, label: "Visit link (only used if no offer links to this review)", widget: string, required: false }
+      - { name: score, label: Editor score (out of 10), widget: number, value_type: float, min: 0, max: 10, step: 0.1 }
+      - name: scores
+        label: Score breakdown
+        widget: list
+        summary: "{{fields.label}}: {{fields.score}}"
+        fields:
+          - { name: label, label: Category, widget: string }
+          - { name: score, label: Score, widget: number, value_type: float, min: 0, max: 10, step: 0.1 }
+      - { name: glance_intro, label: "At a glance: intro", widget: text, hint: *inline_md }
+      - { name: glance, label: "At a glance: facts", widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: offer_body, label: "Welcome offer: description", widget: text, hint: "The offer headline and terms come from the offer that links to this review." }
+      - { name: unique_intro, label: "Why it stands out: intro", widget: text, hint: *inline_md }
+      - { name: unique, label: "Why it stands out: features", widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: why, label: "Why Irish players should pick it", widget: text, hint: *inline_md }
+      - { name: pros, label: Pros, widget: list, field: { name: pro, label: Pro, widget: string } }
+      - { name: cons, label: Cons, widget: list, field: { name: con, label: Con, widget: string } }
+      - { name: sportsbook_title, label: "Sportsbook: heading", widget: string }
+      - { name: sportsbook_intro, label: "Sportsbook: intro", widget: text, hint: *inline_md }
+      - { name: sportsbook_features, label: "Sportsbook: features", widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: sports, label: Sports covered, widget: list, field: { name: sport, label: Sport, widget: string } }
+      - { name: casino_title, label: "Casino: heading", widget: string }
+      - { name: casino_intro, label: "Casino: intro", widget: text, hint: *inline_md }
+      - { name: casino_features, label: "Casino: features", widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: banking_intro, label: "Banking: intro", widget: text, hint: *inline_md }
+      - { name: payments, label: Payment methods, widget: list, field: { name: method, label: Method, widget: string } }
+      - { name: banking_note, label: "Banking: small print", widget: text, hint: *inline_md }
+      - { name: promotions_intro, label: "Promotions: intro", widget: text, hint: *inline_md }
+      - { name: promotions, label: Promotions, widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: safety, label: "Safety: intro", widget: text, hint: *inline_md }
+      - { name: safety_features, label: "Safety: features", widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+      - { name: verdict_title, label: "Verdict: heading", widget: string }
+      - { name: verdict, label: "Verdict: text", widget: markdown, buttons: [bold, italic, link], editor_components: [] }
+      - name: faqs
+        label: FAQ
+        widget: list
+        summary: "{{fields.question}}"
+        fields:
+          - { name: question, label: Question, widget: string }
+          - { name: answer, label: Answer, widget: text, hint: *inline_md }
+
+  # ---------------------------------------------------------------------------- Pages
+  - name: pages
+    label: Pages
+    label_singular: Page
+    icon: description
+    description: Text on every page of the website.
+    files:
+      - name: home
+        label: Homepage
+        file: content/pages/home.json
+        fields:
+          - *seo_field
+          - *banner_title
+          - *banner_text
+          - name: trust
+            label: Licensed operators section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: text, label: Text, widget: text, hint: *inline_md }
+              - { name: boxes, label: Boxes, widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+          - name: guide
+            label: Guide section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - *body_md
+              - { name: button_label, label: Button label, widget: string }
+              - { name: button_link, label: Button link, widget: string }
+              - *stats_field
+          - *criteria_object
+          - name: faq
+            label: FAQ preview section
+            widget: object
+            collapsed: true
+            hint: The questions come from the FAQ collection.
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: text, label: Text, widget: text, hint: *inline_md }
+              - { name: button_label, label: Button label, widget: string }
+              - { name: count, label: Number of questions to show, widget: number, value_type: int, min: 1, max: 20, default: 3 }
+
+      - name: casino
+        label: Casino page
+        file: content/pages/casino.json
+        fields:
+          - *seo_field
+          - *banner_title
+          - *banner_text
+          - name: guide
+            label: Casino guide section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - *body_md
+              - { name: checklist, label: Checklist, widget: list, field: { name: item, label: Item, widget: string } }
+          - *criteria_object
+
+      - name: about
+        label: About us
+        file: content/pages/about.json
+        fields:
+          - *seo_field
+          - *banner_title
+          - *banner_text
+          - name: intro
+            label: Who we are section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - *body_md
+              - *stats_field
+          - name: experts
+            label: Experts & players section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - *body_md
+              - { name: boxes, label: Boxes, widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+          - name: principles
+            label: Editorial principles section
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Section label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: intro, label: Intro, widget: text, hint: *inline_md }
+              - { name: boxes, label: Boxes, widget: list, summary: "{{fields.title}}", fields: *icon_box_fields }
+
+      - name: faq_page
+        label: FAQ page
+        file: content/pages/faq.json
+        fields:
+          - *seo_field
+          - *banner_title
+          - *banner_text
+          - { name: subtitle, label: Section label, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: intro, label: Intro, widget: text, hint: *inline_md }
+          - name: sidebar
+            label: Sidebar boxes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - name: link_type
+                label: Link
+                widget: select
+                options: [{ label: Email address, value: email }, { label: Helpline number, value: helpline }]
+
+      - name: contact
+        label: Contact
+        file: content/pages/contact.json
+        fields:
+          - *seo_field
+          - *banner_title
+          - *banner_text
+          - { name: subtitle, label: Section label, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - *body_md
+          - { name: email_title, label: Email box title, widget: string }
+          - { name: support_title, label: Support box title, widget: string }
+          - { name: support_text, label: Support box text, widget: string }
+
+      - { name: gambling_guide, label: Irish gambling guide, file: content/pages/gambling-guide.json, fields: *document_fields }
+      - { name: responsible_gambling, label: Responsible gambling, file: content/pages/responsible-gambling.json, fields: *document_fields }
+      - { name: terms, label: Terms & conditions, file: content/pages/terms-and-conditions.json, fields: *document_fields }
+      - { name: privacy, label: Privacy policy, file: content/pages/privacy-policy.json, fields: *document_fields }
+      - { name: cookies, label: Cookie policy, file: content/pages/cookie-policy.json, fields: *document_fields }
+      - { name: affiliate, label: Affiliate disclosure, file: content/pages/affiliate-disclosure.json, fields: *document_fields }
+
+      - name: not_found
+        label: 404 page
+        file: content/pages/404.json
+        fields:
+          - *seo_field
+          - { name: heading, label: Heading, widget: string }
+          - { name: text, label: Text, widget: text, hint: *inline_md }
+          - { name: button_label, label: Button label, widget: string }
+
+  # ---------------------------------------------------------------------------- FAQ
+  - name: faq
+    label: FAQ
+    icon: help
+    description: Questions shown on the FAQ page (the first few also appear on the homepage).
+    files:
+      - name: faq
+        label: Frequently asked questions
+        file: content/faq.json
+        fields:
+          - name: items
+            label: Questions (drag to reorder)
+            label_singular: question
+            widget: list
+            collapsed: true
+            allow_reorder: true
+            summary: "{{fields.question}}"
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: Answer, widget: text, hint: *inline_md }
+              - { name: note, label: Highlighted tip (optional), widget: string, required: false }
+
+  # ---------------------------------------------------------------------------- Settings
+  - name: settings
+    label: Site settings
+    icon: settings
+    description: Brand name, contact details and text used on every page.
+    files:
+      - name: site
+        label: Site settings
+        file: content/settings.json
+        fields:
+          - { name: site_name, label: Site name, widget: string, hint: "Used everywhere {{site_name}} appears." }
+          - { name: domain, label: Domain, widget: string, hint: "e.g. top10irishcasino.site" }
+          - { name: email, label: Contact email, widget: string }
+          - { name: helpline_name, label: Helpline name, widget: string }
+          - { name: helpline_url, label: Helpline website, widget: string }
+          - { name: helpline_number, label: Helpline phone number, widget: string }
+          - { name: updated, label: '"Updated" month shown on offer pages and legal pages', widget: string, hint: "e.g. November 2026" }
+          - { name: year, label: Copyright year, widget: string }
+          - name: header
+            label: Header
+            widget: object
+            collapsed: true
+            fields:
+              - { name: topbar_full, label: Top bar text (desktop), widget: text }
+              - { name: topbar_short, label: Top bar text (mobile), widget: string }
+              - { name: topbar_link_label, label: Top bar link label, widget: string }
+              - { name: button_label, label: Header button label, widget: string }
+              - { name: button_link, label: Header button link, widget: string }
+              - { name: mobile_help_title, label: Mobile menu help title, widget: string }
+              - { name: mobile_help_text, label: Mobile menu help text, widget: string }
+          - name: footer
+            label: Footer
+            widget: object
+            collapsed: true
+            fields:
+              - { name: about, label: About text, widget: text, hint: *inline_md }
+              - { name: age_note, label: 18+ note, widget: string }
+              - { name: contact_title, label: Contact column title, widget: string }
+              - { name: email_label, label: Email label, widget: string }
+              - { name: helpline_label, label: Helpline label, widget: string }
+              - name: notices
+                label: Responsible gambling and legal notices
+                widget: list
+                field: { name: notice, label: Notice, widget: text, hint: *inline_md }
+              - { name: copyright, label: Copyright text, widget: string }
+          - name: offers
+            label: Offer card labels
+            widget: object
+            collapsed: true
+            fields:
+              - { name: sport_button, label: Sportsbook button, widget: string }
+              - { name: casino_button, label: Casino button, widget: string }
+              - { name: tcs_label, label: T&Cs label, widget: string }
+              - { name: top_pick_label, label: Top pick ribbon, widget: string }
+              - { name: rating_label, label: Rating label, widget: string }
+              - { name: licence_prefix, label: Licence prefix, widget: string }
+              - { name: more_info, label: '"More info" button (mobile)', widget: string }
+              - { name: less_info, label: '"Less info" button (mobile)', widget: string }
+              - { name: review_link, label: Review link, widget: string, hint: "{{brand}} is replaced with the brand name." }
+              - { name: disclaimer, label: 18+ disclaimer under the offers, widget: text, hint: *inline_md }
+          - name: rg_cta
+            label: Responsible gambling banner
+            widget: object
+            collapsed: true
+            fields:
+              - { name: subtitle, label: Label, widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: button_label, label: Button label, widget: string }
+              - { name: button_link, label: Button link, widget: string }
+              - { name: call_label, label: Call button label, widget: string, hint: *tokens }

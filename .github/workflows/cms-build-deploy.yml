@@ -1,0 +1,80 @@
+# Rebuilds the website whenever content changes (for example after saving in Sveltia CMS),
+# commits the regenerated HTML pages, and uploads the site to your web host over FTP.
+#
+# One-time setup (GitHub → this repository → Settings → Secrets and variables → Actions):
+#   Secrets:    FTP_SERVER, FTP_USERNAME, FTP_PASSWORD          (from your hosting control panel)
+#   Variables:  DEPLOY_BRANCH   branch to publish, default: adding-cms
+#               FTP_SERVER_DIR  folder on the server, default: public_html/
+#               FTP_PROTOCOL    ftps (default) or ftp
+# Without the FTP secrets the workflow still rebuilds and commits the pages; it just skips the upload.
+
+name: Build & deploy website
+
+on:
+  push:
+    paths:
+      - "updated-website/**"
+      - ".github/workflows/cms-build-deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+      DEPLOY_BRANCH: ${{ vars.DEPLOY_BRANCH || 'adding-cms' }}
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build tools
+        run: pip install "markdown>=3.5,<4" "PyYAML>=6,<7"
+
+      - name: Build pages from content
+        run: python updated-website/_cms/build.py
+
+      - name: Commit regenerated pages
+        run: |
+          if [ -z "$(git status --porcelain -- updated-website)" ]; then
+            echo "Pages already up to date."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A updated-website
+            git commit -m "Rebuild website pages from CMS content"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Upload website to hosting (FTP)
+        if: env.FTP_SERVER != '' && github.ref_name == env.DEPLOY_BRANCH
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./updated-website/
+          server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/__pycache__/**
+            content/**
+            _cms/**
+            admin/cms-config.php
+            admin/.cms-login-attempts.json

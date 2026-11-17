@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "title": "Cookie Policy | {{site_name}}",
+    "description": "How {{site_name}} uses cookies and how you can manage your preferences."
+  },
+  "banner_title": "Cookie Policy",
+  "banner_text": "What cookies we use, why we use them and how to control them.",
+  "show_updated": true,
+  "sidebar_title": "On this page",
+  "intro": "This policy explains what cookies are, how {{site_name}} ({{domain}}) uses them and the choices you have. By continuing to browse the site, you agree to our use of cookies as described below.",
+  "sections": [
+    {
+      "anchor": "what",
+      "heading": "What are cookies?",
+      "body": "Cookies are small text files saved on your computer, tablet or phone when you visit a website. They help sites work properly, improve your experience and tell site owners how pages are used. Cookies don't contain personal details such as your name or payment information, and they can't run code or install malware."
+    },
+    {
+      "anchor": "how",
+      "heading": "How we use cookies",
+      "body": "**Strictly necessary cookies** keep the site working — remembering your privacy choices, managing security and making sure pages load correctly. They don't collect personal data and don't require consent.\n\n**Analytics and performance cookies** (including Google Analytics) collect aggregated, anonymised information about which pages are popular, how people move around the site and where problems occur. They're only set with your consent.\n\n**Functional cookies** remember choices such as language or region to give you a more tailored experience. They may be set by us or by third-party services on our pages, and only with your consent.\n\n**Advertising and affiliate cookies** may be set by affiliate or advertising partners to record that you visited their site after clicking a link on ours. We don't control these cookies; they are covered by those partners' own policies."
+    },
+    {
+      "anchor": "third-party",
+      "heading": "Third-party cookies",
+      "body": "Besides our own cookies, the following kinds of services may place cookies when you visit:\n\n- Web analytics providers (such as Google Analytics)\n- Affiliate tracking networks used by the operators we link to\n- Embedded content providers (such as video players or social sharing tools)\n\nWe recommend reviewing the cookie and privacy policies of any third-party service you interact with through our site."
+    },
+    {
+      "anchor": "manage",
+      "heading": "Managing your preferences",
+      "body": "You can accept, reject or customise cookies at any time:\n\n- **Cookie banner** — on your first visit, accept all cookies, reject non-essential ones or choose by category\n- **Browser settings** — block or delete cookies in your browser's privacy settings (some features may stop working)\n- **Opt-out tools** — opt out of Google Analytics with the browser add-on at tools.google.com/dlpage/gaoptout"
+    },
+    {
+      "anchor": "retention",
+      "heading": "How long cookies last",
+      "body": "Session cookies are deleted when you close your browser. Persistent cookies stay on your device for a set period — usually between 30 days and 2 years — or until you delete them. You can see individual expiry dates in your browser's developer tools."
+    },
+    {
+      "anchor": "changes",
+      "heading": "Changes to this policy",
+      "body": "We may update this policy when the cookies we use or the legal requirements change. Updates will be posted here with a new effective date."
+    },
+    {
+      "anchor": "contact",
+      "heading": "Contact us",
+      "body": "Questions about cookies? Email us at [{{email}}](mailto:{{email}})."
+    }
+  ]
+}

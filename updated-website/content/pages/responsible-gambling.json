@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "Responsible Gambling | {{site_name}}",
+    "description": "Safer gambling tips, warning signs, operator tools and where to get free, confidential help in Ireland."
+  },
+  "banner_title": "Responsible Gambling",
+  "banner_text": "Keep it fun. Know the signs, use the tools and get help early.",
+  "show_updated": false,
+  "sidebar_title": "On this page",
+  "intro": "We want everyone who uses our site to enjoy gambling safely. Our comparisons are never intended to encourage excessive or problematic gambling. If you're worried about your own gambling or someone else's, help is free, confidential and available today.",
+  "sections": [
+    {
+      "anchor": "stay-in-control",
+      "heading": "Staying in control",
+      "body": "Gambling should only ever be entertainment. Treat any money you stake as the cost of that entertainment — not a way to make money or solve financial problems.\n\n- Set a budget before you start and stick to it\n- Use deposit limits, time-outs and reality checks in your account\n- Never chase losses or borrow money to gamble\n- Avoid betting when stressed, upset or after drinking\n- Take regular breaks and balance gambling with other activities"
+    },
+    {
+      "anchor": "warning-signs",
+      "heading": "Warning signs to watch for",
+      "body": "It may be time to step back or seek help if you notice any of the following:\n\n- Spending more time or money than you planned\n- Hiding your gambling from family or friends\n- Feeling anxious, irritable or low when you're not gambling\n- Gambling to escape problems or to win back losses\n- Gambling affecting work, relationships or bills"
+    },
+    {
+      "anchor": "tools",
+      "heading": "Tools every licensed operator provides",
+      "body": "Every operator we list is required to offer safer-gambling tools. You'll usually find them in your account settings under \"Responsible Gambling\" or \"Safer Gambling\".\n\n- Deposit, loss and wager limits\n- Session reminders and reality checks\n- Time-outs from 24 hours to several weeks\n- Self-exclusion for months, years or permanently"
+    },
+    {
+      "anchor": "get-help",
+      "heading": "Where to get free help in Ireland",
+      "body": "If gambling is affecting you or someone you care about, confidential support is available free of charge:\n\n- [GamblingCare.ie](https://gamblingcare.ie/) — helpline {{helpline}}\n- [Extern Problem Gambling](https://www.problemgambling.ie/) — support and counselling\n- Gamblers Anonymous Ireland — peer support meetings nationwide\n- [GambleAware](https://www.gambleaware.org/) — information and advice"
+    },
+    {
+      "anchor": "minors",
+      "heading": "Protecting minors",
+      "body": "Gambling is strictly for adults aged 18 and over. Licensed operators verify every customer's age and identity. If children use your devices, consider parental-control software and never share your account details."
+    }
+  ]
+}

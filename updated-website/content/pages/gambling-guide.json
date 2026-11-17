@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Irish Gambling Guide 2026 | {{site_name}}",
+    "description": "A plain-English guide to online gambling in Ireland: the law, the GRAI regulator, responsible gambling, betting markets, payments and tax."
+  },
+  "banner_title": "Irish Gambling Guide",
+  "banner_text": "Everything Irish players should understand before signing up with any betting site.",
+  "show_updated": false,
+  "sidebar_title": "In this guide",
+  "intro": "Ireland's online gambling market is one of the busiest in Europe, with hundreds of thousands of people betting from home. Yet many players still have questions about how the industry works, what their rights are and how to make better decisions. This guide covers the essentials.",
+  "sections": [
+    {
+      "anchor": "legal-framework",
+      "heading": "Online gambling law in Ireland",
+      "body": "For decades Irish online gambling sat in a legal grey area, with much of the legislation dating back to the 1931 Betting Act. That has now changed. The Gambling Regulation Act 2024 is the biggest overhaul of Irish gambling law in generations, and it created the Gambling Regulatory Authority of Ireland (GRAI) as an independent, dedicated regulator.\n\nUnder the new regime, every operator offering services to people in Ireland — whether based here or abroad — needs a GRAI licence. That brings Ireland into line with mature markets such as the UK and Malta and gives Irish players much stronger consumer protection.",
+      "note": "Regulated by the GRAI under the Gambling Regulation Act 2024"
+    },
+    {
+      "anchor": "responsible",
+      "heading": "Responsible gambling in Ireland",
+      "body": "Responsible gambling means keeping betting a form of entertainment rather than a source of money worries or stress. In Ireland, both the regulator and operators share the job of promoting safer play. The GRAI oversees licensing, advertising standards and player protections such as age verification, self-exclusion and deposit limits.\n\nOrganisations including the Gambling Awareness Trust, Extern Problem Gambling and Gamblers Anonymous Ireland offer counselling, support and outreach to anyone struggling. Irish operators are increasingly required to show safer-gambling messages and give customers practical tools to manage their spending.",
+      "link_label": "Read our safer gambling tips",
+      "link_url": "responsible-gambling.html"
+    },
+    {
+      "anchor": "sports-betting",
+      "heading": "Sports betting: markets, odds and strategy",
+      "body": "Sport is woven into Irish life, and the online betting market here is one of the most competitive in Europe. Irish punters can bet on everything from GAA hurling and football to Premier League accas, Six Nations rugby, horse racing and international esports.\n\nGetting to grips with odds formats — decimal, fractional and American — and the difference between pre-match and in-play betting is the foundation of smart betting. Experienced bettors compare prices across sites, manage their bankroll with discipline and use cash out and bet builders deliberately rather than impulsively."
+    },
+    {
+      "anchor": "banking-tax",
+      "heading": "Deposits, withdrawals and tax",
+      "body": "One of the questions we hear most is about tax. Under current Irish law, individual players don't pay income tax on gambling winnings — the duty is paid by operators, not punters. That makes Ireland a very player-friendly place to bet.\n\nMost reputable sites accept the payment methods Irish players prefer, including Visa and Mastercard debit cards, PayPal, Revolut, Skrill, Neteller and bank transfer. Withdrawal speed depends on the operator and method: e-wallets are usually quickest, often paying out within hours, while bank transfers can take three to five working days.",
+      "stats": [
+        {
+          "value": "0%",
+          "label": "Tax on player winnings"
+        },
+        {
+          "value": "<24h",
+          "label": "Typical e-wallet payout"
+        },
+        {
+          "value": "10+",
+          "label": "Payment methods accepted"
+        }
+      ]
+    }
+  ]
+}

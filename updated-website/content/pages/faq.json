@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "FAQ – Online Gambling in Ireland | {{site_name}}",
+    "description": "Is online gambling legal in Ireland? Are winnings taxed? How do wagering requirements work? Expert answers to common questions."
+  },
+  "banner_title": "Frequently Asked Questions",
+  "banner_text": "Straight answers about online betting and casinos in Ireland.",
+  "subtitle": "Expert Answers",
+  "heading": "Online gambling in Ireland, explained",
+  "intro": "Questions about betting at online sportsbooks or casinos in Ireland? Our team answers the ones Irish players ask us most — covering legality, safety, bonuses, payments and tax. Can't find what you need? Just get in touch.",
+  "sidebar": [
+    {
+      "title": "Still have questions?",
+      "text": "Our team reads every message and replies as quickly as we can.",
+      "link_type": "email"
+    },
+    {
+      "title": "Need support?",
+      "text": "If gambling is causing you problems, free and confidential help is available.",
+      "link_type": "helpline"
+    }
+  ]
+}

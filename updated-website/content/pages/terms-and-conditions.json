@@ -1,0 +1,63 @@
+{
+  "seo": {
+    "title": "Terms & Conditions | {{site_name}}",
+    "description": "Terms and conditions for using the {{site_name}} comparison website."
+  },
+  "banner_title": "Terms & Conditions",
+  "banner_text": "The rules for using our website. Please read them carefully.",
+  "show_updated": true,
+  "sidebar_title": "On this page",
+  "intro": "Welcome to {{site_name}}. By accessing or using this website, you agree to the terms and conditions below. If you don't accept them in full, please stop using the site.",
+  "sections": [
+    {
+      "anchor": "about-site",
+      "heading": "About this website",
+      "body": "{{site_name}} ({{domain}}) is an independent comparison and information website covering online sports betting and related gambling services available in Ireland. We are not a gambling operator: we don't accept bets or process payments of any kind. Everything we publish is for information and editorial purposes only."
+    },
+    {
+      "anchor": "eligibility",
+      "heading": "Who can use this site",
+      "body": "This website is only for people aged 18 or over who live in Ireland, or in another jurisdiction where viewing online gambling comparison content is lawful. By using the site you confirm that you meet these requirements. We may restrict access for anyone we reasonably believe does not."
+    },
+    {
+      "anchor": "accuracy",
+      "heading": "Accuracy of information",
+      "body": "We work hard to keep everything on this site — reviews, bonus details, licence information and payment data — accurate and current at the time of publishing. However, the gambling industry moves quickly, and operators can change offers, terms and other details without telling us. We are not responsible for decisions based on information that an operator has since changed.\n\nBefore you register or deposit, please confirm the current bonus terms, wagering requirements and eligibility rules directly with the operator."
+    },
+    {
+      "anchor": "third-party",
+      "heading": "Links to operators and other websites",
+      "body": "This site links to third-party gambling operators and other external websites for your convenience. A link is not an endorsement of an operator's conduct, reliability or suitability for your circumstances. We have no control over third-party sites and accept no responsibility for any loss or damage arising from your use of them.\n\nEach operator has its own terms and conditions, which govern your relationship with that operator. Please read them in full before opening an account or depositing."
+    },
+    {
+      "anchor": "ip",
+      "heading": "Intellectual property",
+      "body": "All content on {{domain}} — including articles, reviews, ratings, graphics, logos and page layouts — belongs to {{site_name}} and is protected by copyright and intellectual property law. You may not copy, distribute, republish or commercially use any of it without our written permission. You're welcome to link to our pages for non-commercial purposes, provided the source is clearly credited."
+    },
+    {
+      "anchor": "liability",
+      "heading": "Limitation of liability",
+      "body": "This website is provided \"as is\", without warranties of any kind, express or implied. To the fullest extent permitted by law, we exclude all liability for direct, indirect, incidental or consequential loss arising from your use of the site or reliance on its content. Nothing in these terms limits liability for fraud or for anything else that cannot legally be excluded."
+    },
+    {
+      "anchor": "rg",
+      "heading": "Responsible gambling",
+      "body": "We are committed to responsible gambling, and nothing on this site is intended to encourage excessive or harmful gambling. If you or someone you know is struggling, free and confidential support is available from GamblingCare.ie on {{helpline}}. See our [Responsible Gambling](responsible-gambling.html) page for more resources."
+    },
+    {
+      "anchor": "changes",
+      "heading": "Changes to these terms",
+      "body": "We may update these terms at any time. Changes take effect as soon as they're published on this page, and continuing to use the site means you accept the updated terms. Please check back from time to time."
+    },
+    {
+      "anchor": "law",
+      "heading": "Governing law",
+      "body": "These terms are governed by the laws of Ireland, and any disputes relating to your use of this site are subject to the exclusive jurisdiction of the Irish courts."
+    },
+    {
+      "anchor": "contact",
+      "heading": "Contact us",
+      "body": "Questions about these terms? Email us at [{{email}}](mailto:{{email}})."
+    }
+  ]
+}

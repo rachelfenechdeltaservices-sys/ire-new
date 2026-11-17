@@ -1,0 +1,104 @@
+{
+  "seo": {
+    "title": "{{site_name}} | Best Irish Sportsbooks & Betting Offers 2026",
+    "description": "Compare Ireland's best licensed sportsbooks and betting offers for 2026. Expert-tested rankings, verified GRAI licences and honest reviews."
+  },
+  "banner_title": "Ireland's Best Sportsbooks 2026",
+  "banner_text": "Licensed, regulated and tested by experts. Compare the top Irish betting sites and welcome offers in one place.",
+  "trust": {
+    "subtitle": "Licensed Operators Only",
+    "heading": "Every brand we list is verified for Ireland.",
+    "text": "We only feature operators that hold a valid licence to serve Irish customers, and we show each licence number on every listing so you can check it yourself. Credentials are confirmed directly with each operator before a brand goes live — and monitored after that — because your safety comes first.",
+    "boxes": [
+      {
+        "icon": "badge-check",
+        "title": "Verified licences",
+        "text": "We check that every partner holds an active Irish remote bookmaker licence and re-check it regularly, so you only ever click through to legally authorised operators."
+      },
+      {
+        "icon": "clipboard-list-check",
+        "title": "Ad policy compliant",
+        "text": "Our listings follow Google's Gambling and Games advertising policy and Irish regulations, and every advertiser is vetted against local standards and industry best practice."
+      },
+      {
+        "icon": "user-shield",
+        "title": "Real, hands-on testing",
+        "text": "Our reviewers open real accounts, deposit their own money, contact support and request withdrawals — exactly as you would."
+      },
+      {
+        "icon": "balance-scale",
+        "title": "Transparent & independent",
+        "text": "Clear, honest and secure recommendations aren't optional for us. Read our [affiliate disclosure](affiliate-disclosure.html) to see exactly how we're funded."
+      }
+    ]
+  },
+  "guide": {
+    "subtitle": "Our 2026 Guide",
+    "heading": "Honest rankings for Irish punters",
+    "body": "Choosing an online bookmaker in Ireland has never been simple. The market is packed with brands making big promises, inflated bonus claims and terms that hide the real conditions deep in the small print. That's the problem {{site_name}} was built to solve.\n\nWe're an independent editorial team of experienced gambling analysts and former industry insiders. We spend our time filtering out the noise so you only see platforms that are properly licensed, thoroughly tested and proven to pay out without hassle. Whether you're after value on Premier League prices, a flutter on the GAA or an each-way bet at Leopardstown, our rankings are built on real testing — never on paid placement.",
+    "button_label": "Read our gambling guide",
+    "button_link": "gambling-guide.html",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Years of combined industry experience"
+      },
+      {
+        "value": "100%",
+        "label": "Irish-licensed operators"
+      },
+      {
+        "value": "6",
+        "label": "Core rating criteria"
+      },
+      {
+        "value": "0%",
+        "label": "Tax on player winnings"
+      }
+    ]
+  },
+  "how_we_rate": {
+    "subtitle": "How We Rate",
+    "heading": "How we score Irish betting sites",
+    "intro": "Every operator goes through a detailed, multi-step review before it can appear in our rankings. Our specialists — with more than 40 years' combined experience — open real accounts, deposit real money, test withdrawals and question customer support. Nobody can pay to be listed, and commercial deals never change a score.",
+    "criteria": [
+      {
+        "icon": "shield-check",
+        "title": "Licensing & compliance",
+        "text": "Nothing matters more than a valid licence. We confirm each operator is authorised by a recognised regulator — the Gambling Regulatory Authority of Ireland (GRAI), the Malta Gaming Authority or the UK Gambling Commission — and that it runs proper age checks and anti-money-laundering controls. No verifiable licence, no listing."
+      },
+      {
+        "icon": "gift",
+        "title": "Welcome offer & fair terms",
+        "text": "A big headline figure is meaningless if the small print is stacked against you. We read every welcome offer in full — minimum odds, qualifying stakes, free-bet expiry and any rollover — and reward bookmakers whose terms are short, clear and genuinely achievable."
+      },
+      {
+        "icon": "futbol",
+        "title": "Markets & odds",
+        "text": "We compare depth and pricing across the sports Irish punters actually bet on: Premier League and European football, GAA hurling and football, UK and Irish racing, rugby, golf and more. In-play coverage, bet builders, cash out and live streaming all count towards the score."
+      },
+      {
+        "icon": "credit-card",
+        "title": "Payments & withdrawals",
+        "text": "Slow cash-outs are the number-one complaint we hear. We deposit and withdraw ourselves, logging accepted methods, fees and the real time it takes for money to land. Operators that pay out within 24 hours score best; deliberate delays are marked down hard."
+      },
+      {
+        "icon": "mobile-alt",
+        "title": "Mobile experience",
+        "text": "Most Irish players bet from their phones, so we test iOS and Android apps as well as the mobile site — load times, navigation, bet-slip speed and whether every key feature works on a small screen. A clunky mobile product costs points, however good the desktop site is."
+      },
+      {
+        "icon": "hands-helping",
+        "title": "Responsible gambling tools",
+        "text": "Good operators help you stay in control. We check that deposit limits, reality checks, time-outs and self-exclusion are easy to find and easy to use, and that support services such as GamblingCare.ie are signposted clearly — not hidden several menus deep."
+      }
+    ]
+  },
+  "faq": {
+    "subtitle": "FAQ",
+    "heading": "Questions Irish players ask us most",
+    "text": "Legality, safety, bonuses and tax — the essentials in plain English.",
+    "button_label": "View all FAQs",
+    "count": 3
+  }
+}

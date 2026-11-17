@@ -1,0 +1,68 @@
+{
+  "seo": {
+    "title": "Privacy Policy | {{site_name}}",
+    "description": "How {{site_name}} collects, uses and protects your personal data under the GDPR."
+  },
+  "banner_title": "Privacy Policy",
+  "banner_text": "How we collect, use and protect your personal data.",
+  "show_updated": true,
+  "sidebar_title": "On this page",
+  "intro": "{{site_name}} ({{domain}}) is committed to protecting the privacy of everyone who visits this website. This policy explains what personal data we collect, why we collect it, how we use it and the rights you have. It applies to all users of {{domain}}.",
+  "sections": [
+    {
+      "anchor": "who-we-are",
+      "heading": "Who we are",
+      "body": "{{site_name}} is an independent online gambling comparison and information website for users in Ireland. Under data protection law, we are the data controller for personal data collected through this website. For any questions about how we handle your data, email [{{email}}](mailto:{{email}})."
+    },
+    {
+      "anchor": "data-we-collect",
+      "heading": "What data we collect",
+      "body": "**Information you give us.** If you contact us by email, we collect what you choose to send — usually your name, email address and message. We use it only to reply to you and for no other purpose.\n\n**Information collected automatically.** When you visit the site, our servers and analytics tools collect technical data such as an anonymised IP address, browser type and version, operating system, referring page, pages viewed, time on page and the date and time of your visit. This is used in aggregate for statistics and site performance only.\n\n**Information collected through cookies.** We use cookies and similar technologies to understand how visitors use the site. Full details are in our [Cookie Policy](cookie-policy.html), which should be read alongside this policy."
+    },
+    {
+      "anchor": "how-we-use",
+      "heading": "How we use your data",
+      "body": "We use personal data to:\n\n- Reply to messages and enquiries you send us\n- Analyse traffic and behaviour so we can improve our content and performance\n- Keep the website secure and stable\n- Meet our legal obligations under Irish and EU law\n\nWe don't use your data for automated decision-making or profiling, and we never sell, rent or trade it to third parties for marketing."
+    },
+    {
+      "anchor": "legal-basis",
+      "heading": "Legal basis for processing",
+      "body": "Under the GDPR and the Data Protection Acts 1988–2018, we rely on the following lawful bases:\n\n- **Consent** — for non-essential cookies and any direct marketing, where applicable\n- **Legitimate interests** — for analytics, security monitoring and improving the site, where these aren't outweighed by your rights\n- **Legal obligation** — where processing is required by law"
+    },
+    {
+      "anchor": "sharing",
+      "heading": "Sharing data with third parties",
+      "body": "We don't sell your personal data. We may share limited data with service providers that help us run the website:\n\n- Web hosting and infrastructure providers\n- Analytics providers (such as Google Analytics, under a data processing agreement)\n- Affiliate tracking networks, which may receive anonymised click data when you follow a link to an operator\n\nAll providers must handle data in line with data protection law. We only transfer personal data outside the European Economic Area where appropriate safeguards are in place, such as the European Commission's Standard Contractual Clauses."
+    },
+    {
+      "anchor": "retention",
+      "heading": "How long we keep data",
+      "body": "We keep personal data only as long as needed for the purpose it was collected for, or as required by law. Contact messages are kept for no more than 12 months. Anonymised analytics data may be kept longer for statistical purposes. You can ask us to delete your data at any time."
+    },
+    {
+      "anchor": "your-rights",
+      "heading": "Your rights",
+      "body": "Under the GDPR you have the right to:\n\n- **Access** — request a copy of the data we hold about you\n- **Rectification** — ask us to correct inaccurate or incomplete data\n- **Erasure** — ask us to delete your data, subject to legal obligations\n- **Restriction** — ask us to limit how we use your data\n- **Portability** — receive your data in a structured, machine-readable format\n- **Objection** — object to processing based on legitimate interests, including direct marketing\n- **Withdraw consent** — at any time, without affecting earlier processing\n\nTo use any of these rights, email [{{email}}](mailto:{{email}}). We'll respond within 30 days. If you're not happy with our response, you can complain to the Data Protection Commission at dataprotection.ie."
+    },
+    {
+      "anchor": "security",
+      "heading": "Security",
+      "body": "We use appropriate technical and organisational measures to protect your data against unauthorised access, loss or disclosure, including SSL encryption and restricted access to the data we hold. No internet transmission is completely secure, however, so we can't guarantee absolute security."
+    },
+    {
+      "anchor": "children",
+      "heading": "Children's privacy",
+      "body": "This website is not aimed at anyone under 18 and we don't knowingly collect data from minors. If you believe a child has given us personal data, please contact us and we'll delete it promptly."
+    },
+    {
+      "anchor": "changes",
+      "heading": "Changes to this policy",
+      "body": "We may update this policy to reflect changes in our practices or the law. When we make significant changes, we'll update the date at the top of this page."
+    },
+    {
+      "anchor": "contact",
+      "heading": "Contact us",
+      "body": "For any questions or requests about this policy or your data, email [{{email}}](mailto:{{email}})."
+    }
+  ]
+}

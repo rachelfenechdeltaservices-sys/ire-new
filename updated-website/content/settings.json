@@ -1,0 +1,51 @@
+{
+  "site_name": "Top 10 Irish Casino",
+  "domain": "top10irishcasino.site",
+  "email": "contact@top10irishcasino.site",
+  "helpline_name": "GamblingCare.ie",
+  "helpline_url": "https://gamblingcare.ie/",
+  "helpline_number": "1800 936 725",
+  "updated": "November 2026",
+  "year": "2026",
+  "header": {
+    "topbar_full": "We only list operators licensed for Ireland. We may earn a commission from featured brands, which can affect where they appear. Not every provider is included.",
+    "topbar_short": "Licensed Irish operators only. We may earn commission.",
+    "topbar_link_label": "Learn more",
+    "button_label": "TOP OFFERS",
+    "button_link": "index.html#sportsbook-offers",
+    "mobile_help_title": "Need help?",
+    "mobile_help_text": "Free, confidential support:"
+  },
+  "footer": {
+    "about": "Independent, expert-tested comparisons of Irish-licensed sportsbooks and online casinos. Every brand we list is verified before it goes live — and re-checked regularly after.",
+    "age_note": "Strictly for adults. Play responsibly.",
+    "contact_title": "Get in touch",
+    "email_label": "Email",
+    "helpline_label": "GamblingCare Helpline (free)",
+    "notices": [
+      "Gambling carries real financial risk and can become addictive. Decide on a budget before you start, never bet money you need for everyday life and never try to win back losses. If gambling is affecting you or someone close to you, contact [GamblingCare.ie](https://gamblingcare.ie/) free on {{helpline}} — every call is confidential.",
+      "The offers and operators shown on this website are intended only for people aged 18 or over who live in Ireland. Each operator sets its own eligibility rules and terms; we have no control over them and cannot interpret them on an operator's behalf. Please confirm you meet every requirement — including age and location — directly with the operator before you register or deposit.",
+      "All text, images, data and media on this website are protected by copyright and intellectual property law. Copying, redistributing or using any of it commercially without our written permission is not allowed."
+    ],
+    "copyright": "All Rights Reserved."
+  },
+  "offers": {
+    "sport_button": "Visit now",
+    "casino_button": "Visit casino",
+    "tcs_label": "T&Cs apply",
+    "top_pick_label": "Top Pick",
+    "rating_label": "Our rating",
+    "licence_prefix": "Licence No.",
+    "more_info": "More info",
+    "less_info": "Less info",
+    "review_link": "Read {{brand}} review",
+    "disclaimer": "**Strictly 18+.** Please play responsibly. Terms & conditions apply and offers may carry additional requirements. Ratings reflect our editorial opinion; we may receive a commission when you sign up through our links."
+  },
+  "rg_cta": {
+    "subtitle": "Play Responsibly",
+    "heading": "Gambling should stay fun. Help is free and confidential.",
+    "button_label": "Safer Gambling Tips",
+    "button_link": "responsible-gambling.html",
+    "call_label": "Call {{helpline}}"
+  }
+}

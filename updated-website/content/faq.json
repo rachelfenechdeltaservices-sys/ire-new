@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "question": "Is online gambling legal in Ireland?",
+      "answer": "Yes. Online betting and gaming are legal for adults in Ireland, and the rules have recently been modernised. The Gambling Regulation Act 2024 created the Gambling Regulatory Authority of Ireland (GRAI), a dedicated regulator that now licenses operators serving Irish customers. Players are not breaking any law by betting online — the safest approach is simply to stick with operators that hold a current GRAI, MGA or UKGC licence.",
+      "note": "Regulated under the Gambling Regulation Act 2024"
+    },
+    {
+      "question": "How can I tell if a betting site is safe?",
+      "answer": "Start with the licence. A legitimate operator shows its regulator, licence number and a verification link in the site footer. After that, look for independent game testing (eCOGRA, iTech Labs or GLI), SSL encryption, clear terms and conditions and a named company behind the brand. If any of these are missing, walk away.",
+      "note": "Always check the licence number against the regulator's register"
+    },
+    {
+      "question": "What is a wagering requirement?",
+      "answer": "A wagering (or playthrough) requirement tells you how many times you must bet a bonus — sometimes bonus plus deposit — before winnings from it can be withdrawn. A €100 bonus at 30x means €3,000 of total bets. Games contribute differently: slots usually count 100%, while blackjack or roulette may count 10% or nothing at all. Check the multiplier, eligible games, time limit and any cap on winnings before you opt in.",
+      "note": "We treat anything above 40x as a warning sign"
+    },
+    {
+      "question": "Can I self-exclude from gambling sites in Ireland?",
+      "answer": "Yes, and it's quick to do. Every licensed operator must offer self-exclusion, letting you block your account for anything from 24 hours to several years, or close it permanently. Multi-operator schemes let you exclude from many sites with a single registration, and services such as GamblingCare.ie, Extern Problem Gambling and Gamblers Anonymous Ireland offer free, confidential help.",
+      "note": "Self-exclusion tools are available on every licensed site"
+    },
+    {
+      "question": "Do I pay tax on gambling winnings in Ireland?",
+      "answer": "No. Individual players in Ireland don't pay income tax on gambling winnings — the betting duty is paid by the operator. Whether you win €500 on a slot or €2,000 on an accumulator, the full amount is yours and doesn't need to be declared to Revenue. Different rules could only apply in the very rare case where gambling forms part of a genuine professional trade.",
+      "note": "Players keep 100% of winnings — operators pay the duty"
+    }
+  ]
+}

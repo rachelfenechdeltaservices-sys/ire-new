@@ -1,0 +1,275 @@
+{
+  "title": "NetBet Review",
+  "brand": "NetBet",
+  "menu_order": 1,
+  "seo": {
+    "title": "NetBet Review 2026 – Sportsbook & Casino | {{site_name}}",
+    "description": "Our expert NetBet review for Irish players: welcome offer, sportsbook, casino, payments, licence GRAI-1195-RB-26-0001 and verdict."
+  },
+  "month": "September 2026",
+  "tagline": "A 25-year European veteran with a sportsbook and casino under one roof",
+  "logo": "/assets/images/brands/netbet-logo.png",
+  "invert_logo": false,
+  "licence": "GRAI-1195-RB-26-0001",
+  "lead": "NetBet has been taking bets online since 2001 and serves Irish customers under its own Irish licence. You get an award-winning sportsbook covering football, racing and GAA, plus one of the largest casino lobbies open to Irish players. Here's our honest take on what it does well — and where it falls short.",
+  "score": 9.0,
+  "scores": [
+    {
+      "label": "Sportsbook",
+      "score": 9.6
+    },
+    {
+      "label": "Casino",
+      "score": 9.5
+    },
+    {
+      "label": "Bonuses",
+      "score": 8.7
+    },
+    {
+      "label": "Payments",
+      "score": 8.8
+    },
+    {
+      "label": "Mobile & App",
+      "score": 8.5
+    }
+  ],
+  "glance_intro": "Two and a half decades online is a rare thing in this industry. NetBet has grown into a multi-market European operator with licences in several regulated countries — Ireland included. For Irish punters that means a mature, dependable platform: a complete sportsbook, thousands of casino games and round-the-clock support.",
+  "glance": [
+    {
+      "icon": "building",
+      "title": "Operator",
+      "text": "NetBet Enterprises Ltd — a European betting group trading online since 2001 across several regulated markets."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Irish licence",
+      "text": "Licence Number GRAI-1195-RB-26-0001."
+    },
+    {
+      "icon": "gift",
+      "title": "Welcome offer",
+      "text": "Bet €10 and receive €40 in free bets as a new sportsbook customer, with a separate casino welcome package."
+    },
+    {
+      "icon": "layer-group",
+      "title": "Products",
+      "text": "Sportsbook, in-play betting, 3,000+ casino games, live dealer tables and crash games."
+    }
+  ],
+  "offer_body": "Place a €10 qualifying bet and NetBet rewards you with €40 in free bets, usually spread across football, bet builder, horse racing and UFC — a neat way to explore the whole sportsbook. Casino fans get their own deposit-match and free-spins welcome route.",
+  "unique_intro": "NetBet's real strength is staying power combined with scale. Very few brands active in Ireland have operated continuously since 2001, and fewer still pair that history with a casino lobby in the thousands and licences across several demanding European regulators.",
+  "unique": [
+    {
+      "icon": "landmark",
+      "title": "25 years online",
+      "text": "Trading since 2001 — a record that has survived every market cycle and few Irish-facing rivals can match."
+    },
+    {
+      "icon": "flag",
+      "title": "Licensed for Ireland",
+      "text": "Holds Irish licence GRAI-1195-RB-26-0001, so Irish customers are protected under Irish rules."
+    },
+    {
+      "icon": "globe-europe",
+      "title": "Multi-regulator background",
+      "text": "The group is licensed in other strict European markets, and that compliance-first culture shows."
+    },
+    {
+      "icon": "dice",
+      "title": "3,000+ casino games",
+      "text": "One of the biggest lobbies available in Ireland — slots, jackpots, tables and live studios."
+    },
+    {
+      "icon": "rocket",
+      "title": "Dedicated crash games",
+      "text": "Aviator, Spaceman and other crash titles in their own section — still rare among Irish-facing brands."
+    },
+    {
+      "icon": "trophy",
+      "title": "Award-winning sportsbook",
+      "text": "Industry recognition, including a CEEGA award for Best Overall Sports Betting Operator."
+    },
+    {
+      "icon": "horse-head",
+      "title": "Irish favourites covered",
+      "text": "GAA, Irish and UK racing and League of Ireland football alongside the big European leagues."
+    },
+    {
+      "icon": "comments",
+      "title": "24/7 support",
+      "text": "Live chat and email around the clock, with quick replies even on busy evenings."
+    },
+    {
+      "icon": "credit-card",
+      "title": "Flexible payments",
+      "text": "Cards, PayPal and other e-wallets, with a low €10 minimum withdrawal."
+    }
+  ],
+  "why": "Want one account that handles everything — a proper sportsbook with GAA and racing, plus a casino so big you'll never run out of games — from a brand with 25 years behind it and its own Irish licence? NetBet is one of the safest all-round picks in the market, ideal if you value a proven name over the newest arrival.",
+  "pros": [
+    "Licence Number GRAI-1195-RB-26-0001 — fully legal for Irish players",
+    "Online since 2001 — one of the longest track records in the business",
+    "Huge casino with 3,000+ games, including live dealer and crash titles",
+    "€40 in free bets from a €10 qualifying bet, spread across four sports",
+    "GAA, Irish racing and League of Ireland football all covered",
+    "24/7 live chat with fast response times",
+    "Flexible cashier with a low €10 minimum withdrawal"
+  ],
+  "cons": [
+    "Interface feels busier and more traditional than newer apps such as Midnite",
+    "Casino bonuses come with wagering requirements — read the terms first",
+    "Welcome offers change often, so the deal on the day may differ",
+    "Esports coverage is lighter than at specialist bookmakers"
+  ],
+  "sportsbook_title": "A seasoned sportsbook with real Irish coverage",
+  "sportsbook_intro": "NetBet follows the classic full-service European model: dozens of sports, deep pre-match markets, a reliable in-play console and sharp prices on the major football leagues. Importantly for Irish users, GAA, Irish racing and League of Ireland are properly stocked rather than token extras.",
+  "sportsbook_features": [
+    {
+      "icon": "futbol",
+      "title": "Football in depth",
+      "text": "Premier League, Champions League and top European leagues — League of Ireland too."
+    },
+    {
+      "icon": "horse-head",
+      "title": "UK & Irish racing",
+      "text": "Daily cards from Irish and UK meetings with each-way, ante-post and festival markets."
+    },
+    {
+      "icon": "hockey-sticks",
+      "title": "GAA markets",
+      "text": "Gaelic football and hurling throughout the championship season."
+    },
+    {
+      "icon": "tv",
+      "title": "In-play console",
+      "text": "Live betting on football, tennis, basketball and more with stats and visualisations."
+    },
+    {
+      "icon": "layer-group",
+      "title": "Bet builder & accas",
+      "text": "Same-game combos and accumulators — the welcome pack even includes a bet builder token."
+    },
+    {
+      "icon": "bolt",
+      "title": "Boosts & specials",
+      "text": "Enhanced odds and specials on headline fixtures, refreshed through the week."
+    }
+  ],
+  "sports": [
+    "Football",
+    "Horse Racing",
+    "GAA Hurling",
+    "Gaelic Football",
+    "Tennis",
+    "Basketball",
+    "Rugby",
+    "Boxing & MMA",
+    "UFC",
+    "Golf",
+    "Snooker",
+    "Cricket",
+    "Motorsport",
+    "Esports"
+  ],
+  "casino_title": "NetBet Casino — 3,000+ games on one account",
+  "casino_intro": "This is where NetBet's size really shows. Slots, jackpots, table games, live studios and a dedicated crash section add up to one of the biggest lobbies Irish players can access — all on the same account as the sportsbook.",
+  "casino_features": [
+    {
+      "icon": "dice",
+      "title": "3,000+ games",
+      "text": "Slots and jackpots from leading studios, from Megaways to classic three-reelers."
+    },
+    {
+      "icon": "user-tie",
+      "title": "Live dealer floor",
+      "text": "Roulette, blackjack, baccarat and game shows streamed in HD, day and night."
+    },
+    {
+      "icon": "rocket",
+      "title": "Crash games",
+      "text": "Aviator, Spaceman and other fast-paced crash titles in their own lobby."
+    },
+    {
+      "icon": "gift",
+      "title": "Casino welcome path",
+      "text": "A separate deposit match with free spins for new casino players — wagering applies."
+    }
+  ],
+  "banking_intro": "NetBet's long history shows in its cashier: more payment options than most challengers, EUR accounts for Irish customers and a €10 minimum withdrawal on every method. Deposits are instant, and e-wallets are usually the quickest way to get paid.",
+  "payments": [
+    "Visa",
+    "Mastercard",
+    "PayPal",
+    "Apple Pay",
+    "Skrill",
+    "paysafecard",
+    "Bank Transfer"
+  ],
+  "banking_note": "Irish accounts are held in EUR. Identity (KYC) checks are completed before your first withdrawal, in line with Irish anti-money-laundering rules. Available methods can change — check the cashier for the latest list.",
+  "promotions_intro": "As a long-established brand, NetBet runs one of the busier promotions calendars in Ireland — daily price boosts, acca deals and recurring free bets on the sportsbook, plus tournaments and spin drops in the casino.",
+  "promotions": [
+    {
+      "icon": "bullseye-arrow",
+      "title": "Daily price boosts",
+      "text": "Enhanced odds on headline football, racing and big-event fixtures every day."
+    },
+    {
+      "icon": "sync",
+      "title": "Acca & free bet offers",
+      "text": "Regular accumulator promotions and free bet rewards for active punters."
+    },
+    {
+      "icon": "medal",
+      "title": "Casino tournaments",
+      "text": "Slot races, prize pools and free-spin campaigns throughout the year."
+    }
+  ],
+  "safety": "NetBet serves Irish customers under licence GRAI-1195-RB-26-0001. Following the Gambling Regulation Act 2024, licensing in Ireland is now overseen by the Gambling Regulatory Authority of Ireland (GRAI). The wider group is also regulated in other strict European markets, and every account includes a full set of safer-gambling tools.",
+  "safety_features": [
+    {
+      "icon": "lock",
+      "title": "SSL-encrypted account",
+      "text": "Payments and personal data are always sent over encrypted connections."
+    },
+    {
+      "icon": "id-card",
+      "title": "KYC & AML checks",
+      "text": "Identity is verified before your first withdrawal, in line with Irish anti-money-laundering rules — which also blocks underage accounts."
+    },
+    {
+      "icon": "hands-helping",
+      "title": "Safer gambling tools",
+      "text": "Deposit limits, time-outs, reality checks and self-exclusion are available in your account settings."
+    }
+  ],
+  "verdict_title": "The proven all-rounder with a huge games library",
+  "verdict": "NetBet earns its spot through substance: 25 years online, its own Irish licence, a sportsbook that takes GAA and Irish racing seriously and a casino big enough to be a destination in itself. The €10-for-€40 welcome offer is generous and spreads free bets across four different sports.\n\nThe trade-off for all that content is a busier, more traditional layout than the newest apps, and casino bonus terms that need a careful read. For Irish players who want one dependable account covering everything from a Sunday GAA bet to a full casino session, NetBet is among the most complete options available.",
+  "faqs": [
+    {
+      "question": "Is NetBet legal in Ireland?",
+      "answer": "Yes. NetBet operates under Irish licence GRAI-1195-RB-26-0001 and accepts customers aged 18+ who live in Ireland. Gambling licensing in Ireland is overseen by the GRAI under the Gambling Regulation Act 2024."
+    },
+    {
+      "question": "What is the NetBet welcome offer?",
+      "answer": "New sportsbook customers who bet €10 can receive €40 in free bets, typically split between football, bet builder, horse racing and UFC. A separate casino welcome package with a deposit match and free spins is also available. Offers change regularly, so always check the current terms on NetBet's site."
+    },
+    {
+      "question": "How long has NetBet been around?",
+      "answer": "NetBet has been online since 2001, making it one of Europe's longest-running online betting brands."
+    },
+    {
+      "question": "How big is the NetBet casino?",
+      "answer": "More than 3,000 games — slots, jackpots, table games, live dealer studios and a crash games section featuring titles like Aviator and Spaceman."
+    },
+    {
+      "question": "Does NetBet cover GAA and Irish racing?",
+      "answer": "Yes. Gaelic football and hurling markets run through the championship, with daily Irish and UK racing and League of Ireland football."
+    },
+    {
+      "question": "Which payment methods does NetBet accept?",
+      "answer": "Visa, Mastercard, PayPal, Apple Pay, Skrill, paysafecard and bank transfer, with a €10 minimum withdrawal. Availability can vary — check the cashier in your account."
+    }
+  ]
+}

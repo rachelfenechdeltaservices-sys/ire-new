@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "Affiliate Disclosure | {{site_name}}",
+    "description": "How {{site_name}} is funded through affiliate partnerships and how we keep our rankings independent."
+  },
+  "banner_title": "Affiliate Disclosure",
+  "banner_text": "How this website is funded — and why it never decides our rankings.",
+  "show_updated": true,
+  "sidebar_title": "On this page",
+  "intro": "Transparency is one of our founding principles. This page explains clearly how {{site_name}} earns money, and how that revenue does — and doesn't — affect what we publish.",
+  "sections": [
+    {
+      "anchor": "revenue",
+      "heading": "How we make money",
+      "body": "{{site_name}} takes part in affiliate programmes run by online sportsbooks, casinos and other gambling businesses. If you click a link on our site and then register or deposit with that operator, we may receive a referral fee or commission. It's paid by the operator — never by you — and doesn't change the price or terms of anything you sign up for.\n\nThis is a common, widely used model in online publishing. It lets us pay for our editorial work, testing and the running of this website without charging our readers."
+    },
+    {
+      "anchor": "rankings",
+      "heading": "Does this affect our rankings?",
+      "body": "No. Our rankings, scores and recommendations come only from our independent methodology, explained in [How We Rate](index.html#how-we-rate). A high commission won't earn a better review, and operators that pay less — or nothing at all — are judged by exactly the same criteria.\n\nWe have published low ratings and critical reviews of operators in our affiliate network and will keep doing so whenever our honest assessment calls for it. Our long-term credibility with Irish players matters more than any single referral fee."
+    },
+    {
+      "anchor": "which-links",
+      "heading": "Which links are affiliate links?",
+      "body": "Most outbound links to gambling operators on this site may be affiliate links. Rather than labelling every one — which would make pages hard to read — we disclose our model site-wide through this page, which is linked from every page.\n\nLinks to regulators, responsible gambling organisations and other informational resources are never affiliate links and earn us nothing."
+    },
+    {
+      "anchor": "independence",
+      "heading": "Our commitment to editorial independence",
+      "body": "We keep a strict separation between our commercial relationships and our editorial content. No operator can pay to change a review, alter a rating or buy a higher ranking. Any sponsored content will always be clearly labelled and kept apart from our independent pages.\n\nWe update reviews on a rolling basis. If an operator's quality slips, its rating drops — whatever commercial arrangement is in place."
+    },
+    {
+      "anchor": "compliance",
+      "heading": "Compliance",
+      "body": "This disclosure is provided in line with applicable advertising standards and consumer protection guidelines. If you have questions about our affiliate relationships or how they relate to any content on this site, email [{{email}}](mailto:{{email}})."
+    }
+  ]
+}

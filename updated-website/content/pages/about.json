@@ -1,0 +1,80 @@
+{
+  "seo": {
+    "title": "About Us | {{site_name}}",
+    "description": "Meet the team behind {{site_name}} — betting industry experts and sportsbook players who test every operator with real money."
+  },
+  "banner_title": "About Us",
+  "banner_text": "Industry experts and sportsbook players giving Irish punters a clear, honest starting point.",
+  "intro": {
+    "subtitle": "Who We Are",
+    "heading": "Irish players deserve better information.",
+    "body": "{{site_name}} started from one simple belief. For years, gambling review sites have put affiliate commissions ahead of honesty — pushing the highest-paying brands to the top regardless of quality, and ignoring good operators simply because they pay less. We set out to build something different: a resource where every recommendation is earned, never bought.\n\nOur team brings together experienced gambling journalists, former sportsbook professionals and committed player advocates who, between them, have tested hundreds of platforms across Europe and beyond. Just as importantly, we're sportsbook players ourselves — so we know exactly what matters when you're the one placing the bet. Every sportsbook we cover is reviewed by a real person who signs up, deposits, plays, contacts support and requests a withdrawal.\n\nThat's the only honest way to understand what a platform is really like for the person on the other side of the screen. No shortcuts and no assumptions — just first-hand experience turned into practical advice.",
+    "stats": [
+      {
+        "value": "40+",
+        "label": "Years of combined experience"
+      },
+      {
+        "value": "100%",
+        "label": "Licensed operators only"
+      },
+      {
+        "value": "0",
+        "label": "Paid placements in our scores"
+      },
+      {
+        "value": "18+",
+        "label": "Adults only, always"
+      }
+    ]
+  },
+  "experts": {
+    "subtitle": "Industry Experts & Players",
+    "heading": "Experts by trade. Punters by choice.",
+    "body": "Our reviewers aren't observers looking in from the outside. We've built our careers inside the betting industry — in trading, compliance, product and marketing roles — and we understand how sportsbooks set their prices, structure their promotions and handle customers' money. We're also active sportsbook players in our own right: we follow the same Premier League fixtures, GAA championships and race meetings as our readers, and we claim the same welcome offers with our own money.\n\nThat dual perspective shapes everything we publish. Industry knowledge helps us read between the lines of the terms and conditions; first-hand experience as players tells us what it actually feels like when a withdrawal is delayed, an odds boost disappoints or an app crashes mid-match.",
+    "boxes": [
+      {
+        "icon": "briefcase",
+        "title": "Industry insight",
+        "text": "Years of experience inside the betting sector mean we know how offers are built, where the small print hides and which practices separate trustworthy operators from the rest."
+      },
+      {
+        "icon": "futbol",
+        "title": "Players ourselves",
+        "text": "We bet on the same markets you do, with our own accounts. If an offer, an app or a payout process doesn't meet our standards as customers, it won't earn a recommendation."
+      },
+      {
+        "icon": "users",
+        "title": "Looking out for each other",
+        "text": "Ireland's betting market is fiercely competitive, and operators compete hard for every new customer. We see our role as being in your corner — sharing what we learn, flagging unfair terms and slow payouts, and helping fellow punters bet with confidence."
+      }
+    ]
+  },
+  "principles": {
+    "subtitle": "What We Stand For",
+    "heading": "Our editorial principles",
+    "intro": "Four promises that shape **every review** and every ranking we publish.",
+    "boxes": [
+      {
+        "icon": "user-check",
+        "title": "Hands-on testing",
+        "text": "Real accounts, real deposits and real withdrawals for every brand."
+      },
+      {
+        "icon": "balance-scale",
+        "title": "Independence",
+        "text": "Commissions never decide a score or a ranking position."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Licensed only",
+        "text": "We feature operators licensed for Ireland — and show the licence."
+      },
+      {
+        "icon": "hands-helping",
+        "title": "Player first",
+        "text": "Safer gambling is part of every recommendation we make."
+      }
+    ]
+  }
+}

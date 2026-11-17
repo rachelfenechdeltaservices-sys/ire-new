@@ -1,0 +1,133 @@
+{
+  "subtitle": "Casino Offers",
+  "heading": "Top hybrid casinos for Irish players",
+  "intro": "Every brand here is a true hybrid — a fully licensed sportsbook and a complete online casino under one login. One wallet, instant switching between live betting, slots, live dealer tables, jackpots and table games.",
+  "offers": [
+    {
+      "enabled": true,
+      "brand": "QuinnCasino",
+      "logo": "/assets/images/brands/quinn-1.jpg",
+      "invert_logo": false,
+      "licence": "GRAI-0633-RB-26-0001",
+      "review": "",
+      "rating": 9.9,
+      "tag": "Web Exclusive",
+      "headline": "Stake €10",
+      "highlight": "Get 50 Free Spins",
+      "features": [
+        "50 Free Spins on Big Bass Splash",
+        "Live dealer games are available",
+        "Great Promotions",
+        "Low Minimum Deposit"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "quinncasino-casino",
+      "terms": "18+ New ROI Customers Only. Sign up via our mobile site or app & stake €10+ across any QuinnCasino games, within 7 days of registration. Get 50 Free Spins (€0.10 spin value) on “Big Bass Splash”, valid for 7 days. Free Spins winnings are real cash, max. €100. ROI T&Cs Apply. Gamble Responsibly. GamblingCare.ie"
+    },
+    {
+      "enabled": true,
+      "brand": "Novibet",
+      "logo": "/assets/images/brands/novibetlogo.png",
+      "invert_logo": false,
+      "licence": "GRAI-0397-RB-26-0001",
+      "review": "novibet-review",
+      "rating": 9.8,
+      "tag": "",
+      "headline": "Get 300",
+      "highlight": "Free Spins",
+      "features": [
+        "Large slot library",
+        "Live dealer tables",
+        "Separate casino welcome offer",
+        "Wide range of payment options"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "novibet-casino",
+      "terms": "Register and KYC using promo code SPLASH300, Get 50 Free Spins on Big Bass Splash. Then Deposit and Bet €10 Get the additional 250 Free Spins on Big Bass Splash. T&Cs Apply*"
+    },
+    {
+      "enabled": true,
+      "brand": "NetBet",
+      "logo": "/assets/images/brands/netbet-logo.png",
+      "invert_logo": false,
+      "licence": "GRAI-1195-RB-26-0001",
+      "review": "netbet-review",
+      "rating": 9.7,
+      "tag": "",
+      "headline": "€400 Bonus",
+      "highlight": "+ 100 Free Spins",
+      "features": [
+        "2,000+ slots & games, 50+ providers",
+        "120+ live casino games & game shows",
+        "MGA-licensed",
+        "Same-day withdrawals"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "netbet-casino",
+      "terms": "New players only; first deposit only; no opt-in required; €100–€400+ unlocks €100–€400 Bonus + 25–100 Free Spins; Bonus 10x wagering; Free Spins 0x wagering; max wins apply; claim in Missions within 7 days; T&Cs apply."
+    },
+    {
+      "enabled": true,
+      "brand": "LiveScore Vegas",
+      "logo": "/assets/images/brands/livescorebet-logo-2.svg",
+      "invert_logo": false,
+      "licence": "GRAI-0724-RB-26-0001",
+      "review": "livescorebet-review",
+      "rating": 9.5,
+      "tag": "",
+      "headline": "€10 on Slots",
+      "highlight": "and Get 300 Free Spins",
+      "features": [
+        "1,100+ slots inc. Megaways",
+        "100+ live tables (Evolution & Pragmatic)",
+        "Irish-licensed operator",
+        "Daily Vegas free-spin drops"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "livescorevegas-casino",
+      "terms": "New LiveScore Vegas members only. Must sign up via this offer link. Wager within 7 days of reg. Accept Free Spins on King Kong Cash Even Bigger Bananas 4 via pop up within 24 hrs of qualifying (10c spin value, 3 days expiry).T&Cs and deposit exclusions apply."
+    },
+    {
+      "enabled": true,
+      "brand": "TonyBet",
+      "logo": "/assets/images/brands/tonybet-logo.png",
+      "invert_logo": false,
+      "licence": "GRAI-0191-RB-26-0001",
+      "review": "",
+      "rating": 8.9,
+      "tag": "",
+      "headline": "100% up to €1050",
+      "highlight": "+ 150 Free Spins",
+      "features": [
+        "8,000+ slots & jackpot games",
+        "Live dealer roulette, blackjack & baccarat",
+        "Daily drops, tournaments & cashback",
+        "Fast withdrawals"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "tonybet-casino",
+      "terms": "18+. New Players only.T&Cs apply. Please Gamble Responsibly. gamblingcare.ie"
+    },
+    {
+      "enabled": true,
+      "brand": "Midnite",
+      "logo": "/assets/images/brands/midnite.svg",
+      "invert_logo": true,
+      "licence": "GRAI-0767-RB-26-0001",
+      "review": "midnite-review",
+      "rating": 8.7,
+      "tag": "",
+      "headline": "Deposit €20",
+      "highlight": "& Get 100 Free Spins",
+      "features": [
+        "Wide selection of top games",
+        "Continuous expansion of the game library",
+        "Loyalty programme and tailored events",
+        "Optimised for on-the-go play"
+      ],
+      "url": "https://top10irishcasino.site/",
+      "tracking_id": "midnite-casino",
+      "terms": "18+ | New customers only. Opt in and wager €20 or more on selected games within 14 days of registration. Get 100 Free Spins for selected games, valued at 10 cents and valid for 7 days. T&Cs apply. BeGambleAware.org"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "title": "LiveScore Bet Review",
+  "brand": "LiveScore Bet",
+  "menu_order": 4,
+  "seo": {
+    "title": "LiveScore Bet Review 2026 – Sportsbook & Casino | {{site_name}}",
+    "description": "Our expert LiveScore Bet review for Irish players: welcome offer, sportsbook, casino, payments, licence GRAI-0724-RB-26-0001 and verdict."
+  },
+  "month": "September 2026",
+  "tagline": "Live-data DNA from the scores brand Irish fans already use",
+  "logo": "/assets/images/brands/livescorebet-logo.svg",
+  "invert_logo": false,
+  "licence": "GRAI-0724-RB-26-0001",
+  "lead": "LiveScore Bet is a licensed Irish sportsbook built on one of the world's most popular live-score platforms. Real-time football pricing, racing and GAA markets sit alongside a full casino on the same login. Here's our honest take.",
+  "score": 8.8,
+  "scores": [
+    {
+      "label": "Sportsbook",
+      "score": 9.0
+    },
+    {
+      "label": "Casino",
+      "score": 8.9
+    },
+    {
+      "label": "Bonuses",
+      "score": 8.8
+    },
+    {
+      "label": "Payments",
+      "score": 8.5
+    },
+    {
+      "label": "Mobile & App",
+      "score": 9.0
+    }
+  ],
+  "glance_intro": "LiveScore Bet is the betting arm of the LiveScore Group — the scores app that has been the go-to second screen for Irish football fans for over a decade. That data heritage feeds straight into the sportsbook, with real-time pricing, deep football coverage and an interface designed to keep you in the moment.",
+  "glance": [
+    {
+      "icon": "building",
+      "title": "Operator",
+      "text": "LiveScore Betting and Gaming (Gibraltar) Limited, part of the LiveScore Group behind LiveScore.com."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Irish licence",
+      "text": "Licence Number GRAI-0724-RB-26-0001."
+    },
+    {
+      "icon": "gift",
+      "title": "Welcome offer",
+      "text": "Bet €10 and get €50 in free bets as a new sportsbook customer — see the full terms below."
+    },
+    {
+      "icon": "layer-group",
+      "title": "Products",
+      "text": "Sportsbook, in-play betting, 1,000+ slots, live casino and free-to-play games."
+    }
+  ],
+  "offer_body": "Deposit and place a €10 qualifying bet at minimum odds of 1.50 within 14 days of sign-up to receive €50 in free bets. Casino fans can pick up LiveScore Vegas's separate free-spins welcome offer instead.",
+  "unique_intro": "LiveScore Bet sits on top of one of football's biggest live-data engines. You notice it in the speed of in-play pricing, the match stats shown beside the bet slip and the polish of a mobile product from a company whose app millions open every weekend.",
+  "unique": [
+    {
+      "icon": "chart-line",
+      "title": "Native live-score data",
+      "text": "Prices, match data and stats come from the group's own feed rather than a third party."
+    },
+    {
+      "icon": "futbol",
+      "title": "Football-first depth",
+      "text": "Hundreds of markets per fixture across the Premier League, Europe and the League of Ireland."
+    },
+    {
+      "icon": "hockey-sticks",
+      "title": "Real GAA coverage",
+      "text": "Hurling and Gaelic football alongside daily Irish and UK racing."
+    },
+    {
+      "icon": "euro-sign",
+      "title": "Simple welcome offer",
+      "text": "€50 in free bets from a €10 qualifying bet at modest 1.50 minimum odds."
+    },
+    {
+      "icon": "dice",
+      "title": "Full-size casino",
+      "text": "1,000+ slots plus a live dealer floor behind the same login."
+    },
+    {
+      "icon": "mobile-alt",
+      "title": "Mobile-native",
+      "text": "Lightweight, fast apps that inherit LiveScore's mobile expertise."
+    },
+    {
+      "icon": "wallet",
+      "title": "Single wallet",
+      "text": "Switch between sportsbook, slots and live tables on one balance."
+    },
+    {
+      "icon": "shield-check",
+      "title": "Irish licence",
+      "text": "Licence Number GRAI-0724-RB-26-0001."
+    },
+    {
+      "icon": "trophy",
+      "title": "Free-to-play games",
+      "text": "Predictor and fantasy-style games built into your account."
+    }
+  ],
+  "why": "If football is the heart of your betting — and you already check LiveScore like half the country does — this sportsbook turns that habit into an edge: live data and betting in one place, proper GAA and racing coverage, a straightforward €50 welcome offer and a casino big enough for after the final whistle.",
+  "pros": [
+    "Licence Number GRAI-0724-RB-26-0001 — fully legal for Irish players",
+    "Tight integration with the LiveScore data engine for fast in-play prices",
+    "€50 in free bets from a €10 qualifying bet",
+    "Deep football coverage with genuine GAA and Irish racing markets",
+    "1,000+ slots and a live dealer floor on the same wallet",
+    "EUR payments including Revolut, Apple Pay and Google Pay",
+    "Polished, fast mobile apps"
+  ],
+  "cons": [
+    "Free bets must be accepted within 7 days and expire after 7 days",
+    "Apple Pay works for deposits but not withdrawals (closed-loop rules)",
+    "Promotions calendar is leaner than some legacy bookmakers",
+    "Esports and niche sports are thinner than at specialist books"
+  ],
+  "sportsbook_title": "A live-data sportsbook tuned for Irish football fans",
+  "sportsbook_intro": "The layout is exactly what punters expect — sports on the left, fixtures in the centre, bet slip on the right — with clear typography that's easy to follow in-play. Football is the headline act, but racing and GAA are treated seriously.",
+  "sportsbook_features": [
+    {
+      "icon": "bolt",
+      "title": "Real-time pricing",
+      "text": "In-play odds refresh live, powered directly by the LiveScore data feed."
+    },
+    {
+      "icon": "chart-bar",
+      "title": "Stats beside the bet slip",
+      "text": "Form, head-to-head and live match data next to the market."
+    },
+    {
+      "icon": "horse-head",
+      "title": "UK & Irish racing",
+      "text": "Full daily racecards with each-way terms, ante-post and festival specials."
+    },
+    {
+      "icon": "hockey-sticks",
+      "title": "GAA markets",
+      "text": "Gaelic football and hurling, including provincial and All-Ireland championships."
+    },
+    {
+      "icon": "layer-group",
+      "title": "Bet builder & accas",
+      "text": "Combine selections in one match or build accumulators across the card."
+    },
+    {
+      "icon": "tv",
+      "title": "Live streaming",
+      "text": "Watch selected events live while you bet in-play."
+    }
+  ],
+  "sports": [
+    "Football",
+    "Horse Racing",
+    "Greyhounds",
+    "Basketball",
+    "Tennis",
+    "GAA Hurling",
+    "Gaelic Football",
+    "Boxing & MMA",
+    "Rugby",
+    "Golf",
+    "Snooker",
+    "Esports",
+    "Cricket",
+    "Motorsport"
+  ],
+  "casino_title": "LiveScore Vegas — 1,000+ slots on one wallet",
+  "casino_intro": "The casino is a real second product. With more than a thousand slots and a full live dealer floor, it gives you somewhere to go after the final whistle — and your balance, verification and limits carry across instantly.",
+  "casino_features": [
+    {
+      "icon": "dice",
+      "title": "1,000+ slots",
+      "text": "Megaways, classic reels, jackpots and trending releases from established studios."
+    },
+    {
+      "icon": "user-tie",
+      "title": "Live dealer floor",
+      "text": "Roulette, blackjack, baccarat and game shows streamed in HD around the clock."
+    },
+    {
+      "icon": "gift",
+      "title": "Casino welcome path",
+      "text": "€10 on slots unlocks up to 300 free spins — see our casino list for full terms."
+    },
+    {
+      "icon": "wallet",
+      "title": "Single wallet",
+      "text": "One balance for sportsbook, slots, live tables and free-to-play games."
+    }
+  ],
+  "banking_intro": "Irish accounts get a modern EUR-only cashier: debit cards, PayPal, Revolut, Apple Pay, Google Pay and bank transfer. Deposits are instant; withdrawals are usually approved within about 24 hours, with PayPal often paying the same day and cards taking one to three working days. The minimum withdrawal is €10.",
+  "payments": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "PayPal",
+    "Revolut",
+    "Apple Pay",
+    "Google Pay",
+    "Bank Transfer"
+  ],
+  "banking_note": "All deposits are in EUR with no forced conversion. A closed-loop policy applies, so withdrawals return to your deposit method and Apple Pay deposits are paid back to the linked card. KYC is required before the first withdrawal. Methods can change — check the cashier.",
+  "promotions_intro": "After the welcome offer, LiveScore Bet runs a rolling set of football-led promotions — price boosts, acca offers and casino spin drops — plus free-to-play predictor games that reward regular players.",
+  "promotions": [
+    {
+      "icon": "bullseye-arrow",
+      "title": "Price boosts",
+      "text": "Enhanced odds on the biggest football and racing fixtures each day."
+    },
+    {
+      "icon": "sync",
+      "title": "Acca offers",
+      "text": "Recurring accumulator promotions across the top football competitions."
+    },
+    {
+      "icon": "gamepad",
+      "title": "Free-to-play games",
+      "text": "Predictor games and fantasy-style competitions at no cost."
+    }
+  ],
+  "safety": "LiveScore Bet is operated by LiveScore Betting and Gaming (Gibraltar) Limited and serves Irish players under licence GRAI-0724-RB-26-0001, with Irish licensing overseen by the Gambling Regulatory Authority of Ireland under the Gambling Regulation Act 2024. Safer-gambling tools are available directly in your account.",
+  "safety_features": [
+    {
+      "icon": "lock",
+      "title": "SSL-encrypted account",
+      "text": "Payments and personal data are always sent over encrypted connections."
+    },
+    {
+      "icon": "id-card",
+      "title": "KYC & AML checks",
+      "text": "Identity is verified before your first withdrawal, in line with Irish anti-money-laundering rules — which also blocks underage accounts."
+    },
+    {
+      "icon": "hands-helping",
+      "title": "Safer gambling tools",
+      "text": "Deposit limits, time-outs, reality checks and self-exclusion are available in your account settings."
+    }
+  ],
+  "verdict_title": "The football fan's sportsbook with a serious casino",
+  "verdict": "LiveScore Bet stands out by using something rivals can't buy — a live-data brand Irish football fans already use every weekend. The sportsbook is quick, GAA and racing coverage is genuine, the €50 welcome offer is easy to understand and the 1,000+ slot casino sits comfortably on the same account.\n\nThe caveats are minor: a 7-day window on the free bets and a leaner promotions calendar than the oldest legacy books. If you mostly bet on football with a bit of casino on a Saturday night, LiveScore Bet is one of the most natural choices in Ireland.",
+  "faqs": [
+    {
+      "question": "Is LiveScore Bet legal in Ireland?",
+      "answer": "Yes. LiveScore Betting and Gaming (Gibraltar) Limited holds Irish licence GRAI-0724-RB-26-0001 and accepts customers aged 18+ who live in Ireland."
+    },
+    {
+      "question": "What is the LiveScore Bet welcome offer?",
+      "answer": "New customers who deposit and bet €10 on the sportsbook at minimum odds of 1.50 within 14 days of sign-up receive €50 in free bets. Free bets must be accepted within 7 days and are valid for 7 days. Full terms apply — check LiveScore Bet's site."
+    },
+    {
+      "question": "Does LiveScore Bet cover GAA?",
+      "answer": "Yes — Gaelic football and hurling, including provincial championships and the All-Ireland series, plus daily Irish and UK racing."
+    },
+    {
+      "question": "Which payment methods does LiveScore Bet accept?",
+      "answer": "Visa and Mastercard debit, PayPal, Revolut, Apple Pay, Google Pay and bank transfer, all in EUR, with a €10 minimum withdrawal."
+    },
+    {
+      "question": "How big is the casino?",
+      "answer": "More than 1,000 slots plus a full live dealer floor with roulette, blackjack, baccarat and game shows."
+    },
+    {
+      "question": "Can I use one account for sports and casino?",
+      "answer": "Yes. One LiveScore Bet account covers sportsbook, in-play, casino, live tables and free-to-play games with a shared wallet."
+    }
+  ]
+}

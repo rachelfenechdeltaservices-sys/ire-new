@@ -1,0 +1,1 @@
+Sveltia CMS 0.268.0 (MIT) — self-hosted copy of https://www.npmjs.com/package/@sveltia/cms dist files
