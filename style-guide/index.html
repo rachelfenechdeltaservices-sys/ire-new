@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Neon Sweeps Style Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Homepage design system for the US sweepstakes casino: colour, type, borders, buttons, imagery and every homepage section, built from the final approved screenshots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout concept: sticky section rail on the left, long reading column on the right.
+   Each homepage section = screenshot crop + spec table + live CSS sample. Single dark theme, matching the product. */
+:root{
+  color-scheme:dark;
+  /* ---- site tokens (documented in the guide) ---- */
+  --bg:#000816; --surface:#061326; --raised:#0A1D32; --footer:#060F26; --line:#233650; --line-soft:#1A2840;
+  --cyan:#04F5E5; --mint:#18F5CC; --magenta:#F032F4; --purple:#A84DFF; --violet:#322571;
+  --hotpink:#F80180; --pink-input:#EC097D; --gold:#FFCE21; --check:#1CF11D;
+  --text:#FFFFFF; --muted:#A8B4C7; --dim:#7C8BA3;
+  --cta:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);
+  --viewall:linear-gradient(100deg,#5B087C 0%,#A83CD2 60%,#E6A5FF 100%);
+  --neon-edge:linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%);
+  /* ---- guide chrome ---- */
+  --doc-panel:#08132A; --doc-code:#030B1C; --doc-accent:#04F5E5;
+  --f-display:'Montserrat','Arial Black',Arial,sans-serif;
+  --f-body:'Inter',system-ui,Arial,sans-serif;
+  --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--f-body)}
+a{color:var(--cyan)}
+code{font:500 12.5px var(--f-mono);color:#9DF3EC;background:#0B1B33;padding:1px 6px;border-radius:5px;overflow-wrap:anywhere}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h2{font-size:clamp(24px,3vw,32px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:700;margin-top:26px}
+p{color:#C4CFDD;max-width:72ch;margin:10px 0}
+strong{color:#fff}
+
+.shell{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}
+.rail{position:sticky;top:0;height:100vh;overflow:auto;padding:26px 14px 40px;border-right:1px solid var(--line-soft);background:#030C1E}
+.rail .brand{font:900 15px var(--f-display);letter-spacing:.06em;padding:0 10px 4px}
+.rail .brand span{display:block;font:600 10.5px var(--f-body);letter-spacing:.18em;color:var(--dim);margin-top:4px}
+.rail h4{font:700 10.5px var(--f-body);letter-spacing:.16em;text-transform:uppercase;color:var(--magenta);margin:22px 10px 6px}
+.rail a{display:block;color:#AEBBD0;text-decoration:none;font-size:13px;padding:6px 10px;border-radius:8px}
+.rail a:hover,.rail a:focus-visible{background:#0F2140;color:#fff;outline:none}
+.rail a.on{color:#fff;background:#0F2140;box-shadow:inset 2px 0 0 var(--cyan)}
+
+main{min-width:0;padding-block:40px 120px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(0px,3vw,40px)}
+section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);scroll-margin-top:12px}
+.eyebrow{display:block;font:700 11px var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
+.part{margin-top:80px;padding:22px 24px;border-radius:16px;background:linear-gradient(100deg,#0A1530,#1A0B33);border:1px solid #2A2156}
+.part .eyebrow{color:var(--magenta)}
+.part h2{font-size:clamp(26px,3.4vw,38px)}
+
+/* hero of the guide */
+.cover{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px;align-items:start}
+.cover h1{font-size:clamp(38px,5.4vw,68px);font-weight:900;line-height:.98;letter-spacing:-.02em;margin:6px 0 16px}
+.cover h1 .g{background:linear-gradient(90deg,#2EF2D0,#6F9BFF 45%,#F032F4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
+.cover figure{margin:0}
+.cover figure img{max-height:640px;width:auto;margin:0 auto}
+
+/* panels, figures, tables */
+.panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
+figure.ref{margin:18px 0;padding:12px;background:#020A1A;border:1px solid #1C3350;border-radius:14px}
+figure.ref img{display:block;width:100%;height:auto;border-radius:8px}
+figure.ref figcaption{font-size:12.5px;color:#93A4BC;margin-top:9px}
+figure.ref figcaption b{color:var(--cyan);font:700 10.5px var(--f-body);letter-spacing:.14em;text-transform:uppercase;margin-right:8px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.grid2>*,.grid3>*{min-width:0}
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line-soft);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:560px}
+th,td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{background:#0D1C36;color:#E8F2FF;font-weight:600;font-size:12px;letter-spacing:.02em}
+td{color:#C7D2E0}
+tr:last-child td{border-bottom:0}
+td.k{color:#fff;font-weight:600;white-space:nowrap}
+.note{border-left:3px solid var(--cyan);background:#071D2E;border-radius:0 10px 10px 0;padding:12px 16px;font-size:13.5px;color:#BFD6E6;margin:16px 0}
+.note.warn{border-color:var(--gold);background:#1D1807;color:#E9DDB3}
+.note.pink{border-color:var(--magenta);background:#1E0A26;color:#E6C9EE}
+.tag{display:inline-block;font:700 10px var(--f-body);letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:5px;vertical-align:1px}
+.tag.s{background:#0C3B36;color:#7DF6E6}
+.tag.m{background:#2A1C47;color:#CDB6FF}
+.tag.new{background:#3B0E3F;color:#F7A6FA}
+.tag.fix{background:#3A2A06;color:#FFD76A}
+.tag.del{background:#3A0B14;color:#FF9AA9}
+
+/* code */
+.code{position:relative;margin:16px 0}
+.code pre{margin:0;background:var(--doc-code);border:1px solid var(--line-soft);border-radius:12px;padding:44px 16px 16px;overflow:auto;font:12px/1.65 var(--f-mono);color:#D4E3F3;max-height:460px}
+.copy{position:absolute;top:9px;right:9px;font:600 11.5px var(--f-body);background:#11304A;border:1px solid #29597A;color:#B7FBF4;border-radius:7px;padding:5px 11px;cursor:pointer}
+.copy:hover{background:#174063}
+.copy:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
+/* swatches */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:16px 0}
+.sw{display:flex;align-items:center;gap:11px;padding:9px;border:1px solid var(--line-soft);border-radius:11px;background:#07122A;cursor:pointer;text-align:left;color:inherit;font:inherit;width:100%}
+.sw:hover{border-color:#2F5276}
+.sw i{flex:0 0 52px;height:52px;border-radius:8px;border:1px solid #FFFFFF26}
+.sw span{display:flex;flex-direction:column;min-width:0;line-height:1.35}
+.sw b{font-size:12.5px}
+.sw code{background:none;padding:0;font-size:12px}
+.sw small{font-size:11px;color:var(--dim)}
+
+/* change log */
+.changes{display:grid;gap:8px;margin:16px 0}
+.chg{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--line-soft);border-radius:11px;background:#07122A;font-size:13.5px;color:#C7D2E0}
+.chg .tag{justify-self:start;margin-top:2px}
+
+/* anatomy list */
+.anatomy{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px;counter-reset:a;margin:16px 0;padding:0;list-style:none}
+.anatomy li{counter-increment:a;display:flex;gap:10px;align-items:center;padding:9px 12px;border:1px solid var(--line-soft);border-radius:10px;background:#07122A;font-size:13px}
+.anatomy li::before{content:counter(a,decimal-leading-zero);font:600 11px var(--f-mono);color:var(--magenta)}
+.anatomy a{color:#E3ECF7;text-decoration:none}
+.anatomy a:hover{color:var(--cyan)}
+
+/* ============ LIVE SAMPLES — these use the production CSS from the guide ============ */
+.stage{background:var(--bg);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin:16px 0;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.btn-deposit,.btn-play{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 22px;border:0;border-radius:8px;background:var(--cta);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn-play:hover,.btn-deposit:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(4,245,229,.65)}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 22px;border:1.5px solid #C85DFF;border-radius:8px;background:#0B1230;color:#fff;font:600 15px var(--f-display);box-shadow:0 0 12px rgba(200,93,255,.35);cursor:pointer}
+.btn-view{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:0 20px;border:1.5px solid #F38CFF;border-radius:12px;background:var(--viewall);color:#fff;font:700 14px var(--f-display);box-shadow:0 0 14px rgba(218,45,255,.45);cursor:pointer}
+.btn-arrow{width:44px;height:44px;display:inline-grid;place-items:center;border:1.5px solid #10E8F1;border-radius:10px;background:linear-gradient(125deg,#07162C,#1B2350);color:#fff;font:600 20px var(--f-body);cursor:pointer}
+.btn-arrow.next{border-color:#BD48F5}
+.btn-promo{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:0 16px;border:0;border-radius:7px;background:var(--cta);color:#00151C;font:700 13px var(--f-display)}
+.btn-mint{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 24px;border:0;border-radius:14px;background:#2EF0C8;color:#00150F;font:700 16px var(--f-display);box-shadow:0 0 14px rgba(46,240,200,.45)}
+.btn-vip{display:inline-flex;align-items:center;gap:10px;min-height:42px;padding:0 22px;border:1.5px solid #FF5BD8;border-radius:999px;background:linear-gradient(100deg,#3A0C5C,#7A1F9E);color:#fff;font:700 14px var(--f-display);box-shadow:0 0 14px rgba(255,91,216,.45)}
+.btn-read{display:inline-flex;align-items:center;min-height:42px;padding:0 34px;border:1.5px solid #E03BA8;border-radius:8px;background:linear-gradient(180deg,#4A0E44,#2A0A2E);color:#fff;font:600 14px var(--f-body);box-shadow:0 0 12px rgba(224,59,168,.35)}
+.btn-search{width:64px;height:44px;display:inline-grid;place-items:center;border:0;border-radius:999px;background:linear-gradient(135deg,#B01CE8,#E21FD0);color:#fff;box-shadow:0 0 16px rgba(199,9,235,.6)}
+.badge-new{display:inline-block;padding:3px 11px;border-radius:999px;background:#D41BE0;color:#fff;font:800 12px var(--f-display);letter-spacing:.04em;box-shadow:0 0 10px rgba(212,27,224,.6)}
+.badge-hot{display:inline-block;padding:3px 10px;border-radius:6px;background:#F032F4;color:#fff;font:800 12px var(--f-display)}
+.badge-rtp{display:inline-block;padding:5px 14px;border:2px solid #00F8E7;border-radius:999px;background:#00191CC9;color:#00F8E7;font:800 15px var(--f-display);box-shadow:0 0 10px rgba(0,248,231,.5),inset 0 0 8px rgba(0,248,231,.2)}
+.badge-tag{display:inline-block;padding:2px 9px;border:1px solid #FFFFFF88;border-radius:999px;color:#fff;font:700 10px var(--f-body);letter-spacing:.06em}
+.ribbon{display:inline-block;padding:3px 12px;border-radius:0 8px 0 10px;background:#FF4F9B;color:#fff;font:800 10px var(--f-body);letter-spacing:.06em}
+.ribbon.cy{background:#2CD6C2;color:#00201D}
+
+.pill-title{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:6px 26px;border:2px solid transparent;border-radius:999px;background:linear-gradient(#051026,#051026) padding-box,var(--neon-edge) border-box;box-shadow:-4px 0 14px rgba(4,245,229,.45),4px 0 14px rgba(240,50,244,.5);font:600 clamp(18px,2.2vw,24px) var(--f-display);color:#fff;white-space:nowrap}
+.pill-title svg{width:26px;height:26px;color:var(--cyan);flex:none}
+.sec-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;width:100%}
+.sec-head .ctl{display:flex;gap:10px;align-items:center}
+
+.border-demos{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:16px;width:100%}
+.bd{height:96px;border-radius:12px;background:#061326;display:grid;place-items:center;text-align:center;font-size:11.5px;color:#C7D2E0;padding:8px}
+.bd b{display:block;color:#fff;font-size:12.5px}
+
+.hero-type{font:900 clamp(44px,8vw,92px)/.92 var(--f-display);letter-spacing:-.01em}
+.hero-type .rep{background:linear-gradient(90deg,#2EF2D0 0%,#33D3F0 35%,#8C7BFF 65%,#E93BF2 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyeb{font:800 clamp(14px,1.8vw,21px) var(--f-display);letter-spacing:.01em}
+.eyeb .c{color:#2EF2D0}.eyeb .m{color:#E93BF2}
+
+.type-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.type-row:last-child{border-bottom:0}
+.type-row small{color:var(--dim);font:500 11.5px var(--f-mono)}
+
+.mini-search{display:flex;align-items:center;gap:14px;width:100%;min-height:68px;padding:10px 12px 10px 24px;border:2px solid transparent;border-radius:999px;background:linear-gradient(#070C26,#070C26) padding-box,linear-gradient(90deg,#B44DFF,#04F5E5 45%,#F032F4) border-box;box-shadow:0 0 18px rgba(180,77,255,.35)}
+.mini-search b{font:700 18px var(--f-display);white-space:nowrap}
+.mini-search span{flex:1;min-width:0;color:#B9C4D6;font-size:13px;border-left:1px solid #3A4870;padding-left:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.legal-bar{width:100%;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:16px 22px;border-radius:10px;background:var(--hotpink);font:600 13px var(--f-body)}
+
+.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 22px}
+.checklist label{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#D3DEEA}
+.checklist input{accent-color:var(--cyan);margin-top:4px}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#0E2A3F;border:1px solid var(--cyan);color:#fff;padding:8px 16px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
+
+@media(max-width:1060px){
+  .shell{grid-template-columns:1fr}
+  .rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;height:auto;display:flex;align-items:center;gap:4px;overflow-x:auto;padding:10px max(12px,env(safe-area-inset-right,0px)) 10px max(12px,env(safe-area-inset-left,0px));border-right:0;border-bottom:1px solid var(--line-soft)}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:#030C1E}
+  .rail .brand,.rail h4{display:none}
+  .rail a{white-space:nowrap;flex:none}
+  .cover{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .grid2,.grid3,.checklist{grid-template-columns:1fr}
+  .chg{grid-template-columns:1fr;gap:6px}
+  .type-row{grid-template-columns:1fr;gap:4px}
+  .stage{padding:16px}
+  .pill-title{white-space:normal}
+  .mini-search b{display:none}
+}
+</style>
+</head>
+<body>
+
+
+<div class="shell">
+<nav class="rail" aria-label="Style guide sections">
+  <div class="brand">NEON SWEEPS<span>HOMEPAGE STYLE GUIDE · V6</span></div>
+  <h4>Start</h4>
+  <a href="#overview">Overview</a>
+  <a href="#changes">What changed from v5</a>
+  <a href="#anatomy">Page anatomy</a>
+  <h4>Foundations</h4>
+  <a href="#color">Colour</a>
+  <a href="#gradients">Gradients &amp; glow</a>
+  <a href="#type">Typography</a>
+  <a href="#borders">Borders &amp; radii</a>
+  <a href="#spacing">Grid &amp; spacing</a>
+  <a href="#buttons">Buttons &amp; badges</a>
+  <a href="#section-header">Section header</a>
+  <h4>Imagery</h4>
+  <a href="#imagery">Image style</a>
+  <a href="#formats">Image formats</a>
+  <h4>Homepage sections</h4>
+  <a href="#s-header">Header &amp; ticker</a>
+  <a href="#s-hero">Hero</a>
+  <a href="#s-nav">Category nav</a>
+  <a href="#s-promos">Promotions</a>
+  <a href="#s-popular">Popular Games</a>
+  <a href="#s-casino">Casino</a>
+  <a href="#s-characters">Favourite Characters</a>
+  <a href="#s-live">Live Casino</a>
+  <a href="#s-shows">Game Shows</a>
+  <a href="#s-rtp">High RTP Games</a>
+  <a href="#s-new">New Games</a>
+  <a href="#s-vip">VIP Club</a>
+  <a href="#s-providers">Game Providers</a>
+  <a href="#s-search">AI Game Search</a>
+  <a href="#s-faq">FAQ</a>
+  <a href="#s-seo">SEO content block</a>
+  <a href="#s-footer">Footer &amp; legal bar</a>
+  <h4>Build</h4>
+  <a href="#responsive">Responsive</a>
+  <a href="#sweeps">Sweepstakes wording</a>
+  <a href="#tokens">CSS tokens</a>
+  <a href="#checklist">Handoff checklist</a>
+  <a href="#next">Next: subpages</a>
+</nav>
+
+<main><div class="wrap">
+
+<!-- ================= OVERVIEW ================= -->
+<header id="overview" class="cover">
+  <div>
+    <span class="eyebrow">Homepage style guide · Version 6 · Final references only</span>
+    <h1>Neon Sweeps<br><span class="g">Style Guide</span></h1>
+    <p>This guide documents the finished homepage of the US sweepstakes casino so designers and developers can rebuild it and extend it to new pages. It covers colour, type, borders, buttons, image style and every homepage section, top to bottom.</p>
+    <p>Four images are the source of truth: the full homepage, and the close-ups of <strong>High RTP Games</strong>, <strong>New Games</strong> and <strong>Favourite Characters</strong>. Where the homepage and v5 disagree, the homepage wins. Everything else from v5 that is no longer on the page has been removed.</p>
+    <div class="meta"><span>Desktop canvas 1440px</span><span>Container ≈ 1290px</span><span>Dark theme only</span><span>Copyable HEX &amp; CSS</span></div>
+    <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
+  </div>
+  <figure class="ref">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to hot-pink legal bar" width="667" height="2000">
+    <figcaption><b>Reference 1</b>Final homepage. The master reference for layout, order and colour.</figcaption>
+  </figure>
+</header>
+
+<!-- ================= CHANGES ================= -->
+<section id="changes">
+  <span class="eyebrow">Corrections</span>
+  <h2>What changed from v5</h2>
+  <p>v5 was written while the page was still in progress. These are the corrections made after checking it against the final homepage.</p>
+  <div class="changes">
+    <div class="chg"><span class="tag fix">Fixed</span><div><strong>Section order.</strong> Game Providers moved from under Promotions to near the bottom, after VIP Club. See the full order under <a href="#anatomy">Page anatomy</a>.</div></div>
+    <div class="chg"><span class="tag fix">Fixed</span><div><strong>Game Shows.</strong> The charcoal <code>#1B1B22</code> panel, borderless cards and plain-text View All are gone. Game Shows now uses the same neon pill header, purple View All and arrows as every other section, with neon-bordered wide cards.</div></div>
+    <div class="chg"><span class="tag fix">Fixed</span><div><strong>Card shapes.</strong> Promotions are ≈2:1 (was 1.55:1). Casino and Live Casino are ≈2:1 (was 4:3). Favourite Characters are ≈2.1:1 on the homepage (was 1.62:1). High RTP game cards are nearly square at ≈1.15:1 (was portrait 2:3).</div></div>
+    <div class="chg"><span class="tag fix">Fixed</span><div><strong>Hero.</strong> The hero is a carousel with round side arrows and three dots. It has a two-tone eyebrow, a four-item feature row (Slots, Live Casino, Big Wins, Instant Play) and an Active Players card. The headline is a wide, heavy geometric sans, not a condensed face.</div></div>
+    <div class="chg"><span class="tag new">New</span><div><strong>Seven new homepage blocks:</strong> Casino, New Games, VIP Club banner, AI Game Search, FAQ, SEO content block, and a footer with a hot-pink legal bar.</div></div>
+    <div class="chg"><span class="tag new">New</span><div><strong>Providers grid</strong> is now 6 × 3 (18 logos). Spribe, Penguin King, Animo, Big Daddy, Fantasma and Icon21 were added.</div></div>
+    <div class="chg"><span class="tag del">Removed</span><div>Recent Winners and Jackpot Winners, the four aubergine promo-art references, the portrait game-cover reference and the old Game Shows screenshot. None of these appear on the final homepage. If Winners comes back, it should be documented on its own subpage.</div></div>
+  </div>
+</section>
+
+<!-- ================= ANATOMY ================= -->
+<section id="anatomy">
+  <span class="eyebrow">Structure</span>
+  <h2>Page anatomy</h2>
+  <p>The homepage is one centred column. Every content section after the category nav opens with the same <a href="#section-header">section header</a>, so the page reads as a rhythm of header → row of cards.</p>
+  <ol class="anatomy">
+    <li><a href="#s-header">Header</a></li><li><a href="#s-header">News ticker</a></li><li><a href="#s-hero">Hero carousel</a></li><li><a href="#s-nav">Category nav</a></li>
+    <li><a href="#s-promos">Promotions · 3</a></li><li><a href="#s-popular">Popular Games · 4</a></li><li><a href="#s-casino">Casino · 4</a></li><li><a href="#s-characters">Favourite Characters · 3</a></li>
+    <li><a href="#s-live">Live Casino · 4</a></li><li><a href="#s-shows">Game Shows · 3</a></li><li><a href="#s-rtp">High RTP · panel + 4</a></li><li><a href="#s-new">New Games · 8</a></li>
+    <li><a href="#s-vip">VIP Club banner</a></li><li><a href="#s-providers">Game Providers · 6×3</a></li><li><a href="#s-search">AI Game Search</a></li><li><a href="#s-faq">FAQ</a></li>
+    <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li><li><a href="#s-footer">Legal bar</a></li>
+  </ol>
+  <p>The number after each name is how many cards sit in a row at desktop width. Rows of 3 use wide (≈2:1) cards, rows of 4 use medium cards, and New Games uses 8 portrait tiles. This mix of rhythms is deliberate. Keep it when you add sections.</p>
+</section>
+
+<!-- ================= FOUNDATIONS ================= -->
+<div class="part" id="foundations"><span class="eyebrow">Part 1</span><h2>Foundations</h2></div>
+
+<section id="color">
+  <span class="eyebrow">Foundations</span>
+  <h2>Colour</h2>
+  <p>A near-black navy ground with two neon accents that do almost all the work: <strong>cyan</strong> for action (CTAs, active states, left edge of borders) and <strong>magenta</strong> for energy (badges, right edge of borders, footer). Purple ties them together in gradients and glows. Gold is for VIP and RTP only. Click any chip to copy its HEX.</p>
+  <h3>Core UI</h3>
+  <div class="swatches">
+    <button class="sw" data-copy="#000816"><i style="background:#000816"></i><span><b>Page background</b><code>#000816</code><small><span class="tag s">Sampled</span> gutters</small></span></button>
+    <button class="sw" data-copy="#061326"><i style="background:#061326"></i><span><b>Surface</b><code>#061326</code><small><span class="tag m">Matched</span> header pills, panels</small></span></button>
+    <button class="sw" data-copy="#0A1D32"><i style="background:#0A1D32"></i><span><b>Raised</b><code>#0A1D32</code><small><span class="tag m">Matched</span> card footers</small></span></button>
+    <button class="sw" data-copy="#060F26"><i style="background:#060F26"></i><span><b>Footer</b><code>#060F26</code><small><span class="tag s">Sampled</span> footer ground</small></span></button>
+    <button class="sw" data-copy="#233650"><i style="background:#233650"></i><span><b>Quiet line</b><code>#233650</code><small><span class="tag m">Matched</span> nav, FAQ borders</small></span></button>
+    <button class="sw" data-copy="#FFFFFF"><i style="background:#FFFFFF"></i><span><b>Text</b><code>#FFFFFF</code><small>Headings, labels</small></span></button>
+    <button class="sw" data-copy="#A8B4C7"><i style="background:#A8B4C7"></i><span><b>Muted text</b><code>#A8B4C7</code><small>Body copy, footer links</small></span></button>
+  </div>
+  <h3>Neon accents</h3>
+  <div class="swatches">
+    <button class="sw" data-copy="#04F5E5"><i style="background:#04F5E5"></i><span><b>Cyan</b><code>#04F5E5</code><small>Active, icons, border start</small></span></button>
+    <button class="sw" data-copy="#0FE2D0"><i style="background:#0FE2D0"></i><span><b>CTA mint</b><code>#0FE2D0</code><small><span class="tag s">Sampled</span> Deposit button</small></span></button>
+    <button class="sw" data-copy="#2EF0C8"><i style="background:#2EF0C8"></i><span><b>Play Now mint</b><code>#2EF0C8</code><small><span class="tag m">Matched</span> character CTA</small></span></button>
+    <button class="sw" data-copy="#F032F4"><i style="background:#F032F4"></i><span><b>Magenta</b><code>#F032F4</code><small>Border end, HOT badge</small></span></button>
+    <button class="sw" data-copy="#A84DFF"><i style="background:#A84DFF"></i><span><b>Purple</b><code>#A84DFF</code><small>Glows, gradients</small></span></button>
+    <button class="sw" data-copy="#322571"><i style="background:#322571"></i><span><b>Violet fill</b><code>#322571</code><small><span class="tag s">Sampled</span> FAQ active tab</small></span></button>
+    <button class="sw" data-copy="#C709EB"><i style="background:#C709EB"></i><span><b>Search magenta</b><code>#C709EB</code><small><span class="tag s">Sampled</span> AI search button</small></span></button>
+    <button class="sw" data-copy="#F80180"><i style="background:#F80180"></i><span><b>Hot pink</b><code>#F80180</code><small><span class="tag s">Sampled</span> legal bar</small></span></button>
+    <button class="sw" data-copy="#EC097D"><i style="background:#EC097D"></i><span><b>Pink input</b><code>#EC097D</code><small><span class="tag s">Sampled</span> newsletter field</small></span></button>
+    <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 97%+</small></span></button>
+    <button class="sw" data-copy="#1CF11D"><i style="background:#1CF11D"></i><span><b>Check green</b><code>#1CF11D</code><small>RTP checklist ticks</small></span></button>
+  </div>
+  <h3>Card accent colours</h3>
+  <p>Cards with a solid colour background (New Games) or a themed border (High RTP, Favourite Characters) take their border colour from the artwork's dominant hue. Use these values so the same hues repeat across sections.</p>
+  <div class="swatches">
+    <button class="sw" data-copy="#01A200"><i style="background:#01A200"></i><span><b>Green</b><code>#01A200</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#051AF1"><i style="background:#051AF1"></i><span><b>Royal blue</b><code>#051AF1</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#F9A202"><i style="background:#F9A202"></i><span><b>Amber</b><code>#F9A202</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#F9038D"><i style="background:#F9038D"></i><span><b>Pink</b><code>#F9038D</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#EE0212"><i style="background:#EE0212"></i><span><b>Red</b><code>#EE0212</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#EA02AC"><i style="background:#EA02AC"></i><span><b>Fuchsia</b><code>#EA02AC</code><small><span class="tag s">Sampled</span> New Games</small></span></button>
+    <button class="sw" data-copy="#FFB000"><i style="background:#FFB000"></i><span><b>Character gold</b><code>#FFB000</code><small><span class="tag m">Matched</span> Book of Dead</small></span></button>
+    <button class="sw" data-copy="#C72CFF"><i style="background:#C72CFF"></i><span><b>Character violet</b><code>#C72CFF</code><small><span class="tag m">Matched</span> Le Vampire</small></span></button>
+    <button class="sw" data-copy="#FF30C8"><i style="background:#FF30C8"></i><span><b>Character pink</b><code>#FF30C8</code><small><span class="tag m">Matched</span> Sakura Fortune</small></span></button>
+    <button class="sw" data-copy="#00F8E7"><i style="background:#00F8E7"></i><span><b>RTP badge</b><code>#00F8E7</code><small><span class="tag m">Matched</span> badge text + outline</small></span></button>
+  </div>
+</section>
+
+<section id="gradients">
+  <span class="eyebrow">Foundations</span>
+  <h2>Gradients &amp; glow</h2>
+  <p>Gradients run left to right, and go from cool to warm: cyan on the left, magenta on the right. Glows are soft, short and coloured, never white or grey. Two glows of different colour on either side of an element are the signature effect of this site.</p>
+  <div class="tbl"><table>
+    <tr><th>Name</th><th>Preview</th><th>CSS</th><th>Used on</th></tr>
+    <tr><td class="k">CTA</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(100deg,#00D9C9,#18FFE0)"></div></td><td><code>linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%)</code></td><td>Deposit, Play Now, Purchase Now</td></tr>
+    <tr><td class="k">View All</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(100deg,#5B087C,#A83CD2 60%,#E6A5FF)"></div></td><td><code>linear-gradient(100deg,#5B087C 0%,#A83CD2 60%,#E6A5FF 100%)</code></td><td>Every View All button</td></tr>
+    <tr><td class="k">Neon edge</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#04F5E5,#7B8CFF 50%,#F032F4)"></div></td><td><code>linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%)</code></td><td>Section title pill border, VIP banner border, ticker</td></tr>
+    <tr><td class="k">Hero REPEAT</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#2EF2D0,#33D3F0 35%,#8C7BFF 65%,#E93BF2)"></div></td><td><code>linear-gradient(90deg,#2EF2D0 0%,#33D3F0 35%,#8C7BFF 65%,#E93BF2 100%)</code></td><td>Hero headline word, clipped to text</td></tr>
+    <tr><td class="k">VIP banner</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#030A1E,#140A3A 45%,#5A1E86)"></div></td><td><code>linear-gradient(90deg,#030A1E 0%,#140A3A 45%,#5A1E86 100%)</code></td><td>VIP Club banner fill</td></tr>
+    <tr><td class="k">Provider tile</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(160deg,#082749,#07172D)"></div></td><td><code>linear-gradient(160deg,#082749 0%,#07172D 100%)</code> <span class="tag s">Sampled</span></td><td>Provider logo tiles</td></tr>
+    <tr><td class="k">Search edge</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#B44DFF,#04F5E5 45%,#F032F4)"></div></td><td><code>linear-gradient(90deg,#B44DFF 0%,#04F5E5 45%,#F032F4 100%)</code></td><td>AI Game Search border</td></tr>
+    <tr><td class="k">Image fade</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(180deg,transparent,#6A0FD0)"></div></td><td><code>linear-gradient(180deg,transparent 45%,rgba(106,15,208,.85) 100%)</code></td><td>Bottom of Game Shows and Live Casino art (usually baked into the art)</td></tr>
+  </table></div>
+  <h3>Glow presets</h3>
+  <div class="tbl"><table>
+    <tr><th>Name</th><th>box-shadow</th><th>Used on</th></tr>
+    <tr><td class="k">Split glow</td><td><code>-4px 0 14px rgba(4,245,229,.45), 4px 0 14px rgba(240,50,244,.50)</code></td><td>Section title pills, VIP banner</td></tr>
+    <tr><td class="k">Cyan glow</td><td><code>0 0 6px rgba(4,245,229,.65), 0 0 18px rgba(4,245,229,.30)</code></td><td>CTA buttons, cyan-bordered cards</td></tr>
+    <tr><td class="k">Magenta glow</td><td><code>0 0 6px rgba(240,50,244,.65), 0 0 18px rgba(240,50,244,.30)</code></td><td>Magenta-bordered cards, NEW badge</td></tr>
+    <tr><td class="k">Accent glow</td><td><code>0 0 12px color-mix(in srgb, var(--accent) 65%, transparent)</code></td><td>New Games, High RTP, characters (one colour per card)</td></tr>
+  </table></div>
+</section>
+
+<section id="type">
+  <span class="eyebrow">Foundations</span>
+  <h2>Typography</h2>
+  <p>Two families. <strong>Montserrat</strong> carries the brand: the hero, section titles, buttons and card labels. It matches the wide, round geometric letters in the screenshot. <strong>Inter</strong> handles running text, FAQ answers, footer links and small UI labels. Both are free on Google Fonts. These are visual matches; if the designer used other source fonts, swap them in here.</p>
+  <div class="panel">
+    <div class="eyeb"><span class="c">THE ULTIMATE</span> <span class="m">GAMING EXPERIENCE</span></div>
+    <div class="hero-type" style="margin-top:8px">PLAY.WIN.<br><span class="rep">REPEAT</span></div>
+  </div>
+  <div class="panel">
+    <div class="type-row"><small>Hero · 900</small><div style="font:900 44px/1 var(--f-display)">PLAY.WIN.</div></div>
+    <div class="type-row"><small>H2 page · 600</small><div style="font:600 30px/1.2 var(--f-display)">Frequently Asked Questions</div></div>
+    <div class="type-row"><small>Section title · 600</small><div style="font:600 24px/1.2 var(--f-display)">Popular Games</div></div>
+    <div class="type-row"><small>Banner · 800 italic</small><div style="font:italic 800 34px/1 var(--f-display)">VIP CLUB</div></div>
+    <div class="type-row"><small>Promo title · 800</small><div style="font:800 24px/1.05 var(--f-display)">WELCOME <span style="color:#2EF2D0">BONUS</span></div></div>
+    <div class="type-row"><small>Card title · 700</small><div style="font:700 14px/1.3 var(--f-display);letter-spacing:.02em">CYBERPUNK ODYSSEY</div></div>
+    <div class="type-row"><small>Button · 700</small><div style="font:700 15px var(--f-display)">Play Now →</div></div>
+    <div class="type-row"><small>Body · Inter 400</small><div style="font:400 15px/1.6 var(--f-body);color:#C4CFDD">Our system complies with international banking standards and uses end-to-end encryption.</div></div>
+    <div class="type-row"><small>Meta · Inter 500</small><div style="font:500 13px var(--f-body);color:#C4CFDD">👤 2,400 Playing</div></div>
+    <div class="type-row"><small>Tag · Inter 700</small><div><span class="badge-tag">NEW PROVIDER</span></div></div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Role</th><th>Family</th><th>Size @1440</th><th>Weight</th><th>Line height</th><th>Case / colour</th></tr>
+    <tr><td class="k">Hero headline</td><td>Montserrat</td><td>88–96px</td><td>900</td><td>0.92</td><td>Upper · white + REPEAT gradient</td></tr>
+    <tr><td class="k">Hero eyebrow</td><td>Montserrat</td><td>20–22px</td><td>800</td><td>1.2</td><td>Upper · cyan + magenta</td></tr>
+    <tr><td class="k">Hero feature row</td><td>Montserrat</td><td>12px</td><td>700</td><td>1</td><td>Upper · white, cyan icons</td></tr>
+    <tr><td class="k">Section title (pill)</td><td>Montserrat</td><td>24px</td><td>600</td><td>1.2</td><td>Title case · white</td></tr>
+    <tr><td class="k">Page heading (FAQ, SEO)</td><td>Montserrat</td><td>30–34px</td><td>600</td><td>1.2</td><td>Title case · white, key phrase magenta <code>#F032F4</code></td></tr>
+    <tr><td class="k">Promo title</td><td>Montserrat</td><td>24–26px</td><td>800</td><td>1.05</td><td>Upper · white, accent word mint</td></tr>
+    <tr><td class="k">VIP banner title</td><td>Montserrat</td><td>48px</td><td>800 italic</td><td>1</td><td>Upper · white</td></tr>
+    <tr><td class="k">Card title</td><td>Montserrat</td><td>14px</td><td>700</td><td>1.3</td><td>Upper · white</td></tr>
+    <tr><td class="k">Buttons</td><td>Montserrat</td><td>14–16px</td><td>700</td><td>1</td><td>Title case</td></tr>
+    <tr><td class="k">Body, FAQ answers</td><td>Inter</td><td>15px</td><td>400</td><td>1.6</td><td>Sentence case · muted</td></tr>
+    <tr><td class="k">Footer links, meta</td><td>Inter</td><td>13–14px</td><td>400–500</td><td>1.8</td><td>Title case · muted</td></tr>
+    <tr><td class="k">Tags, ribbons</td><td>Inter</td><td>10–11px</td><td>700</td><td>1</td><td>Upper · letter-spacing .06em</td></tr>
+  </table></div>
+  <div class="note warn"><strong>Text inside artwork.</strong> Game names on Casino, Live Casino, Game Shows, High RTP, New Games and character cards are game logos, and they are part of the image. They use each game's own lettering (chunky condensed, gold bevel, outline and drop shadow). Don't try to reproduce them in CSS, and don't place HTML titles on top of them.</div>
+</section>
+
+<section id="borders">
+  <span class="eyebrow">Foundations</span>
+  <h2>Borders &amp; radii</h2>
+  <p>Almost every object on the page is outlined. There are three kinds of border, and each has a job.</p>
+  <div class="stage">
+    <div class="border-demos">
+      <div class="bd" style="border:2px solid transparent;background:linear-gradient(#061326,#061326) padding-box,var(--neon-edge) border-box;box-shadow:-4px 0 14px rgba(4,245,229,.4),4px 0 14px rgba(240,50,244,.45);border-radius:999px"><div><b>Neon edge</b>Titles, VIP, search</div></div>
+      <div class="bd" style="border:1.5px solid #04F5E5;box-shadow:0 0 6px rgba(4,245,229,.6),0 0 16px rgba(4,245,229,.25)"><div><b>Single neon</b>Cards, promos</div></div>
+      <div class="bd" style="border:1.5px solid #F032F4;box-shadow:0 0 6px rgba(240,50,244,.6),0 0 16px rgba(240,50,244,.25)"><div><b>Single neon</b>Magenta variant</div></div>
+      <div class="bd" style="border:2px solid #F9A202;box-shadow:0 0 12px rgba(249,162,2,.6)"><div><b>Accent</b>Matches the art</div></div>
+      <div class="bd" style="border:1px solid #233650"><div><b>Quiet</b>Nav, FAQ, inputs</div></div>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Element</th><th>Border</th><th>Radius @1440</th><th>Glow</th></tr>
+    <tr><td class="k">Section title pill</td><td>2px neon-edge gradient</td><td>999px</td><td>Split glow</td></tr>
+    <tr><td class="k">News ticker</td><td>1.5px cyan → violet</td><td>999px</td><td>Faint cyan</td></tr>
+    <tr><td class="k">Wallet</td><td>1px <code>#233650</code></td><td>12px</td><td>None</td></tr>
+    <tr><td class="k">Category nav</td><td>1px <code>#3A4A66</code></td><td>14px</td><td>None</td></tr>
+    <tr><td class="k">Hero side arrows</td><td>1px <code>#3A4A66</code></td><td>50% (circle)</td><td>None</td></tr>
+    <tr><td class="k">Active Players card</td><td>1.5px magenta</td><td>14px</td><td>Magenta</td></tr>
+    <tr><td class="k">Promotion card</td><td>1.5px cyan or magenta</td><td>12px</td><td>Matching colour</td></tr>
+    <tr><td class="k">Popular game card</td><td>1.5px magenta / violet</td><td>12px</td><td>Magenta</td></tr>
+    <tr><td class="k">Casino &amp; Live Casino card</td><td>1.5px magenta / violet</td><td>12px</td><td>Magenta</td></tr>
+    <tr><td class="k">Favourite character card</td><td>2px accent (gold, violet, pink)</td><td>16px</td><td>Accent glow</td></tr>
+    <tr><td class="k">Game Shows card</td><td>2px magenta / violet</td><td>14px</td><td>Magenta</td></tr>
+    <tr><td class="k">High RTP info panel</td><td>2px gradient cyan → purple</td><td>16px</td><td>Cyan + purple</td></tr>
+    <tr><td class="k">High RTP game card</td><td>2px accent (orange, red, green, blue)</td><td>14px</td><td>Accent glow</td></tr>
+    <tr><td class="k">New Games tile</td><td>2px accent, lighter than the card</td><td>16px</td><td>Accent glow</td></tr>
+    <tr><td class="k">VIP Club banner</td><td>2px neon-edge gradient</td><td>16px</td><td>Split glow</td></tr>
+    <tr><td class="k">Provider tile</td><td>1px <code>#12304F</code></td><td>10px</td><td>None (cyan on hover)</td></tr>
+    <tr><td class="k">AI Game Search</td><td>2px search-edge gradient</td><td>999px</td><td>Purple</td></tr>
+    <tr><td class="k">FAQ item</td><td>1px <code>#2A3A58</code></td><td>10px</td><td>None</td></tr>
+    <tr><td class="k">FAQ active tab</td><td>1.5px <code>#8B5CFF</code></td><td>10px</td><td>Violet</td></tr>
+    <tr><td class="k">Newsletter card</td><td>1.5px <code>#E03BA8</code></td><td>16px</td><td>Pink</td></tr>
+  </table></div>
+  <p><strong>Rule of thumb:</strong> things you click or browse get a neon border with a glow. Structure (nav bar, FAQ rows, inputs) gets a quiet 1px line with no glow. Never put a glow on the quiet border.</p>
+</section>
+
+<section id="spacing">
+  <span class="eyebrow">Foundations</span>
+  <h2>Grid &amp; spacing</h2>
+  <p>The design is drawn on a 1440px canvas with a centred container of about 1290px (≈75px side gutters). All rows of cards share the same left and right edge. Hero arrows are the only things that sit outside the container.</p>
+  <div class="tbl"><table>
+    <tr><th>Token</th><th>Value @1440</th><th>Where</th></tr>
+    <tr><td class="k">Container</td><td>max-width 1290px</td><td>Every section</td></tr>
+    <tr><td class="k">Card gap</td><td>20px</td><td>Promotions, Popular, Casino, Characters, Live, Game Shows</td></tr>
+    <tr><td class="k">Dense gap</td><td>12–14px</td><td>New Games (8-up), Provider tiles, High RTP cards</td></tr>
+    <tr><td class="k">Header → cards</td><td>14–16px</td><td>Between section header and its card row</td></tr>
+    <tr><td class="k">Section → section</td><td>28–32px</td><td>From the bottom of one card row to the next header</td></tr>
+    <tr><td class="k">Card inner padding</td><td>16–20px</td><td>Promotions, VIP banner, newsletter card</td></tr>
+    <tr><td class="k">Header bar height</td><td>72px</td><td>Top bar</td></tr>
+    <tr><td class="k">News ticker height</td><td>46px</td><td>Below header</td></tr>
+    <tr><td class="k">Hero height</td><td>360–380px</td><td>Including dots</td></tr>
+    <tr><td class="k">Category nav height</td><td>56px</td><td>Six equal tabs</td></tr>
+  </table></div>
+  <h3>Card sizes at 1440</h3>
+  <div class="tbl"><table>
+    <tr><th>Card</th><th>Per row</th><th>Size</th><th>Ratio</th></tr>
+    <tr><td class="k">Promotion</td><td>3</td><td>≈ 416 × 212</td><td>≈ 2 : 1</td></tr>
+    <tr><td class="k">Popular game</td><td>4</td><td>≈ 308 × 220 (art 150 + footer 70)</td><td>art ≈ 2 : 1</td></tr>
+    <tr><td class="k">Casino / Live Casino</td><td>4</td><td>≈ 308 × 155</td><td>≈ 2 : 1</td></tr>
+    <tr><td class="k">Favourite character</td><td>3</td><td>≈ 416 × 200</td><td>≈ 2.1 : 1</td></tr>
+    <tr><td class="k">Game Show</td><td>3</td><td>≈ 416 × 208</td><td>≈ 2 : 1</td></tr>
+    <tr><td class="k">High RTP info panel</td><td>1 + 4 cards</td><td>≈ 440 × 162</td><td>≈ 2.7 : 1</td></tr>
+    <tr><td class="k">High RTP game</td><td>4</td><td>≈ 190 × 162</td><td>≈ 1.15 : 1</td></tr>
+    <tr><td class="k">New game tile</td><td>8</td><td>≈ 150 × 195</td><td>≈ 0.78 (7 : 9)</td></tr>
+    <tr><td class="k">Provider tile</td><td>6</td><td>≈ 205 × 64</td><td>≈ 3.2 : 1</td></tr>
+    <tr><td class="k">VIP banner</td><td>1</td><td>1290 × 130</td><td>full width</td></tr>
+  </table></div>
+</section>
+
+<section id="buttons">
+  <span class="eyebrow">Foundations</span>
+  <h2>Buttons &amp; badges</h2>
+  <p>Every sample below is live HTML built with the CSS in this guide. Buttons are never part of an image: the art carries the picture, the HTML carries the action.</p>
+  <div class="stage">
+    <button class="btn-deposit">Deposit</button>
+    <button class="btn-play">Play Now →</button>
+    <button class="btn-ghost">Explore Games ▶</button>
+    <button class="btn-view">View All →</button>
+    <button class="btn-arrow" aria-label="Previous">‹</button><button class="btn-arrow next" aria-label="Next">›</button>
+  </div>
+  <div class="stage">
+    <button class="btn-promo">🎁 Purchase Now</button>
+    <button class="btn-mint">Play Now ▶</button>
+    <button class="btn-vip">Explore VIP Club →</button>
+    <button class="btn-read">Continue Reading</button>
+    <button class="btn-search" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+  </div>
+  <div class="stage">
+    <span class="badge-new">NEW</span><span class="badge-hot">HOT</span><span class="badge-rtp">RTP 98.61%</span><span class="badge-tag">AVAILABLE</span><span class="ribbon">KING'S ARRIVAL</span><span class="ribbon cy">BEYOND LIMITS</span>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Control</th><th>Size @1440</th><th>Fill</th><th>Border / radius</th><th>Text</th></tr>
+    <tr><td class="k">Deposit</td><td>140 × 42</td><td>CTA gradient</td><td>none · 8px</td><td>15px / 700 · <code>#00151C</code></td></tr>
+    <tr><td class="k">Hero Play Now</td><td>≈ 180 × 46</td><td>CTA gradient</td><td>none · 8px</td><td>16px / 700 + arrow</td></tr>
+    <tr><td class="k">Explore Games</td><td>≈ 225 × 46</td><td><code>#0B1230</code></td><td>1.5px <code>#C85DFF</code> · 8px</td><td>16px / 600 white + ▶</td></tr>
+    <tr><td class="k">View All</td><td>184 × 44</td><td>View All gradient</td><td>1.5px <code>#F38CFF</code> · 12px</td><td>14px / 700 white + →</td></tr>
+    <tr><td class="k">Carousel arrows</td><td>44 × 44</td><td>navy gradient</td><td>1.5px cyan (prev), purple (next) · 10px</td><td>white chevron</td></tr>
+    <tr><td class="k">Promo CTA</td><td>≈ 36px high</td><td>CTA gradient</td><td>none · 7px</td><td>13px / 700 + gift icon</td></tr>
+    <tr><td class="k">Character Play Now</td><td>≈ 48px high</td><td>Mint <code>#2EF0C8</code></td><td>none · 14px</td><td>16px / 700 + ▶</td></tr>
+    <tr><td class="k">Explore VIP Club</td><td>≈ 44px high</td><td>Purple gradient</td><td>1.5px pink · 999px</td><td>14px / 700 + →</td></tr>
+    <tr><td class="k">Continue Reading</td><td>≈ 280 × 44</td><td>Plum gradient</td><td>1.5px <code>#E03BA8</code> · 8px</td><td>14px / 600 white</td></tr>
+    <tr><td class="k">Search</td><td>≈ 64 × 44</td><td>Magenta gradient</td><td>none · 999px</td><td>white icon</td></tr>
+  </table></div>
+  <p><strong>States.</strong> Hover lifts 2px and brightens the glow over 200ms. Pressed scales to .98. Keyboard focus shows a 2px cyan outline with a 3px offset. Disabled drops to 45% opacity and loses its glow. With reduced motion turned on, keep the colour change and drop the movement.</p>
+</section>
+
+<section id="section-header">
+  <span class="eyebrow">Foundations · the most repeated component</span>
+  <h2>Section header</h2>
+  <p>Every content section opens with this header: a neon pill title with a cyan line icon on the left, and a View All button with two arrows on the right. Promotions is the one exception, with no controls, because all three cards are always visible.</p>
+  <figure class="ref"><img src="img/section-header.webp" alt="Popular Games section header with neon pill title, purple View All button and two arrow buttons" loading="lazy"><figcaption><b>Homepage</b>Popular Games header.</figcaption></figure>
+  <div class="stage">
+    <div class="sec-head">
+      <h3 class="pill-title" style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="12.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><path d="M7 5h10a5 5 0 0 1 5 5v2a5 5 0 0 1-9 3h-2a5 5 0 0 1-9-3v-2a5 5 0 0 1 5-5z"/></svg>Popular Games</h3>
+      <div class="ctl"><button class="btn-view">View All →</button><button class="btn-arrow" aria-label="Previous">‹</button><button class="btn-arrow next" aria-label="Next">›</button></div>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>Section</th><th>Icon (line, cyan, 24–26px)</th><th>Controls</th></tr>
+    <tr><td class="k">Promotions</td><td>Gift box</td><td>None</td></tr>
+    <tr><td class="k">Popular Games</td><td>Game controller</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Casino</td><td>Casino chip / dice</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Favourite Characters from Games</td><td>Group of people (filled)</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Live Casino</td><td>Live dealer / chip</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Game Shows</td><td>Wheel / TV</td><td>View All + arrows</td></tr>
+    <tr><td class="k">High RTP Games</td><td>Percent sign, green <code>#1CF11D</code></td><td>View All + arrows</td></tr>
+    <tr><td class="k">New Games</td><td>Sparkles</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Game Providers</td><td>Game controller</td><td>View All + arrows</td></tr>
+  </table></div>
+  <p><strong>Optional subtitle.</strong> The New Games and Favourite Characters references show a one-line subtitle under the header ("Discover the latest games added to our collection!"). It is not used on the homepage. Use it on category subpages: Inter 500, 18px, <code>#E6ECF5</code>, 10px below the pill.</p>
+  <div class="code"><button class="copy" data-target="code-sechead">Copy CSS</button><pre id="code-sechead">.section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
+.section-title{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:6px 26px;
+  border:2px solid transparent;border-radius:999px;
+  background:linear-gradient(#051026,#051026) padding-box,
+             linear-gradient(90deg,#04F5E5,#7B8CFF 50%,#F032F4) border-box;
+  box-shadow:-4px 0 14px rgba(4,245,229,.45),4px 0 14px rgba(240,50,244,.5);
+  font:600 24px/1.2 Montserrat,Arial,sans-serif;color:#fff}
+.section-title svg{width:26px;height:26px;color:#04F5E5}
+.view-all{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:0 20px;
+  border:1.5px solid #F38CFF;border-radius:12px;
+  background:linear-gradient(100deg,#5B087C,#A83CD2 60%,#E6A5FF);
+  box-shadow:0 0 14px rgba(218,45,255,.45);color:#fff;font:700 14px Montserrat,sans-serif}
+.carousel-btn{width:44px;height:44px;display:grid;place-items:center;border:1.5px solid #10E8F1;
+  border-radius:10px;background:linear-gradient(125deg,#07162C,#1B2350);color:#fff}
+.carousel-btn--next{border-color:#BD48F5}</pre></div>
+</section>
+
+<!-- ================= IMAGERY ================= -->
+<div class="part" id="imagery-part"><span class="eyebrow">Part 2</span><h2>Imagery</h2></div>
+
+<section id="imagery">
+  <span class="eyebrow">Imagery</span>
+  <h2>Image style</h2>
+  <p>All game and promo art follows one look: <strong>glossy, high-contrast 3D illustration lit by neon</strong>. Every image uses the same recipe. Each point below can be seen in the approved examples.</p>
+  <div class="grid3">
+    <figure class="ref"><img src="img/character-card.webp" alt="Book of Dead character card: explorer holding a golden book, gold light trails, gold border, mint Play Now button" loading="lazy"><figcaption><b>Character</b>Hero figure on the left, logo and CTA on the right.</figcaption></figure>
+    <figure class="ref"><img src="img/new-game-card.webp" alt="Plinko Pop Meltdown new game tile: glowing green temple steps with a chunky game logo and magenta NEW badge" loading="lazy"><figcaption><b>Saturated tile</b>One dominant hue fills the whole tile.</figcaption></figure>
+    <figure class="ref"><img src="img/rtp-card.webp" alt="Book of Truth High RTP card: glowing open golden book on dark background with cyan RTP 98.61% badge" loading="lazy"><figcaption><b>Symbol</b>One glowing object on a dark ground.</figcaption></figure>
+  </div>
+  <div class="grid2">
+    <div class="panel" style="margin:0">
+      <h3 style="margin-top:0">Always</h3>
+      <ul style="color:#C7D2E0;font-size:14px;padding-left:18px;margin:8px 0 0">
+        <li>One clear subject: a character, a dealer, or a single symbol (book, 7, clover, diamond).</li>
+        <li>Neon rim light in the card's accent colour. Light trails or sparks curl around the subject.</li>
+        <li>Deep background: navy, black-violet, or one saturated hue for New Games.</li>
+        <li>Rich, saturated colour with crisp highlights on gold, gems and coins.</li>
+        <li>Friendly, confident characters looking at the viewer, from the chest up.</li>
+        <li>Game logo in the lower third (tiles) or upper right (character cards).</li>
+      </ul>
+    </div>
+    <div class="panel" style="margin:0">
+      <h3 style="margin-top:0">Never</h3>
+      <ul style="color:#C7D2E0;font-size:14px;padding-left:18px;margin:8px 0 0">
+        <li>Photographs, flat vector art or muted colour.</li>
+        <li>Buttons, prices, coin amounts, RTP numbers or player counts inside the image.</li>
+        <li>A border or glow drawn into the image. Borders are always CSS.</li>
+        <li>Imitations of a real provider's game art. Licensed titles use the provider's own approved assets.</li>
+        <li>Cash, cards or chips shown as real-money prizes. This is a sweepstakes site (see <a href="#sweeps">wording</a>).</li>
+        <li>Stretching. Crop to the ratio instead.</li>
+      </ul>
+    </div>
+  </div>
+  <h3>What is in the image vs. what is HTML</h3>
+  <div class="tbl"><table>
+    <tr><th>Card type</th><th>Baked into the image</th><th>Built in HTML / CSS</th></tr>
+    <tr><td class="k">Hero</td><td>777 slot machine, coins, diamonds, lightning</td><td>Eyebrow, headline, feature row, buttons, Active Players card, dots, arrows</td></tr>
+    <tr><td class="k">Promotion</td><td>Right-hand art (gift box, characters, provider mascots)</td><td>Tag, title, offer, CTA, ribbon, border</td></tr>
+    <tr><td class="k">Popular game</td><td>Character art + game logo</td><td>Footer title, player count, HOT badge, border</td></tr>
+    <tr><td class="k">Casino / Live Casino</td><td>Dealer, table and label (ROULETTE, LIVE)</td><td>Border, glow, link</td></tr>
+    <tr><td class="k">Favourite character</td><td>Character, background glow, game logo</td><td>Play Now button, border, glow</td></tr>
+    <tr><td class="k">Game Show</td><td>Host, wheel, game logo, purple fade</td><td>Border, glow, link</td></tr>
+    <tr><td class="k">High RTP game</td><td>Symbol + game logo</td><td>RTP badge, border</td></tr>
+    <tr><td class="k">New game</td><td>Full tile art + game logo</td><td>NEW badge, border, glow</td></tr>
+    <tr><td class="k">VIP banner</td><td>Two gold crowns (transparent PNG/WebP)</td><td>Everything else</td></tr>
+    <tr><td class="k">Provider</td><td>Logo only (SVG, transparent)</td><td>Tile, border</td></tr>
+  </table></div>
+  <h3>Generation brief (for new in-house art)</h3>
+  <div class="code"><button class="copy" data-target="code-brief">Copy brief</button><pre id="code-brief">Premium casino game illustration, glossy high-detail 3D render, one clear subject
+[CHARACTER / DEALER / SYMBOL], dramatic neon rim lighting in [ACCENT COLOUR],
+curling light trails and small sparks, deep [NAVY / BLACK-VIOLET / SATURATED ACCENT]
+background, rich saturated colour, crisp metallic highlights on gold and gems,
+subject placed [LEFT HALF for character cards | CENTRED for tiles],
+leave [RIGHT 45% | LOWER THIRD] calm for the game logo and HTML button.
+No text except the game logo. No buttons, prices, RTP numbers, borders or watermarks.</pre></div>
+</section>
+
+<section id="formats">
+  <span class="eyebrow">Imagery</span>
+  <h2>Image formats &amp; exports</h2>
+  <p>Export every image at 2× its displayed size. Use WebP (AVIF where your stack supports it), always set <code>width</code> and <code>height</code> to stop layout shift, and lazy-load everything below the hero.</p>
+  <div class="tbl"><table>
+    <tr><th>Asset</th><th>Ratio</th><th>Export (2×)</th><th>Safe area</th><th>File name</th></tr>
+    <tr><td class="k">Hero art</td><td>≈ 3.6 : 1</td><td>2600 × 720</td><td>Art in right 55%</td><td><code>hero/hero-777.webp</code></td></tr>
+    <tr><td class="k">Promotion art</td><td>2 : 1</td><td>840 × 420</td><td>Art in right 50%</td><td><code>promotions/welcome-bonus.webp</code></td></tr>
+    <tr><td class="k">Popular game</td><td>2 : 1</td><td>640 × 320</td><td>Logo in lower third</td><td><code>games/cyberpunk-odyssey.webp</code></td></tr>
+    <tr><td class="k">Casino / Live tile</td><td>2 : 1</td><td>640 × 320</td><td>Label bottom centre</td><td><code>casino/roulette.webp</code></td></tr>
+    <tr><td class="k">Character card</td><td>2.1 : 1 (1.65 : 1 on mobile)</td><td>880 × 420 + 880 × 534</td><td>Figure left 50%, logo top right</td><td><code>characters/book-of-dead.webp</code></td></tr>
+    <tr><td class="k">Game Show</td><td>2 : 1</td><td>840 × 420</td><td>Logo bottom centre</td><td><code>game-shows/monopoly.webp</code></td></tr>
+    <tr><td class="k">High RTP game</td><td>1.15 : 1</td><td>400 × 350</td><td>Bottom 30% clear for badge</td><td><code>rtp/fire-streak.webp</code></td></tr>
+    <tr><td class="k">New game tile</td><td>7 : 9</td><td>320 × 410</td><td>Top-right corner clear for NEW</td><td><code>new/coinburst-sevens.webp</code></td></tr>
+    <tr><td class="k">VIP crown</td><td>1 : 1</td><td>240 × 240, transparent</td><td>—</td><td><code>vip/crown.webp</code></td></tr>
+    <tr><td class="k">Provider logo</td><td>any</td><td>SVG</td><td>Max 40px high in tile</td><td><code>providers/hacksaw.svg</code></td></tr>
+  </table></div>
+</section>
+
+<!-- ================= SECTIONS ================= -->
+<div class="part" id="sections"><span class="eyebrow">Part 3</span><h2>Homepage sections</h2></div>
+
+<section id="s-header">
+  <span class="eyebrow">Section · site chrome</span>
+  <h2>Header &amp; news ticker</h2>
+  <figure class="ref"><img src="img/header-ticker.webp" alt="Header with menu icon, LOGO HERE, $100.00 wallet and cyan Deposit button, above a rounded news ticker" loading="lazy"><figcaption><b>Homepage</b>Header and ticker.</figcaption></figure>
+  <div class="grid2">
+    <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the logo (wordmark, white, Montserrat 800). Right: the wallet pill (coin icon, balance, chevron; 1px <code>#233650</code>, 12px radius, <code>#061326</code> fill) and the Deposit button. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
+    <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Montserrat 800 with a megaphone icon, then items separated by small white dots. Each item has a colour icon (🎁 ⚡ 👑). A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
+  </div>
+</section>
+
+<section id="s-hero">
+  <span class="eyebrow">Section · main banner</span>
+  <h2>Hero carousel</h2>
+  <figure class="ref"><img src="img/hero.webp" alt="Hero banner: PLAY.WIN.REPEAT headline, feature row, Play Now and Explore Games buttons, neon 777 slot machine art and Active Players card" loading="lazy"><figcaption><b>Homepage</b>Hero slide 1 of 3.</figcaption></figure>
+  <div class="tbl"><table>
+    <tr><th>Layer</th><th>Spec</th></tr>
+    <tr><td class="k">Frame</td><td>Container width, 360–380px high, no border. The art bleeds to the right edge and fades into the page on the left.</td></tr>
+    <tr><td class="k">Eyebrow</td><td>"THE ULTIMATE" cyan <code>#2EF2D0</code> + "GAMING EXPERIENCE" magenta <code>#E93BF2</code>, 21px / 800.</td></tr>
+    <tr><td class="k">Headline</td><td>"PLAY.WIN." white, "REPEAT" with the REPEAT gradient. 88–96px / 900, two lines.</td></tr>
+    <tr><td class="k">Feature row</td><td>Four items with cyan line icons: SLOTS · LIVE CASINO · BIG WINS · INSTANT PLAY. 12px / 700, 28px apart.</td></tr>
+    <tr><td class="k">Buttons</td><td>Play Now (CTA) + Explore Games (ghost), 16px apart, 18px under the feature row.</td></tr>
+    <tr><td class="k">Art</td><td>Neon 777 slot machine with gold coins, diamond and lightning. Right 55–60% of the frame.</td></tr>
+    <tr><td class="k">Active Players card</td><td>≈ 215 × 135, bottom right, overlapping the art. Translucent navy <code>rgba(6,10,30,.75)</code> with a 1.5px magenta border and 14px radius. Label in white 13px; the number "25,000+" in cyan 18px / 700; a purple rising line chart.</td></tr>
+    <tr><td class="k">Arrows</td><td>40px circles outside the container, vertically centred. 1px <code>#3A4A66</code> border, navy fill.</td></tr>
+    <tr><td class="k">Dots</td><td>Three 8px dots, centred under the art. Active is white, inactive is outlined.</td></tr>
+  </table></div>
+  <div class="note warn">The Active Players number must come from real data or be removed. Don't show an invented live count.</div>
+</section>
+
+<section id="s-nav">
+  <span class="eyebrow">Section · navigation</span>
+  <h2>Category nav</h2>
+  <figure class="ref"><img src="img/category-nav.webp" alt="Category navigation bar with Popular, New, Casino, Live Casino, Promotions and VIP Club" loading="lazy"><figcaption><b>Homepage</b>Six tabs; Popular is active.</figcaption></figure>
+  <p>A 56px bar with a 1px <code>#3A4A66</code> border, 14px radius and a transparent fill. Six equal tabs: Popular, New, Casino, Live Casino, Promotions, VIP Club. Each tab has a 22px white line icon and a 15px / 500 label. The active tab's icon turns cyan with a soft glow, and its label stays white. On mobile the bar scrolls sideways.</p>
+</section>
+
+<section id="s-promos">
+  <span class="eyebrow">Section · marketing</span>
+  <h2>Promotions</h2>
+  <figure class="ref"><img src="img/promotions.webp" alt="Promotions section with Welcome Bonus, Welcome Penguin King and Welcome Evoplay cards" loading="lazy"><figcaption><b>Homepage</b>Three promotion cards.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/promo-card.webp" alt="Welcome Bonus promotion card close-up" loading="lazy"><figcaption><b>Detail</b>Welcome Bonus, cyan variant.</figcaption></figure>
+    <div class="tbl" style="margin:0"><table style="min-width:0">
+      <tr><th>Layer</th><th>Spec</th></tr>
+      <tr><td class="k">Card</td><td>≈ 2 : 1, 12px radius, 1.5px cyan or magenta border with matching glow. Fill: dark teal <code>#04161C</code> (cyan) or dark plum <code>#160818</code> (magenta).</td></tr>
+      <tr><td class="k">Tag</td><td>Top left, white outline pill: AVAILABLE, NEW PROVIDER.</td></tr>
+      <tr><td class="k">Ribbon</td><td>Optional, top right corner. Pink <code>#FF4F9B</code> or teal <code>#2CD6C2</code>.</td></tr>
+      <tr><td class="k">Title</td><td>Two or three lines, 24–26px / 800, uppercase white; one accent word in mint.</td></tr>
+      <tr><td class="k">Offer</td><td>12px / 600 uppercase, with GC and SC amounts in gold.</td></tr>
+      <tr><td class="k">CTA</td><td>Bottom left, CTA gradient with gift icon.</td></tr>
+      <tr><td class="k">Art</td><td>Right half, glowing to match the border colour.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section id="s-popular">
+  <span class="eyebrow">Section · game row</span>
+  <h2>Popular Games</h2>
+  <figure class="ref"><img src="img/popular.webp" alt="Popular Games row with Cyberpunk Odyssey, Shadow Blade, Neon Horizon Zero and Valiant Gold" loading="lazy"><figcaption><b>Homepage</b>Four cards with a text footer.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/popular-card.webp" alt="Cyberpunk Odyssey card with player count footer" loading="lazy"><figcaption><b>Detail</b>Art + footer.</figcaption></figure>
+    <div>
+      <p>The only game row with an HTML footer. The art (≈ 2 : 1) sits on top. Under it is a 70px footer in <code>#0A1426</code> with the title (14px / 700 uppercase) and a player count (👤 icon, 13px, muted). The whole card has a 1.5px magenta border, 12px radius and magenta glow.</p>
+      <p>A <span class="badge-hot">HOT</span> badge can sit in the top-right corner of the art.</p>
+      <div class="note warn">Player counts must be real. If the number isn't available, hide the line rather than show a placeholder.</div>
+    </div>
+  </div>
+</section>
+
+<section id="s-casino">
+  <span class="eyebrow">Section · game row · new in v6</span>
+  <h2>Casino</h2>
+  <figure class="ref"><img src="img/casino.webp" alt="Casino row with Roulette, Blackjack, Baccarat and Slots cards" loading="lazy"><figcaption><b>Homepage</b>Roulette, Blackjack, Baccarat, Slots.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/casino-card.webp" alt="Roulette card: dealer beside a roulette wheel, ROULETTE in yellow" loading="lazy"><figcaption><b>Detail</b>Label is part of the art.</figcaption></figure>
+    <div><p>Four ≈ 2 : 1 tiles with no footer. The label (ROULETTE, BLACKJACK…) is in the art: yellow-gold condensed capitals with a dark outline, centred at the bottom. Each tile has a 1.5px magenta/violet border with a 12px radius.</p><p>The art pairs a dealer on the right with the game's table or object on the left, in warm gold or purple light. The Slots tile uses the neon 777 symbol instead of a dealer.</p></div>
+  </div>
+</section>
+
+<section id="s-characters">
+  <span class="eyebrow">Section · feature row</span>
+  <h2>Favourite Characters from Games</h2>
+  <figure class="ref"><img src="img/characters.webp" alt="Favourite Characters reference: Book of Dead, Le Vampire and Sakura Fortune cards with Play Now buttons" loading="lazy"><figcaption><b>Reference 4</b>Section close-up, with subtitle and the decorative wave.</figcaption></figure>
+  <figure class="ref"><img src="img/characters-home.webp" alt="Favourite Characters row on the homepage: three wider cards with gold, violet and pink borders" loading="lazy"><figcaption><b>Homepage</b>The same cards in the wider 2.1 : 1 homepage crop, without subtitle or wave.</figcaption></figure>
+  <div class="tbl"><table>
+    <tr><th>Layer</th><th>Spec</th></tr>
+    <tr><td class="k">Grid</td><td>3 cards, 20px gap. ≈ 2.1 : 1 on the homepage. Reference 4 shows the taller 1.65 : 1 crop, which is used on tablet and mobile.</td></tr>
+    <tr><td class="k">Card</td><td>16px radius, 2px accent border with matching outer glow. Accents: gold <code>#FFB000</code>, violet <code>#C72CFF</code>, pink <code>#FF30C8</code>.</td></tr>
+    <tr><td class="k">Art</td><td>Character from the chest up in the left half, looking at the viewer, wrapped in light trails of the accent colour. Background is dark and tinted with the accent.</td></tr>
+    <tr><td class="k">Logo</td><td>Game logo in the upper right, part of the art.</td></tr>
+    <tr><td class="k">CTA</td><td>Play Now ▶ in mint <code>#2EF0C8</code>, 14px radius, lower right, centred under the logo.</td></tr>
+    <tr><td class="k">Wave</td><td>The cyan/purple wave under the cards in reference 4 is a decorative SVG for standalone use. It isn't on the homepage.</td></tr>
+  </table></div>
+</section>
+
+<section id="s-live">
+  <span class="eyebrow">Section · game row</span>
+  <h2>Live Casino</h2>
+  <figure class="ref"><img src="img/live-casino.webp" alt="Live Casino row with Roulette Live, Blackjack Live, Baccarat Live and Game Shows Live" loading="lazy"><figcaption><b>Homepage</b>Same card as Casino, with a LIVE label.</figcaption></figure>
+  <p>Built exactly like <a href="#s-casino">Casino</a>: four ≈ 2 : 1 tiles with neon borders. The label has two lines: the game name in yellow-gold and <strong>LIVE</strong> in magenta underneath, both part of the art. The fourth tile, Game Shows Live, links to the Game Shows section or page.</p>
+</section>
+
+<section id="s-shows">
+  <span class="eyebrow">Section · feature row · corrected in v6</span>
+  <h2>Game Shows</h2>
+  <figure class="ref"><img src="img/game-shows.webp" alt="Game Shows row with Sweet Bonanza Candyland, Monopoly and Snakes &amp; Ladders cards" loading="lazy"><figcaption><b>Homepage</b>Three wide cards with neon borders.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/game-show-card.webp" alt="Sweet Bonanza Candyland game show card with host, wheel and purple fade" loading="lazy"><figcaption><b>Detail</b>Host, wheel, logo, purple fade.</figcaption></figure>
+    <div><p>This replaces the v5 charcoal design. It uses the standard section header and three ≈ 2 : 1 cards in a row. Each card has a 2px magenta/violet border, 14px radius and magenta glow.</p><p>In the art, a presenter holding a microphone stands in front of the show's wheel or board. The game logo is at the bottom centre, and the lower 40% fades to purple. The fade is in the art; don't add a second CSS overlay.</p></div>
+  </div>
+</section>
+
+<section id="s-rtp">
+  <span class="eyebrow">Section · feature row</span>
+  <h2>High RTP Games</h2>
+  <figure class="ref"><img src="img/high-rtp.webp" alt="High RTP Games reference: RTP 97%+ gold laurel panel with three checklist items, then Book of Truth, Fire Streak, Lucky Clover and Diamond Rush cards with cyan RTP badges" loading="lazy"><figcaption><b>Reference 2</b>Section close-up.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/rtp-info.webp" alt="RTP 97%+ Games info panel with gold laurels and green checkmarks" loading="lazy"><figcaption><b>Detail</b>Info panel.</figcaption></figure>
+    <div class="tbl" style="margin:0"><table style="min-width:0">
+      <tr><th>Layer</th><th>Spec</th></tr>
+      <tr><td class="k">Layout</td><td>Info panel (≈ 34% width) then four game cards. 28px after the panel, 16px between cards.</td></tr>
+      <tr><td class="k">Info panel</td><td>Fill <code>linear-gradient(120deg,#130620,#04121C)</code>. 2px gradient border cyan → purple, 16px radius.</td></tr>
+      <tr><td class="k">Laurel badge</td><td>Gold laurel wreath (art) around "RTP / 97%+ / GAMES" in gold <code>#FFCE21</code>, 900 weight, warm glow.</td></tr>
+      <tr><td class="k">Checklist</td><td>Top Payout Rates · Higher Win Potential · Player Favorites. 22px green check circles <code>#1CF11D</code>, white 14px / 600.</td></tr>
+      <tr><td class="k">Game card</td><td>≈ 1.15 : 1, 14px radius, 2px accent border (amber, red, green, blue-violet).</td></tr>
+      <tr><td class="k">RTP badge</td><td>Bottom centre, pill with 2px <code>#00F8E7</code> outline, translucent fill <code>#00191CC9</code>, cyan 15px / 800 text.</td></tr>
+    </table></div>
+  </div>
+  <div class="note warn">RTP values must come from the provider for the exact game version you host. RTP is a long-run average, so "Higher Win Potential" should be checked with compliance before launch.</div>
+</section>
+
+<section id="s-new">
+  <span class="eyebrow">Section · tile row · new in v6</span>
+  <h2>New Games</h2>
+  <figure class="ref"><img src="img/new-games.webp" alt="New Games reference: eight portrait tiles with NEW badges in green, blue, amber, pink, red and fuchsia" loading="lazy"><figcaption><b>Reference 3</b>Section close-up, with the optional subtitle and wave.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0;max-width:260px"><img src="img/new-game-card.webp" alt="Plinko Pop Meltdown tile" loading="lazy"><figcaption><b>Detail</b>One tile.</figcaption></figure>
+    <div>
+      <p>Eight portrait tiles (7 : 9) in one row, 14px apart. This is the densest row on the page. Each tile is one saturated colour: the art's background matches the border, so the tile reads as a block of colour.</p>
+      <p>Border: 2px, a lighter tint of the tile colour, with a 16px radius and a glow in the same colour. The <span class="badge-new">NEW</span> badge is HTML, pinned 10px from the top-right corner. The game logo is in the lower third of the art.</p>
+      <p>Put tiles of the same colour apart. Lucky Baccarat C (green) and B (pink) sit next to each other because they differ in colour, not just in letter.</p>
+    </div>
+  </div>
+</section>
+
+<section id="s-vip">
+  <span class="eyebrow">Section · banner · new in v6</span>
+  <h2>VIP Club banner</h2>
+  <figure class="ref"><img src="img/vip-club.webp" alt="VIP Club banner with gold crowns on both ends, VIP CLUB title, two-line pitch and Explore VIP Club button" loading="lazy"><figcaption><b>Homepage</b>Full-width banner.</figcaption></figure>
+  <p>A 130px banner across the full container, with no section header. 2px neon-edge border, 16px radius, split glow and the VIP banner gradient fill. From left to right: a gold crown (art), <strong>VIP CLUB</strong> in 48px / 800 italic white, a two-line pitch in 18px / 500 white ("Unlock Exclusive Rewards, Higher Bonuses, and Premium Perks!"), the Explore VIP Club button, and a second crown. Keep the crowns as separate transparent images so the banner can stretch.</p>
+</section>
+
+<section id="s-providers">
+  <span class="eyebrow">Section · logo grid · moved in v6</span>
+  <h2>Game Providers</h2>
+  <figure class="ref"><img src="img/providers.webp" alt="Game Providers grid: six columns by three rows of provider logos" loading="lazy"><figcaption><b>Homepage</b>6 × 3 grid of 18 logos.</figcaption></figure>
+  <div class="grid2">
+    <figure class="ref" style="margin:0;max-width:300px"><img src="img/provider-tile.webp" alt="Hacksaw Gaming provider tile" loading="lazy"><figcaption><b>Detail</b>One tile.</figcaption></figure>
+    <div><p>Tiles ≈ 205 × 64 with 12px gaps, a 10px radius, the provider-tile gradient and a 1px <code>#12304F</code> border. Logos are SVGs in their brand colours or white, centred with <code>object-fit:contain</code>, at most 40px high and 70% of the tile's width. On hover, the border turns cyan with a soft cyan glow.</p>
+    <p>Order: Hacksaw, Games Global, Pragmatic Play, Playson, Novomatic, Alamba · InOut, PG Soft, 3 Oaks, VoltEnt, Shady Lady, Happy Duck · Spribe, Penguin King, Animo, Big Daddy, Fantasma, Icon21.</p></div>
+  </div>
+  <div class="note">Only show providers you have a live contract with, using logos from their media kits.</div>
+</section>
+
+<section id="s-search">
+  <span class="eyebrow">Section · tool · new in v6</span>
+  <h2>AI Game Search</h2>
+  <figure class="ref"><img src="img/ai-search.webp" alt="AI Game Search pill-shaped bar with sparkle icon, placeholder text and magenta search button" loading="lazy"><figcaption><b>Homepage</b>Search bar.</figcaption></figure>
+  <div class="stage"><div class="mini-search"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#04F5E5" stroke-width="1.8" stroke-linejoin="round"><path d="M10 3l1.8 5.2L17 10l-5.2 1.8L10 17l-1.8-5.2L3 10l5.2-1.8z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg><b>AI Game Search</b><span>Tell us what you want to play… e.g., "slots with high RTP"</span><button class="btn-search" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button></div></div>
+  <p>A full-width pill, ≈ 76px tall, with a 2px search-edge gradient border and a purple glow. Fill <code>#070C26</code>. Left: a cyan sparkle icon and "AI Game Search" in 20px / 700 white. A 1px divider, then the input with placeholder text in 14px muted. Right: the magenta search button. The input must be a real labelled <code>&lt;input&gt;</code>.</p>
+</section>
+
+<section id="s-faq">
+  <span class="eyebrow">Section · support · new in v6</span>
+  <h2>FAQ</h2>
+  <figure class="ref"><img src="img/faq.webp" alt="FAQ with left tabs General, Security, Integration, Payment, Support and an accordion of questions" loading="lazy"><figcaption><b>Homepage</b>Tabs left, accordion right.</figcaption></figure>
+  <div class="grid2">
+    <div><h3>Tabs · ≈ 270px column</h3><p>Plain white 15px / 600 labels, 26px apart. The active tab gets a violet <code>#322571</code> fill, a 1.5px <code>#8B5CFF</code> border, 10px radius and a soft violet glow.</p></div>
+    <div><h3>Accordion</h3><p>Heading "Frequently Asked Questions", 30px / 600, centred over the column. Items have a 1px <code>#2A3A58</code> border, 10px radius, 10px gap. Question in 15px / 600 white with a +/− icon on the right. The open item shows its answer in 14px muted, indented 16px.</p></div>
+  </div>
+  <div class="note pink"><strong>Replace the placeholder copy.</strong> The current questions ("Can we integrate this with our existing systems?", tabs "Integration" and "Payment") are B2B template text. Use player questions instead, for example: What are Gold Coins and Sweeps Coins? · How do I redeem Sweeps Coins? · Which states can play? · How do I get free coins? · Is my account secure? Suggested tabs: General · Coins · Redemptions · Account &amp; Security · Support.</div>
+</section>
+
+<section id="s-seo">
+  <span class="eyebrow">Section · content</span>
+  <h2>SEO content block</h2>
+  <figure class="ref"><img src="img/seo-block.webp" alt="Centred heading Providing Casino Experience With Intelligent Solutions with a magenta highlight, paragraph and Continue Reading button" loading="lazy"><figcaption><b>Homepage</b>Centred text block.</figcaption></figure>
+  <p>Everything is centred. The heading is 34px / 600 white, with the key phrase in magenta <code>#F032F4</code>. Under it, two lines of 14px muted body text (max 900px wide), then the Continue Reading button, which expands the full article in place. Keep the expanded text in the HTML so search engines can read it.</p>
+  <div class="note pink"><strong>Replace the placeholder copy.</strong> The paragraph is about budgeting and retirement planning. Write real sweepstakes casino copy here: what the site is, how free play works, game variety and safe play.</div>
+</section>
+
+<section id="s-footer">
+  <span class="eyebrow">Section · site chrome · new in v6</span>
+  <h2>Footer &amp; legal bar</h2>
+  <figure class="ref"><img src="img/footer.webp" alt="Footer with logo, Games, Rewards and Support link columns, pink newsletter card, and a hot-pink legal bar" loading="lazy"><figcaption><b>Homepage</b>Footer and legal bar.</figcaption></figure>
+  <div class="tbl"><table>
+    <tr><th>Part</th><th>Spec</th></tr>
+    <tr><td class="k">Top edge</td><td>A 1px glowing violet line across the full width.</td></tr>
+    <tr><td class="k">Ground</td><td><code>#060F26</code>, 48px top padding.</td></tr>
+    <tr><td class="k">Logo</td><td>Wordmark, 28px / 800 white, top left.</td></tr>
+    <tr><td class="k">Columns</td><td>GAMES, REWARDS, SUPPORT. Headings 14px / 700 uppercase white; links 14px muted with 1.9 line height; hover turns cyan.</td></tr>
+    <tr><td class="k">Newsletter card</td><td>≈ 400 × 165. 1.5px <code>#E03BA8</code> border, 16px radius, pink glow, dark fill <code>#070C20</code>. Copy 14px muted, then a pink pill input <code>#EC097D</code> with a white mail icon button on the right.</td></tr>
+    <tr><td class="k">Legal bar</td><td>Full-bleed hot pink <code>#F80180</code>, 56px. Left: All Rights Reserved. Centre: © 2026 ONLINE CASINO (bold). Right: Find Us on Social Media + Facebook, Instagram, X, YouTube icons. All white.</td></tr>
+  </table></div>
+  <div class="stage"><div class="legal-bar"><span>All Rights Reserved</span><b>© 2026 ONLINE CASINO</b><span>Find Us on Social Media</span></div></div>
+  <div class="note pink"><strong>Add before launch:</strong> No Purchase Necessary · Sweepstakes Rules · Terms · Privacy · Responsible Social Gameplay · age requirement (18+ or 21+ depending on your rules) · list of excluded states. The legal bar is a natural place for a one-line version.</div>
+</section>
+
+<!-- ================= BUILD ================= -->
+<div class="part" id="build"><span class="eyebrow">Part 4</span><h2>Build notes</h2></div>
+
+<section id="responsive">
+  <span class="eyebrow">Build</span>
+  <h2>Responsive</h2>
+  <div class="tbl"><table>
+    <tr><th>Width</th><th>Gutter</th><th>3-up rows</th><th>4-up rows</th><th>New Games</th><th>Providers</th><th>High RTP</th></tr>
+    <tr><td class="k">≥ 1440</td><td>75px</td><td>3</td><td>4</td><td>8</td><td>6 × 3</td><td>panel + 4</td></tr>
+    <tr><td class="k">1024–1439</td><td>32px</td><td>3</td><td>4</td><td>6 + scroll</td><td>6 × 3</td><td>panel + 4</td></tr>
+    <tr><td class="k">768–1023</td><td>24px</td><td>2 + scroll</td><td>3 + scroll</td><td>4 + scroll</td><td>4 × 5</td><td>panel full width, 4 below</td></tr>
+    <tr><td class="k">&lt; 768</td><td>16px</td><td>1.15 visible, swipe</td><td>2 visible, swipe</td><td>2.5 visible, swipe</td><td>3 × 6</td><td>panel, then 2 × 2</td></tr>
+  </table></div>
+  <p>On mobile, every carousel row scrolls sideways with scroll snap, and a partly visible card hints that there is more. The arrows hide below 768px, but View All stays. The hero headline drops to 44–52px, the art moves behind the text with a dark overlay, and the Active Players card hides. The category nav scrolls. Character cards switch to the 1.65 : 1 crop. Keep all touch targets at least 44px.</p>
+</section>
+
+<section id="sweeps">
+  <span class="eyebrow">Build · US sweepstakes</span>
+  <h2>Sweepstakes wording</h2>
+  <p>The design is final, but some labels are written for a real-money casino. A US sweepstakes site sells Gold Coins and gives Sweeps Coins as a free bonus, so the copy should say that. These are suggested swaps for your legal team to confirm. They don't change the layout.</p>
+  <div class="tbl"><table>
+    <tr><th>Where</th><th>On the design</th><th>Suggested</th></tr>
+    <tr><td class="k">Header button</td><td>Deposit</td><td>Get Coins / Buy Coins</td></tr>
+    <tr><td class="k">Wallet</td><td>$100.00</td><td>Two balances with a toggle: GC 250,000 · SC 25.00</td></tr>
+    <tr><td class="k">News ticker</td><td>50% up to $1,000</td><td>Coin package amounts (GC + free SC)</td></tr>
+    <tr><td class="k">Feature row</td><td>BIG WINS</td><td>BIG PRIZES or keep, if legal approves</td></tr>
+    <tr><td class="k">Footer link</td><td>Deposit &amp; Payouts</td><td>Purchases &amp; Redemptions</td></tr>
+    <tr><td class="k">Footer link</td><td>Responsible Gaming</td><td>Responsible Social Gameplay</td></tr>
+    <tr><td class="k">FAQ tab</td><td>Payment</td><td>Coins &amp; Redemptions</td></tr>
+  </table></div>
+  <p>The Welcome Bonus card already uses the right model: "SIGN UP 10K GC + 1 SC · SPEND $9.99 250K GC + 25 SC". Use that pattern for every offer.</p>
+</section>
+
+<section id="tokens">
+  <span class="eyebrow">Build</span>
+  <h2>CSS tokens</h2>
+  <p>Paste this into <code>styles/tokens.css</code>. The component CSS in this guide uses these names.</p>
+  <div class="code"><button class="copy" data-target="code-tokens">Copy tokens</button><pre id="code-tokens">:root{
+  /* ground */
+  --bg:#000816; --surface:#061326; --raised:#0A1D32; --footer:#060F26;
+  --line:#233650; --line-nav:#3A4A66; --line-faq:#2A3A58;
+  /* text */
+  --text:#FFFFFF; --muted:#A8B4C7;
+  /* neon */
+  --cyan:#04F5E5; --cta-mint:#0FE2D0; --play-mint:#2EF0C8;
+  --magenta:#F032F4; --purple:#A84DFF; --violet:#322571;
+  --search:#C709EB; --hotpink:#F80180; --pink-input:#EC097D; --newsletter:#E03BA8;
+  --gold:#FFCE21; --check:#1CF11D; --rtp:#00F8E7; --new-badge:#D41BE0;
+  /* card accents */
+  --acc-green:#01A200; --acc-blue:#051AF1; --acc-amber:#F9A202;
+  --acc-pink:#F9038D; --acc-red:#EE0212; --acc-fuchsia:#EA02AC;
+  --char-gold:#FFB000; --char-violet:#C72CFF; --char-pink:#FF30C8;
+  /* gradients */
+  --g-cta:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);
+  --g-viewall:linear-gradient(100deg,#5B087C 0%,#A83CD2 60%,#E6A5FF 100%);
+  --g-edge:linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%);
+  --g-repeat:linear-gradient(90deg,#2EF2D0 0%,#33D3F0 35%,#8C7BFF 65%,#E93BF2 100%);
+  --g-vip:linear-gradient(90deg,#030A1E 0%,#140A3A 45%,#5A1E86 100%);
+  --g-provider:linear-gradient(160deg,#082749 0%,#07172D 100%);
+  --g-search:linear-gradient(90deg,#B44DFF 0%,#04F5E5 45%,#F032F4 100%);
+  /* glow */
+  --glow-split:-4px 0 14px rgba(4,245,229,.45),4px 0 14px rgba(240,50,244,.5);
+  --glow-cyan:0 0 6px rgba(4,245,229,.65),0 0 18px rgba(4,245,229,.30);
+  --glow-magenta:0 0 6px rgba(240,50,244,.65),0 0 18px rgba(240,50,244,.30);
+  /* shape */
+  --r-pill:999px; --r-card:12px; --r-feature:16px; --r-btn:8px; --r-ctl:10px;
+  /* layout */
+  --container:1290px; --gap:20px; --gap-dense:14px; --section-gap:32px;
+  /* type */
+  --f-display:'Montserrat',Arial,sans-serif; --f-body:'Inter',Arial,sans-serif;
+}
+.card{position:relative;overflow:hidden;border:1.5px solid var(--accent,var(--magenta));
+  border-radius:var(--r-card);box-shadow:0 0 12px color-mix(in srgb,var(--accent,var(--magenta)) 60%,transparent);
+  transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 0 20px color-mix(in srgb,var(--accent,var(--magenta)) 80%,transparent)}
+.card img{display:block;width:100%;height:100%;object-fit:cover}
+.row{display:grid;grid-template-columns:repeat(var(--cols,4),minmax(0,1fr));gap:var(--gap)}
+@media(max-width:1023px){.row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory}
+  .row>*{flex:0 0 calc(100% / var(--cols-tab,2.15));scroll-snap-align:start}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}</pre></div>
+</section>
+
+<section id="checklist">
+  <span class="eyebrow">Build · QA</span>
+  <h2>Handoff checklist</h2>
+  <div class="panel checklist">
+    <label><input type="checkbox" id="c1">Sections are in the final homepage order</label>
+    <label><input type="checkbox" id="c2">Every section header uses the neon pill, View All and arrows</label>
+    <label><input type="checkbox" id="c3">Card ratios match the card size table</label>
+    <label><input type="checkbox" id="c4">Borders and glows are CSS, never baked into art</label>
+    <label><input type="checkbox" id="c5">Buttons, badges, RTP values and counts are HTML</label>
+    <label><input type="checkbox" id="c6">Game Shows uses neon-bordered cards (not the v5 charcoal panel)</label>
+    <label><input type="checkbox" id="c7">New Games tiles keep their colour order and NEW badges</label>
+    <label><input type="checkbox" id="c8">Providers grid is 6 × 3 with SVG logos</label>
+    <label><input type="checkbox" id="c9">FAQ and SEO placeholder copy replaced</label>
+    <label><input type="checkbox" id="c10">Sweepstakes wording and legal links approved</label>
+    <label><input type="checkbox" id="c11">Live counts and RTP values come from real data</label>
+    <label><input type="checkbox" id="c12">Mobile carousels snap; touch targets ≥ 44px</label>
+    <label><input type="checkbox" id="c13">Images are WebP at 2×, with width/height set</label>
+    <label><input type="checkbox" id="c14">Keyboard focus visible; reduced motion respected</label>
+  </div>
+</section>
+
+<section id="next">
+  <span class="eyebrow">Next</span>
+  <h2>Next: subpages</h2>
+  <p>This guide covers the homepage and the shared foundations. Each subpage will get its own chapter that reuses these tokens and components and documents only what is new.</p>
+  <div class="tbl"><table>
+    <tr><th>Subpage</th><th>Reuses</th><th>Needs designing</th></tr>
+    <tr><td class="k">Category (Slots, Casino, Live, New…)</td><td>Section header with subtitle, card rows</td><td>Filter bar, sort, full grid, pagination</td></tr>
+    <tr><td class="k">Game detail / launch</td><td>Buttons, badges, RTP badge</td><td>Game frame, info panel, related games</td></tr>
+    <tr><td class="k">Promotions</td><td>Promotion card</td><td>Full offer page, terms layout</td></tr>
+    <tr><td class="k">VIP Club</td><td>VIP banner, gold</td><td>Tier ladder, benefits table</td></tr>
+    <tr><td class="k">Get Coins (store)</td><td>CTA, card border</td><td>Coin package cards, checkout</td></tr>
+    <tr><td class="k">Redeem</td><td>Inputs, FAQ</td><td>Redemption form, status</td></tr>
+    <tr><td class="k">Account, Help, Legal</td><td>FAQ, footer</td><td>Account layout, long-form text styles</td></tr>
+  </table></div>
+</section>
+
+<footer class="doc">Neon Sweeps homepage style guide · v6 · Built from four final references: the homepage, High RTP Games, New Games and Favourite Characters. Values tagged Sampled were read from the screenshots; all other values are matched recommendations.</footer>
+</div></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var toast=document.getElementById('toast'),tt;
+  function show(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},1400)}
+  function copy(text,label){
+    try{
+      navigator.clipboard.writeText(text).then(function(){show('Copied '+label)},function(){fallback(text,label)});
+    }catch(e){fallback(text,label)}
+  }
+  function fallback(text,label){
+    var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+    var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+    document.body.removeChild(ta);show(ok?'Copied '+label:'Select the text to copy it')
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copy(b.dataset.copy,b.dataset.copy)})});
+  document.querySelectorAll('[data-target]').forEach(function(b){b.addEventListener('click',function(){copy(document.getElementById(b.dataset.target).textContent,'code')})});
+  /* highlight current section in the rail */
+  var links=[].slice.call(document.querySelectorAll('.rail a'));
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&map[e.target.id]){links.forEach(function(l){l.classList.remove('on')});map[e.target.id].classList.add('on')}})},{rootMargin:'-20% 0px -70% 0px'});
+    document.querySelectorAll('main [id]').forEach(function(s){if(map[s.id])io.observe(s)});
+  }
+})();
+</script>
+
+</body>
+</html>
