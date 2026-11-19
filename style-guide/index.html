@@ -130,6 +130,24 @@ td.k{color:#fff;font-weight:600;white-space:nowrap}
 .fl-text small{color:var(--muted);font-size:12.5px}
 .fl-text em{font-style:normal;color:var(--cyan);font-size:12px;overflow-wrap:anywhere}
 @media(max-width:720px){.font-links{grid-template-columns:1fr}}
+.b-rules{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 8px}
+.b-rules>div{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:10px;align-items:center;padding:12px;border:1px solid var(--line-soft);border-radius:11px;background:#07122A}
+.b-rules i{grid-row:span 2;width:28px;height:28px;border-radius:8px}
+.b-rules b{font-size:13px}.b-rules span{font-size:11.5px;color:var(--dim);line-height:1.4}
+.b-group{margin-top:34px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--magenta)}
+.b-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:18px;align-items:start;padding:18px;margin:12px 0;border:1px solid var(--line-soft);border-radius:14px;background:var(--doc-panel)}
+.b-left{min-width:0}
+.b-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.b-head b{font:600 17px var(--f-display)}
+.b-head span{font-size:12px;color:var(--cyan)}
+.b-stage{display:flex;flex-wrap:wrap;align-items:center;gap:12px;min-height:96px;margin:12px 0;padding:20px;border-radius:10px;background:var(--bg);border:1px solid #13213A}
+.b-why{font-size:13.5px;margin:0}
+.b-code{margin:0;min-width:0}
+.b-code pre{max-height:none;font-size:11.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.b-pinkbar{display:inline-flex;gap:4px;padding:6px 10px;border-radius:10px;background:#F80180}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:900px){.b-row{grid-template-columns:1fr}.b-rules{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.b-rules{grid-template-columns:1fr}}
 /* ============ LIVE SAMPLES — these use the production CSS from the guide ============ */
 .stage{background:var(--bg);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin:16px 0;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .btn-deposit,.btn-play{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 22px;border:0;border-radius:8px;background:var(--cta);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -216,7 +234,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#type">Typography</a>
   <a href="#borders">Borders &amp; radii</a>
   <a href="#spacing">Grid &amp; spacing</a>
-  <a href="#buttons">Buttons &amp; badges</a>
+  <a href="#buttons">Buttons</a>
   <a href="#section-header">Section header</a>
   <h4>Imagery</h4>
   <a href="#imagery">Image style</a>
@@ -536,39 +554,346 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 
 <section id="buttons">
   <span class="eyebrow">Foundations</span>
-  <h2>Buttons &amp; badges</h2>
-  <p>Every sample below is live HTML built with the CSS in this guide. Buttons are never part of an image: the art carries the picture, the HTML carries the action.</p>
-  <div class="stage">
-    <button class="btn-deposit">Deposit</button>
-    <button class="btn-play">Play Now →</button>
-    <button class="btn-ghost">Explore Games →</button>
-    <button class="btn-view">View All →</button>
-    <button class="btn-arrow" aria-label="Previous">‹</button><button class="btn-arrow next" aria-label="Next">›</button>
+  <h2>Buttons</h2>
+  <p>Every button on the homepage, in the order players meet them. Each row shows the live button (built with the CSS beside it), where it lives and why it looks the way it does. Buttons are always HTML, never part of an image.</p>
+  <div class="b-rules">
+    <div><i style="background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%)"></i><b>Cyan = play or pay</b><span>Deposit, Play Now, promo CTAs, Play Jackpot Games</span></div>
+    <div><i style="background:linear-gradient(100deg,#5B087C,#A83CD2 60%,#E6A5FF)"></i><b>Purple = browse</b><span>View All, carousel arrows, VIP</span></div>
+    <div><i style="background:#EC097D"></i><b>Pink = engage</b><span>Search, newsletter, Continue Reading</span></div>
+    <div><i style="background:transparent;border:1.5px solid #3A4A66"></i><b>Quiet = navigate</b><span>Wallet, menu, tabs, FAQ rows, hero arrows</span></div>
   </div>
-  <div class="stage">
-    <button class="btn-promo">🎁 Purchase Now</button>
-    <button class="btn-mint">Play Now →</button>
-    <button class="btn-vip">Explore VIP Club →</button>
-    <button class="btn-read">Continue Reading</button>
-    <button class="btn-search" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
-  </div>
+  <style id="button-css">
+.b-deposit{display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 24px;border:0;border-radius:8px;
+  background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;font:600 15px/1 Poppins,sans-serif;
+  box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;
+  transition:transform .2s,box-shadow .2s}
+.b-deposit:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(4,245,229,.65)}
+.b-wallet{display:inline-flex;align-items:center;gap:10px;min-height:42px;
+  padding:0 14px;border:1px solid #233650;border-radius:12px;background:#061326;
+  color:#fff;font:500 15px Inter,sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}
+.b-wallet .coin{width:20px;height:20px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#7FFFF2,#04BFB2)}
+.b-wallet:hover{border-color:#3A5A80}
+.b-icon{width:44px;height:44px;display:inline-grid;place-items:center;
+  border:0;border-radius:10px;background:transparent;color:#fff;cursor:pointer}
+.b-icon:hover{background:#0F2140}
+.b-ticker{width:32px;height:32px;display:inline-grid;place-items:center;
+  border:0;border-radius:50%;background:transparent;color:#04F5E5;cursor:pointer}
+.b-ticker:hover{background:rgba(4,245,229,.12)}
+.b-tabbar{display:flex;gap:4px;padding:4px 8px;border:1px solid #3A4A66;border-radius:14px}
+.b-tab{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 16px;
+  border:0;background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-tab svg{color:#F4CC1D}
+.b-tab[aria-current="page"] svg{color:#04F5E5;filter:drop-shadow(0 0 6px rgba(4,245,229,.7))}
+.b-tab:hover{color:#04F5E5}
+.b-play{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 24px;
+  border:0;border-radius:8px;background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 18px rgba(4,245,229,.45);
+  cursor:pointer;transition:transform .2s,box-shadow .2s}
+.b-play:hover{transform:translateY(-2px);box-shadow:0 0 26px rgba(4,245,229,.7)}
+.b-ghost{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 22px;
+  border:1.5px solid transparent;border-radius:8px;color:#fff;
+  background:linear-gradient(#0B1230,#0B1230) padding-box,
+             linear-gradient(90deg,#04F5E5,#B44DFF) border-box;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 12px rgba(143,92,255,.35);cursor:pointer}
+.b-ghost:hover{box-shadow:0 0 18px rgba(143,92,255,.6)}
+.b-round{width:40px;height:40px;display:inline-grid;place-items:center;
+  border:1px solid #3A4A66;border-radius:50%;background:rgba(6,19,38,.8);color:#fff;cursor:pointer}
+.b-round:hover{border-color:#04F5E5}
+.b-dots{display:inline-flex;gap:8px}
+.b-dot{width:8px;height:8px;padding:0;border:1px solid #8FA0B7;border-radius:50%;
+  background:transparent;cursor:pointer}
+.b-dot[aria-current="true"]{background:#fff;border-color:#fff}
+.b-promo{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 16px;
+  border:0;border-radius:7px;background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;
+  font:600 13px/1 Poppins,sans-serif;cursor:pointer}
+.b-promo:hover{box-shadow:0 0 14px rgba(4,245,229,.6)}
+.b-mint{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 24px;
+  border:0;border-radius:14px;background:#2EF0C8;color:#00150F;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(46,240,200,.45);cursor:pointer}
+.b-mint:hover{transform:translateY(-2px);box-shadow:0 0 22px rgba(46,240,200,.7)}
+.b-view{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:0 20px;
+  border:1.5px solid #F38CFF;border-radius:12px;color:#fff;
+  background:linear-gradient(100deg,#5B087C 0%,#A83CD2 60%,#E6A5FF 100%);
+  font:600 14px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(218,45,255,.45);cursor:pointer}
+.b-view:hover{box-shadow:0 0 22px rgba(218,45,255,.7)}
+.b-arrow{width:44px;height:44px;display:inline-grid;place-items:center;
+  border:1.5px solid #10E8F1;border-radius:10px;color:#fff;cursor:pointer;
+  background:linear-gradient(125deg,#07162C,#1B2350)}
+.b-arrow--next{border-color:#BD48F5}
+.b-arrow:hover{box-shadow:0 0 12px rgba(16,232,241,.5)}
+.b-arrow:disabled{opacity:.4;cursor:default;box-shadow:none}
+.b-vip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 24px;
+  border:1.5px solid #FF5BD8;border-radius:999px;color:#fff;
+  background:linear-gradient(100deg,#3A0C5C,#7A1F9E);
+  font:600 14px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(255,91,216,.45);cursor:pointer}
+.b-vip:hover{box-shadow:0 0 22px rgba(255,91,216,.7)}
+.b-search{width:64px;height:44px;display:inline-grid;place-items:center;border:0;
+  border-radius:999px;background:linear-gradient(135deg,#B01CE8,#E21FD0);color:#fff;
+  box-shadow:0 0 16px rgba(199,9,235,.6);cursor:pointer}
+.b-search:hover{box-shadow:0 0 24px rgba(199,9,235,.85)}
+.b-faq-tabs{display:grid;gap:6px;width:100%;max-width:250px}
+.b-faq-tab{padding:10px 18px;text-align:left;border:1.5px solid transparent;border-radius:10px;
+  background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-faq-tab[aria-selected="true"]{border-color:#8B5CFF;
+  background:linear-gradient(90deg,#322571,#3E1F8F);box-shadow:0 0 14px rgba(139,92,255,.45)}
+.b-faq-tab:hover{background:#0F2140}
+.b-faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  padding:12px 18px;text-align:left;border:1px solid #2A3A58;border-radius:10px;
+  background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-faq-q::after{content:"+";font:400 22px/1 Inter,sans-serif}
+.b-faq-q[aria-expanded="true"]::after{content:"−"}
+.b-faq-q:hover{border-color:#3E5480}
+.b-read{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  min-width:240px;padding:0 34px;border:1.5px solid #E03BA8;border-radius:8px;color:#fff;
+  background:linear-gradient(180deg,#4A0E44,#2A0A2E);font:500 15px Poppins,sans-serif;
+  box-shadow:0 0 12px rgba(224,59,168,.35);cursor:pointer}
+.b-read:hover{box-shadow:0 0 20px rgba(224,59,168,.6)}
+.b-news{display:flex;align-items:center;width:100%;max-width:380px;min-height:50px;
+  padding:0 6px 0 22px;border-radius:999px;background:#EC097D;
+  box-shadow:0 0 16px rgba(236,9,125,.5)}
+.b-news input{flex:1;min-width:0;border:0;background:transparent;color:#fff;
+  font:500 14px Poppins,sans-serif;outline:0}
+.b-news input::placeholder{color:#FFD3EA}
+.b-news button{width:40px;height:40px;display:grid;place-items:center;border:0;
+  border-radius:50%;background:transparent;color:#fff;cursor:pointer}
+.b-news button:hover{background:rgba(255,255,255,.15)}
+.b-social{width:36px;height:36px;display:inline-grid;place-items:center;
+  border-radius:8px;color:#fff;text-decoration:none}
+.b-social:hover{background:rgba(255,255,255,.18)}
+/* sits on the legal bar: background:#F80180 */
+  </style>
+  <h3 class="b-group">Header & navigation</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Deposit</b><span>Header · top right</span></div>
+      <div class="b-stage"><button class="b-deposit">Deposit</button></div>
+      <p class="b-why">The single most important action on the site, so it is the only filled button in the header. Cyan is the colour for "do something" everywhere on the page, so players learn it once.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-1">Copy CSS</button><pre id="bcss-1">.b-deposit{display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 24px;border:0;border-radius:8px;
+  background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;font:600 15px/1 Poppins,sans-serif;
+  box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;
+  transition:transform .2s,box-shadow .2s}
+.b-deposit:hover{transform:translateY(-2px);box-shadow:0 0 24px rgba(4,245,229,.65)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Wallet balance</b><span>Header · left of Deposit</span></div>
+      <div class="b-stage"><button class="b-wallet"><span class="coin"></span>$100.00<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
+      <p class="b-why">Shows the balance and opens the wallet panel. It is a button, but a quiet one: a 1px border and no glow, so it never competes with Deposit beside it. The amount uses Inter for steady-width digits.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-2">Copy CSS</button><pre id="bcss-2">.b-wallet{display:inline-flex;align-items:center;gap:10px;min-height:42px;
+  padding:0 14px;border:1px solid #233650;border-radius:12px;background:#061326;
+  color:#fff;font:500 15px Inter,sans-serif;font-variant-numeric:tabular-nums;cursor:pointer}
+.b-wallet .coin{width:20px;height:20px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#7FFFF2,#04BFB2)}
+.b-wallet:hover{border-color:#3A5A80}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Menu</b><span>Header · far left</span></div>
+      <div class="b-stage"><button class="b-icon" aria-label="Open menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+      <p class="b-why">Opens the site menu. Icon-only, so it has no fill or border at rest and must carry an aria-label ("Open menu") for screen readers.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-3">Copy CSS</button><pre id="bcss-3">.b-icon{width:44px;height:44px;display:inline-grid;place-items:center;
+  border:0;border-radius:10px;background:transparent;color:#fff;cursor:pointer}
+.b-icon:hover{background:#0F2140}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>News ticker »</b><span>News ticker · right end</span></div>
+      <div class="b-stage"><button class="b-ticker" aria-label="Next headline"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l6 6-6 6M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">Skips to the next headline. Cyan so it reads as part of the ticker, small because it is secondary to the news itself.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-4">Copy CSS</button><pre id="bcss-4">.b-ticker{width:32px;height:32px;display:inline-grid;place-items:center;
+  border:0;border-radius:50%;background:transparent;color:#04F5E5;cursor:pointer}
+.b-ticker:hover{background:rgba(4,245,229,.12)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Category tab</b><span>Category nav · six tabs</span></div>
+      <div class="b-stage"><div class="b-tabbar"><button class="b-tab" aria-current="page"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg>Popular</button><button class="b-tab"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1 6.2L12 17.4 6.5 20.3l1-6.2L3 9.7l6.2-.9z"/></svg>New</button></div></div>
+      <p class="b-why">Switches the game category. Tabs are buttons with no box: a gold icon and white label. The current tab turns its icon cyan with a glow, so state is shown by colour, not by a heavy fill.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-5">Copy CSS</button><pre id="bcss-5">.b-tabbar{display:flex;gap:4px;padding:4px 8px;border:1px solid #3A4A66;border-radius:14px}
+.b-tab{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 16px;
+  border:0;background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-tab svg{color:#F4CC1D}
+.b-tab[aria-current=&quot;page&quot;] svg{color:#04F5E5;filter:drop-shadow(0 0 6px rgba(4,245,229,.7))}
+.b-tab:hover{color:#04F5E5}</pre></div>
+  </article><h3 class="b-group">Hero & banners</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Play Now (hero)</b><span>Hero · first button</span></div>
+      <div class="b-stage"><button class="b-play">Play Now<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">The main call to action of the whole page. Same cyan as Deposit but bigger, with an arrow that says "this takes you somewhere". Also used for <strong>Play Jackpot Games →</strong> in the Jackpots banner.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-6">Copy CSS</button><pre id="bcss-6">.b-play{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 24px;
+  border:0;border-radius:8px;background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 18px rgba(4,245,229,.45);
+  cursor:pointer;transition:transform .2s,box-shadow .2s}
+.b-play:hover{transform:translateY(-2px);box-shadow:0 0 26px rgba(4,245,229,.7)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Explore Games (ghost)</b><span>Hero · second button</span></div>
+      <div class="b-stage"><button class="b-ghost">Explore Games<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">The second choice next to Play Now. Outline only, so the eye goes to the filled cyan button first. The cyan-to-violet edge keeps it on-brand. Also used for the secondary button in the Jackpots banner.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-7">Copy CSS</button><pre id="bcss-7">.b-ghost{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 22px;
+  border:1.5px solid transparent;border-radius:8px;color:#fff;
+  background:linear-gradient(#0B1230,#0B1230) padding-box,
+             linear-gradient(90deg,#04F5E5,#B44DFF) border-box;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 12px rgba(143,92,255,.35);cursor:pointer}
+.b-ghost:hover{box-shadow:0 0 18px rgba(143,92,255,.6)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Hero slide arrows & dots</b><span>Hero · outside left/right edge, dots under the art</span></div>
+      <div class="b-stage"><button class="b-round" aria-label="Previous slide"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><span class="b-dots"><button class="b-dot" aria-current="true" aria-label="Slide 1"></button><button class="b-dot" aria-label="Slide 2"></button><button class="b-dot" aria-label="Slide 3"></button></span><button class="b-round" aria-label="Next slide"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">Move between hero slides. Round and low-contrast so they never pull attention from the headline. Dots show position: the current one is filled white.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-8">Copy CSS</button><pre id="bcss-8">.b-round{width:40px;height:40px;display:inline-grid;place-items:center;
+  border:1px solid #3A4A66;border-radius:50%;background:rgba(6,19,38,.8);color:#fff;cursor:pointer}
+.b-round:hover{border-color:#04F5E5}
+.b-dots{display:inline-flex;gap:8px}
+.b-dot{width:8px;height:8px;padding:0;border:1px solid #8FA0B7;border-radius:50%;
+  background:transparent;cursor:pointer}
+.b-dot[aria-current=&quot;true&quot;]{background:#fff;border-color:#fff}</pre></div>
+  </article><h3 class="b-group">Cards</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Promo CTA</b><span>Promotion cards · bottom left</span></div>
+      <div class="b-stage"><button class="b-promo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M12 8v13M5 13v8h14v-8M12 8C10 4 6 4 7 7c.6 1.5 5 1 5 1s4.4.5 5-1c1-3-3-3-5 1"/></svg>Purchase Now</button><button class="b-promo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M12 8v13M5 13v8h14v-8M12 8C10 4 6 4 7 7c.6 1.5 5 1 5 1s4.4.5 5-1c1-3-3-3-5 1"/></svg>Play Now</button></div>
+      <p class="b-why">Smaller cyan button sized for a card. The gift icon ties it to an offer. Label changes per card ("Purchase Now", "Play Now") but the style never does, so every offer looks equally clickable.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-9">Copy CSS</button><pre id="bcss-9">.b-promo{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 16px;
+  border:0;border-radius:7px;background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%);color:#00151C;
+  font:600 13px/1 Poppins,sans-serif;cursor:pointer}
+.b-promo:hover{box-shadow:0 0 14px rgba(4,245,229,.6)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Character Play Now</b><span>Favourite Characters cards · right side</span></div>
+      <div class="b-stage"><button class="b-mint">Play Now<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">Sits on top of busy, colourful artwork, so it is larger, rounder and a flat bright mint with no gradient. That keeps it readable on gold, violet and pink cards alike.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-10">Copy CSS</button><pre id="bcss-10">.b-mint{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 24px;
+  border:0;border-radius:14px;background:#2EF0C8;color:#00150F;
+  font:600 16px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(46,240,200,.45);cursor:pointer}
+.b-mint:hover{transform:translateY(-2px);box-shadow:0 0 22px rgba(46,240,200,.7)}</pre></div>
+  </article><h3 class="b-group">Section controls</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>View All</b><span>Every section header · right</span></div>
+      <div class="b-stage"><button class="b-view">View All<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">Opens the full list for that section. Purple, not cyan, because browsing is a secondary action: cyan is kept for playing and paying. The same button appears in every section, so players always know where "more" is.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-11">Copy CSS</button><pre id="bcss-11">.b-view{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:0 20px;
+  border:1.5px solid #F38CFF;border-radius:12px;color:#fff;
+  background:linear-gradient(100deg,#5B087C 0%,#A83CD2 60%,#E6A5FF 100%);
+  font:600 14px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(218,45,255,.45);cursor:pointer}
+.b-view:hover{box-shadow:0 0 22px rgba(218,45,255,.7)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Carousel arrows</b><span>Every section header · after View All</span></div>
+      <div class="b-stage"><button class="b-arrow" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button class="b-arrow b-arrow--next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">Scroll the card row left and right. Square with a navy fill. The left one has a cyan edge and the right one purple, echoing the cyan-to-magenta direction of every gradient on the site. Hidden below 768px, where rows are swiped.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-12">Copy CSS</button><pre id="bcss-12">.b-arrow{width:44px;height:44px;display:inline-grid;place-items:center;
+  border:1.5px solid #10E8F1;border-radius:10px;color:#fff;cursor:pointer;
+  background:linear-gradient(125deg,#07162C,#1B2350)}
+.b-arrow--next{border-color:#BD48F5}
+.b-arrow:hover{box-shadow:0 0 12px rgba(16,232,241,.5)}
+.b-arrow:disabled{opacity:.4;cursor:default;box-shadow:none}</pre></div>
+  </article><h3 class="b-group">Hero & banners</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Explore VIP Club</b><span>VIP Club banner · right</span></div>
+      <div class="b-stage"><button class="b-vip">Explore VIP Club<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <p class="b-why">The only fully round (pill) CTA on the page. The pill shape and pink edge match the VIP banner's own rounded, glowing frame, so it reads as part of the banner, not a generic button.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-13">Copy CSS</button><pre id="bcss-13">.b-vip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 24px;
+  border:1.5px solid #FF5BD8;border-radius:999px;color:#fff;
+  background:linear-gradient(100deg,#3A0C5C,#7A1F9E);
+  font:600 14px/1 Poppins,sans-serif;box-shadow:0 0 14px rgba(255,91,216,.45);cursor:pointer}
+.b-vip:hover{box-shadow:0 0 22px rgba(255,91,216,.7)}</pre></div>
+  </article><h3 class="b-group">Tools & content</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>AI search</b><span>AI Game Search bar · right end</span></div>
+      <div class="b-stage"><button class="b-search" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button></div>
+      <p class="b-why">Submits the search. A bright magenta pill at the end of the bar so the whole bar reads as one tool. Icon-only, so it needs aria-label="Search".</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-14">Copy CSS</button><pre id="bcss-14">.b-search{width:64px;height:44px;display:inline-grid;place-items:center;border:0;
+  border-radius:999px;background:linear-gradient(135deg,#B01CE8,#E21FD0);color:#fff;
+  box-shadow:0 0 16px rgba(199,9,235,.6);cursor:pointer}
+.b-search:hover{box-shadow:0 0 24px rgba(199,9,235,.85)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>FAQ category tab</b><span>FAQ · left column</span></div>
+      <div class="b-stage"><div class="b-faq-tabs"><button class="b-faq-tab" aria-selected="true">General</button><button class="b-faq-tab">Security</button></div></div>
+      <p class="b-why">Filters the questions by topic. Plain text at rest. The selected tab gets a violet fill and glow, a different colour from the cyan category nav, so the two kinds of tabs are never confused.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-15">Copy CSS</button><pre id="bcss-15">.b-faq-tabs{display:grid;gap:6px;width:100%;max-width:250px}
+.b-faq-tab{padding:10px 18px;text-align:left;border:1.5px solid transparent;border-radius:10px;
+  background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-faq-tab[aria-selected=&quot;true&quot;]{border-color:#8B5CFF;
+  background:linear-gradient(90deg,#322571,#3E1F8F);box-shadow:0 0 14px rgba(139,92,255,.45)}
+.b-faq-tab:hover{background:#0F2140}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>FAQ question</b><span>FAQ · accordion rows</span></div>
+      <div class="b-stage"><div style="display:grid;gap:8px;width:100%"><button class="b-faq-q" aria-expanded="true">How secure is the platform?</button><button class="b-faq-q" aria-expanded="false">How do I redeem Sweeps Coins?</button></div></div>
+      <p class="b-why">The whole row is the button that opens the answer, so it is easy to hit on a phone. + and − show whether it is closed or open. Quiet border, no glow: this is reading content, not a promotion.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-16">Copy CSS</button><pre id="bcss-16">.b-faq-q{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  padding:12px 18px;text-align:left;border:1px solid #2A3A58;border-radius:10px;
+  background:transparent;color:#fff;font:600 15px Poppins,sans-serif;cursor:pointer}
+.b-faq-q::after{content:&quot;+&quot;;font:400 22px/1 Inter,sans-serif}
+.b-faq-q[aria-expanded=&quot;true&quot;]::after{content:&quot;−&quot;}
+.b-faq-q:hover{border-color:#3E5480}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Continue Reading</b><span>SEO content block · centred</span></div>
+      <div class="b-stage"><button class="b-read">Continue Reading</button></div>
+      <p class="b-why">Expands the long article in place. Dark plum with a pink edge matches the magenta highlight in the heading above it. Deliberately low-key: reading more is optional.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-17">Copy CSS</button><pre id="bcss-17">.b-read{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  min-width:240px;padding:0 34px;border:1.5px solid #E03BA8;border-radius:8px;color:#fff;
+  background:linear-gradient(180deg,#4A0E44,#2A0A2E);font:500 15px Poppins,sans-serif;
+  box-shadow:0 0 12px rgba(224,59,168,.35);cursor:pointer}
+.b-read:hover{box-shadow:0 0 20px rgba(224,59,168,.6)}</pre></div>
+  </article><h3 class="b-group">Footer</h3><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Newsletter submit</b><span>Footer · newsletter card</span></div>
+      <div class="b-stage"><form class="b-news" onsubmit="event.preventDefault()"><label class="sr" for="nl-email">Email</label><input id="nl-email" type="email" placeholder="Enter your email"><button aria-label="Subscribe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></button></form></div>
+      <p class="b-why">The field and its send button are one pink pill, so signing up looks like a single step. The mail icon is the submit button, with aria-label="Subscribe".</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-18">Copy CSS</button><pre id="bcss-18">.b-news{display:flex;align-items:center;width:100%;max-width:380px;min-height:50px;
+  padding:0 6px 0 22px;border-radius:999px;background:#EC097D;
+  box-shadow:0 0 16px rgba(236,9,125,.5)}
+.b-news input{flex:1;min-width:0;border:0;background:transparent;color:#fff;
+  font:500 14px Poppins,sans-serif;outline:0}
+.b-news input::placeholder{color:#FFD3EA}
+.b-news button{width:40px;height:40px;display:grid;place-items:center;border:0;
+  border-radius:50%;background:transparent;color:#fff;cursor:pointer}
+.b-news button:hover{background:rgba(255,255,255,.15)}</pre></div>
+  </article><article class="b-row">
+    <div class="b-left">
+      <div class="b-head"><b>Social icons</b><span>Legal bar · right</span></div>
+      <div class="b-stage"><span class="b-pinkbar"><a class="b-social" href="#buttons" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a><a class="b-social" href="#buttons" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a class="b-social" href="#buttons" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a><a class="b-social" href="#buttons" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></span></div>
+      <p class="b-why">Links to social channels. White icons with no box, because they sit on the hot-pink bar, which already provides the colour.</p>
+    </div>
+    <div class="code b-code"><button class="copy" data-target="bcss-19">Copy CSS</button><pre id="bcss-19">.b-social{width:36px;height:36px;display:inline-grid;place-items:center;
+  border-radius:8px;color:#fff;text-decoration:none}
+.b-social:hover{background:rgba(255,255,255,.18)}
+/* sits on the legal bar: background:#F80180 */</pre></div>
+  </article>
+  <h3 class="b-group">States (all buttons)</h3>
+  <div class="tbl"><table>
+    <tr><th>State</th><th>What changes</th><th>CSS</th></tr>
+    <tr><td class="k">Hover</td><td>Lifts 2px (filled buttons only) and the glow brightens, over 200ms.</td><td><code>transform:translateY(-2px)</code></td></tr>
+    <tr><td class="k">Pressed</td><td>Shrinks slightly.</td><td><code>:active{transform:scale(.98)}</code></td></tr>
+    <tr><td class="k">Keyboard focus</td><td>2px cyan outline, 3px away from the button.</td><td><code>:focus-visible{outline:2px solid #04F5E5;outline-offset:3px}</code></td></tr>
+    <tr><td class="k">Disabled</td><td>45% opacity, no glow, no movement.</td><td><code>:disabled{opacity:.45;box-shadow:none;transform:none}</code></td></tr>
+    <tr><td class="k">Reduced motion</td><td>Keep the colour change, drop the movement.</td><td><code>@media(prefers-reduced-motion:reduce)</code></td></tr>
+  </table></div>
+  <p>Minimum touch size is 44 × 44px. Icon-only buttons (menu, arrows, search, newsletter, social) always need an <code>aria-label</code>.</p>
+  <h3 class="b-group">Badges (not buttons)</h3>
+  <p>Badges label a card but are not clickable, so they have no hover state.</p>
   <div class="stage">
     <span class="badge-new">NEW</span><span class="badge-hot">HOT</span><span class="badge-rtp">RTP 98.61%</span><span class="badge-tag">AVAILABLE</span><span class="ribbon">KING'S ARRIVAL</span><span class="ribbon cy">BEYOND LIMITS</span>
   </div>
-  <div class="tbl"><table>
-    <tr><th>Control</th><th>Size @1440</th><th>Fill</th><th>Border / radius</th><th>Text</th></tr>
-    <tr><td class="k">Deposit</td><td>140 × 42</td><td>CTA gradient</td><td>none · 8px</td><td>15px / 700 · <code>#00151C</code></td></tr>
-    <tr><td class="k">Hero Play Now</td><td>≈ 180 × 46</td><td>CTA gradient</td><td>none · 8px</td><td>16px / 700 + arrow</td></tr>
-    <tr><td class="k">Explore Games</td><td>≈ 225 × 46</td><td><code>#0B1230</code></td><td>1.5px <code>#C85DFF</code> · 8px</td><td>16px / 600 white + →</td></tr>
-    <tr><td class="k">View All</td><td>184 × 44</td><td>View All gradient</td><td>1.5px <code>#F38CFF</code> · 12px</td><td>14px / 700 white + →</td></tr>
-    <tr><td class="k">Carousel arrows</td><td>44 × 44</td><td>navy gradient</td><td>1.5px cyan (prev), purple (next) · 10px</td><td>white chevron</td></tr>
-    <tr><td class="k">Promo CTA</td><td>≈ 36px high</td><td>CTA gradient</td><td>none · 7px</td><td>13px / 700 + gift icon</td></tr>
-    <tr><td class="k">Character Play Now</td><td>≈ 48px high</td><td>Mint <code>#2EF0C8</code></td><td>none · 14px</td><td>16px / 700 + →</td></tr>
-    <tr><td class="k">Explore VIP Club</td><td>≈ 44px high</td><td>Purple gradient</td><td>1.5px pink · 999px</td><td>14px / 700 + →</td></tr>
-    <tr><td class="k">Continue Reading</td><td>≈ 280 × 44</td><td>Plum gradient</td><td>1.5px <code>#E03BA8</code> · 8px</td><td>14px / 600 white</td></tr>
-    <tr><td class="k">Search</td><td>≈ 64 × 44</td><td>Magenta gradient</td><td>none · 999px</td><td>white icon</td></tr>
-  </table></div>
-  <p><strong>States.</strong> Hover lifts 2px and brightens the glow over 200ms. Pressed scales to .98. Keyboard focus shows a 2px cyan outline with a 3px offset. Disabled drops to 45% opacity and loses its glow. With reduced motion turned on, keep the colour change and drop the movement.</p>
 </section>
 
 <section id="section-header">
