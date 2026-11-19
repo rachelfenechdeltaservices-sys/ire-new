@@ -265,6 +265,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Game Shows.</strong> The charcoal <code>#1B1B22</code> panel, borderless cards and plain-text View All are gone. Game Shows now uses the same neon pill header, purple View All and arrows as every other section, with neon-bordered wide cards.</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Card shapes.</strong> Promotions are ≈2:1 (was 1.55:1). Casino and Live Casino are ≈2:1 (was 4:3). Favourite Characters are ≈2.1:1 on the homepage (was 1.62:1). High RTP game cards are nearly square at ≈1.15:1 (was portrait 2:3).</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Hero.</strong> The hero is a carousel with round side arrows and three dots. It has a two-tone eyebrow, a four-item feature row (Slots, Live Casino, Big Wins, Instant Play) and an Active Players card. The headline is a wide, heavy geometric sans, not a condensed face.</div></div>
+    <div class="chg"><span class="tag fix">Updated</span><div><strong>High RTP panel.</strong> The info panel now reads <strong>96%+</strong> as one large gold figure. The laurel wreath and the words "RTP" and "GAMES" are gone. The latest homepage screenshot is the reference for this panel; the close-up (reference 2) still shows the old 97%+ panel and is kept only for the game cards.</div></div>
     <div class="chg"><span class="tag new">New</span><div><strong>Seven new homepage blocks:</strong> Casino, New Games, VIP Club banner, AI Game Search, FAQ, SEO content block, and a footer with a hot-pink legal bar.</div></div>
     <div class="chg"><span class="tag new">New</span><div><strong>Providers grid</strong> is now 6 × 3 (18 logos). Spribe, Penguin King, Animo, Big Daddy, Fantasma and Icon21 were added.</div></div>
     <div class="chg"><span class="tag del">Removed</span><div>Recent Winners and Jackpot Winners, the four aubergine promo-art references, the portrait game-cover reference and the old Game Shows screenshot. None of these appear on the final homepage. If Winners comes back, it should be documented on its own subpage.</div></div>
@@ -314,7 +315,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <button class="sw" data-copy="#C709EB"><i style="background:#C709EB"></i><span><b>Search magenta</b><code>#C709EB</code><small><span class="tag s">Sampled</span> AI search button</small></span></button>
     <button class="sw" data-copy="#F80180"><i style="background:#F80180"></i><span><b>Hot pink</b><code>#F80180</code><small><span class="tag s">Sampled</span> legal bar</small></span></button>
     <button class="sw" data-copy="#EC097D"><i style="background:#EC097D"></i><span><b>Pink input</b><code>#EC097D</code><small><span class="tag s">Sampled</span> newsletter field</small></span></button>
-    <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 97%+</small></span></button>
+    <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 96%+</small></span></button>
     <button class="sw" data-copy="#1CF11D"><i style="background:#1CF11D"></i><span><b>Check green</b><code>#1CF11D</code><small>RTP checklist ticks</small></span></button>
   </div>
   <h3>Card accent colours</h3>
@@ -743,14 +744,15 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="s-rtp">
   <span class="eyebrow">Section · feature row</span>
   <h2>High RTP Games</h2>
-  <figure class="ref"><img src="img/high-rtp.webp" alt="High RTP Games reference: RTP 97%+ gold laurel panel with three checklist items, then Book of Truth, Fire Streak, Lucky Clover and Diamond Rush cards with cyan RTP badges" loading="lazy"><figcaption><b>Reference 2</b>Section close-up.</figcaption></figure>
+  <figure class="ref"><img src="img/high-rtp-home.webp" alt="Updated High RTP Games row on the homepage: 96%+ gold figure with three checklist items, then Book of Truth, Fire Streak, Lucky Clover and Diamond Rush cards with cyan RTP badges" loading="lazy"><figcaption><b>Homepage · updated</b>The current panel with the 96%+ figure. This is the reference for the info panel.</figcaption></figure>
+  <figure class="ref"><img src="img/high-rtp.webp" alt="High RTP Games close-up showing the earlier 97%+ laurel panel and the four game cards" loading="lazy"><figcaption><b>Reference 2</b>Close-up, used for the game cards and RTP badges only. Its 97%+ laurel panel has been replaced.</figcaption></figure>
   <div class="grid2">
-    <figure class="ref" style="margin:0"><img src="img/rtp-info.webp" alt="RTP 97%+ Games info panel with gold laurels and green checkmarks" loading="lazy"><figcaption><b>Detail</b>Info panel.</figcaption></figure>
+    <figure class="ref" style="margin:0"><img src="img/rtp-info.webp" alt="96%+ info panel with large gold figure and three green checkmarks" loading="lazy"><figcaption><b>Detail</b>Updated info panel.</figcaption></figure>
     <div class="tbl" style="margin:0"><table style="min-width:0">
       <tr><th>Layer</th><th>Spec</th></tr>
       <tr><td class="k">Layout</td><td>Info panel (≈ 34% width) then four game cards. 28px after the panel, 16px between cards.</td></tr>
-      <tr><td class="k">Info panel</td><td>Fill <code>linear-gradient(120deg,#130620,#04121C)</code>. 2px gradient border cyan → purple, 16px radius.</td></tr>
-      <tr><td class="k">Laurel badge</td><td>Gold laurel wreath (art) around "RTP / 97%+ / GAMES" in gold <code>#FFCE21</code>, 900 weight, warm glow.</td></tr>
+      <tr><td class="k">Info panel</td><td>Fill <code>linear-gradient(120deg,#130620,#04121C)</code>. 2px cyan border with a cyan → purple glow, 16px radius.</td></tr>
+      <tr><td class="k">Headline figure</td><td><strong>96%+</strong> as HTML text, Montserrat 900, ≈ 64px, gold <code>#FFD21F</code> with a warm glow <code>text-shadow:0 0 14px rgba(255,150,0,.75)</code>. Centred in the left half of the panel. No laurel and no extra words.</td></tr>
       <tr><td class="k">Checklist</td><td>Top Payout Rates · Higher Win Potential · Player Favorites. 22px green check circles <code>#1CF11D</code>, white 14px / 600.</td></tr>
       <tr><td class="k">Game card</td><td>≈ 1.15 : 1, 14px radius, 2px accent border (amber, red, green, blue-violet).</td></tr>
       <tr><td class="k">RTP badge</td><td>Bottom centre, pill with 2px <code>#00F8E7</code> outline, translucent fill <code>#00191CC9</code>, cyan 15px / 800 text.</td></tr>
