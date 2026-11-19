@@ -7,7 +7,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Homepage design system for the US sweepstakes casino: colour, type, borders, buttons, imagery and every homepage section, built from the final approved screenshots.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 /* Layout concept: sticky section rail on the left, long reading column on the right.
    Each homepage section = screenshot crop + spec table + live CSS sample. Single dark theme, matching the product. */
@@ -23,8 +23,9 @@
   --neon-edge:linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%);
   /* ---- guide chrome ---- */
   --doc-panel:#08132A; --doc-code:#030B1C; --doc-accent:#04F5E5;
-  --f-display:'Montserrat','Arial Black',Arial,sans-serif;
-  --f-body:'Inter',system-ui,Arial,sans-serif;
+  --f-display:'Poppins','Arial Black',Arial,sans-serif;
+  --f-head:'Inter',system-ui,Arial,sans-serif;
+  --f-body:'Poppins',system-ui,Arial,sans-serif;
   --f-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
 }
 *{box-sizing:border-box}
@@ -266,6 +267,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Game Shows.</strong> The charcoal <code>#1B1B22</code> panel, borderless cards and plain-text View All are gone. Game Shows now uses the same neon pill header, purple View All and arrows as every other section, with neon-bordered wide cards.</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Card shapes.</strong> Promotions are ≈2:1 (was 1.55:1). Casino and Live Casino are ≈2:1 (was 4:3). Favourite Characters are ≈2.1:1 on the homepage (was 1.62:1). High RTP game cards are nearly square at ≈1.15:1 (was portrait 2:3).</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Hero.</strong> The hero is a carousel with round side arrows and three dots. It has a two-tone eyebrow, a four-item feature row (Slots, Live Casino, Big Wins, Instant Play) and an Active Players card. The headline is a wide, heavy geometric sans, not a condensed face.</div></div>
+    <div class="chg"><span class="tag fix">Updated</span><div><strong>Fonts.</strong> Montserrat and Barlow Condensed are replaced by <strong>Inter</strong> (Headings H1–H4, live amounts) and <strong>Poppins</strong> (Subheadings, Body, hero, banners and buttons), following the approved type sheet. See <a href="#type">Typography</a>.</div></div>
     <div class="chg"><span class="tag fix">Updated</span><div><strong>High RTP panel.</strong> The info panel now reads <strong>96%+</strong> as one large gold figure. The laurel wreath and the words "RTP" and "GAMES" are gone. The close-up (reference 2) still shows the old 97%+ panel and is kept only for the game cards.</div></div>
     <div class="chg"><span class="tag new">New</span><div><strong>Jackpots.</strong> A Full Moon Jackpots banner now sits between Game Shows and High RTP Games: headline and CTA on the left, a howling wolf and full moon in the middle, and Mini, Grand and Major prize boxes in Sweeps Coins on the right. See <a href="#s-jackpots">Jackpots</a>.</div></div>
     <div class="chg"><span class="tag fix">Updated</span><div><strong>Promotions art.</strong> Welcome Bonus now shows two playing cards and a chip inside a pink neon ring. Penguin King shows a gold and purple crown. The offer line reads "SPEND $9.99 25K GC + 25 SC".</div></div>
@@ -375,40 +377,72 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 <section id="type">
   <span class="eyebrow">Foundations</span>
   <h2>Typography</h2>
-  <p>Two families. <strong>Montserrat</strong> carries the brand: the hero, section titles, buttons and card labels. It matches the wide, round geometric letters in the screenshot. <strong>Inter</strong> handles running text, FAQ answers, footer links and small UI labels. Both are free on Google Fonts. These are visual matches; if the designer used other source fonts, swap them in here.</p>
+  <p>Two families, both free on Google Fonts. <strong>Inter</strong> sets the Headings: clean, even capitals at a regular weight. <strong>Poppins</strong> sets Subheadings and Body: its round, geometric letters carry the friendly, playful side of the brand. Poppins' heavy weights (700–800) also set the hero, banner titles and buttons, which need more punch than the regular-weight styles on the sheet. The scale below comes from the approved type sheet.</p>
   <div class="panel">
     <div class="eyeb"><span class="c">THE ULTIMATE</span> <span class="m">GAMING EXPERIENCE</span></div>
     <div class="hero-type" style="margin-top:8px">PLAY.WIN.<br><span class="rep">REPEAT</span></div>
+    <p style="margin:12px 0 0;font-size:13px;color:var(--dim)">Hero display · Poppins 800</p>
   </div>
+  <h3>Headings · Inter</h3>
   <div class="panel">
-    <div class="type-row"><small>Hero · 900</small><div style="font:900 44px/1 var(--f-display)">PLAY.WIN.</div></div>
-    <div class="type-row"><small>H2 page · 600</small><div style="font:600 30px/1.2 var(--f-display)">Frequently Asked Questions</div></div>
-    <div class="type-row"><small>Section title · 600</small><div style="font:600 24px/1.2 var(--f-display)">Popular Games</div></div>
-    <div class="type-row"><small>Banner · 800 italic</small><div style="font:italic 800 34px/1 var(--f-display)">VIP CLUB</div></div>
-    <div class="type-row"><small>Promo title · 800</small><div style="font:800 24px/1.05 var(--f-display)">WELCOME <span style="color:#2EF2D0">BONUS</span></div></div>
-    <div class="type-row"><small>Card title · 700</small><div style="font:700 14px/1.3 var(--f-display);letter-spacing:.02em">CYBERPUNK ODYSSEY</div></div>
-    <div class="type-row"><small>Button · 700</small><div style="font:700 15px var(--f-display)">Play Now →</div></div>
-    <div class="type-row"><small>Body · Inter 400</small><div style="font:400 15px/1.6 var(--f-body);color:#C4CFDD">Our system complies with international banking standards and uses end-to-end encryption.</div></div>
-    <div class="type-row"><small>Meta · Inter 500</small><div style="font:500 13px var(--f-body);color:#C4CFDD">👤 2,400 Playing</div></div>
-    <div class="type-row"><small>Tag · Inter 700</small><div><span class="badge-tag">NEW PROVIDER</span></div></div>
+    <div class="type-row"><small>H1 · 64 / 400</small><div style="font:400 clamp(36px,6vw,64px)/1.1 var(--f-head);text-transform:uppercase">Heading</div></div>
+    <div class="type-row"><small>H2 · 56 / 400</small><div style="font:400 clamp(32px,5.2vw,56px)/1.1 var(--f-head);text-transform:uppercase">Heading</div></div>
+    <div class="type-row"><small>H3 · 40 / 400</small><div style="font:400 clamp(26px,3.8vw,40px)/1.15 var(--f-head);text-transform:uppercase">Heading</div></div>
+    <div class="type-row"><small>H4 · 32 / 400</small><div style="font:400 clamp(22px,3vw,32px)/1.2 var(--f-head)">Heading</div></div>
+  </div>
+  <h3>Subheadings · Poppins</h3>
+  <div class="panel">
+    <div class="type-row"><small>S1 · 28 / 700</small><div style="font:700 28px/1.3 var(--f-display)">SubHeading</div></div>
+    <div class="type-row"><small>S2 · 24 / 400</small><div style="font:400 24px/1.35 var(--f-display)">SubHeading</div></div>
+    <div class="type-row"><small>S3 · 20 / 400</small><div style="font:400 20px/1.4 var(--f-display)">SubHeading</div></div>
+  </div>
+  <h3>Body · Poppins</h3>
+  <div class="panel">
+    <div class="type-row"><small>Body L · 18 / 400</small><div style="font:400 18px/1.6 var(--f-body);color:#C4CFDD">Spin, play and collect Sweeps Coins every day.</div></div>
+    <div class="type-row"><small>Body M · 16 / 400</small><div style="font:400 16px/1.6 var(--f-body);color:#C4CFDD">Our system uses end-to-end encryption to keep your account safe.</div></div>
+    <div class="type-row"><small>Body S · 14 / 400</small><div style="font:400 14px/1.6 var(--f-body);color:#C4CFDD">Popular Slots · Live Tournaments · New Releases</div></div>
+    <div class="type-row"><small>Body XS · 12 / 400</small><div style="font:400 12px/1.5 var(--f-body);color:#C4CFDD">👤 2,400 Playing</div></div>
   </div>
   <div class="tbl"><table>
-    <tr><th>Role</th><th>Family</th><th>Size @1440</th><th>Weight</th><th>Line height</th><th>Case / colour</th></tr>
-    <tr><td class="k">Hero headline</td><td>Montserrat</td><td>88–96px</td><td>900</td><td>0.92</td><td>Upper · white + REPEAT gradient</td></tr>
-    <tr><td class="k">Hero eyebrow</td><td>Montserrat</td><td>20–22px</td><td>800</td><td>1.2</td><td>Upper · cyan + magenta</td></tr>
-    <tr><td class="k">Hero feature row</td><td>Montserrat</td><td>12px</td><td>700</td><td>1</td><td>Upper · white, cyan icons</td></tr>
-    <tr><td class="k">Section title (pill)</td><td>Montserrat</td><td>24px</td><td>600</td><td>1.2</td><td>Title case · white</td></tr>
-    <tr><td class="k">Page heading (FAQ, SEO)</td><td>Montserrat</td><td>30–34px</td><td>600</td><td>1.2</td><td>Title case · white, key phrase magenta <code>#F032F4</code></td></tr>
-    <tr><td class="k">Promo title</td><td>Montserrat</td><td>24–26px</td><td>800</td><td>1.05</td><td>Upper · white, accent word mint</td></tr>
-    <tr><td class="k">VIP banner title</td><td>Montserrat</td><td>48px</td><td>800 italic</td><td>1</td><td>Upper · white</td></tr>
-    <tr><td class="k">Card title</td><td>Montserrat</td><td>14px</td><td>700</td><td>1.3</td><td>Upper · white</td></tr>
-    <tr><td class="k">Buttons</td><td>Montserrat</td><td>14–16px</td><td>700</td><td>1</td><td>Title case</td></tr>
-    <tr><td class="k">Body, FAQ answers</td><td>Inter</td><td>15px</td><td>400</td><td>1.6</td><td>Sentence case · muted</td></tr>
-    <tr><td class="k">Footer links, meta</td><td>Inter</td><td>13–14px</td><td>400–500</td><td>1.8</td><td>Title case · muted</td></tr>
-    <tr><td class="k">Tags, ribbons</td><td>Inter</td><td>10–11px</td><td>700</td><td>1</td><td>Upper · letter-spacing .06em</td></tr>
+    <tr><th>Style</th><th>Family</th><th>Size @1440</th><th>Mobile</th><th>Weight</th><th>Line height</th><th>Case</th></tr>
+    <tr><td class="k">H1</td><td>Inter</td><td>64px</td><td>40px</td><td>400</td><td>1.1</td><td>Upper</td></tr>
+    <tr><td class="k">H2</td><td>Inter</td><td>56px</td><td>34px</td><td>400</td><td>1.1</td><td>Upper</td></tr>
+    <tr><td class="k">H3</td><td>Inter</td><td>40px</td><td>28px</td><td>400</td><td>1.15</td><td>Upper</td></tr>
+    <tr><td class="k">H4</td><td>Inter</td><td>32px</td><td>24px</td><td>400</td><td>1.2</td><td>Title</td></tr>
+    <tr><td class="k">S1</td><td>Poppins</td><td>28px</td><td>22px</td><td>700</td><td>1.3</td><td>Title</td></tr>
+    <tr><td class="k">S2</td><td>Poppins</td><td>24px</td><td>20px</td><td>400</td><td>1.35</td><td>Title</td></tr>
+    <tr><td class="k">S3</td><td>Poppins</td><td>20px</td><td>18px</td><td>400</td><td>1.4</td><td>Title</td></tr>
+    <tr><td class="k">Body L</td><td>Poppins</td><td>18px</td><td>16px</td><td>400</td><td>1.6</td><td>Sentence</td></tr>
+    <tr><td class="k">Body M</td><td>Poppins</td><td>16px</td><td>15px</td><td>400</td><td>1.6</td><td>Sentence</td></tr>
+    <tr><td class="k">Body S</td><td>Poppins</td><td>14px</td><td>14px</td><td>400</td><td>1.6</td><td>Sentence</td></tr>
+    <tr><td class="k">Body XS</td><td>Poppins</td><td>12px</td><td>12px</td><td>400</td><td>1.5</td><td>Sentence</td></tr>
   </table></div>
-  <div class="note warn"><strong>Text inside artwork.</strong> Game names on Casino, Live Casino, Game Shows, High RTP, New Games and character cards are game logos, and they are part of the image. They use each game's own lettering (chunky condensed, gold bevel, outline and drop shadow). Don't try to reproduce them in CSS, and don't place HTML titles on top of them.</div>
+  <h3>Where each style is used</h3>
+  <div class="tbl"><table>
+    <tr><th>Homepage element</th><th>Style</th><th>Family · weight · size</th><th>Colour</th></tr>
+    <tr><td class="k">Hero headline</td><td>Display</td><td>Poppins 800 · 88–96px · line height 0.92</td><td>White + REPEAT gradient</td></tr>
+    <tr><td class="k">Hero eyebrow</td><td>S3, bold</td><td>Poppins 700 · 20px · upper</td><td>Cyan + magenta</td></tr>
+    <tr><td class="k">Hero feature row</td><td>Body XS, bold</td><td>Poppins 600 · 12px · upper</td><td>White, cyan icons</td></tr>
+    <tr><td class="k">Section title (pill)</td><td>S2</td><td>Poppins 500 · 24px</td><td>White</td></tr>
+    <tr><td class="k">Page heading (FAQ, SEO)</td><td>H4</td><td>Inter 400 · 32px</td><td>White, key phrase magenta <code>#F032F4</code></td></tr>
+    <tr><td class="k">Subpage page title</td><td>H1 / H2</td><td>Inter 400 · 64 / 56px · upper</td><td>White</td></tr>
+    <tr><td class="k">Promo title</td><td>S1</td><td>Poppins 700 · 26–28px · upper</td><td>White, accent word mint</td></tr>
+    <tr><td class="k">Jackpots headline</td><td>Display</td><td>Poppins 800 · 44px · upper</td><td>White + violet <code>#B26BFF</code></td></tr>
+    <tr><td class="k">VIP banner title</td><td>Display</td><td>Poppins 800 italic · 48px · upper</td><td>White</td></tr>
+    <tr><td class="k">VIP pitch, subtitles</td><td>Body L</td><td>Poppins 500 · 18px</td><td>White</td></tr>
+    <tr><td class="k">Card title</td><td>Body S, bold</td><td>Poppins 600 · 14px · upper</td><td>White</td></tr>
+    <tr><td class="k">Buttons</td><td>—</td><td>Poppins 600 · 14–16px</td><td>Per button</td></tr>
+    <tr><td class="k">FAQ question</td><td>Body M, bold</td><td>Poppins 600 · 16px</td><td>White</td></tr>
+    <tr><td class="k">Body, FAQ answers, SEO text</td><td>Body M</td><td>Poppins 400 · 16px</td><td>Muted</td></tr>
+    <tr><td class="k">Footer links, ticker</td><td>Body S</td><td>Poppins 400 · 14px</td><td>Muted / white</td></tr>
+    <tr><td class="k">Player counts, meta</td><td>Body XS</td><td>Poppins 400 · 12px</td><td>Muted</td></tr>
+    <tr><td class="k">Tags, ribbons</td><td>Body XS, bold</td><td>Poppins 700 · 10–11px · upper · letter-spacing .06em</td><td>White</td></tr>
+    <tr><td class="k">Live amounts (jackpots, RTP, balance)</td><td>—</td><td>Inter 700 · tabular numbers</td><td>Per component</td></tr>
+  </table></div>
+  <div class="note"><strong>Why amounts use Inter.</strong> Inter has true tabular figures (<code>font-variant-numeric: tabular-nums</code>), so jackpot amounts and balances keep the same width as they tick up. Poppins does not.</div>
+  <div class="note warn"><strong>Text inside artwork.</strong> Game names on Casino, Live Casino, Game Shows, High RTP, New Games and character cards are game logos, and they are part of the image. They use each game's own lettering, not Inter or Poppins. Don't place HTML titles on top of them.</div>
 </section>
+
 
 <section id="borders">
   <span class="eyebrow">Foundations</span>
@@ -545,19 +579,19 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">New Games</td><td>Sparkles</td><td>View All + arrows</td></tr>
     <tr><td class="k">Game Providers</td><td>Game controller</td><td>View All + arrows</td></tr>
   </table></div>
-  <p><strong>Optional subtitle.</strong> The New Games and Favourite Characters references show a one-line subtitle under the header ("Discover the latest games added to our collection!"). It is not used on the homepage. Use it on category subpages: Inter 500, 18px, <code>#E6ECF5</code>, 10px below the pill.</p>
+  <p><strong>Optional subtitle.</strong> The New Games and Favourite Characters references show a one-line subtitle under the header ("Discover the latest games added to our collection!"). It is not used on the homepage. Use it on category subpages: Body L (Poppins 500, 18px), <code>#E6ECF5</code>, 10px below the pill.</p>
   <div class="code"><button class="copy" data-target="code-sechead">Copy CSS</button><pre id="code-sechead">.section-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}
 .section-title{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:6px 26px;
   border:2px solid transparent;border-radius:999px;
   background:linear-gradient(#051026,#051026) padding-box,
              linear-gradient(90deg,#04F5E5,#7B8CFF 50%,#F032F4) border-box;
   box-shadow:-4px 0 14px rgba(4,245,229,.45),4px 0 14px rgba(240,50,244,.5);
-  font:600 24px/1.2 Montserrat,Arial,sans-serif;color:#fff}
+  font:500 24px/1.2 Poppins,Arial,sans-serif;color:#fff}
 .section-title svg{width:26px;height:26px;color:#04F5E5}
 .view-all{display:inline-flex;align-items:center;gap:14px;min-height:44px;padding:0 20px;
   border:1.5px solid #F38CFF;border-radius:12px;
   background:linear-gradient(100deg,#5B087C,#A83CD2 60%,#E6A5FF);
-  box-shadow:0 0 14px rgba(218,45,255,.45);color:#fff;font:700 14px Montserrat,sans-serif}
+  box-shadow:0 0 14px rgba(218,45,255,.45);color:#fff;font:600 14px Poppins,sans-serif}
 .carousel-btn{width:44px;height:44px;display:grid;place-items:center;border:1.5px solid #10E8F1;
   border-radius:10px;background:linear-gradient(125deg,#07162C,#1B2350);color:#fff}
 .carousel-btn--next{border-color:#BD48F5}</pre></div>
@@ -653,8 +687,8 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <h2>Header &amp; news ticker</h2>
   <figure class="ref"><img src="img/header-ticker.webp" alt="Header with menu icon, LOGO HERE, $100.00 wallet and cyan Deposit button, above a rounded news ticker" loading="lazy"><figcaption><b>Homepage</b>Header and ticker.</figcaption></figure>
   <div class="grid2">
-    <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the logo (wordmark, white, Montserrat 800). Right: the wallet pill (coin icon, balance, chevron; 1px <code>#233650</code>, 12px radius, <code>#061326</code> fill) and the Deposit button. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
-    <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Montserrat 800 with a megaphone icon, then items separated by small gold dots <code>#F4CC1D</code>. Items are plain white 13px / 600 text with no icons. A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
+    <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the logo (wordmark, white, Poppins 800). Right: the wallet pill (coin icon, balance, chevron; 1px <code>#233650</code>, 12px radius, <code>#061326</code> fill) and the Deposit button. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
+    <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Poppins 700 with a megaphone icon, then items separated by small gold dots <code>#F4CC1D</code>. Items are plain white Body S (Poppins 14px / 500) with no icons. A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
   </div>
 </section>
 
@@ -769,12 +803,12 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><th>Layer</th><th>Spec</th></tr>
     <tr><td class="k">Banner</td><td>Container width, ≈ 280px high, 16px radius. 2px neon-edge border (cyan top-left to purple bottom-right) with split glow. Fill: deep navy on the left fading to electric blue-violet <code>#1A1680</code> behind the moon.</td></tr>
     <tr><td class="k">Eyebrow</td><td>"STEP INTO OUR WORLD OF", white, 16px / 700 uppercase.</td></tr>
-    <tr><td class="k">Headline</td><td>"FULL MOON" white and "JACKPOTS" in violet <code>#B26BFF</code>, two lines, Montserrat 900, ≈ 44px, line height 1.</td></tr>
+    <tr><td class="k">Headline</td><td>"FULL MOON" white and "JACKPOTS" in violet <code>#B26BFF</code>, two lines, Poppins 800, ≈ 44px, line height 1.</td></tr>
     <tr><td class="k">Tagline</td><td>"Massive Prizes, Life-Changing Wins, And Non-Stop Action!" in muted 13px, max two lines.</td></tr>
     <tr><td class="k">Buttons</td><td>Primary: <strong>Play Jackpot Games →</strong>, CTA gradient, 8px radius. Secondary: ghost button, 1.5px violet border, white text + →. The secondary label is unreadable in the screenshot; suggested: <strong>Jackpot Rules →</strong>.</td></tr>
     <tr><td class="k">Art</td><td>A howling wolf on a rock in front of a glowing full moon, with blue lightning and purple mist. Centre of the banner, between the text and the prize boxes. Supplied as one transparent-edged image.</td></tr>
     <tr><td class="k">Prize boxes</td><td>Three boxes in the order <strong>Mini · Grand · Major</strong>. Grand is the largest and sits slightly higher. Each has a 2px border and glow in its tier colour, a near-black fill, a 12px radius, and an icon that overlaps the top edge: pink crown (Mini), gold crown (Grand), cyan gem (Major).</td></tr>
-    <tr><td class="k">Prize text</td><td>Tier name in its colour, Montserrat 800, 22px. Amount in white/gold, Montserrat 800, 22px (Grand 26px), tabular numbers, with the "SC" prefix.</td></tr>
+    <tr><td class="k">Prize text</td><td>Tier name in its colour, Poppins 700, 22px. Amount in white/gold, Inter 700, 22px (Grand 26px), tabular numbers, with the "SC" prefix.</td></tr>
     <tr><td class="k">Bottom strip</td><td>The screenshot shows a faint row of extra buttons along the bottom edge with unreadable labels. Leave it out, or use it for one text link such as "How jackpots work →".</td></tr>
   </table></div>
   <div class="grid2">
@@ -786,8 +820,8 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   box-shadow:0 0 14px color-mix(in srgb,var(--tier) 70%,transparent),
              inset 0 0 12px color-mix(in srgb,var(--tier) 25%,transparent)}
 .jackpot-tier__icon{position:absolute;top:-26px;width:52px}
-.jackpot-tier__name{font:800 22px Montserrat,sans-serif;color:var(--tier)}
-.jackpot-tier__amount{font:800 22px Montserrat,sans-serif;color:#fff;
+.jackpot-tier__name{font:700 22px Poppins,sans-serif;color:var(--tier)}
+.jackpot-tier__amount{font:700 22px Inter,sans-serif;color:#fff;
   font-variant-numeric:tabular-nums}
 .jackpot-tier--grand{transform:translateY(-8px) scale(1.15)}
 /* --tier: #FF3FD0 mini · #FFC531 grand · #19C8FF major */</pre></div></div>
@@ -805,7 +839,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
       <tr><th>Layer</th><th>Spec</th></tr>
       <tr><td class="k">Layout</td><td>Info panel (≈ 34% width) then four game cards. 28px after the panel, 16px between cards.</td></tr>
       <tr><td class="k">Info panel</td><td>Fill <code>linear-gradient(120deg,#130620,#04121C)</code>. 2px cyan border with a cyan → purple glow, 16px radius.</td></tr>
-      <tr><td class="k">Headline figure</td><td><strong>96%+</strong> as HTML text, Montserrat 900, ≈ 64px, gold <code>#FFD21F</code> with a warm glow <code>text-shadow:0 0 14px rgba(255,150,0,.75)</code>. Centred in the left half of the panel. No laurel and no extra words.</td></tr>
+      <tr><td class="k">Headline figure</td><td><strong>96%+</strong> as HTML text, Poppins 800, ≈ 64px, gold <code>#FFD21F</code> with a warm glow <code>text-shadow:0 0 14px rgba(255,150,0,.75)</code>. Centred in the left half of the panel. No laurel and no extra words.</td></tr>
       <tr><td class="k">Checklist</td><td>Top Payout Rates · Higher Win Potential · Player Favorites. 22px green check circles <code>#1CF11D</code>, white 14px / 600.</td></tr>
       <tr><td class="k">Game card</td><td>≈ 1.15 : 1, 14px radius, 2px accent border (amber, red, green, blue-violet).</td></tr>
       <tr><td class="k">RTP badge</td><td>Bottom centre, pill with 2px <code>#00F8E7</code> outline, translucent fill <code>#00191CC9</code>, cyan 15px / 800 text.</td></tr>
@@ -963,7 +997,14 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   /* layout */
   --container:1290px; --gap:20px; --gap-dense:14px; --section-gap:32px;
   /* type */
-  --f-display:'Montserrat',Arial,sans-serif; --f-body:'Inter',Arial,sans-serif;
+  --f-head:'Inter',Arial,sans-serif;      /* H1–H4, live amounts */
+  --f-display:'Poppins',Arial,sans-serif; /* subheadings, display, buttons */
+  --f-body:'Poppins',Arial,sans-serif;    /* body */
+  --h1:400 64px/1.1 var(--f-head); --h2:400 56px/1.1 var(--f-head);
+  --h3:400 40px/1.15 var(--f-head); --h4:400 32px/1.2 var(--f-head);
+  --s1:700 28px/1.3 var(--f-display); --s2:400 24px/1.35 var(--f-display); --s3:400 20px/1.4 var(--f-display);
+  --body-l:400 18px/1.6 var(--f-body); --body-m:400 16px/1.6 var(--f-body);
+  --body-s:400 14px/1.6 var(--f-body); --body-xs:400 12px/1.5 var(--f-body);
 }
 .card{position:relative;overflow:hidden;border:1.5px solid var(--accent,var(--magenta));
   border-radius:var(--r-card);box-shadow:0 0 12px color-mix(in srgb,var(--accent,var(--magenta)) 60%,transparent);
