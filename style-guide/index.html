@@ -195,7 +195,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 
 <div class="shell">
 <nav class="rail" aria-label="Style guide sections">
-  <div class="brand">NEON SWEEPS<span>HOMEPAGE STYLE GUIDE · V6</span></div>
+  <div class="brand">NEON SWEEPS<span>HOMEPAGE STYLE GUIDE · V7</span></div>
   <h4>Start</h4>
   <a href="#overview">Overview</a>
   <a href="#changes">What changed from v5</a>
@@ -221,6 +221,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#s-characters">Favourite Characters</a>
   <a href="#s-live">Live Casino</a>
   <a href="#s-shows">Game Shows</a>
+  <a href="#s-jackpots">Jackpots</a>
   <a href="#s-rtp">High RTP Games</a>
   <a href="#s-new">New Games</a>
   <a href="#s-vip">VIP Club</a>
@@ -242,16 +243,16 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 <!-- ================= OVERVIEW ================= -->
 <header id="overview" class="cover">
   <div>
-    <span class="eyebrow">Homepage style guide · Version 6 · Final references only</span>
+    <span class="eyebrow">Homepage style guide · Version 7 · Final</span>
     <h1>Neon Sweeps<br><span class="g">Style Guide</span></h1>
     <p>This guide documents the finished homepage of the US sweepstakes casino so designers and developers can rebuild it and extend it to new pages. It covers colour, type, borders, buttons, image style and every homepage section, top to bottom.</p>
-    <p>Four images are the source of truth: the full homepage, and the close-ups of <strong>High RTP Games</strong>, <strong>New Games</strong> and <strong>Favourite Characters</strong>. Where the homepage and v5 disagree, the homepage wins. Everything else from v5 that is no longer on the page has been removed.</p>
+    <p>The source of truth is the <strong>latest full homepage</strong> (with Jackpots and the 96%+ RTP panel). Three close-ups add detail: <strong>High RTP Games</strong> (game cards only), <strong>New Games</strong> and <strong>Favourite Characters</strong>. Where a close-up and the homepage disagree, the homepage wins. Anything no longer on the page has been removed.</p>
     <div class="meta"><span>Desktop canvas 1440px</span><span>Container ≈ 1290px</span><span>Dark theme only</span><span>Copyable HEX &amp; CSS</span></div>
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
     <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to hot-pink legal bar" width="667" height="2000">
-    <figcaption><b>Reference 1</b>Final homepage. The master reference for layout, order and colour.</figcaption>
+    <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
 </header>
 
@@ -259,17 +260,21 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 <section id="changes">
   <span class="eyebrow">Corrections</span>
   <h2>What changed from v5</h2>
-  <p>v5 was written while the page was still in progress. These are the corrections made after checking it against the final homepage.</p>
+  <p>v5 was written while the page was still in progress. These are all the corrections made since, checked against the latest homepage.</p>
   <div class="changes">
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Section order.</strong> Game Providers moved from under Promotions to near the bottom, after VIP Club. See the full order under <a href="#anatomy">Page anatomy</a>.</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Game Shows.</strong> The charcoal <code>#1B1B22</code> panel, borderless cards and plain-text View All are gone. Game Shows now uses the same neon pill header, purple View All and arrows as every other section, with neon-bordered wide cards.</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Card shapes.</strong> Promotions are ≈2:1 (was 1.55:1). Casino and Live Casino are ≈2:1 (was 4:3). Favourite Characters are ≈2.1:1 on the homepage (was 1.62:1). High RTP game cards are nearly square at ≈1.15:1 (was portrait 2:3).</div></div>
     <div class="chg"><span class="tag fix">Fixed</span><div><strong>Hero.</strong> The hero is a carousel with round side arrows and three dots. It has a two-tone eyebrow, a four-item feature row (Slots, Live Casino, Big Wins, Instant Play) and an Active Players card. The headline is a wide, heavy geometric sans, not a condensed face.</div></div>
-    <div class="chg"><span class="tag fix">Updated</span><div><strong>High RTP panel.</strong> The info panel now reads <strong>96%+</strong> as one large gold figure. The laurel wreath and the words "RTP" and "GAMES" are gone. The latest homepage screenshot is the reference for this panel; the close-up (reference 2) still shows the old 97%+ panel and is kept only for the game cards.</div></div>
-    <div class="chg"><span class="tag new">New</span><div><strong>Seven new homepage blocks:</strong> Casino, New Games, VIP Club banner, AI Game Search, FAQ, SEO content block, and a footer with a hot-pink legal bar.</div></div>
+    <div class="chg"><span class="tag fix">Updated</span><div><strong>High RTP panel.</strong> The info panel now reads <strong>96%+</strong> as one large gold figure. The laurel wreath and the words "RTP" and "GAMES" are gone. The close-up (reference 2) still shows the old 97%+ panel and is kept only for the game cards.</div></div>
+    <div class="chg"><span class="tag new">New</span><div><strong>Jackpots.</strong> A Full Moon Jackpots banner now sits between Game Shows and High RTP Games: headline and CTA on the left, a howling wolf and full moon in the middle, and Mini, Grand and Major prize boxes in Sweeps Coins on the right. See <a href="#s-jackpots">Jackpots</a>.</div></div>
+    <div class="chg"><span class="tag fix">Updated</span><div><strong>Promotions art.</strong> Welcome Bonus now shows two playing cards and a chip inside a pink neon ring. Penguin King shows a gold and purple crown. The offer line reads "SPEND $9.99 25K GC + 25 SC".</div></div>
+    <div class="chg"><span class="tag fix">Updated</span><div><strong>Small details.</strong> News ticker items are separated by gold dots, with no icons. Category nav icons are gold, with the active one in cyan. Explore Games and every character Play Now button end in an arrow (→). Active Players reads 29,900+.</div></div>
+    <div class="chg"><span class="tag new">New</span><div><strong>Eight new homepage blocks in total:</strong> Casino, Jackpots, New Games, VIP Club banner, AI Game Search, FAQ, SEO content block, and a footer with a hot-pink legal bar.</div></div>
     <div class="chg"><span class="tag new">New</span><div><strong>Providers grid</strong> is now 6 × 3 (18 logos). Spribe, Penguin King, Animo, Big Daddy, Fantasma and Icon21 were added.</div></div>
-    <div class="chg"><span class="tag del">Removed</span><div>Recent Winners and Jackpot Winners, the four aubergine promo-art references, the portrait game-cover reference and the old Game Shows screenshot. None of these appear on the final homepage. If Winners comes back, it should be documented on its own subpage.</div></div>
+    <div class="chg"><span class="tag del">Removed</span><div>Recent Winners, the old gold three-tier Jackpot Winners panel (replaced by the new Jackpots banner), the four aubergine promo-art references, the portrait game-cover reference and the old Game Shows screenshot.</div></div>
   </div>
+  <div class="note warn"><strong>Text errors in the screenshot.</strong> Some labels in the latest homepage image are garbled by the image generator. They are not design changes, so build them with the correct text: the Shadow Blade badge reads "NOT" (use <strong>HOT</strong>); High RTP cards read "Lucky Fortune" and "Vamory Rush" (use <strong>Lucky Clover</strong> and <strong>Diamond Rush</strong>); several New Games logos are scrambled (use the names in reference 3); and the two secondary buttons in the Jackpots banner have unreadable labels (see <a href="#s-jackpots">Jackpots</a> for suggested wording).</div>
 </section>
 
 <!-- ================= ANATOMY ================= -->
@@ -280,7 +285,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <ol class="anatomy">
     <li><a href="#s-header">Header</a></li><li><a href="#s-header">News ticker</a></li><li><a href="#s-hero">Hero carousel</a></li><li><a href="#s-nav">Category nav</a></li>
     <li><a href="#s-promos">Promotions · 3</a></li><li><a href="#s-popular">Popular Games · 4</a></li><li><a href="#s-casino">Casino · 4</a></li><li><a href="#s-characters">Favourite Characters · 3</a></li>
-    <li><a href="#s-live">Live Casino · 4</a></li><li><a href="#s-shows">Game Shows · 3</a></li><li><a href="#s-rtp">High RTP · panel + 4</a></li><li><a href="#s-new">New Games · 8</a></li>
+    <li><a href="#s-live">Live Casino · 4</a></li><li><a href="#s-shows">Game Shows · 3</a></li><li><a href="#s-jackpots">Jackpots banner</a></li><li><a href="#s-rtp">High RTP · panel + 4</a></li><li><a href="#s-new">New Games · 8</a></li>
     <li><a href="#s-vip">VIP Club banner</a></li><li><a href="#s-providers">Game Providers · 6×3</a></li><li><a href="#s-search">AI Game Search</a></li><li><a href="#s-faq">FAQ</a></li>
     <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li><li><a href="#s-footer">Legal bar</a></li>
   </ol>
@@ -317,6 +322,14 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <button class="sw" data-copy="#EC097D"><i style="background:#EC097D"></i><span><b>Pink input</b><code>#EC097D</code><small><span class="tag s">Sampled</span> newsletter field</small></span></button>
     <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 96%+</small></span></button>
     <button class="sw" data-copy="#1CF11D"><i style="background:#1CF11D"></i><span><b>Check green</b><code>#1CF11D</code><small>RTP checklist ticks</small></span></button>
+    <button class="sw" data-copy="#F4CC1D"><i style="background:#F4CC1D"></i><span><b>Ticker dot</b><code>#F4CC1D</code><small><span class="tag s">Sampled</span> news separators</small></span></button>
+  </div>
+  <h3>Jackpot tiers</h3>
+  <div class="swatches">
+    <button class="sw" data-copy="#FF3FD0"><i style="background:#FF3FD0"></i><span><b>Mini</b><code>#FF3FD0</code><small><span class="tag m">Matched</span> border, crown, label</small></span></button>
+    <button class="sw" data-copy="#FFC531"><i style="background:#FFC531"></i><span><b>Grand</b><code>#FFC531</code><small><span class="tag m">Matched</span> border, crown, label</small></span></button>
+    <button class="sw" data-copy="#19C8FF"><i style="background:#19C8FF"></i><span><b>Major</b><code>#19C8FF</code><small><span class="tag m">Matched</span> border, gem, label</small></span></button>
+    <button class="sw" data-copy="#B26BFF"><i style="background:#B26BFF"></i><span><b>JACKPOTS word</b><code>#B26BFF</code><small><span class="tag m">Matched</span> headline accent</small></span></button>
   </div>
   <h3>Card accent colours</h3>
   <p>Cards with a solid colour background (New Games) or a themed border (High RTP, Favourite Characters) take their border colour from the artwork's dominant hue. Use these values so the same hues repeat across sections.</p>
@@ -461,6 +474,8 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Casino / Live Casino</td><td>4</td><td>≈ 308 × 155</td><td>≈ 2 : 1</td></tr>
     <tr><td class="k">Favourite character</td><td>3</td><td>≈ 416 × 200</td><td>≈ 2.1 : 1</td></tr>
     <tr><td class="k">Game Show</td><td>3</td><td>≈ 416 × 208</td><td>≈ 2 : 1</td></tr>
+    <tr><td class="k">Jackpots banner</td><td>1</td><td>1290 × 280</td><td>≈ 4.6 : 1</td></tr>
+    <tr><td class="k">Jackpot prize box</td><td>3</td><td>≈ 125 × 110 (Grand ≈ 160 × 140)</td><td>—</td></tr>
     <tr><td class="k">High RTP info panel</td><td>1 + 4 cards</td><td>≈ 440 × 162</td><td>≈ 2.7 : 1</td></tr>
     <tr><td class="k">High RTP game</td><td>4</td><td>≈ 190 × 162</td><td>≈ 1.15 : 1</td></tr>
     <tr><td class="k">New game tile</td><td>8</td><td>≈ 150 × 195</td><td>≈ 0.78 (7 : 9)</td></tr>
@@ -476,13 +491,13 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <div class="stage">
     <button class="btn-deposit">Deposit</button>
     <button class="btn-play">Play Now →</button>
-    <button class="btn-ghost">Explore Games ▶</button>
+    <button class="btn-ghost">Explore Games →</button>
     <button class="btn-view">View All →</button>
     <button class="btn-arrow" aria-label="Previous">‹</button><button class="btn-arrow next" aria-label="Next">›</button>
   </div>
   <div class="stage">
     <button class="btn-promo">🎁 Purchase Now</button>
-    <button class="btn-mint">Play Now ▶</button>
+    <button class="btn-mint">Play Now →</button>
     <button class="btn-vip">Explore VIP Club →</button>
     <button class="btn-read">Continue Reading</button>
     <button class="btn-search" aria-label="Search"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
@@ -494,11 +509,11 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><th>Control</th><th>Size @1440</th><th>Fill</th><th>Border / radius</th><th>Text</th></tr>
     <tr><td class="k">Deposit</td><td>140 × 42</td><td>CTA gradient</td><td>none · 8px</td><td>15px / 700 · <code>#00151C</code></td></tr>
     <tr><td class="k">Hero Play Now</td><td>≈ 180 × 46</td><td>CTA gradient</td><td>none · 8px</td><td>16px / 700 + arrow</td></tr>
-    <tr><td class="k">Explore Games</td><td>≈ 225 × 46</td><td><code>#0B1230</code></td><td>1.5px <code>#C85DFF</code> · 8px</td><td>16px / 600 white + ▶</td></tr>
+    <tr><td class="k">Explore Games</td><td>≈ 225 × 46</td><td><code>#0B1230</code></td><td>1.5px <code>#C85DFF</code> · 8px</td><td>16px / 600 white + →</td></tr>
     <tr><td class="k">View All</td><td>184 × 44</td><td>View All gradient</td><td>1.5px <code>#F38CFF</code> · 12px</td><td>14px / 700 white + →</td></tr>
     <tr><td class="k">Carousel arrows</td><td>44 × 44</td><td>navy gradient</td><td>1.5px cyan (prev), purple (next) · 10px</td><td>white chevron</td></tr>
     <tr><td class="k">Promo CTA</td><td>≈ 36px high</td><td>CTA gradient</td><td>none · 7px</td><td>13px / 700 + gift icon</td></tr>
-    <tr><td class="k">Character Play Now</td><td>≈ 48px high</td><td>Mint <code>#2EF0C8</code></td><td>none · 14px</td><td>16px / 700 + ▶</td></tr>
+    <tr><td class="k">Character Play Now</td><td>≈ 48px high</td><td>Mint <code>#2EF0C8</code></td><td>none · 14px</td><td>16px / 700 + →</td></tr>
     <tr><td class="k">Explore VIP Club</td><td>≈ 44px high</td><td>Purple gradient</td><td>1.5px pink · 999px</td><td>14px / 700 + →</td></tr>
     <tr><td class="k">Continue Reading</td><td>≈ 280 × 44</td><td>Plum gradient</td><td>1.5px <code>#E03BA8</code> · 8px</td><td>14px / 600 white</td></tr>
     <tr><td class="k">Search</td><td>≈ 64 × 44</td><td>Magenta gradient</td><td>none · 999px</td><td>white icon</td></tr>
@@ -525,6 +540,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Favourite Characters from Games</td><td>Group of people (filled)</td><td>View All + arrows</td></tr>
     <tr><td class="k">Live Casino</td><td>Live dealer / chip</td><td>View All + arrows</td></tr>
     <tr><td class="k">Game Shows</td><td>Wheel / TV</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Jackpots</td><td>Crown / gem</td><td>View All + arrows</td></tr>
     <tr><td class="k">High RTP Games</td><td>Percent sign, green <code>#1CF11D</code></td><td>View All + arrows</td></tr>
     <tr><td class="k">New Games</td><td>Sparkles</td><td>View All + arrows</td></tr>
     <tr><td class="k">Game Providers</td><td>Game controller</td><td>View All + arrows</td></tr>
@@ -592,6 +608,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Casino / Live Casino</td><td>Dealer, table and label (ROULETTE, LIVE)</td><td>Border, glow, link</td></tr>
     <tr><td class="k">Favourite character</td><td>Character, background glow, game logo</td><td>Play Now button, border, glow</td></tr>
     <tr><td class="k">Game Show</td><td>Host, wheel, game logo, purple fade</td><td>Border, glow, link</td></tr>
+    <tr><td class="k">Jackpots banner</td><td>Wolf, full moon, lightning, crown and gem icons (separate transparent files)</td><td>Headline, tagline, buttons, prize boxes and amounts, border</td></tr>
     <tr><td class="k">High RTP game</td><td>Symbol + game logo</td><td>RTP badge, border</td></tr>
     <tr><td class="k">New game</td><td>Full tile art + game logo</td><td>NEW badge, border, glow</td></tr>
     <tr><td class="k">VIP banner</td><td>Two gold crowns (transparent PNG/WebP)</td><td>Everything else</td></tr>
@@ -619,6 +636,8 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Casino / Live tile</td><td>2 : 1</td><td>640 × 320</td><td>Label bottom centre</td><td><code>casino/roulette.webp</code></td></tr>
     <tr><td class="k">Character card</td><td>2.1 : 1 (1.65 : 1 on mobile)</td><td>880 × 420 + 880 × 534</td><td>Figure left 50%, logo top right</td><td><code>characters/book-of-dead.webp</code></td></tr>
     <tr><td class="k">Game Show</td><td>2 : 1</td><td>840 × 420</td><td>Logo bottom centre</td><td><code>game-shows/monopoly.webp</code></td></tr>
+    <tr><td class="k">Jackpot art</td><td>≈ 1.5 : 1</td><td>900 × 600, transparent edges</td><td>Wolf + moon centred</td><td><code>jackpots/full-moon-wolf.webp</code></td></tr>
+    <tr><td class="k">Jackpot tier icons</td><td>1 : 1</td><td>160 × 160, transparent</td><td>—</td><td><code>jackpots/crown-gold.webp</code></td></tr>
     <tr><td class="k">High RTP game</td><td>1.15 : 1</td><td>400 × 350</td><td>Bottom 30% clear for badge</td><td><code>rtp/fire-streak.webp</code></td></tr>
     <tr><td class="k">New game tile</td><td>7 : 9</td><td>320 × 410</td><td>Top-right corner clear for NEW</td><td><code>new/coinburst-sevens.webp</code></td></tr>
     <tr><td class="k">VIP crown</td><td>1 : 1</td><td>240 × 240, transparent</td><td>—</td><td><code>vip/crown.webp</code></td></tr>
@@ -635,7 +654,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <figure class="ref"><img src="img/header-ticker.webp" alt="Header with menu icon, LOGO HERE, $100.00 wallet and cyan Deposit button, above a rounded news ticker" loading="lazy"><figcaption><b>Homepage</b>Header and ticker.</figcaption></figure>
   <div class="grid2">
     <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the logo (wordmark, white, Montserrat 800). Right: the wallet pill (coin icon, balance, chevron; 1px <code>#233650</code>, 12px radius, <code>#061326</code> fill) and the Deposit button. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
-    <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Montserrat 800 with a megaphone icon, then items separated by small white dots. Each item has a colour icon (🎁 ⚡ 👑). A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
+    <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Montserrat 800 with a megaphone icon, then items separated by small gold dots <code>#F4CC1D</code>. Items are plain white 13px / 600 text with no icons. A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
   </div>
 </section>
 
@@ -649,9 +668,9 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Eyebrow</td><td>"THE ULTIMATE" cyan <code>#2EF2D0</code> + "GAMING EXPERIENCE" magenta <code>#E93BF2</code>, 21px / 800.</td></tr>
     <tr><td class="k">Headline</td><td>"PLAY.WIN." white, "REPEAT" with the REPEAT gradient. 88–96px / 900, two lines.</td></tr>
     <tr><td class="k">Feature row</td><td>Four items with cyan line icons: SLOTS · LIVE CASINO · BIG WINS · INSTANT PLAY. 12px / 700, 28px apart.</td></tr>
-    <tr><td class="k">Buttons</td><td>Play Now (CTA) + Explore Games (ghost), 16px apart, 18px under the feature row.</td></tr>
+    <tr><td class="k">Buttons</td><td>Play Now → (CTA) + Explore Games → (ghost with cyan-violet border), 16px apart, 18px under the feature row.</td></tr>
     <tr><td class="k">Art</td><td>Neon 777 slot machine with gold coins, diamond and lightning. Right 55–60% of the frame.</td></tr>
-    <tr><td class="k">Active Players card</td><td>≈ 215 × 135, bottom right, overlapping the art. Translucent navy <code>rgba(6,10,30,.75)</code> with a 1.5px magenta border and 14px radius. Label in white 13px; the number "25,000+" in cyan 18px / 700; a purple rising line chart.</td></tr>
+    <tr><td class="k">Active Players card</td><td>≈ 215 × 135, bottom right, overlapping the art. Translucent navy <code>rgba(6,10,30,.75)</code> with a 1.5px magenta border and 14px radius. Label in white 13px; the number "29,900+" in cyan 18px / 700; a purple rising line chart.</td></tr>
     <tr><td class="k">Arrows</td><td>40px circles outside the container, vertically centred. 1px <code>#3A4A66</code> border, navy fill.</td></tr>
     <tr><td class="k">Dots</td><td>Three 8px dots, centred under the art. Active is white, inactive is outlined.</td></tr>
   </table></div>
@@ -662,7 +681,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <span class="eyebrow">Section · navigation</span>
   <h2>Category nav</h2>
   <figure class="ref"><img src="img/category-nav.webp" alt="Category navigation bar with Popular, New, Casino, Live Casino, Promotions and VIP Club" loading="lazy"><figcaption><b>Homepage</b>Six tabs; Popular is active.</figcaption></figure>
-  <p>A 56px bar with a 1px <code>#3A4A66</code> border, 14px radius and a transparent fill. Six equal tabs: Popular, New, Casino, Live Casino, Promotions, VIP Club. Each tab has a 22px white line icon and a 15px / 500 label. The active tab's icon turns cyan with a soft glow, and its label stays white. On mobile the bar scrolls sideways.</p>
+  <p>A 56px bar with a 1px <code>#3A4A66</code> border, 14px radius and a transparent fill. Six equal tabs: Popular, New, Casino, Live Casino, Promotions, VIP Club. Each tab has a 22px gold line icon and a 15px / 600 white label. The active tab's icon is cyan with a soft glow. On mobile the bar scrolls sideways.</p>
 </section>
 
 <section id="s-promos">
@@ -679,7 +698,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
       <tr><td class="k">Title</td><td>Two or three lines, 24–26px / 800, uppercase white; one accent word in mint.</td></tr>
       <tr><td class="k">Offer</td><td>12px / 600 uppercase, with GC and SC amounts in gold.</td></tr>
       <tr><td class="k">CTA</td><td>Bottom left, CTA gradient with gift icon.</td></tr>
-      <tr><td class="k">Art</td><td>Right half, glowing to match the border colour.</td></tr>
+      <tr><td class="k">Art</td><td>Right half, glowing to match the border colour. Welcome Bonus: two playing cards and a chip in a pink neon ring. Penguin King: a gold and purple crown. Evoplay: the provider's cartoon characters on a green glow.</td></tr>
     </table></div>
   </div>
 </section>
@@ -712,14 +731,14 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <span class="eyebrow">Section · feature row</span>
   <h2>Favourite Characters from Games</h2>
   <figure class="ref"><img src="img/characters.webp" alt="Favourite Characters reference: Book of Dead, Le Vampire and Sakura Fortune cards with Play Now buttons" loading="lazy"><figcaption><b>Reference 4</b>Section close-up, with subtitle and the decorative wave.</figcaption></figure>
-  <figure class="ref"><img src="img/characters-home.webp" alt="Favourite Characters row on the homepage: three wider cards with gold, violet and pink borders" loading="lazy"><figcaption><b>Homepage</b>The same cards in the wider 2.1 : 1 homepage crop, without subtitle or wave.</figcaption></figure>
+  <figure class="ref"><img src="img/characters-home.webp" alt="Favourite Characters row on the homepage: three wider cards with gold, violet and pink borders" loading="lazy"><figcaption><b>Homepage</b>The same cards in the wider 2.1 : 1 homepage crop, without subtitle or wave. The Play Now buttons end in an arrow.</figcaption></figure>
   <div class="tbl"><table>
     <tr><th>Layer</th><th>Spec</th></tr>
     <tr><td class="k">Grid</td><td>3 cards, 20px gap. ≈ 2.1 : 1 on the homepage. Reference 4 shows the taller 1.65 : 1 crop, which is used on tablet and mobile.</td></tr>
     <tr><td class="k">Card</td><td>16px radius, 2px accent border with matching outer glow. Accents: gold <code>#FFB000</code>, violet <code>#C72CFF</code>, pink <code>#FF30C8</code>.</td></tr>
     <tr><td class="k">Art</td><td>Character from the chest up in the left half, looking at the viewer, wrapped in light trails of the accent colour. Background is dark and tinted with the accent.</td></tr>
     <tr><td class="k">Logo</td><td>Game logo in the upper right, part of the art.</td></tr>
-    <tr><td class="k">CTA</td><td>Play Now ▶ in mint <code>#2EF0C8</code>, 14px radius, lower right, centred under the logo.</td></tr>
+    <tr><td class="k">CTA</td><td>Play Now → in mint <code>#2EF0C8</code>, 14px radius, lower right, centred under the logo.</td></tr>
     <tr><td class="k">Wave</td><td>The cyan/purple wave under the cards in reference 4 is a decorative SVG for standalone use. It isn't on the homepage.</td></tr>
   </table></div>
 </section>
@@ -738,6 +757,40 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="grid2">
     <figure class="ref" style="margin:0"><img src="img/game-show-card.webp" alt="Sweet Bonanza Candyland game show card with host, wheel and purple fade" loading="lazy"><figcaption><b>Detail</b>Host, wheel, logo, purple fade.</figcaption></figure>
     <div><p>This replaces the v5 charcoal design. It uses the standard section header and three ≈ 2 : 1 cards in a row. Each card has a 2px magenta/violet border, 14px radius and magenta glow.</p><p>In the art, a presenter holding a microphone stands in front of the show's wheel or board. The game logo is at the bottom centre, and the lower 40% fades to purple. The fade is in the art; don't add a second CSS overlay.</p></div>
+  </div>
+</section>
+
+<section id="s-jackpots">
+  <span class="eyebrow">Section · feature banner · new in v7</span>
+  <h2>Jackpots</h2>
+  <figure class="ref"><img src="img/jackpots.webp" alt="Jackpots section: Full Moon Jackpots banner with headline, Play Jackpot Games button, howling wolf in front of a full moon, and Mini, Grand and Major prize boxes" loading="lazy"><figcaption><b>Homepage</b>Section header and Full Moon Jackpots banner.</figcaption></figure>
+  <p>One full-width banner under the standard section header. It is the most theatrical block on the page, so keep everything around it calm.</p>
+  <div class="tbl"><table>
+    <tr><th>Layer</th><th>Spec</th></tr>
+    <tr><td class="k">Banner</td><td>Container width, ≈ 280px high, 16px radius. 2px neon-edge border (cyan top-left to purple bottom-right) with split glow. Fill: deep navy on the left fading to electric blue-violet <code>#1A1680</code> behind the moon.</td></tr>
+    <tr><td class="k">Eyebrow</td><td>"STEP INTO OUR WORLD OF", white, 16px / 700 uppercase.</td></tr>
+    <tr><td class="k">Headline</td><td>"FULL MOON" white and "JACKPOTS" in violet <code>#B26BFF</code>, two lines, Montserrat 900, ≈ 44px, line height 1.</td></tr>
+    <tr><td class="k">Tagline</td><td>"Massive Prizes, Life-Changing Wins, And Non-Stop Action!" in muted 13px, max two lines.</td></tr>
+    <tr><td class="k">Buttons</td><td>Primary: <strong>Play Jackpot Games →</strong>, CTA gradient, 8px radius. Secondary: ghost button, 1.5px violet border, white text + →. The secondary label is unreadable in the screenshot; suggested: <strong>Jackpot Rules →</strong>.</td></tr>
+    <tr><td class="k">Art</td><td>A howling wolf on a rock in front of a glowing full moon, with blue lightning and purple mist. Centre of the banner, between the text and the prize boxes. Supplied as one transparent-edged image.</td></tr>
+    <tr><td class="k">Prize boxes</td><td>Three boxes in the order <strong>Mini · Grand · Major</strong>. Grand is the largest and sits slightly higher. Each has a 2px border and glow in its tier colour, a near-black fill, a 12px radius, and an icon that overlaps the top edge: pink crown (Mini), gold crown (Grand), cyan gem (Major).</td></tr>
+    <tr><td class="k">Prize text</td><td>Tier name in its colour, Montserrat 800, 22px. Amount in white/gold, Montserrat 800, 22px (Grand 26px), tabular numbers, with the "SC" prefix.</td></tr>
+    <tr><td class="k">Bottom strip</td><td>The screenshot shows a faint row of extra buttons along the bottom edge with unreadable labels. Leave it out, or use it for one text link such as "How jackpots work →".</td></tr>
+  </table></div>
+  <div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/jackpot-tiers.webp" alt="Mini SC 8.25, Grand SC 4,342.90 and Major SC 872.50 prize boxes with crown and gem icons" loading="lazy"><figcaption><b>Detail</b>Prize boxes.</figcaption></figure>
+    <div><div class="note warn" style="margin-top:0">Prize amounts must come from the live jackpot feed and update in place. Show them in Sweeps Coins (SC), never in dollars, and link the banner to the jackpot rules.</div>
+    <div class="code" style="margin-bottom:0"><button class="copy" data-target="code-jackpot">Copy CSS</button><pre id="code-jackpot">.jackpot-tier{position:relative;display:grid;place-items:center;
+  gap:4px;padding:26px 20px 14px;border:2px solid var(--tier);
+  border-radius:12px;background:#07040F;
+  box-shadow:0 0 14px color-mix(in srgb,var(--tier) 70%,transparent),
+             inset 0 0 12px color-mix(in srgb,var(--tier) 25%,transparent)}
+.jackpot-tier__icon{position:absolute;top:-26px;width:52px}
+.jackpot-tier__name{font:800 22px Montserrat,sans-serif;color:var(--tier)}
+.jackpot-tier__amount{font:800 22px Montserrat,sans-serif;color:#fff;
+  font-variant-numeric:tabular-nums}
+.jackpot-tier--grand{transform:translateY(-8px) scale(1.15)}
+/* --tier: #FF3FD0 mini · #FFC531 grand · #19C8FF major */</pre></div></div>
   </div>
 </section>
 
@@ -851,6 +904,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">768–1023</td><td>24px</td><td>2 + scroll</td><td>3 + scroll</td><td>4 + scroll</td><td>4 × 5</td><td>panel full width, 4 below</td></tr>
     <tr><td class="k">&lt; 768</td><td>16px</td><td>1.15 visible, swipe</td><td>2 visible, swipe</td><td>2.5 visible, swipe</td><td>3 × 6</td><td>panel, then 2 × 2</td></tr>
   </table></div>
+  <p>The Jackpots banner stacks on tablet and mobile: text and buttons first, then the wolf art as a shorter strip, then the three prize boxes in one row (Grand in the middle, still largest). Below 400px the boxes become a 3-column row of smaller tiles with the icon inside.</p>
   <p>On mobile, every carousel row scrolls sideways with scroll snap, and a partly visible card hints that there is more. The arrows hide below 768px, but View All stays. The hero headline drops to 44–52px, the art moves behind the text with a dark overlay, and the Active Players card hides. The category nav scrolls. Character cards switch to the 1.65 : 1 crop. Keep all touch targets at least 44px.</p>
 </section>
 
@@ -868,7 +922,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Footer link</td><td>Responsible Gaming</td><td>Responsible Social Gameplay</td></tr>
     <tr><td class="k">FAQ tab</td><td>Payment</td><td>Coins &amp; Redemptions</td></tr>
   </table></div>
-  <p>The Welcome Bonus card already uses the right model: "SIGN UP 10K GC + 1 SC · SPEND $9.99 250K GC + 25 SC". Use that pattern for every offer.</p>
+  <p>The Welcome Bonus card and the Jackpots prize boxes already use the right model: "SIGN UP 10K GC + 1 SC · SPEND $9.99 25K GC + 25 SC" and amounts in SC. Use that pattern for every offer and prize.</p>
 </section>
 
 <section id="tokens">
@@ -885,7 +939,9 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   --cyan:#04F5E5; --cta-mint:#0FE2D0; --play-mint:#2EF0C8;
   --magenta:#F032F4; --purple:#A84DFF; --violet:#322571;
   --search:#C709EB; --hotpink:#F80180; --pink-input:#EC097D; --newsletter:#E03BA8;
-  --gold:#FFCE21; --check:#1CF11D; --rtp:#00F8E7; --new-badge:#D41BE0;
+  --gold:#FFCE21; --check:#1CF11D; --rtp:#00F8E7; --new-badge:#D41BE0; --ticker-dot:#F4CC1D;
+  /* jackpot tiers */
+  --jp-mini:#FF3FD0; --jp-grand:#FFC531; --jp-major:#19C8FF; --jp-word:#B26BFF;
   /* card accents */
   --acc-green:#01A200; --acc-blue:#051AF1; --acc-amber:#F9A202;
   --acc-pink:#F9038D; --acc-red:#EE0212; --acc-fuchsia:#EA02AC;
@@ -930,6 +986,8 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <label><input type="checkbox" id="c4">Borders and glows are CSS, never baked into art</label>
     <label><input type="checkbox" id="c5">Buttons, badges, RTP values and counts are HTML</label>
     <label><input type="checkbox" id="c6">Game Shows uses neon-bordered cards (not the v5 charcoal panel)</label>
+    <label><input type="checkbox" id="c15">Jackpots banner in place, amounts live from the feed in SC</label>
+    <label><input type="checkbox" id="c16">Garbled screenshot labels built with the correct names</label>
     <label><input type="checkbox" id="c7">New Games tiles keep their colour order and NEW badges</label>
     <label><input type="checkbox" id="c8">Providers grid is 6 × 3 with SVG logos</label>
     <label><input type="checkbox" id="c9">FAQ and SEO placeholder copy replaced</label>
@@ -950,6 +1008,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Category (Slots, Casino, Live, New…)</td><td>Section header with subtitle, card rows</td><td>Filter bar, sort, full grid, pagination</td></tr>
     <tr><td class="k">Game detail / launch</td><td>Buttons, badges, RTP badge</td><td>Game frame, info panel, related games</td></tr>
     <tr><td class="k">Promotions</td><td>Promotion card</td><td>Full offer page, terms layout</td></tr>
+    <tr><td class="k">Jackpots</td><td>Jackpots banner, prize boxes</td><td>Jackpot game grid, rules, recent jackpot wins</td></tr>
     <tr><td class="k">VIP Club</td><td>VIP banner, gold</td><td>Tier ladder, benefits table</td></tr>
     <tr><td class="k">Get Coins (store)</td><td>CTA, card border</td><td>Coin package cards, checkout</td></tr>
     <tr><td class="k">Redeem</td><td>Inputs, FAQ</td><td>Redemption form, status</td></tr>
@@ -957,7 +1016,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   </table></div>
 </section>
 
-<footer class="doc">Neon Sweeps homepage style guide · v6 · Built from four final references: the homepage, High RTP Games, New Games and Favourite Characters. Values tagged Sampled were read from the screenshots; all other values are matched recommendations.</footer>
+<footer class="doc">Neon Sweeps homepage style guide · v7 · Built from the latest homepage plus the High RTP Games, New Games and Favourite Characters close-ups. Values tagged Sampled were read from the screenshots; all other values are matched recommendations.</footer>
 </div></main>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
