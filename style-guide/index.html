@@ -148,6 +148,33 @@ td.k{color:#fff;font-weight:600;white-space:nowrap}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media(max-width:900px){.b-row{grid-template-columns:1fr}.b-rules{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.b-rules{grid-template-columns:1fr}}
+.dt{margin:28px 0;padding:22px;border:1px solid var(--line-soft);border-radius:16px;background:#050E22;scroll-margin-top:12px}
+.dt-head h3{margin:0;font-size:22px}
+.dt-head .eyebrow{margin-bottom:4px}
+.dt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.dt-box{min-width:0;padding:14px 16px;border:1px solid var(--line-soft);border-radius:12px;background:var(--doc-panel)}
+.dt h4{margin:0 0 8px;font:600 12px var(--f-body);letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+.dt-box ol,.dt-box ul{margin:0;padding-left:18px;font-size:13.5px;color:#C7D2E0;display:grid;gap:4px}
+.dt-count{font:700 26px/1.1 var(--f-display);color:#fff;margin-bottom:6px}
+.dt-al{width:100%;min-width:0;font-size:13px}
+.dt-al td{padding:6px 0;border-bottom:1px solid var(--line-soft);vertical-align:middle}
+.dt-al td:last-child{text-align:right;white-space:nowrap}
+.al{display:inline-block;padding:2px 9px;border-radius:999px;font:600 11px var(--f-body);letter-spacing:.04em}
+.al-l{background:#0C3B36;color:#7DF6E6}.al-c{background:#3B0E3F;color:#F7A6FA}.al-r{background:#2A1C47;color:#CDB6FF}
+.dt-style{padding:16px;border:1px solid #2A2156;border-radius:12px;background:linear-gradient(100deg,#0A1530,#150B2E)}
+.dt-style p{margin:0 0 10px;font-size:14px}
+.dt-prompt{margin-top:10px}
+.dt-plabel{font:600 12.5px var(--f-body);color:#F7A6FA}
+.dt-prompt .code{margin:6px 0 0}
+.dt-prompt pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:none;font-size:12px}
+.dt-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start;margin:16px 0}
+.dt-rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin:16px 0}
+.dt-rules>div{padding:14px 16px;border:1px solid var(--line-soft);border-radius:12px;background:#07122A}
+.dt-rules b{display:block;font-size:14px;margin-bottom:4px}.dt-rules span{font-size:13px;color:#AEBBD0}
+@media(max-width:900px){.dt-grid,.dt-rules{grid-template-columns:1fr}.dt-pair{grid-template-columns:1fr}.dt{padding:16px}}
+.mm-closed{min-width:0}.mm-closed .mm__logo{white-space:nowrap}
+#s-menu td{vertical-align:middle}
+@media(max-width:520px){.mm-closed .b-wallet{display:none}.mm-closed{padding:8px 10px;gap:8px}.mm-closed .b-deposit{padding:0 14px}.mm-closed .mm__logo{font-size:14px;min-width:0;overflow:hidden;text-overflow:ellipsis}.mm-closed .b-icon{width:36px;flex:none}}
 /* ============ LIVE SAMPLES — these use the production CSS from the guide ============ */
 .stage{background:var(--bg);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin:16px 0;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .btn-deposit,.btn-play{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 22px;border:0;border-radius:8px;background:var(--cta);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -265,6 +292,13 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#tokens">CSS tokens</a>
   <a href="#checklist">Handoff checklist</a>
   <a href="#next">Next: subpages</a>
+  <h4>Sections in detail</h4>
+  <a href="#dt-rules">Layout rules</a>
+  <a href="#dt-home">Homepage sections</a>
+  <a href="#d-shell">Page shell</a>
+  <a href="#d-allgames">All Games page</a>
+  <a href="#d-promopage">Promotions page</a>
+  <a href="#d-guidespage">Guides page</a>
 </nav>
 
 <main><div class="wrap">
@@ -460,7 +494,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Hero feature row</td><td>Body XS, bold</td><td>Poppins 600 · 12px · upper</td><td>White, cyan icons</td></tr>
     <tr><td class="k">Section title (pill)</td><td>S2</td><td>Poppins 500 · 24px</td><td>White</td></tr>
     <tr><td class="k">Page heading (FAQ, SEO)</td><td>H4</td><td>Inter 400 · 32px</td><td>White, key phrase magenta <code>#F032F4</code></td></tr>
-    <tr><td class="k">Subpage page title</td><td>H1 / H2</td><td>Inter 400 · 64 / 56px · upper</td><td>White</td></tr>
+    <tr><td class="k">Subpage page title</td><td>Display</td><td>Poppins 700 · 56–64px · title case</td><td>White into pink-violet gradient</td></tr>
     <tr><td class="k">Promo title</td><td>S1</td><td>Poppins 700 · 26–28px · upper</td><td>White, accent word mint</td></tr>
     <tr><td class="k">Jackpots headline</td><td>Display</td><td>Poppins 800 · 44px · upper</td><td>White + violet <code>#B26BFF</code></td></tr>
     <tr><td class="k">VIP banner title</td><td>Display</td><td>Poppins 800 italic · 48px · upper</td><td>White</td></tr>
@@ -1567,7 +1601,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="next">
   <span class="eyebrow">Next</span>
   <h2>Next: subpages</h2>
-  <p>This guide covers the homepage and the shared foundations. Each subpage will get its own chapter that reuses these tokens and components and documents only what is new.</p>
+  <p>All Games, Promotions and Guides are now documented in <a href="#dt-pages">Part 5</a>. This guide covers the homepage and the shared foundations. Each subpage will get its own chapter that reuses these tokens and components and documents only what is new.</p>
   <div class="tbl"><table>
     <tr><th>Subpage</th><th>Reuses</th><th>Needs designing</th></tr>
     <tr><td class="k">Category (Slots, Casino, Live, New…)</td><td>Section header with subtitle, card rows</td><td>Filter bar, sort, full grid, pagination</td></tr>
@@ -1581,6 +1615,261 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   </table></div>
 </section>
 
+<div class="part" id="detail"><span class="eyebrow">Part 5</span><h2>Sections in detail</h2></div>
+<section id="dt-rules">
+  <span class="eyebrow">Sections in detail</span>
+  <h2>Layout rules at a glance</h2>
+  <p>Each homepage section and each page is broken down below: what it contains, how its text is aligned, how many buttons it has, its image style, and a ready-to-use prompt for creating matching art.</p>
+  <div class="dt-rules">
+  <div><b>Headings start on the left.</b><span>Every section title pill sits at the left edge. View All and arrows always sit on the right of the same line.</span></div>
+  <div><b>Text inside cards starts on the left.</b><span>Promo titles, offers, footers, article titles and banner copy all align left.</span></div>
+  <div><b>Logos and labels in art are centred.</b><span>Game names baked into tiles, RTP badges, prize boxes and provider logos are centred.</span></div>
+  <div><b>Only one centred text block.</b><span>The SEO block is the only centred heading + paragraph on the homepage. Pagination is also centred.</span></div>
+  <div><b>One button per card, at most two per banner.</b><span>Cards have one CTA or none (the whole card is the link). Hero and Jackpots have two: one filled, one ghost.</span></div>
+  <div><b>Section titles in title case.</b><span>Some close-ups show titles in capitals (POPULAR GAMES, LIVE CASINO, HIGH RTP GAMES) while the homepage uses title case. Use title case everywhere, e.g. "Popular Games".</span></div>
+  <div><b>View All + 2 arrows, or nothing.</b><span>Carousel sections get all three controls. Fixed sections (Promotions, VIP, FAQ) get none. Grid pages use View All without arrows.</span></div>
+</div>
+  <div class="tbl"><table><tr><th>Section</th><th>Heading</th><th>Card / body text</th><th>Buttons</th><th>Image style</th></tr><tr><td class="k">Hero</td><td>Left</td><td>—</td><td>2 + arrows/dots</td><td>3D neon object</td></tr><tr><td class="k">Promotions</td><td>Left</td><td>Left</td><td>1 per card</td><td>3D reward object</td></tr><tr><td class="k">Popular Games</td><td>Left</td><td>Left (footer)</td><td>View All + 2</td><td>Character art</td></tr><tr><td class="k">Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Favourite Characters</td><td>Left</td><td>Centred (logo + button)</td><td>View All + 2 · 1 per card</td><td>Character portrait</td></tr><tr><td class="k">Live Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Game Shows</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Presenter + wheel</td></tr><tr><td class="k">Jackpots</td><td>Left</td><td>Left · prize boxes centred</td><td>View All + 2 · 2 in banner</td><td>Fantasy scene + 3D icons</td></tr><tr><td class="k">High RTP</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Single glowing symbol</td></tr><tr><td class="k">New Games</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Saturated poster</td></tr><tr><td class="k">VIP Club</td><td>—</td><td>Left</td><td>1</td><td>Transparent 3D crowns</td></tr><tr><td class="k">Game Providers</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Logos only</td></tr><tr><td class="k">AI Game Search</td><td>—</td><td>Left</td><td>1</td><td>Icons only</td></tr><tr><td class="k">FAQ</td><td>Left</td><td>Left</td><td>5 tabs + rows</td><td>None</td></tr><tr><td class="k">SEO block</td><td>Centred</td><td>Centred</td><td>1</td><td>None</td></tr><tr><td class="k">Footer</td><td>Left</td><td>Left</td><td>1 + 4 social</td><td>None</td></tr></table></div>
+  <h3>Base prompt (start every image with this)</h3>
+  <div class="dt-prompt"><div class="dt-plabel">Shared style</div><div class="code"><button class="copy" data-target="pr-20">Copy prompt</button><pre id="pr-20">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI.</pre></div></div>
+  <p>Then add the subject line from the section's own prompt below. Every prompt ends with "No text, no logos, no buttons, no borders, no watermarks." because text, logos, borders and buttons are added in HTML or by the designer afterwards.</p>
+</section>
+<section id="dt-home">
+  <span class="eyebrow">Sections in detail</span>
+  <h2>Homepage sections</h2>
+  <article class="dt" id="d-hero">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Hero carousel</h3></div>
+  <figure class="ref"><img src="img/hero.webp" alt="Hero slide with headline, feature row, two buttons and neon 777 slot art" loading="lazy"><figcaption><b>Homepage</b>Hero slide with headline, feature row, two buttons and neon 777 slot art</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Two-tone eyebrow (cyan + magenta)</li><li>Two-line headline: white line + gradient line</li><li>Feature row: 4 icon + label items</li><li>Two buttons</li><li>Art on the right 55–60%</li><li>Active Players card overlapping the art</li><li>Side arrows and 3 dots</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Eyebrow, headline, feature row</td><td><span class="al al-l">Left</span></td></tr><tr><td>Buttons</td><td><span class="al al-l">Left</span> (in a row)</td></tr><tr><td>Active Players card</td><td><span class="al al-l">Left</span> inside the card</td></tr><tr><td>Dots</td><td><span class="al al-c">Centred</span> under the art</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">2 + controls</div><ul><li><strong>Play Now →</strong> (primary, cyan)</li><li><strong>Explore Games →</strong> (ghost)</li><li>Controls: 2 round arrows, 3 dots</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>One hero object, a 3D neon slot machine, glowing in cyan, violet and magenta, with gold coins and electric lightning around it. Lit from inside, on a near-black background that stays dark on the left so the headline can sit there.</p><div class="dt-prompt"><div class="dt-plabel">Hero art (3.6 : 1)</div><div class="code"><button class="copy" data-target="pr-1">Copy prompt</button><pre id="pr-1">Ultra-detailed glossy 3D render of a futuristic neon slot machine with three glowing &quot;7&quot; reels in cyan, violet and magenta, floating gold coins, a faceted crystal diamond and crackling electric-blue lightning arcs, deep navy-black background #000816, dramatic rim lighting, reflective chrome, subject placed in the right 55% of a very wide 3.6:1 frame, left 45% dark and empty for a headline. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-promos">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Promotions</h3></div>
+  <figure class="ref"><img src="img/promotions.webp" alt="Three promotion cards: Welcome Bonus, Penguin King, Evoplay" loading="lazy"><figcaption><b>Homepage</b>Three promotion cards: Welcome Bonus, Penguin King, Evoplay</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header (no View All, no arrows)</li><li>3 cards in a row, each: tag pill, optional corner ribbon, 2–3 line title, offer line with GC/SC in gold, 1 button, art on the right</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Tag, title, offer</td><td><span class="al al-l">Left</span></td></tr><tr><td>Button</td><td><span class="al al-l">Left</span> bottom</td></tr><tr><td>Art</td><td><span class="al al-r">Right</span> half</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1 per card</div><ul><li><strong>Purchase Now</strong> or <strong>Play Now</strong> with gift icon (promo CTA)</li><li>No section controls</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>One glowing 3D object per card, sitting in the right half and lit in the card's border colour (cyan or magenta). Objects are rewards: gift boxes, playing cards and chips, crowns, coins.</p><div class="dt-prompt"><div class="dt-plabel">Promotion card art (2 : 1)</div><div class="code"><button class="copy" data-target="pr-2">Copy prompt</button><pre id="pr-2">Glossy 3D render of [OBJECT: an open gift box bursting with light / two playing cards and a casino chip inside a pink neon ring / a gold and purple crown], floating gold coins and sparkles, neon [cyan / magenta] rim light and glow, near-black navy background, object on the right half of a 2:1 frame, left half dark and empty for text. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-popular">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Popular Games</h3></div>
+  <figure class="ref"><img src="img/popular.webp" alt="Four popular game cards with title and player count footers" loading="lazy"><figcaption><b>Homepage</b>Four popular game cards with title and player count footers</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>4 cards: art with game logo + footer with title and player count</li><li>Optional HOT badge: magenta tab in the top-right corner, flush with the border</li><li>Card ≈ 1.4 : 1 overall: art on top (≈ 65%), dark footer below (≈ 35%)</li><li>Footer: game name (Body S 700, uppercase) on line 1, icon + "2,400 Playing" (Body S 500) on line 2</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>View All + arrows</td><td><span class="al al-r">Right</span></td></tr><tr><td>Footer title and count</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo in art</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Cards themselves are links (no button inside)</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Close-up reference: 4 cards with a 2px magenta border and soft glow inside one dark rounded panel. Character-led game art: one hero character from the chest up, in front of a themed scene, lit with strong neon or fire light. The game logo sits across the lower third.</p><div class="dt-prompt"><div class="dt-plabel">Game tile art (2 : 1)</div><div class="code"><button class="copy" data-target="pr-3">Copy prompt</button><pre id="pr-3">Glossy 3D game illustration of [CHARACTER: a cyberpunk woman in neon visor / a snarling shadow wolf / a bearded storm god / a golden warrior queen], chest-up, centred, dramatic neon [ACCENT] rim light, themed background ([neon city / dark forest / lightning sky / golden temple]), rich saturated colour, lower third kept calm for the game logo. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="note warn">For real licensed games (Book of Dead, Monopoly Live, Sweet Bonanza and so on) always use the provider's official art. Use the prompts only for in-house or placeholder art.</div>
+<div class="note warn">In the close-up the player-count icon changes per card (person, ✕, spade, star). Use the same person icon on every card so the line reads as one data point; save varied icons for meaning, such as a flame for "trending".</div>
+  </article><article class="dt" id="d-casino">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Casino</h3></div>
+  <figure class="ref"><img src="img/casino.webp" alt="Casino row: Roulette, Blackjack, Baccarat, Slots" loading="lazy"><figcaption><b>Homepage</b>Casino row: Roulette, Blackjack, Baccarat, Slots</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>4 tiles: dealer + table art with the game name in the art</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game name in art</td><td><span class="al al-c">Centred</span> bottom</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Tiles are links</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>A smiling dealer on the right, the table or object (wheel, cards, chips) on the left, in warm gold or purple casino light. The label is yellow-gold capitals with a dark outline, centred at the bottom.</p><div class="dt-prompt"><div class="dt-plabel">Casino tile art (2 : 1)</div><div class="code"><button class="copy" data-target="pr-4">Copy prompt</button><pre id="pr-4">Glossy 3D illustration of a friendly glamorous casino dealer on the right side, beside a [roulette wheel / fanned playing cards / baccarat table with chips / neon 777 slot symbol] on the left, warm [gold / purple-magenta] casino lighting with bokeh, rich saturated colour, bottom 25% kept calm for a centred label. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-characters">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Favourite Characters from Games</h3></div>
+  <figure class="ref"><img src="img/characters.webp" alt="Book of Dead, Le Vampire and Sakura Fortune cards with Play Now buttons" loading="lazy"><figcaption><b>Reference</b>Book of Dead, Le Vampire and Sakura Fortune cards with Play Now buttons</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>Optional one-line subtitle (subpages only)</li><li>3 wide cards: character left, game logo upper right, Play Now button under the logo</li><li>Optional decorative wave under the row</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title, subtitle</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo</td><td><span class="al al-c">Centred</span> in the right half</td></tr><tr><td>Play Now button</td><td><span class="al al-c">Centred</span> under the logo</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1 per card</div><ul><li><strong>Play Now →</strong> (mint)</li><li>Header: View All + 2 arrows</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>The most "character" section: one big, expressive, chest-up figure looking at the viewer from the left half, wrapped in curling light trails of the card's accent colour (gold, violet, pink). Right half is dark for the logo and button.</p><div class="dt-prompt"><div class="dt-plabel">Character card art (2.1 : 1)</div><div class="code"><button class="copy" data-target="pr-5">Copy prompt</button><pre id="pr-5">Glossy 3D character portrait of [an adventurous explorer holding a golden book / a grinning vampire count with a glass of red wine / a geisha with cherry blossom hairpins], chest-up on the LEFT half, looking at the viewer, swirling [gold / violet / pink] neon light trails around them, dark background tinted with the same colour, RIGHT 45% dark and empty for a logo and button, 2.1:1 frame. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="note warn">For real licensed games (Book of Dead, Monopoly Live, Sweet Bonanza and so on) always use the provider's official art. Use the prompts only for in-house or placeholder art.</div>
+</article><article class="dt" id="d-live">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Live Casino</h3></div>
+  <figure class="ref"><img src="img/live-casino.webp" alt="Live Casino row with Roulette, Blackjack, Baccarat and Game Shows Live" loading="lazy"><figcaption><b>Homepage</b>Live Casino row with Roulette, Blackjack, Baccarat and Game Shows Live</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Same as Casino: 4 tiles</li><li>Label has two lines: game name in yellow-gold (white on Game Shows) + <strong>LIVE</strong> below</li><li>LIVE is cyan on the first tile and magenta on the others; pick one per row (magenta recommended) unless the colour carries meaning</li><li>Section icon: spade, in cyan</li><li>Each tile: 2px magenta-violet border, 14px radius, dealer on the right looking at the viewer, table or prop on the left</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Name + LIVE in art</td><td><span class="al al-c">Centred</span> bottom</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Tiles are links</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Identical style to Casino so the two rows read as a pair: glamorous dealer in a black dress, warm or neon casino background (purple, blue-red, gold, violet with a prize wheel). Lighting is a little cooler (blue-violet) to suggest a studio.</p><div class="dt-prompt"><div class="dt-plabel">Live tile art (2 : 1)</div><div class="code"><button class="copy" data-target="pr-6">Copy prompt</button><pre id="pr-6">Same as the Casino prompt, plus: live studio feel, cool blue-violet studio lights, a soft camera-light glow on the dealer. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-shows">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Game Shows</h3></div>
+  <figure class="ref"><img src="img/game-shows.webp" alt="Game Shows row with three wide cards" loading="lazy"><figcaption><b>Homepage</b>Game Shows row with three wide cards</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>3 wide cards: presenter with microphone in front of a wheel or board, game logo bottom centre, purple fade at the bottom</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo</td><td><span class="al al-c">Centred</span> bottom</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Cards are links</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Bright, colourful TV-show sets (candy, board game, jungle) with a cheerful presenter in the centre. The lower 40% fades to violet so every card ends in the same colour.</p><div class="dt-prompt"><div class="dt-plabel">Game show art (2 : 1)</div><div class="code"><button class="copy" data-target="pr-7">Copy prompt</button><pre id="pr-7">Glossy 3D illustration of a cheerful TV game show presenter holding a microphone, centred, in front of a giant colourful prize wheel, [candy-land / board-game / jungle] themed studio set, bright saturated colours, lower 40% fading smoothly into deep violet #6A0FD0, 2:1 frame. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="note warn">For real licensed games (Book of Dead, Monopoly Live, Sweet Bonanza and so on) always use the provider's official art. Use the prompts only for in-house or placeholder art.</div>
+</article><article class="dt" id="d-jackpots">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Jackpots</h3></div>
+  <figure class="ref"><img src="img/jackpots.webp" alt="Full Moon Jackpots banner with wolf art and Mini, Grand, Major prize boxes" loading="lazy"><figcaption><b>Homepage</b>Full Moon Jackpots banner with wolf art and Mini, Grand, Major prize boxes</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>One wide banner: eyebrow, 2-line headline, tagline, 2 buttons (left) · wolf and moon art (centre) · 3 prize boxes (right)</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Eyebrow, headline, tagline</td><td><span class="al al-l">Left</span></td></tr><tr><td>Buttons</td><td><span class="al al-l">Left</span></td></tr><tr><td>Prize box name and amount</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">2 + 3 in header</div><ul><li><strong>Play Jackpot Games →</strong> (primary)</li><li><strong>Jackpot Rules →</strong> (ghost)</li><li>Header: View All + 2 arrows</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Night-time fantasy: a howling wolf on a rock in front of a huge glowing full moon, blue lightning and purple mist. Prize icons (crowns, gem) are separate glossy 3D objects.</p><div class="dt-prompt"><div class="dt-plabel">Banner art (≈1.5 : 1, transparent edges)</div><div class="code"><button class="copy" data-target="pr-8">Copy prompt</button><pre id="pr-8">Glossy 3D illustration of a majestic wolf howling on a rocky outcrop in front of an enormous glowing full moon, electric-blue lightning and drifting purple mist, deep blue-violet night sky, rich saturated neon colour, subject centred, edges fading to transparent so it blends into a banner. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">Prize icons (1 : 1, transparent)</div><div class="code"><button class="copy" data-target="pr-9">Copy prompt</button><pre id="pr-9">Glossy 3D [pink crown / golden crown / cyan diamond gem] icon, neon glow in the same colour, centred, transparent background, 1:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-rtp">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>High RTP Games</h3></div>
+  <figure class="ref"><img src="img/high-rtp-97.webp" alt="High RTP Games: 97%+ gold figure with three checklist items, then four symbol cards with cyan RTP badges" loading="lazy"><figcaption><b>Reference (latest)</b>High RTP Games: 97%+ gold figure with three checklist items, then four symbol cards with cyan RTP badges</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header (title in capitals here) with View All + 2 arrows</li><li>Info panel: big gold percentage + divider + 3 checklist items</li><li>4 symbol cards: one glowing symbol + game logo + RTP badge</li><li>A thin cyan line under the cards</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Big percentage</td><td><span class="al al-c">Centred</span> in the left half of the panel</td></tr><tr><td>Checklist</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo + RTP badge</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows (arrow icons)</li><li>Cards are links; the RTP badge is a label, not a button</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>One iconic symbol per card (open golden book, fiery 7, four-leaf clover, diamond) glowing on a background of the same colour. Simpler than character art, so the RTP number stands out.</p><div class="dt-prompt"><div class="dt-plabel">RTP symbol tile (1.15 : 1)</div><div class="code"><button class="copy" data-target="pr-10">Copy prompt</button><pre id="pr-10">Glossy 3D [open golden book with flames / fiery red lucky seven / emerald four-leaf clover / brilliant blue diamond] symbol, centred in the upper 60%, intense glow and light rays in the same colour, dark background tinted [orange / red / green / blue-violet], bottom 30% kept calm for a logo and badge. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="note pink"><strong>Check the figure.</strong> This latest reference shows <strong>97%+</strong>, while the homepage screenshot shows <strong>96%+</strong>. Use one number everywhere. The guide currently uses 96%+; tell me if it should be 97%+.</div>
+</article><article class="dt" id="d-new">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>New Games</h3></div>
+  <figure class="ref"><img src="img/new-games.webp" alt="Eight portrait new game tiles with NEW badges" loading="lazy"><figcaption><b>Reference</b>Eight portrait new game tiles with NEW badges</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>8 portrait tiles, each one saturated colour, NEW badge top right, game logo in the lower third</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo</td><td><span class="al al-c">Centred</span> lower third</td></tr><tr><td>NEW badge</td><td><span class="al al-r">Right</span> top corner</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Tiles are links</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Poster-like tiles flooded with one saturated colour (green, blue, amber, pink, red, fuchsia). Subject in the top two-thirds, chunky white or gold logo below.</p><div class="dt-prompt"><div class="dt-plabel">New game tile (7 : 9)</div><div class="code"><button class="copy" data-target="pr-11">Copy prompt</button><pre id="pr-11">Glossy 3D portrait game poster, background flooded with saturated [green / royal blue / amber / hot pink / red / fuchsia], [SUBJECT: glowing temple stairs / burst of lucky 7s / ghost train / smiling dealer / exploding fruit], subject in the upper two thirds, lower third calm for a logo, top-right corner clear for a badge, 7:9 portrait. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-vip">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>VIP Club banner</h3></div>
+  <figure class="ref"><img src="img/vip-club.webp" alt="VIP Club banner with crowns and Explore VIP Club button" loading="lazy"><figcaption><b>Homepage</b>VIP Club banner with crowns and Explore VIP Club button</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>No section header</li><li>Crown · VIP CLUB title · 2-line pitch · button · crown, in one row</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Title and pitch</td><td><span class="al al-l">Left</span></td></tr><tr><td>Whole row</td><td><span class="al al-c">Centred</span> vertically</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1</div><ul><li><strong>Explore VIP Club →</strong> (pill)</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Only two images: matching glossy gold crowns with gems, on transparent backgrounds. Everything else is CSS.</p><div class="dt-prompt"><div class="dt-plabel">VIP crown (1 : 1, transparent)</div><div class="code"><button class="copy" data-target="pr-12">Copy prompt</button><pre id="pr-12">Glossy 3D royal golden crown with purple and pink gems, soft golden glow, slight 3/4 angle, transparent background, 1:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  
+</article><article class="dt" id="d-providers">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Game Providers</h3></div>
+  <figure class="ref"><img src="img/providers.webp" alt="Six by three grid of provider logos" loading="lazy"><figcaption><b>Homepage</b>Six by three grid of provider logos</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>18 logo tiles, 6 × 3, in a fixed order (see Game Providers section)</li><li>Tile: deep navy <code>#0E1A36</code> to <code>#08122A</code>, 12px radius, soft dark drop shadow, no visible border at rest</li><li>Logo: max 46px high and 70% of the tile width, centred, in brand colours or white</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>Logos</td><td><span class="al al-c">Centred</span> in tiles</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Tiles are links to each provider page</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>No generated art. Official SVG logos only, in brand colours or white. Keep the visual weight even: wide wordmarks shrink, compact marks (Happy Duck, Shady Lady) may be taller.</p></div>
+  
+</article><article class="dt" id="d-search">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>AI Game Search</h3></div>
+  <figure class="ref"><img src="img/ai-search.webp" alt="AI Game Search bar" loading="lazy"><figcaption><b>Homepage</b>AI Game Search bar</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Sparkle icon + label · divider · text input · search button, all in one pill</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Label and input text</td><td><span class="al al-l">Left</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1</div><ul><li><strong>Search</strong> (magenta, icon only)</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>No images. Icons only.</p></div>
+  
+</article><article class="dt" id="d-faq">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>FAQ</h3></div>
+  <figure class="ref"><img src="img/faq.webp" alt="FAQ with tabs and accordion" loading="lazy"><figcaption><b>Homepage</b>FAQ with tabs and accordion</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Tab list (5) on the left</li><li>Heading over the accordion</li><li>4–6 question rows, first one open</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Tabs</td><td><span class="al al-l">Left</span></td></tr><tr><td>Heading</td><td><span class="al al-l">Left</span> over the accordion column</td></tr><tr><td>Questions and answers</td><td><span class="al al-l">Left</span></td></tr><tr><td>+ / − icon</td><td><span class="al al-r">Right</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">5 tabs + 1 per row</div><ul><li>5 FAQ category tabs</li><li>Each question row is a button</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>No images.</p></div>
+  
+</article><article class="dt" id="d-seo">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>SEO content block</h3></div>
+  <figure class="ref"><img src="img/seo-block.webp" alt="Centred heading, paragraph and Continue Reading button" loading="lazy"><figcaption><b>Homepage</b>Centred heading, paragraph and Continue Reading button</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Heading with one magenta phrase</li><li>2 lines of body text</li><li>Continue Reading button</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Heading</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Body text</td><td><span class="al al-c">Centred</span> (max 900px wide)</td></tr><tr><td>Button</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1</div><ul><li><strong>Continue Reading</strong></li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>No images.</p></div>
+  <div class="note">This is the <strong>only centred text block</strong> on the homepage. Everywhere else, text starts on the left.</div>
+</article><article class="dt" id="d-footer">
+  <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Footer</h3></div>
+  <figure class="ref"><img src="img/footer.webp" alt="Footer with logo, three link columns, newsletter card and pink legal bar" loading="lazy"><figcaption><b>Homepage</b>Footer with logo, three link columns, newsletter card and pink legal bar</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Logo</li><li>3 link columns (Games, Rewards, Support)</li><li>Newsletter card with email field</li><li>Hot-pink legal bar</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Logo and columns</td><td><span class="al al-l">Left</span></td></tr><tr><td>Newsletter copy</td><td><span class="al al-l">Left</span></td></tr><tr><td>Legal bar</td><td><span class="al al-l">Left</span> · <span class="al al-c">Centred</span> · <span class="al al-r">Right</span> (3 parts)</td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1 + 4 social</div><ul><li>Newsletter send (mail icon)</li><li>4 social icon links</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>No images.</p></div>
+  
+</article>
+</section>
+<section id="dt-pages">
+  <span class="eyebrow">Sections in detail</span>
+  <h2>Pages</h2>
+  <p>Subpages documented so far. Send more screenshots and they'll be added here in the same format.</p>
+  <article class="dt" id="d-shell">
+  <div class="dt-head"><span class="eyebrow">All subpages</span><h3>Page shell: icon rail, header and page title</h3></div>
+  <p>Every subpage shares the same frame. On desktop the main menu collapses into a slim <strong>icon rail</strong> on the left; the menu button at its top opens the full drawer described in <a href="#s-menu">Main menu</a>.</p>
+  <div class="dt-pair">
+    <figure class="ref" style="margin:0;max-width:140px"><img src="img/rail.webp" alt="Collapsed icon rail with menu button, home, popular, new, browse, promotions, VIP, responsible play, help, support and profile icons" loading="lazy"><figcaption><b>Rail</b>Collapsed menu.</figcaption></figure>
+    <div style="min-width:0">
+      <figure class="ref" style="margin-top:0"><img src="img/ag-head.webp" alt="Breadcrumb, All Games title with gradient, subtitle and cards and chips art" loading="lazy"><figcaption><b>Page title</b>Breadcrumb, title, subtitle and header art.</figcaption></figure>
+      <div class="tbl"><table>
+        <tr><th>Part</th><th>Spec</th><th>Align</th></tr>
+        <tr><td class="k">Icon rail</td><td>80px wide, <code>#050B1C</code>, 1px <code>#121C33</code> right edge. 26px line icons, 52px apart. Top: menu button in a 44px square with a violet border. Current page: 48px rounded square, 2px cyan border, cyan glow. Hover: violet border. Each icon has a tooltip with its label.</td><td><span class="al al-c">Centred</span></td></tr>
+        <tr><td class="k">Breadcrumb</td><td>Body S, white, chevron separators, last item in white 600.</td><td><span class="al al-l">Left</span></td></tr>
+        <tr><td class="k">Page title</td><td>Poppins 700, 56–64px. Gradient from white into pink-violet across the word: <code>linear-gradient(90deg,#fff 40%,#F27BFF 72%,#A98BFF)</code> clipped to the text.</td><td><span class="al al-l">Left</span></td></tr>
+        <tr><td class="k">Subtitle</td><td>Body L, white, 1–2 lines, max 560px.</td><td><span class="al al-l">Left</span></td></tr>
+        <tr><td class="k">Header art</td><td>Top right, about 45% of the width, bleeding off the top. One themed 3D object group per page, on a transparent background.</td><td><span class="al al-r">Right</span></td></tr>
+      </table></div>
+    </div>
+  </div>
+  <div class="note warn"><strong>Two things to settle.</strong> The rail icons differ between pages (Guides swaps the Help icon for the book), and Favourites and Tournaments are missing. Recommended rail, top to bottom: Menu · Home · Favourites · Popular · New · Browse · Promotions · Tournaments · VIP Club · Responsible Play · Guides · Help · Live Support · My Profile. Also, Home has a violet box on every page; it should only be boxed when hovered.</div>
+  <div class="dt-style"><h4>Header art style</h4><p>A small cluster of 3D objects that sums up the page, glowing in cyan, violet and magenta, with neon light streaks behind. It sits top right and never carries text.</p>
+  <div class="dt-prompt"><div class="dt-plabel">Page header art (≈2.4 : 1, transparent background)</div><div class="code"><button class="copy" data-target="pr-13">Copy prompt</button><pre id="pr-13">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. A cluster of [All Games: three neon-edged playing cards (aces) and two stacks of blue and violet casino chips / Promotions: a large purple gift box with gold ribbon and flying gold coins / Guides: an open glowing book with a graduation cap, an ace card, a lightbulb and casino chips], neon light streaks behind, placed to the right, transparent background. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+</article><article class="dt" id="d-allgames">
+  <div class="dt-head"><span class="eyebrow">Subpage</span><h3>All Games</h3></div>
+  <figure class="ref"><img src="img/page-all-games.webp" alt="All Games page: title, filter panel, 20 game tiles and pagination" loading="lazy"><figcaption><b>Design</b>All Games page: title, filter panel, 20 game tiles and pagination</figcaption></figure><figure class="ref"><img src="img/ag-filters.webp" alt="Search field, four dropdowns, active filter chips and Clear All" loading="lazy"><figcaption><b>Filters</b>Search field, four dropdowns, active filter chips and Clear All</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Page shell (rail, header, breadcrumb Home › Games › All Games, title, subtitle, cards and chips art)</li><li>Filter panel: search field + 4 dropdowns (Providers, Categories, Features, Sort by)</li><li>Active filters row: removable chips + Clear All link</li><li>Results bar: "1,248 Games Found" + grid / list toggle</li><li>Game grid: 5 columns × 4 rows (20 per page), same tiles as New Games, NEW and HOT badges</li><li>Pagination: previous, 1–5, …, last, next</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Title, subtitle, filters</td><td><span class="al al-l">Left</span></td></tr><tr><td>Results count</td><td><span class="al al-l">Left</span></td></tr><tr><td>View toggle</td><td><span class="al al-r">Right</span></td></tr><tr><td>Game names in tiles</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Pagination</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">4 + chips + paging</div><ul><li>4 dropdown buttons (outline, chevron)</li><li>Chip remove (×) on each active filter</li><li><strong>Clear All</strong> text link (cyan, underlined)</li><li>Grid / list toggle (2 icon buttons; active one cyan-bordered)</li><li>Pagination: square 40px buttons, current page filled magenta <code>#C21CF0</code></li><li>No View All, no carousel arrows</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>The tiles reuse the New Games poster style: one saturated colour per tile with a coloured border to match. The header art is a cluster of neon playing cards and chips.</p><div class="dt-prompt"><div class="dt-plabel">Game tile (1.27 : 1)</div><div class="code"><button class="copy" data-target="pr-14">Copy prompt</button><pre id="pr-14">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. [SUBJECT], centred in the upper 65%, background flooded with one saturated colour, lower third calm for the game logo, top-right corner clear for a badge, 1.27:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="dt-pair"><figure class="ref" style="margin:0"><img src="img/ag-tile.webp" alt="Plinko Pop Meltdown tile with NEW badge" loading="lazy"><figcaption><b>Tile</b>Saturated poster with NEW badge.</figcaption></figure><figure class="ref" style="margin:0"><img src="img/ag-pagination.webp" alt="Pagination with page 1 filled magenta" loading="lazy"><figcaption><b>Pagination</b>Current page in magenta.</figcaption></figure></div>
+ <div class="tbl"><table><tr><th>Control</th><th>Spec</th></tr>
+ <tr><td class="k">Filter panel</td><td>Full width, 1px <code>#233650</code> border, 16px radius, 20px padding.</td></tr>
+ <tr><td class="k">Search field</td><td>≈ 320px, 44px high, 1.5px violet border, search icon left, placeholder "Search games…".</td></tr>
+ <tr><td class="k">Dropdowns</td><td>44px high, 1px <code>#3A4A66</code> border, 10px radius, icon + label + chevron, Body S 500.</td></tr>
+ <tr><td class="k">Active filter chip</td><td>Pill, 1.5px violet border, white label + ×.</td></tr>
+ <tr><td class="k">Grid</td><td>5 columns, 16px gap (4 at 1024px, 3 at 768px, 2 on phones).</td></tr>
+ </table></div>
+</article><article class="dt" id="d-promopage">
+  <div class="dt-head"><span class="eyebrow">Subpage</span><h3>Promotions</h3></div>
+  <figure class="ref"><img src="img/page-promotions.webp" alt="Promotions page: featured welcome offer banner and five promotion cards" loading="lazy"><figcaption><b>Design</b>Promotions page: featured welcome offer banner and five promotion cards</figcaption></figure><figure class="ref"><img src="img/pr-hero.webp" alt="Featured welcome offer banner with Claim Welcome Offer button" loading="lazy"><figcaption><b>Featured offer</b>Featured welcome offer banner with Claim Welcome Offer button</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Page shell (breadcrumb Home › Promotions, title, subtitle, gift box art)</li><li>Featured offer banner: outlined tag pill, 3-line offer headline, 1 big button, model + gift + roulette art on the right</li><li>Row 1: 3 promotion cards (Welcome Bonus, Daily Races, Daily Scratchcard)</li><li>Row 2: 2 wider cards (Daily Quests, Refer a Friend)</li><li>Decorative wave at the bottom</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Title, subtitle</td><td><span class="al al-l">Left</span></td></tr><tr><td>Banner tag, headline, button</td><td><span class="al al-l">Left</span></td></tr><tr><td>Card tag, title, description, button</td><td><span class="al al-l">Left</span></td></tr><tr><td>Art</td><td><span class="al al-r">Right</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1 per card + 1 hero</div><ul><li><strong>Claim Welcome Offer →</strong>: large pill, CTA gradient, 2px white-cyan outline (the biggest button on the site)</li><li>One promo CTA per card, each with its own icon: Purchase Now (gift), Races (rocket), Learn More (ticket), Learn More (gift), Invite Now (add-user)</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Each card has one bold 3D reward object on the right, glowing in violet-magenta: gift box, checkered racing flags, scratch card with gold crowns, calendar with a gold tick, people icons with a plus. The featured banner uses a glamorous host holding a glowing gift in front of a roulette wheel.</p><div class="dt-prompt"><div class="dt-plabel">Featured banner art (2.4 : 1)</div><div class="code"><button class="copy" data-target="pr-15">Copy prompt</button><pre id="pr-15">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. A glamorous smiling woman in a sparkling purple dress holding a glowing purple gift box with gold ribbon, in front of a neon roulette wheel, flying casino chips and two aces, magenta and violet light, subject in the right 55%, left side dark and empty for headline text. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">Promo card object (2 : 1)</div><div class="code"><button class="copy" data-target="pr-16">Copy prompt</button><pre id="pr-16">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. One glossy 3D [gift box / pair of checkered racing flags / scratch card with gold crown symbols and coins / calendar with a large gold check mark / group of people icons with a gold plus badge], glowing violet-magenta neon rim light, placed on the right half, left half dark and empty. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="dt-pair"><figure class="ref" style="margin:0"><img src="img/pr-card.webp" alt="Welcome Bonus card" loading="lazy"><figcaption><b>3-up card</b>Cyan variant.</figcaption></figure><figure class="ref" style="margin:0"><img src="img/pr-card-wide.webp" alt="Daily Quests wide card" loading="lazy"><figcaption><b>2-up card</b>Wider, same layout.</figcaption></figure></div>
+ <div class="note pink"><strong>Sweepstakes wording.</strong> "100% BONUS + 200 FREE SPINS" is real-money casino language. Suggested: "GET UP TO <strong>250K GC + 25 FREE SC</strong>" with "Claim Welcome Offer". Keep SC amounts in gold, as on the cards.</div>
+</article><article class="dt" id="d-guidespage">
+  <div class="dt-head"><span class="eyebrow">Subpage</span><h3>Guides</h3></div>
+  <figure class="ref"><img src="img/page-guides.webp" alt="Guides page: search, filter chips, category tiles, latest guides and how-to videos" loading="lazy"><figcaption><b>Design</b>Guides page: search, filter chips, category tiles, latest guides and how-to videos</figcaption></figure><figure class="ref"><img src="img/gd-cats.webp" alt="Explore Guide Categories with five icon tiles" loading="lazy"><figcaption><b>Categories</b>Explore Guide Categories with five icon tiles</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Page shell (breadcrumb Home › Guides, title, 2-line subtitle, book and graduation cap art)</li><li>Full-width search field</li><li>6 filter chips: All, Casino News, How To's, Top 5 Lists, Game Strategies, Seasonal Picks</li><li>Explore Guide Categories: 5 icon tiles</li><li>Latest Guides: 4 article cards + View All</li><li>Popular How To's: 5 video cards + View All</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Title, subtitle, search</td><td><span class="al al-l">Left</span></td></tr><tr><td>Chips</td><td><span class="al al-l">Left</span> (one row)</td></tr><tr><td>Category tile label</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Article title and meta</td><td><span class="al al-l">Left</span></td></tr><tr><td>Video title</td><td><span class="al al-l">Left</span> bottom</td></tr><tr><td>View All</td><td><span class="al al-r">Right</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">6 chips + 2 View All</div><ul><li>6 filter chips (pill, icon + label); active chip cyan</li><li><strong>View All →</strong> on Latest Guides and Popular How To's</li><li>No carousel arrows; cards and tiles are links</li><li>Play button on video cards is part of the link</li></ul></div>
+  </div>
+  <div class="dt-style"><h4>Image style</h4><p>Two looks. Category tiles and article thumbnails use single glossy 3D objects (newspaper, chips with a play button, trophy, chess knight, calendar, megaphone) glowing on dark navy. How-to video cards use a scene (cards and chips, slot machine, dealer) with a round play button.</p><div class="dt-prompt"><div class="dt-plabel">Category icon (1 : 1, transparent)</div><div class="code"><button class="copy" data-target="pr-17">Copy prompt</button><pre id="pr-17">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. One isometric glossy 3D icon of [a newspaper / casino chips with a play symbol / a golden trophy with laurels / a chess knight / a calendar with a star], neon cyan and magenta highlights, centred, transparent background, 1:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">Article thumbnail (2.1 : 1)</div><div class="code"><button class="copy" data-target="pr-18">Copy prompt</button><pre id="pr-18">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. One hero object [neon megaphone with sound waves / golden roulette wheel / golden &quot;TOP 5&quot; laurel trophy / gift box with snowflakes], centred, glowing on a dark navy background with light streaks, top-left corner clear for a tag. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">How-to video card (1.1 : 1)</div><div class="code"><button class="copy" data-target="pr-19">Copy prompt</button><pre id="pr-19">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI. [Ace and king playing cards with teal chips / red playing cards / neon 777 slot machine / poker chip with spade / smiling live dealer], upper 60% of the frame, bottom 40% fading to dark navy for a two-line title. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="dt-pair"><figure class="ref" style="margin:0"><img src="img/gd-article.webp" alt="Article card: Biggest Casino News This Month with date and read time" loading="lazy"><figcaption><b>Article card</b>Tag, image, title, date, read time.</figcaption></figure><figure class="ref" style="margin:0"><img src="img/gd-howto.webp" alt="How to Play Blackjack video card with play button" loading="lazy"><figcaption><b>Video card</b>Play button bottom right.</figcaption></figure></div>
+ <figure class="ref"><img src="img/gd-chips.webp" alt="Filter chips: All, Casino News, How To's, Top 5 Lists, Game Strategies, Seasonal Picks" loading="lazy"><figcaption><b>Filter chips</b>All is active (cyan).</figcaption></figure>
+ <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr>
+ <tr><td class="k">Category tile</td><td>5 across, ≈ 200 × 135, 1.5px neon border (cyan/violet; gold on hover), 3D icon top, label Body M 600 centred.</td></tr>
+ <tr><td class="k">Article card</td><td>4 across. Image top (≈ 2.1 : 1) with outlined tag pill, then title S3 600 (2 lines), then date and read time with icons, Body XS.</td></tr>
+ <tr><td class="k">Video card</td><td>5 across, ≈ 1.1 : 1. Title over the art, bottom left, Body L 600. 44px round play button bottom right. Optional LIVE badge top right.</td></tr>
+ </table></div>
+</article>
+</section>
 <footer class="doc">Neon Sweeps homepage style guide · v7 · Built from the latest homepage plus the High RTP Games, New Games and Favourite Characters close-ups. Values tagged Sampled were read from the screenshots; all other values are matched recommendations.</footer>
 </div></main>
 </div>
