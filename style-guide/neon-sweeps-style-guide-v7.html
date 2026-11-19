@@ -121,6 +121,15 @@ td.k{color:#fff;font-weight:600;white-space:nowrap}
 .anatomy a{color:#E3ECF7;text-decoration:none}
 .anatomy a:hover{color:var(--cyan)}
 
+.font-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.font-link{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--line-soft);border-radius:12px;background:#07122A;color:var(--text);text-decoration:none;min-width:0}
+.font-link:hover{border-color:var(--cyan);box-shadow:0 0 12px rgba(4,245,229,.25)}
+.fl-sample{font-size:44px;line-height:1;font-weight:600;color:var(--cyan)}
+.fl-text{display:flex;flex-direction:column;min-width:0}
+.fl-text b{font-size:18px}
+.fl-text small{color:var(--muted);font-size:12.5px}
+.fl-text em{font-style:normal;color:var(--cyan);font-size:12px;overflow-wrap:anywhere}
+@media(max-width:720px){.font-links{grid-template-columns:1fr}}
 /* ============ LIVE SAMPLES — these use the production CSS from the guide ============ */
 .stage{background:var(--bg);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin:16px 0;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .btn-deposit,.btn-play{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 22px;border:0;border-radius:8px;background:var(--cta);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -378,6 +387,13 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <span class="eyebrow">Foundations</span>
   <h2>Typography</h2>
   <p>Two families, both free on Google Fonts. <strong>Inter</strong> sets the Headings: clean, even capitals at a regular weight. <strong>Poppins</strong> sets Subheadings and Body: its round, geometric letters carry the friendly, playful side of the brand. Poppins' heavy weights (700–800) also set the hero, banner titles and buttons, which need more punch than the regular-weight styles on the sheet. The scale below comes from the approved type sheet.</p>
+  <div class="font-links">
+    <a class="font-link" href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener"><span class="fl-sample" style="font-family:var(--f-head)">Aa</span><span class="fl-text"><b>Inter</b><small>Headings H1–H4 · live amounts</small><em>fonts.google.com/specimen/Inter ↗</em></span></a>
+    <a class="font-link" href="https://fonts.google.com/specimen/Poppins?preview.lang=en_Latn&amp;categoryFilters=Sans+Serif:%2FSans%2FGeometric" target="_blank" rel="noopener"><span class="fl-sample" style="font-family:var(--f-display)">Aa</span><span class="fl-text"><b>Poppins</b><small>Subheadings · body · display · buttons</small><em>fonts.google.com/specimen/Poppins ↗</em></span></a>
+  </div>
+  <div class="code"><button class="copy" data-target="code-fonts">Copy embed code</button><pre id="code-fonts">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap"&gt;</pre></div>
   <div class="panel">
     <div class="eyeb"><span class="c">THE ULTIMATE</span> <span class="m">GAMING EXPERIENCE</span></div>
     <div class="hero-type" style="margin-top:8px">PLAY.WIN.<br><span class="rep">REPEAT</span></div>
