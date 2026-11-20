@@ -278,6 +278,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#s-header">Header &amp; ticker</a>
   <a href="#s-hero">Hero</a>
   <a href="#hero-options">Hero options</a>
+  <a href="#hero-carousels">Hero carousel demo</a>
   <a href="#s-nav">Category nav</a>
   <a href="#s-promos">Promotions</a>
   <a href="#s-popular">Popular Games</a>
@@ -1333,6 +1334,92 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 @media(max-width:900px){.hx-c{max-width:100%;background:linear-gradient(90deg,rgba(12,6,24,.92),rgba(12,6,24,.5))}.hx-card{display:none}.hx h4{font-size:40px}}
 @media(prefers-reduced-motion:reduce){.hx-live i{animation:none}}
 </style>
+<div id="hero-carousels">
+  <h3>Carousel in action (3 slides)</h3>
+  <p>Working examples. On desktop use the arrows or dots, or wait 6 seconds; hovering pauses it. On the phone, swipe sideways.</p>
+  <div class="hx-stage">
+    <div class="md-lbl">Desktop carousel</div>
+    <div class="cz" id="cz-d" aria-roledescription="carousel" aria-label="Featured">
+      <div class="cz-track"><div class="cz-s" role="group" aria-roledescription="slide" aria-label="1 of 3"><div class="cz-art" style="background-image:url(img/m-hero.webp);background-position:60% center"></div><div class="cz-c"><small class="cz-eye">THE ULTIMATE <i>GAMING EXPERIENCE</i></small><h4>PLAY.WIN.<br><em>REPEAT</em></h4><p>Hundreds of slots, live tables and game shows. Play free with Gold Coins.</p><div class="hx-btns"><span class="hx-b1">Play Now →</span><span class="hx-b2">Explore Games →</span></div></div></div><div class="cz-s" role="group" aria-roledescription="slide" aria-label="2 of 3"><div class="cz-art" style="background-image:url(img/hero-tourney.webp);background-position:right center"></div><div class="cz-c"><small class="cz-eye"><span class="hx-live" style="padding:3px 10px"><i></i>TOURNAMENT NOW LIVE</span></small><h4>WEEKEND<br><em>SLOT RACE</em></h4><p>Share a <b>50,000 SC</b> prize pool on selected slots. Ends Sunday 23:59 ET.</p><div class="hx-btns"><span class="hx-b1">Join Tournament →</span><span class="hx-b2">View Leaderboard →</span></div></div></div><div class="cz-s" role="group" aria-roledescription="slide" aria-label="3 of 3"><div class="cz-art" style="background-image:url(img/gen-crown.webp);background-position:right center"></div><div class="cz-c"><small class="cz-eye">VIP CLUB</small><h4>ROYAL<br><em>REWARDS</em></h4><p>Level up for weekly <b>SC bonuses</b>, faster redemptions and a personal host.</p><div class="hx-btns"><span class="hx-b1">Explore VIP Club →</span></div></div></div></div>
+      <button type="button" class="cz-arr cz-prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.6 2.5 18.6 5.5 12.1 12l6.5 6.5-3 3L6.1 12z"/></svg></button>
+      <button type="button" class="cz-arr cz-next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.4 2.5 5.4 5.5 11.9 12l-6.5 6.5 3 3L17.9 12z"/></svg></button>
+      <div class="cz-dots"><button type="button" class="cz-dot" aria-label="Slide 1" aria-current="true"></button><button type="button" class="cz-dot" aria-label="Slide 2"></button><button type="button" class="cz-dot" aria-label="Slide 3"></button></div>
+    </div>
+    <div class="md-lbl">Mobile carousel</div>
+    <div class="phone czm-phone">
+      <div class="ph-scroll">
+        <header class="ph-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><b>FULL MOON PLAY</b><span class="ph-sp"></span><span class="ph-lg">Login</span><span class="ph-rg">Register</span></header>
+        <div class="czm" id="cz-m"><div class="czm-track"><div class="czm-s" aria-label="1 of 3"><div class="czm-art" style="background-image:url(img/m-hero.webp);background-position:60% center"></div><div class="czm-c"><h4>PLAY.WIN.<br><em>REPEAT</em></h4><p>Hundreds of slots and live games.</p><span class="hx-b1">Play Now →</span></div></div><div class="czm-s" aria-label="2 of 3"><div class="czm-art" style="background-image:url(img/hero-tourney.webp);background-position:right center"></div><div class="czm-c"><h4>WEEKEND<br><em>SLOT RACE</em></h4><p>Share a <b>50,000 SC</b> prize pool.</p><span class="hx-b1">Join Tournament →</span></div></div><div class="czm-s" aria-label="3 of 3"><div class="czm-art" style="background-image:url(img/gen-crown.webp);background-position:right center"></div><div class="czm-c"><h4>ROYAL<br><em>REWARDS</em></h4><p>Weekly <b>SC bonuses</b> for VIPs.</p><span class="hx-b1">Explore VIP Club →</span></div></div></div><div class="czm-dots"><button type="button" class="czm-dot" aria-label="Slide 1" aria-current="true"></button><button type="button" class="czm-dot" aria-label="Slide 2"></button><button type="button" class="czm-dot" aria-label="Slide 3"></button></div></div>
+        <div class="ph-sh"><b>Popular Games</b><span>View All →</span></div>
+        <div class="ph-row"><div class="ph-t"><div class="ph-ta" style="background-image:url(img/m-g0.webp)"></div></div><div class="ph-t"><div class="ph-ta" style="background-image:url(img/m-g1.webp)"></div></div><div class="ph-t"><div class="ph-ta" style="background-image:url(img/m-g2.webp)"></div></div><div class="ph-t"><div class="ph-ta" style="background-image:url(img/m-g3.webp)"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="tbl"><table><tr><th></th><th>Desktop</th><th>Mobile</th></tr>
+   <tr><td class="k">Navigation</td><td>❮ ❯ arrows on the sides, dots under the slide, keyboard arrows</td><td>Swipe; dots under the slide; no arrows</td></tr>
+   <tr><td class="k">Peek</td><td>No</td><td>The next slide peeks in ≈ 8% from the right, so it's clear there is more</td></tr>
+   <tr><td class="k">Auto-advance</td><td>Every 6s, pauses on hover / focus</td><td>Every 6s, stops after the first swipe</td></tr>
+   <tr><td class="k">Content</td><td>Eyebrow, heading, description, 1–2 buttons</td><td>Heading, short description, 1 button</td></tr>
+   <tr><td class="k">Reduced motion</td><td colspan="2">No auto-advance; slides change instantly</td></tr>
+  </table></div>
+</div>
+<style>
+.cz{position:relative;border-radius:16px;overflow:hidden;background:#0A0E33}
+.cz-track{display:flex;transition:transform .5s ease}
+.cz-s{position:relative;flex:0 0 100%;min-height:330px;display:flex;align-items:center}
+.cz-art{position:absolute;inset:0 0 0 30%;background-size:cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.cz-c{position:relative;z-index:1;max-width:60%;padding:28px 70px;display:grid;gap:12px;justify-items:start}
+.cz-eye{font:700 13px var(--f-display);letter-spacing:.06em;color:#2EF2D0}.cz-eye i{font-style:normal;color:#E93BF2}
+.cz h4,.czm h4{margin:0;font:900 54px/.95 var(--f-display);color:#fff}
+.cz em,.czm em{font-style:normal;background:linear-gradient(90deg,#2EF2D0,#8C7BFF,#E93BF2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cz p,.czm p{margin:0;font:400 16px/1.5 var(--f-body);color:#D7DCE8;max-width:440px}
+.cz p b,.czm p b{color:#FFCE21}
+.cz-arr{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;display:grid;place-items:center;border:1px solid #3A4A66;border-radius:50%;background:rgba(6,19,38,.8);color:#fff;cursor:pointer}
+.cz-arr svg{width:18px;height:18px}.cz-arr:hover{border-color:#04F5E5}
+.cz-prev{left:14px}.cz-next{right:14px}
+.cz-dots,.czm-dots{display:flex;justify-content:center;gap:8px}
+.cz-dots{position:absolute;left:0;right:0;bottom:14px;z-index:2}
+.cz-dot,.czm-dot{width:9px;height:9px;padding:0;border:1px solid #8FA0B7;border-radius:50%;background:transparent;cursor:pointer;transition:width .25s}
+.cz-dot[aria-current="true"],.czm-dot[aria-current="true"]{width:24px;border-radius:5px;background:#04F5E5;border-color:#04F5E5}
+.czm-phone{height:500px}
+.czm{margin:12px -12px 0}
+.czm-track{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 12px;scrollbar-width:none}
+.czm-track::-webkit-scrollbar{display:none}
+.czm-s{flex:0 0 88%;scroll-snap-align:start;scroll-margin-left:12px;border-radius:14px;overflow:hidden;background:#0A0E33;border:1px solid #2A3A58}
+.czm-art{aspect-ratio:16/10;background-size:cover}
+.czm-c{display:grid;gap:8px;padding:12px 14px 14px}
+.czm h4{font-size:28px}.czm p{font-size:13px}
+.czm .hx-b1{min-height:40px;justify-content:center;font-size:14px}
+.czm-dots{margin-top:10px}
+@media(max-width:900px){.cz-c{max-width:100%;padding:24px 60px;background:linear-gradient(90deg,rgba(10,14,51,.92),rgba(10,14,51,.5))}.cz h4{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.cz-track{transition:none}}
+</style>
+<script>
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var d=document.getElementById('cz-d'); if(d){
+    var t=d.querySelector('.cz-track'),dots=[].slice.call(d.querySelectorAll('.cz-dot')),i=0,n=dots.length,timer;
+    function go(k){i=(k+n)%n;t.style.transform='translateX('+(-100*i)+'%)';dots.forEach(function(x,j){x.setAttribute('aria-current',j===i?'true':'false')})}
+    function play(){if(!reduce){clearInterval(timer);timer=setInterval(function(){go(i+1)},6000)}}
+    d.querySelector('.cz-prev').onclick=function(){go(i-1);play()};
+    d.querySelector('.cz-next').onclick=function(){go(i+1);play()};
+    dots.forEach(function(x,j){x.onclick=function(){go(j);play()}});
+    d.addEventListener('mouseenter',function(){clearInterval(timer)});d.addEventListener('mouseleave',play);
+    d.addEventListener('focusin',function(){clearInterval(timer)});
+    d.tabIndex=0;d.addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1)});
+    play();
+  }
+  var m=document.getElementById('cz-m'); if(m){
+    var tr=m.querySelector('.czm-track'),md=[].slice.call(m.querySelectorAll('.czm-dot')),touched=false,mt;
+    function idx(){var w=tr.firstElementChild.getBoundingClientRect().width+10;return Math.round(tr.scrollLeft/w)}
+    function to(k){var w=tr.firstElementChild.getBoundingClientRect().width+10;tr.scrollTo({left:k*w,behavior:reduce?'auto':'smooth'})}
+    tr.addEventListener('scroll',function(){var k=idx();md.forEach(function(x,j){x.setAttribute('aria-current',j===k?'true':'false')})});
+    md.forEach(function(x,j){x.onclick=function(){touched=true;to(j)}});
+    tr.addEventListener('pointerdown',function(){touched=true});tr.addEventListener('touchstart',function(){touched=true},{passive:true});
+    if(!reduce)mt=setInterval(function(){if(touched){clearInterval(mt);return}to((idx()+1)%md.length)},6000);
+  }
+})();
+</script>
 </section>
 
 <section id="s-nav">
