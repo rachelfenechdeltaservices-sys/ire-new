@@ -301,7 +301,6 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#responsive">Responsive</a>
   <a href="#sweeps">Sweepstakes wording</a>
   <a href="#tokens">CSS tokens</a>
-  <a href="#checklist">Handoff checklist</a>
   <a href="#next">Next: subpages</a>
   <h4>Subpages in detail</h4>
   <a href="#dt-rules">Layout rules</a>
@@ -313,6 +312,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#gen-art">Generated content art</a>
   <a href="#d-guidespage">Guides page</a>
   <a href="#d-providers-page">Game Providers pages</a>
+  <a href="#d-help">Help &amp; FAQs page</a>
   <h4>CMS</h4>
   <a href="#cms-intro">How content is edited</a>
   <a href="#cms-maps">Editable fields</a>
@@ -2145,30 +2145,6 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}</pre></div>
 </section>
 
-<section id="checklist">
-  <span class="eyebrow">Build · QA</span>
-  <h2>Handoff checklist</h2>
-  <div class="panel checklist">
-    <label><input type="checkbox" id="c1">Sections are in the final homepage order</label>
-    <label><input type="checkbox" id="c2">Every section header uses the neon pill, View All and arrows</label>
-    <label><input type="checkbox" id="c3">Card ratios match the card size table</label>
-    <label><input type="checkbox" id="c4">Borders and glows are CSS, never baked into art</label>
-    <label><input type="checkbox" id="c5">Buttons, badges, RTP values and counts are HTML</label>
-    <label><input type="checkbox" id="c6">Game Shows uses neon-bordered cards (not the v5 charcoal panel)</label>
-    <label><input type="checkbox" id="c17">Main menu: current page in cyan, hover in violet, Esc closes</label>
-    <label><input type="checkbox" id="c15">Jackpots banner in place, amounts live from the feed in SC</label>
-    <label><input type="checkbox" id="c16">Garbled screenshot labels built with the correct names</label>
-    <label><input type="checkbox" id="c7">New Games tiles keep their colour order and NEW badges</label>
-    <label><input type="checkbox" id="c8">Providers grid is 6 × 3 with SVG logos</label>
-    <label><input type="checkbox" id="c9">FAQ and SEO placeholder copy replaced</label>
-    <label><input type="checkbox" id="c10">Sweepstakes wording and legal links approved</label>
-    <label><input type="checkbox" id="c11">Live counts and RTP values come from real data</label>
-    <label><input type="checkbox" id="c12">Mobile carousels snap; touch targets ≥ 44px</label>
-    <label><input type="checkbox" id="c13">Images are WebP at 2×, with width/height set</label>
-    <label><input type="checkbox" id="c14">Keyboard focus visible; reduced motion respected</label>
-  </div>
-</section>
-
 <section id="next">
   <span class="eyebrow">Next</span>
   <h2>Next: subpages</h2>
@@ -2541,6 +2517,33 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="note warn">In the design, Game Providers in the menu shows the violet hover style while its page is open. Use the cyan current-page style, as defined in <a href="#s-menu">Main menu</a>.</div>
   <div class="note"><strong>SEO.</strong> Each provider page is indexable: title "[Provider] Games · Full Moon Play", a short provider description above the grid, and the game tiles as real links.</div>
 </article>
+<article class="dt" id="d-help">
+  <div class="dt-head"><span class="eyebrow">Subpage</span><h3>Help &amp; FAQs</h3></div>
+  <p>The support hub at <code>/help</code>: explains how the sweepstakes model works, answers common questions and points players to support. <strong>All content on this page is managed in the CMS</strong>; nothing is hard-coded.</p>
+  <figure class="ref" style="margin:0;max-width:820px"><img src="img/help-page.webp" alt="Help and FAQs page: title, search, eight category tiles, Getting Started steps, FAQ accordion, Sweepstakes Casino Overview, Help Resources and Need More Help" loading="lazy"><figcaption><b>Design</b>Help and FAQs page: title, search, eight category tiles, Getting Started steps, FAQ accordion, Sweepstakes Casino Overview, Help Resources and Need More Help</figcaption></figure>
+  <div class="dt-grid">
+    <div class="dt-box"><h4>Page order</h4><ol><li>Breadcrumb Home › Help &amp; FAQs, title (with gradient), subtitle, header art</li><li>Search field</li><li>8 category tiles</li><li>Left column: Getting Started (4 steps), FAQ accordion</li><li>Right column: Sweepstakes Casino Overview, Help Resources, Need More Help</li></ol></div>
+    <div class="dt-box"><h4>Alignment</h4><table class="dt-al"><tr><td>Title, subtitle, search</td><td><span class="al al-l">Left</span></td></tr><tr><td>Category tiles</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Step labels</td><td><span class="al al-c">Centred</span></td></tr><tr><td>FAQ questions + answers</td><td><span class="al al-l">Left</span></td></tr><tr><td>Panels and support buttons</td><td><span class="al al-l">Left</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">2 + links</div><ul><li><strong>Live Chat</strong> (cyan filled) + <strong>Email Support</strong> (magenta outline)</li><li>View Guide →, Expand All / Collapse All</li><li>Category tiles, resource rows and FAQ rows are links / toggles</li></ul></div>
+  </div>
+
+  <h3>Parts</h3>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/help-cats.webp" alt="Eight category tiles: Sweepstakes Basics, Coins and Purchases, Games and Play, Prizes and Redemption, Promotions and Rewards, Account and Verification, Rules and Compliance, Contact Support" loading="lazy"><figcaption><b>Categories</b>Eight category tiles: Sweepstakes Basics, Coins and Purchases, Games and Play, Prizes and Redemption, Promotions and Rewards, Account and Verification, Rules and Compliance, Contact Support</figcaption></figure><figure class="ref" style="margin:0;"><img src="img/help-start.webp" alt="Getting Started: Create an Account, Get Coins, Play Games, Redeem Prizes" loading="lazy"><figcaption><b>Getting Started</b>Getting Started: Create an Account, Get Coins, Play Games, Redeem Prizes</figcaption></figure></div>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Search</td><td>Full width (≈ 55%), 52px, 2px magenta→violet gradient border, 999px radius. Searches FAQ questions and answers as you type; example placeholder from the CMS.</td></tr><tr><td class=k>Category tiles</td><td>8 equal tiles in one row (4 × 2 on tablet, 2 × 4 on phones). Line icon 32px + 2-line label, 1.5px violet border, 14px radius; active tile cyan border + glow. Filters the FAQ list.</td></tr><tr><td class=k>Getting Started</td><td>Panel with rocket icon, title, one line, View Guide link. 4 numbered circle steps joined by arrows: Create an Account → Get Coins (GC &amp; SC) → Play Games → Redeem Prizes.</td></tr><tr><td class=k>FAQ accordion</td><td>Header with Expand All / Collapse All. Rows: Q badge, question, chevron; 1.5px border, 12px radius. Open row: cyan border + glow, A badge and the answer in Body S.</td></tr><tr><td class=k>Sweepstakes Overview</td><td>Explains Gold Coins (gold) and Sweeps Coins (purple) in two rows with 3D coin art, then 4 icons: Play &amp; Win Prizes · Redeem for Real Rewards · Safe &amp; Compliant · Based on Sweepstakes Rules.</td></tr><tr><td class=k>Help Resources</td><td>3 link rows with icon, gold title, one line and chevron: How It Works, Official Rules, Terms &amp; Conditions.</td></tr><tr><td class=k>Need More Help</td><td>Live Chat (cyan button with chat icon) and Email Support (outline button with address), support hours line.</td></tr></table></div>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/help-faq.webp" alt="FAQ accordion with the first question open" loading="lazy"><figcaption><b>FAQ</b>FAQ accordion with the first question open</figcaption></figure><figure class="ref" style="margin:0;"><img src="img/help-overview.webp" alt="Sweepstakes Casino Overview with Gold Coins and Sweeps Coins" loading="lazy"><figcaption><b>Overview</b>Sweepstakes Casino Overview with Gold Coins and Sweeps Coins</figcaption></figure></div>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/help-res.webp" alt="Help Resources: How It Works, Official Rules, Terms and Conditions" loading="lazy"><figcaption><b>Resources</b>Help Resources: How It Works, Official Rules, Terms and Conditions</figcaption></figure><figure class="ref" style="margin:0;"><img src="img/help-support.webp" alt="Need More Help with Live Chat and Email Support" loading="lazy"><figcaption><b>Support</b>Need More Help with Live Chat and Email Support</figcaption></figure></div>
+
+  <h3>Managed in the CMS</h3>
+  <div class="note"><strong>Every text and link on this page is added and edited through the CMS</strong>, so the support and compliance teams can update answers without a developer.</div>
+  <div class="tbl"><table><tr><th>CMS collection / block</th><th>Fields</th></tr><tr><td class=k>Page header</td><td>Title (with gradient word), subtitle, header art, search placeholder</td></tr><tr><td class=k>Help categories</td><td>Name, icon (Lucide), order. Used for the tiles and to tag FAQs.</td></tr><tr><td class=k>FAQs</td><td>Question, answer (rich text with links), category, order, "show on homepage FAQ" toggle, last reviewed date. Add, edit, reorder or hide without a developer.</td></tr><tr><td class=k>Getting Started</td><td>2–5 steps: icon, label; title, intro line, guide link</td></tr><tr><td class=k>Overview panel</td><td>Gold Coins and Sweeps Coins text and art; 4 benefit icons + labels</td></tr><tr><td class=k>Help Resources</td><td>Repeatable rows: icon, title, description, link (How It Works, Official Rules, Terms &amp; Conditions)</td></tr><tr><td class=k>Support contacts</td><td>Live Chat on/off, email address, support hours</td></tr></table></div>
+  <ul style="color:#C7D2E0;font-size:14px;padding-left:18px">
+    <li>The same FAQ collection feeds the homepage FAQ and game / offer pages, so an answer is written once.</li>
+    <li>FAQ answers that mention rules, prizes or redemption go through the Review (legal) step before publishing.</li>
+    <li>SEO: mark the FAQ list up as an FAQPage; all answers are in the HTML even when collapsed.</li>
+  </ul>
+  <div class="note warn">In the design the email reads support@logohere.com and the menu shows "LOGO HERE"; use the real support address. "Redeem for Real Rewards" and "cash" in the first answer should be checked by legal for sweepstakes wording.</div>
+</article>
+
 
 </section>
 <div class="part" id="cms"><span class="eyebrow">Part 6</span><h2>CMS &amp; editable content</h2></div>
