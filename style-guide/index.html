@@ -432,7 +432,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Neon edge</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#04F5E5,#7B8CFF 50%,#F032F4)"></div></td><td><code>linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%)</code></td><td>Section title pill border, VIP banner border, ticker</td></tr>
     <tr><td class="k">Hero REPEAT</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#2EF2D0,#33D3F0 35%,#8C7BFF 65%,#E93BF2)"></div></td><td><code>linear-gradient(90deg,#2EF2D0 0%,#33D3F0 35%,#8C7BFF 65%,#E93BF2 100%)</code></td><td>Hero headline word, clipped to text</td></tr>
     <tr><td class="k">VIP banner</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#030A1E,#140A3A 45%,#5A1E86)"></div></td><td><code>linear-gradient(90deg,#030A1E 0%,#140A3A 45%,#5A1E86 100%)</code></td><td>VIP Club banner fill</td></tr>
-    <tr><td class="k">Provider tile</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(160deg,#082749,#07172D)"></div></td><td><code>linear-gradient(160deg,#082749 0%,#07172D 100%)</code> <span class="tag s">Sampled</span></td><td>Provider logo tiles</td></tr>
+    <tr><td class="k">Provider tile</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(180deg,#0A1E3F,#020C1F)"></div></td><td><code>linear-gradient(180deg,#0A1E3F 0%,#020C1F 100%)</code> <span class="tag s">Sampled</span></td><td>Provider logo tiles</td></tr>
     <tr><td class="k">Search edge</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(90deg,#B44DFF,#04F5E5 45%,#F032F4)"></div></td><td><code>linear-gradient(90deg,#B44DFF 0%,#04F5E5 45%,#F032F4 100%)</code></td><td>AI Game Search border</td></tr>
     <tr><td class="k">Image fade</td><td><div style="width:120px;height:30px;border-radius:6px;background:linear-gradient(180deg,transparent,#6A0FD0)"></div></td><td><code>linear-gradient(180deg,transparent 45%,rgba(106,15,208,.85) 100%)</code></td><td>Bottom of Game Shows and Live Casino art (usually baked into the art)</td></tr>
   </table></div>
@@ -553,7 +553,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">High RTP game card</td><td>2px accent (orange, red, green, blue)</td><td>14px</td><td>Accent glow</td></tr>
     <tr><td class="k">New Games tile</td><td>2px accent, lighter than the card</td><td>16px</td><td>Accent glow</td></tr>
     <tr><td class="k">VIP Club banner</td><td>2px neon-edge gradient</td><td>16px</td><td>Split glow</td></tr>
-    <tr><td class="k">Provider tile</td><td>1px <code>#12304F</code></td><td>10px</td><td>None (cyan on hover)</td></tr>
+    <tr><td class="k">Provider tile</td><td>None (drop shadow)</td><td>14px</td><td>None (cyan border + glow on hover)</td></tr>
     <tr><td class="k">AI Game Search</td><td>2px search-edge gradient</td><td>999px</td><td>Purple</td></tr>
     <tr><td class="k">FAQ item</td><td>1px <code>#2A3A58</code></td><td>10px</td><td>None</td></tr>
     <tr><td class="k">FAQ active tab</td><td>1.5px <code>#8B5CFF</code></td><td>10px</td><td>Violet</td></tr>
@@ -592,7 +592,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">High RTP info panel</td><td>1 + 4 cards</td><td>≈ 440 × 162</td><td>≈ 2.7 : 1</td></tr>
     <tr><td class="k">High RTP game</td><td>4</td><td>≈ 190 × 162</td><td>≈ 1.15 : 1</td></tr>
     <tr><td class="k">New game tile</td><td>8</td><td>≈ 150 × 195</td><td>≈ 0.78 (7 : 9)</td></tr>
-    <tr><td class="k">Provider tile</td><td>6</td><td>≈ 205 × 64</td><td>≈ 3.2 : 1</td></tr>
+    <tr><td class="k">Provider tile</td><td>6</td><td>≈ 205 × 70</td><td>≈ 3 : 1</td></tr>
     <tr><td class="k">VIP banner</td><td>1</td><td>1290 × 130</td><td>full width</td></tr>
   </table></div>
 </section>
@@ -1609,14 +1609,21 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 </section>
 
 <section id="s-providers">
-  <span class="eyebrow">Section · logo grid · moved in v6</span>
+  <span class="eyebrow">Section · logo grid</span>
   <h2>Game Providers</h2>
-  <figure class="ref"><img src="img/providers.webp" alt="Game Providers grid: six columns by three rows of provider logos" loading="lazy"><figcaption><b>Homepage</b>6 × 3 grid of 18 logos.</figcaption></figure>
+  <figure class="ref"><img src="img/providers.webp" alt="Game Providers section: pill title with controller icon, View All and chevron arrows, then a six by three grid of provider logo tiles" loading="lazy"><figcaption><b>Reference</b>6 × 3 grid of 18 logos.</figcaption></figure>
   <div class="grid2">
-    <figure class="ref" style="margin:0;max-width:300px"><img src="img/provider-tile.webp" alt="Hacksaw Gaming provider tile" loading="lazy"><figcaption><b>Detail</b>One tile.</figcaption></figure>
-    <div><p>Tiles ≈ 205 × 64 with 12px gaps, a 10px radius, the provider-tile gradient and a 1px <code>#12304F</code> border. Logos are SVGs in their brand colours or white, centred with <code>object-fit:contain</code>, at most 40px high and 70% of the tile's width. On hover, the border turns cyan with a soft cyan glow.</p>
-    <p>Order: Hacksaw, Games Global, Pragmatic Play, Playson, Novomatic, Alamba · InOut, PG Soft, 3 Oaks, VoltEnt, Shady Lady, Happy Duck · Spribe, Penguin King, Animo, Big Daddy, Fantasma, Icon21.</p></div>
+    <figure class="ref" style="margin:0;max-width:340px"><img src="img/provider-tile.webp" alt="Hacksaw Gaming provider tile" loading="lazy"><figcaption><b>Detail</b>One tile.</figcaption></figure>
+    <div><div class="tbl" style="margin:0"><table style="min-width:0">
+      <tr><th>Part</th><th>Spec</th></tr>
+      <tr><td class="k">Header</td><td>Standard pill title "Game Providers" with the cyan controller icon; View All + 2 chevron arrows.</td></tr>
+      <tr><td class="k">Grid</td><td>6 columns × 3 rows, 14px gap, 16px below the header.</td></tr>
+      <tr><td class="k">Tile</td><td>≈ 205 × 70 (≈ 3 : 1), 14px radius. Fill <code>linear-gradient(180deg,#0A1E3F,#020C1F)</code>, soft drop shadow <code>0 6px 14px rgba(0,0,0,.45)</code>, faint top highlight. No border at rest.</td></tr>
+      <tr><td class="k">Logo</td><td>Official SVG in brand colours or white, centred, max 46px high and 72% of the tile width. Balance visual weight: wide wordmarks smaller, compact marks with mascots (Shady Lady, Happy Duck, Penguin King) may be taller.</td></tr>
+      <tr><td class="k">Hover</td><td>1.5px cyan border and soft cyan glow; logo lifts 2px.</td></tr>
+    </table></div></div>
   </div>
+  <p>Order: Hacksaw Gaming, Games Global, Pragmatic Play, Playson, Novomatic, Alamba Games · InOut, PG Soft, 3 Oaks Gaming, VoltEnt, Shady Lady, Happy Duck · Spribe, Penguin King, Animo, Big Daddy, Fantasma Games, Iconic21.</p>
   <div class="note">Only show providers you have a live contract with, using logos from their media kits.</div>
 </section>
 
@@ -1725,7 +1732,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   --g-edge:linear-gradient(90deg,#04F5E5 0%,#7B8CFF 50%,#F032F4 100%);
   --g-repeat:linear-gradient(90deg,#2EF2D0 0%,#33D3F0 35%,#8C7BFF 65%,#E93BF2 100%);
   --g-vip:linear-gradient(90deg,#030A1E 0%,#140A3A 45%,#5A1E86 100%);
-  --g-provider:linear-gradient(160deg,#082749 0%,#07172D 100%);
+  --g-provider:linear-gradient(180deg,#0A1E3F 0%,#020C1F 100%);
   --g-search:linear-gradient(90deg,#B44DFF 0%,#04F5E5 45%,#F032F4 100%);
   /* glow */
   --glow-split:-4px 0 14px rgba(4,245,229,.45),4px 0 14px rgba(240,50,244,.5);
