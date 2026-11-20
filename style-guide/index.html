@@ -1282,8 +1282,181 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="s-nav">
   <span class="eyebrow">Section · navigation</span>
   <h2>Category nav</h2>
+  <p>The category nav sits directly under the hero and is the fastest way into the game catalogue. It is a single bar with six equal tabs; the current category glows cyan. Each tab is a real link to its category page, so it also works as site navigation for search engines.</p>
   <figure class="ref"><img src="img/category-nav.webp" alt="Category navigation bar with Popular, New, Casino, Live Casino, Promotions and VIP Club" loading="lazy"><figcaption><b>Homepage</b>Six tabs; Popular is active.</figcaption></figure>
-  <p>A 56px bar with a 1px <code>#3A4A66</code> border, 14px radius and a transparent fill. Six equal tabs: Popular, New, Casino, Live Casino, Promotions, VIP Club. Each tab has a 22px gold line icon and a 15px / 600 white label. The active tab's icon is cyan with a soft glow. On mobile the bar scrolls sideways.</p>
+
+  <h3>Live example</h3>
+  <p>Built with the CSS below. Hover a tab, or click one to make it the current category.</p>
+  <div class="stage"><nav class="cat-nav" id="cat-demo" aria-label="Game categories"><ul class="cat-nav__list"><li><a class="cat-nav__item" href="#s-nav" aria-current="page" data-cat="Popular"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg><span>Popular</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="New"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></svg><span>New</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="Casino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" /><path d="M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" /></svg><span>Casino</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="Live Casino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" /><circle cx="12" cy="12" r="2" /><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" /><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" /></svg><span>Live Casino</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="Promotions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></svg><span>Promotions</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="VIP Club"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" /><path d="M5 21h14" /></svg><span>VIP Club</span></a></li></ul></nav></div>
+
+  <h3>States</h3>
+  <div class="cat-states">
+  <div class="cat-state"><div class="one"><ul class="cat-nav__list" style="display:block"><li><a class="cat-nav__item" href="#s-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></svg><span>New</span></a></li></ul></div><h4>Default</h4><p>Gold line icon <code>#F4CC1D</code>, white label. No fill, no underline.</p></div>
+  <div class="cat-state"><div class="one"><ul class="cat-nav__list" style="display:block"><li><a class="cat-nav__item is-hover" href="#s-nav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" /><path d="M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" /></svg><span>Casino</span></a></li></ul></div><h4>Hover / keyboard focus</h4><p>Icon and label turn cyan, faint cyan wash behind the tab. Keyboard focus adds a 2px cyan inner outline.</p></div>
+  <div class="cat-state"><div class="one"><ul class="cat-nav__list" style="display:block"><li><a class="cat-nav__item" href="#s-nav" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg><span>Popular</span></a></li></ul></div><h4>Current category</h4><p>Cyan glowing icon, white label, 3px cyan underline with glow, soft cyan gradient from the bottom. Set with <code>aria-current="page"</code>.</p></div>
+</div>
+
+  <h3>Menu items and icons</h3>
+  <p>Icons are from <a href="https://lucide.dev/icons/" target="_blank" rel="noopener">Lucide</a>, the same thin line set as the main menu, at 22px with a 1.75 stroke.</p>
+  <div class="tbl"><table><tr><th>Icon</th><th>Label</th><th>Lucide name</th><th>Links to</th><th>Shows</th></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg></span></td><td class="k">Popular</td><td><code>flame</code></td><td><code>/popular</code></td><td>Most-played games right now</td></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></svg></span></td><td class="k">New</td><td><code>sparkles</code></td><td><code>/new</code></td><td>Games added in the last 30 days</td></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" /><path d="M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" /></svg></span></td><td class="k">Casino</td><td><code>cherry</code></td><td><code>/casino</code></td><td>Slots and table games</td></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" /><circle cx="12" cy="12" r="2" /><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" /><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" /></svg></span></td><td class="k">Live Casino</td><td><code>radio</code></td><td><code>/live-casino</code></td><td>Live dealer tables and game shows</td></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></svg></span></td><td class="k">Promotions</td><td><code>gift</code></td><td><code>/promotions</code></td><td>All current offers</td></tr><tr><td><span class="cat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" /><path d="M5 21h14" /></svg></span></td><td class="k">VIP Club</td><td><code>crown</code></td><td><code>/vip</code></td><td>Loyalty levels and rewards</td></tr></table></div>
+  <p>Order is fixed: the two "discover" tabs first (Popular, New), then the two game types (Casino, Live Casino), then rewards (Promotions, VIP Club). Labels and order are editable in the CMS; keep it to 6 tabs on desktop.</p>
+
+  <h3>Specs</h3>
+  <div class="tbl"><table><tr><th>Part</th><th>Desktop</th><th>Tablet &amp; phone</th></tr>
+    <tr><td class="k">Bar</td><td>Container width, 56px high, 1px <code>#3A4A66</code> border, 14px radius, fill <code>rgba(6,19,38,.6)</code></td><td>Full width, swipes sideways, scrollbar hidden</td></tr>
+    <tr><td class="k">Tabs</td><td>6 equal columns, content centred, 1px <code>#1A2840</code> dividers</td><td>Natural width, 18px side padding, snap to the start</td></tr>
+    <tr><td class="k">Icon</td><td colspan="2">22px, gold <code>#F4CC1D</code>; cyan <code>#04F5E5</code> on hover and when current</td></tr>
+    <tr><td class="k">Label</td><td>Poppins 600, 15px, white, one line</td><td>Poppins 600, 14px</td></tr>
+    <tr><td class="k">Icon–label gap</td><td colspan="2">10px</td></tr>
+    <tr><td class="k">Underline</td><td colspan="2">3px cyan, inset 18% from each side, glow <code>0 0 10px rgba(4,245,229,.8)</code></td></tr>
+    <tr><td class="k">Spacing</td><td>18px below the hero, 28px above the first section</td><td>12px / 20px</td></tr>
+    <tr><td class="k">Current tab on load</td><td colspan="2">On the homepage: Popular. On a category page: that category. Scroll it into view on phones.</td></tr>
+  </table></div>
+
+  <h3>Phone</h3>
+  <div class="cat-phone"><nav class="cat-nav" aria-label="Game categories"><ul class="cat-nav__list"><li><a class="cat-nav__item" href="#s-nav" data-cat="Popular"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg><span>Popular</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="New"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" /><path d="M20 3v4" /><path d="M22 5h-4" /><path d="M4 17v2" /><path d="M5 18H3" /></svg><span>New</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="Casino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z" /><path d="M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12" /><path d="M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z" /></svg><span>Casino</span></a></li><li><a class="cat-nav__item" href="#s-nav" aria-current="page" data-cat="Live Casino"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" /><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" /><circle cx="12" cy="12" r="2" /><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" /><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" /></svg><span>Live Casino</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="Promotions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></svg><span>Promotions</span></a></li><li><a class="cat-nav__item" href="#s-nav" data-cat="VIP Club"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z" /><path d="M5 21h14" /></svg><span>VIP Club</span></a></li></ul></nav></div>
+  <p style="font-size:13px">Swipe sideways; the current tab (here Live Casino) is scrolled into view when the page loads. Part of the next tab stays visible so players know the bar scrolls.</p>
+
+  <h3>HTML</h3>
+  <div class="code"><button class="copy" data-target="code-catnav-html">Copy HTML</button><pre id="code-catnav-html">&lt;nav class=&quot;cat-nav&quot; aria-label=&quot;Game categories&quot;&gt;
+  &lt;ul class=&quot;cat-nav__list&quot;&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/popular&quot; aria-current=&quot;page&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path d=&quot;M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;Popular&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/new&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path d=&quot;M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z&quot; /&gt;&lt;path d=&quot;M20 3v4&quot; /&gt;&lt;path d=&quot;M22 5h-4&quot; /&gt;&lt;path d=&quot;M4 17v2&quot; /&gt;&lt;path d=&quot;M5 18H3&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;New&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/casino&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path d=&quot;M2 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z&quot; /&gt;&lt;path d=&quot;M12 17a5 5 0 0 0 10 0c0-2.76-2.5-5-5-3-2.5-2-5 .24-5 3Z&quot; /&gt;&lt;path d=&quot;M7 14c3.22-2.91 4.29-8.75 5-12 1.66 2.38 4.94 9 5 12&quot; /&gt;&lt;path d=&quot;M22 9c-4.29 0-7.14-2.33-10-7 5.71 0 10 4.67 10 7Z&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;Casino&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/live-casino&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path d=&quot;M4.9 19.1C1 15.2 1 8.8 4.9 4.9&quot; /&gt;&lt;path d=&quot;M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5&quot; /&gt;&lt;circle cx=&quot;12&quot; cy=&quot;12&quot; r=&quot;2&quot; /&gt;&lt;path d=&quot;M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5&quot; /&gt;&lt;path d=&quot;M19.1 4.9C23 8.8 23 15.1 19.1 19&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;Live Casino&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/promotions&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;rect x=&quot;3&quot; y=&quot;8&quot; width=&quot;18&quot; height=&quot;4&quot; rx=&quot;1&quot; /&gt;&lt;path d=&quot;M12 8v13&quot; /&gt;&lt;path d=&quot;M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7&quot; /&gt;&lt;path d=&quot;M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;Promotions&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a class=&quot;cat-nav__item&quot; href=&quot;/vip&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.75&quot;
+             stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; aria-hidden=&quot;true&quot;&gt;
+          &lt;path d=&quot;M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z&quot; /&gt;&lt;path d=&quot;M5 21h14&quot; /&gt;
+        &lt;/svg&gt;
+        &lt;span&gt;VIP Club&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre></div>
+  <h3>CSS</h3>
+  <div class="code"><button class="copy" data-target="code-catnav-css">Copy CSS</button><pre id="code-catnav-css">.cat-nav{width:100%;border:1px solid #3A4A66;border-radius:14px;background:rgba(6,19,38,.6);overflow:hidden}
+.cat-nav__list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));list-style:none;margin:0;padding:0}
+.cat-nav__list li+li{border-left:1px solid #1A2840}
+.cat-nav__item{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;
+  height:56px;padding:0 14px;color:#fff;text-decoration:none;white-space:nowrap;
+  font:600 15px/1 Poppins,sans-serif;transition:color .2s,background .2s}
+.cat-nav__item svg{width:22px;height:22px;flex:none;color:#F4CC1D;transition:color .2s,filter .2s}
+
+/* hover / keyboard focus */
+.cat-nav__item:hover,.cat-nav__item:focus-visible{outline:0;background:rgba(4,245,229,.06);color:#04F5E5}
+.cat-nav__item:hover svg,.cat-nav__item:focus-visible svg{color:#04F5E5}
+.cat-nav__item:focus-visible{box-shadow:inset 0 0 0 2px #04F5E5}
+
+/* current category */
+.cat-nav__item[aria-current=&quot;page&quot;]{background:linear-gradient(180deg,rgba(4,245,229,0),rgba(4,245,229,.10))}
+.cat-nav__item[aria-current=&quot;page&quot;] svg{color:#04F5E5;filter:drop-shadow(0 0 6px rgba(4,245,229,.75))}
+.cat-nav__item[aria-current=&quot;page&quot;]::after{content:&quot;&quot;;position:absolute;left:18%;right:18%;bottom:0;height:3px;
+  border-radius:3px 3px 0 0;background:#04F5E5;box-shadow:0 0 10px rgba(4,245,229,.8)}
+
+/* tablet &amp; phone: swipe sideways */
+@media(max-width:1023px){
+  .cat-nav{overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
+  .cat-nav::-webkit-scrollbar{display:none}
+  .cat-nav__list{display:flex}
+  .cat-nav__list li{flex:0 0 auto;scroll-snap-align:start}
+  .cat-nav__item{height:52px;padding:0 18px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.cat-nav__item,.cat-nav__item svg{transition:none}}</pre></div>
+
+  <h3>Behaviour &amp; accessibility</h3>
+  <ul style="color:#C7D2E0;font-size:14px;padding-left:18px">
+    <li>Use links (<code>&lt;a&gt;</code>), not buttons: each tab opens its own page with its own address.</li>
+    <li>Exactly one tab has <code>aria-current="page"</code>.</li>
+    <li>The bar is a <code>&lt;nav&gt;</code> with <code>aria-label="Game categories"</code>, so screen readers can tell it apart from the main menu.</li>
+    <li>Tabs are at least 44px tall for touch; keyboard users tab through them in order.</li>
+  </ul>
+  <style>.cat-nav{width:100%;border:1px solid #3A4A66;border-radius:14px;background:rgba(6,19,38,.6);overflow:hidden}
+.cat-nav__list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));list-style:none;margin:0;padding:0}
+.cat-nav__list li+li{border-left:1px solid #1A2840}
+.cat-nav__item{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;
+  height:56px;padding:0 14px;color:#fff;text-decoration:none;white-space:nowrap;
+  font:600 15px/1 Poppins,sans-serif;transition:color .2s,background .2s}
+.cat-nav__item svg{width:22px;height:22px;flex:none;color:#F4CC1D;transition:color .2s,filter .2s}
+
+/* hover / keyboard focus */
+.cat-nav__item:hover,.cat-nav__item:focus-visible{outline:0;background:rgba(4,245,229,.06);color:#04F5E5}
+.cat-nav__item:hover svg,.cat-nav__item:focus-visible svg{color:#04F5E5}
+.cat-nav__item:focus-visible{box-shadow:inset 0 0 0 2px #04F5E5}
+
+/* current category */
+.cat-nav__item[aria-current="page"]{background:linear-gradient(180deg,rgba(4,245,229,0),rgba(4,245,229,.10))}
+.cat-nav__item[aria-current="page"] svg{color:#04F5E5;filter:drop-shadow(0 0 6px rgba(4,245,229,.75))}
+.cat-nav__item[aria-current="page"]::after{content:"";position:absolute;left:18%;right:18%;bottom:0;height:3px;
+  border-radius:3px 3px 0 0;background:#04F5E5;box-shadow:0 0 10px rgba(4,245,229,.8)}
+
+/* tablet & phone: swipe sideways */
+@media(max-width:1023px){
+  .cat-nav{overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none}
+  .cat-nav::-webkit-scrollbar{display:none}
+  .cat-nav__list{display:flex}
+  .cat-nav__list li{flex:0 0 auto;scroll-snap-align:start}
+  .cat-nav__item{height:52px;padding:0 18px;font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.cat-nav__item,.cat-nav__item svg{transition:none}}
+.cat-nav__item.is-hover{background:rgba(4,245,229,.06);color:#04F5E5}.cat-nav__item.is-hover svg{color:#04F5E5}
+.cat-states{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.cat-state{min-width:0;padding:14px;border:1px solid var(--line-soft);border-radius:12px;background:var(--doc-panel)}
+.cat-state .one{border:1px solid #3A4A66;border-radius:12px;background:#000816;overflow:hidden;margin-bottom:10px}
+.cat-state h4{margin:0 0 4px;font:600 14px var(--f-display)}.cat-state p{margin:0;font-size:13px}
+.cat-ic{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#060A1A;color:#F4CC1D}.cat-ic svg{width:22px;height:22px}
+.cat-phone{max-width:390px;margin:16px 0;padding:14px;border-radius:24px;border:1px solid #2A3A58;background:#000816}
+.cat-phone .cat-nav{overflow-x:auto;scrollbar-width:none}.cat-phone .cat-nav__list{display:flex}.cat-phone .cat-nav__list li{flex:0 0 auto}.cat-phone .cat-nav__item{height:52px;padding:0 18px;font-size:14px}
+@media(max-width:900px){.cat-states{grid-template-columns:1fr}}</style>
+  <script>
+  (function(){
+    var n=document.getElementById('cat-demo'); if(!n) return;
+    n.querySelectorAll('.cat-nav__item').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
+      n.querySelectorAll('.cat-nav__item').forEach(function(x){x.removeAttribute('aria-current')});a.setAttribute('aria-current','page');})});
+  })();
+  </script>
 </section>
 
 <section id="s-promos">
