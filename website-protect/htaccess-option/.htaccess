@@ -1,0 +1,13 @@
+# Option B: browser password prompt for the whole folder (HTML and images).
+# 1) Upload a .htpasswd file OUTSIDE public_html, e.g. /home/YOURUSER/.htpasswd
+# 2) Put the full server path to it below (cPanel shows it under "Directory Privacy",
+#    or ask your host for the path to your home folder).
+AuthType Basic
+AuthName "Full Moon Play Style Guide"
+AuthUserFile /home/YOURUSER/.htpasswd
+Require valid-user
+
+Options -Indexes
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

@@ -1,0 +1,6 @@
+# Put this in the img/ folder as ".htaccess" (Option A, PHP gate).
+# Stops visitors browsing a list of all images. It does not password-protect them.
+Options -Indexes
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>
