@@ -318,7 +318,6 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#cms-maps">Editable fields</a>
   <a href="#cms-blocks">Block library &amp; sizes</a>
   <a href="#cms-devices">Desktop &amp; mobile</a>
-  <a href="#cms-model">Structure &amp; workflow</a>
   <h4>Game pages &amp; In-Game Mode</h4>
   <a href="#gp-overview">Three states</a>
   <a href="#gp-page">Game page</a>
@@ -2643,65 +2642,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 </div>
 </section>
 
-<section id="cms-model">
-  <span class="eyebrow">CMS</span>
-  <h2>Content structure &amp; workflow</h2>
-  <p>How the Promotions page above is stored. Developers render each block type with the components in this guide; editors only ever see the form fields.</p>
-  <div class="code"><button class="copy" data-target="code-cms-json">Copy JSON</button><pre id="code-cms-json">{
-  &quot;page&quot;: &quot;promotions&quot;,
-  &quot;status&quot;: &quot;published&quot;,
-  &quot;blocks&quot;: [
-    {
-      &quot;type&quot;: &quot;page-header&quot;,
-      &quot;breadcrumb&quot;: [&quot;Home&quot;, &quot;Promotions&quot;],
-      &quot;title&quot;: &quot;Promotions&quot;,
-      &quot;subtitle&quot;: &quot;Exclusive offers, bonuses, and rewards just for you!&quot;,
-      &quot;art&quot;: { &quot;desktop&quot;: &quot;promo-header.webp&quot;, &quot;mobile&quot;: &quot;promo-header-m.webp&quot; }
-    },
-    {
-      &quot;type&quot;: &quot;banner&quot;,
-      &quot;size&quot;: &quot;full&quot;,
-      &quot;tag&quot;: &quot;WELCOME OFFER&quot;,
-      &quot;headline&quot;: [&quot;GET UP TO&quot;, &quot;250K GC&quot;, &quot;+ 25 FREE SC&quot;],
-      &quot;highlight&quot;: { &quot;line&quot;: 2, &quot;style&quot;: &quot;cyan-violet&quot; },
-      &quot;buttons&quot;: [{ &quot;label&quot;: &quot;Claim Welcome Offer&quot;, &quot;link&quot;: &quot;/store&quot;, &quot;style&quot;: &quot;primary&quot; }],
-      &quot;image&quot;: { &quot;desktop&quot;: &quot;welcome-d.webp&quot;, &quot;mobile&quot;: &quot;welcome-m.webp&quot;, &quot;focal&quot;: [0.72, 0.45] },
-      &quot;align&quot;: { &quot;desktop&quot;: &quot;left&quot;, &quot;mobile&quot;: &quot;left&quot; },
-      &quot;mobileLayout&quot;: &quot;stack&quot;,
-      &quot;showOn&quot;: [&quot;desktop&quot;, &quot;tablet&quot;, &quot;mobile&quot;],
-      &quot;schedule&quot;: { &quot;start&quot;: &quot;2026-12-01T00:00:00Z&quot;, &quot;end&quot;: null }
-    },
-    {
-      &quot;type&quot;: &quot;promo-grid&quot;,
-      &quot;columns&quot;: { &quot;desktop&quot;: 3, &quot;tablet&quot;: 2, &quot;mobile&quot;: 1 },
-      &quot;cards&quot;: [
-        { &quot;tag&quot;: &quot;AVAILABLE&quot;, &quot;title&quot;: &quot;Welcome Bonus&quot;,
-          &quot;offer&quot;: &quot;SIGN UP **10K GC + 1 SC**&quot;, &quot;button&quot;: { &quot;label&quot;: &quot;Purchase Now&quot;, &quot;icon&quot;: &quot;gift&quot;, &quot;link&quot;: &quot;/store&quot; },
-          &quot;art&quot;: &quot;welcome-card.webp&quot;, &quot;accent&quot;: &quot;cyan&quot; }
-      ]
-    }
-  ]
-}</pre></div>
-  <h3>Workflow</h3>
-  <div class="tbl"><table>
-    <tr><th>Step</th><th>What happens</th></tr>
-    <tr><td class="k">Draft</td><td>Changes are saved but not live. Editors can leave and come back.</td></tr>
-    <tr><td class="k">Preview</td><td>Private link showing the page as it will look, with a Desktop / Tablet / Mobile switch.</td></tr>
-    <tr><td class="k">Review</td><td>Optional approval step for promotions and legal text (Admin role).</td></tr>
-    <tr><td class="k">Schedule</td><td>Pick a start and end date and time. Offers and ticker items switch on and off by themselves.</td></tr>
-    <tr><td class="k">Publish</td><td>Goes live. Every publish keeps a version, so any page can be rolled back.</td></tr>
-  </table></div>
-  <h3>Built-in checks</h3>
-  <ul style="color:#C7D2E0;font-size:14px;padding-left:18px">
-    <li>Character limits on every text field (shown as a live counter), so headlines never break the layout.</li>
-    <li>Image checks: minimum size for the chosen banner size, WebP conversion, and required alt text.</li>
-    <li>Only one filled button per banner; a second button is always the ghost style.</li>
-    <li>Sweepstakes wording check: warns on words like "deposit", "cash out" or "free spins" and suggests GC / SC wording.</li>
-    <li>Amounts such as jackpots, balances, RTP and player counts are never typed in. They come from live data.</li>
-  </ul>
-  <h3>Choosing a CMS</h3>
-  <p>Any headless CMS that supports reusable blocks, scheduling and roles can do this. Good fits are <strong>Strapi</strong> or <strong>Payload</strong> (open source, self-hosted, "dynamic zones" or "blocks" map directly to the block library), or <strong>Sanity</strong> / <strong>Contentful</strong> (hosted). Recommended: <strong>Payload</strong>, because blocks, drafts, scheduled publishing, versions, roles and live preview are built in, and it runs inside the same Next.js app as the site.</p>
-</section>
+
 <style>.pinned{position:relative;margin:12px 0;border-radius:10px;overflow:hidden;border:1px solid #1C3350}
 .pinned img{display:block;width:100%;height:auto}
 .pin{position:absolute;transform:translate(-50%,-50%);width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#F032F4;color:#fff;font:700 12px var(--f-body);box-shadow:0 0 0 2px #fff,0 0 12px rgba(240,50,244,.8)}
@@ -2754,8 +2695,8 @@ td.pn{width:40px}
 .cms-frame--mobile .cbn{flex-direction:column;align-items:stretch;padding:16px}
 .cms-frame--mobile .cbn-text{max-width:none;grid-auto-flow:row}
 .cms-frame--mobile .cbn-h1{font-size:24px}.cms-frame--mobile .cbn-h2{font-size:28px}
-.cbn--m-stack .cbn-art{position:relative;order:-1;width:auto;height:150px;margin:-16px -16px 6px;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
-.cbn--m-overlay .cbn-art{width:100%;opacity:.45;-webkit-mask-image:none;mask-image:none}
+.cbn--m-stack .cbn-art{position:relative;order:-1;width:auto;height:240px;background-position:center 20%;margin:-16px -16px 6px;-webkit-mask-image:linear-gradient(180deg,#000 60%,transparent);mask-image:linear-gradient(180deg,#000 60%,transparent)}
+.cbn--m-overlay .cbn-art{width:100%;opacity:.55;background-position:center 15%;-webkit-mask-image:none;mask-image:none}
 .cbn--m-text .cbn-art{display:none}
 .cms-frame--mobile .cbn-crown{align-self:center}
 .cms-admin{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:18px;align-items:center;margin:16px 0}
@@ -2765,7 +2706,7 @@ td.pn{width:40px}
 (function(){
   var $=function(i){return document.getElementById(i)};
   var dev='desktop';
-  var art='img/gen-cards.webp';
+  var art='img/gen-cards.webp', artM='img/gen-cards-m.webp';
   function render(){
     var b=$('ce-banner'),blk=$('ce-block').value,size=$('ce-size').value,al=$('ce-align').value,ml=$('ce-ml').value;
     var show={desktop:$('ce-d').checked,mobile:$('ce-m').checked}[dev];
@@ -2782,7 +2723,7 @@ td.pn{width:40px}
         '<div class="cbn-sub">'+t($('ce-sub').value)+'</div>'+
         '<button type="button" class="cbn-btn">'+t($('ce-btn').value)+' →</button>'+
       '</div>'+
-      (blk==='promo'?'<div class="cbn-art" style="background-image:url('+art+')"></div>':crown);
+      (blk==='promo'?'<div class="cbn-art" style="background-image:url('+(dev==='mobile'?artM:art)+')"></div>':crown);
     var n=[['ce-h1',16],['ce-h2',16],['ce-sub',70],['ce-btn',22]].map(function(p){return $(p[0]).value.length+'/'+p[1]});
     $('ce-count').textContent='Characters used · headline '+n[0]+' · highlight '+n[1]+' · text '+n[2]+' · button '+n[3];
   }
