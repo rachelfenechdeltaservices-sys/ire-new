@@ -178,6 +178,11 @@ td.k{color:#fff;font-weight:600;white-space:nowrap}
 .gen-art{margin-top:22px;padding:18px;border:1px solid #493150;border-radius:14px;background:#0E0818}
 .gen-art>h4{margin:0 0 6px}
 .gen-art>p{font-size:14px}
+.dt-pair>*{min-width:0}
+#ig-mode .dt-pair,#ig-deposit .dt-pair{grid-template-columns:minmax(0,360px) minmax(0,1fr)}
+#gp-mobile .dt-pair{grid-template-columns:minmax(0,360px) minmax(0,420px)}
+.dt-pair .tbl table{min-width:0}
+@media(max-width:900px){#ig-mode .dt-pair,#ig-deposit .dt-pair,#gp-mobile .dt-pair{grid-template-columns:1fr}}
 /* ============ LIVE SAMPLES — these use the production CSS from the guide ============ */
 .stage{background:var(--bg);border:1px solid var(--line-soft);border-radius:14px;padding:22px;margin:16px 0;display:flex;flex-wrap:wrap;gap:16px;align-items:center}
 .btn-deposit,.btn-play{display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 22px;border:0;border-radius:8px;background:var(--cta);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.40);cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -309,6 +314,16 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#cms-blocks">Block library &amp; sizes</a>
   <a href="#cms-devices">Desktop &amp; mobile</a>
   <a href="#cms-model">Structure &amp; workflow</a>
+  <h4>Game pages &amp; In-Game Mode</h4>
+  <a href="#gp-overview">Three states</a>
+  <a href="#gp-page">Game page</a>
+  <a href="#gp-auth">Logged out vs in</a>
+  <a href="#gp-mobile">Mobile game page</a>
+  <a href="#ig-mode">In-Game Mode</a>
+  <a href="#ig-deposit">Quick deposit</a>
+  <a href="#ig-push">Notifications</a>
+  <a href="#gp-seo">SEO</a>
+  <a href="#gp-content">Content sources</a>
 </nav>
 
 <main><div class="wrap">
@@ -1610,11 +1625,11 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="next">
   <span class="eyebrow">Next</span>
   <h2>Next: subpages</h2>
-  <p>All Games, Promotions and Guides are now documented in <a href="#dt-pages">Part 5</a>. This guide covers the homepage and the shared foundations. Each subpage will get its own chapter that reuses these tokens and components and documents only what is new.</p>
+  <p>All Games, Promotions and Guides are documented in <a href="#dt-pages">Part 5</a>, and game pages in <a href="#gp-overview">Part 7</a>. This guide covers the homepage and the shared foundations. Each subpage will get its own chapter that reuses these tokens and components and documents only what is new.</p>
   <div class="tbl"><table>
     <tr><th>Subpage</th><th>Reuses</th><th>Needs designing</th></tr>
     <tr><td class="k">Category (Slots, Casino, Live, New…)</td><td>Section header with subtitle, card rows</td><td>Filter bar, sort, full grid, pagination</td></tr>
-    <tr><td class="k">Game detail / launch</td><td>Buttons, badges, RTP badge</td><td>Game frame, info panel, related games</td></tr>
+    <tr><td class="k">Game detail / launch</td><td>Buttons, badges, RTP badge</td><td>Done: see <a href="#gp-page">Part 7</a>. Still to design: desktop In-Game Mode</td></tr>
     <tr><td class="k">Promotions</td><td>Promotion card</td><td>Full offer page, terms layout</td></tr>
     <tr><td class="k">Jackpots</td><td>Jackpots banner, prize boxes</td><td>Jackpot game grid, rules, recent jackpot wins</td></tr>
     <tr><td class="k">VIP Club</td><td>VIP banner, gold</td><td>Tier ladder, benefits table</td></tr>
@@ -2140,6 +2155,117 @@ td.pn{width:40px}
   render();
 })();
 </script>
+<div class="part" id="game"><span class="eyebrow">Part 7</span><h2>Game Pages &amp; In-Game Mode</h2></div>
+<section id="gp-overview">
+  <span class="eyebrow">Game pages</span>
+  <h2>Three states of a game</h2>
+  <p>Every game has one page at a fixed address, for example <code>/games/eastern-fury</code>. What the page shows depends on whether the visitor is logged out, logged in, or playing. The review is <strong>always</strong> on the page, for players deciding what to play and for search engines.</p>
+  <div class="tbl"><table><tr><th></th><th>Logged out (visitor)</th><th>Logged in (player)</th><th>In-Game Mode</th></tr><tr><td class=k>Who</td><td>New visitors and search engines</td><td>Signed-in players</td><td>A player with a game open</td></tr><tr><td class=k>Header</td><td>Search · <strong>Login</strong> · <strong>Register</strong></td><td>Wallet balance · <strong>Deposit</strong></td><td>Wallet balance · Deposit · news ticker</td></tr><tr><td class=k>Game review</td><td>Always visible (full text, ratings, stats)</td><td>Always visible</td><td>Hidden while playing; "Game info" opens it</td></tr><tr><td class=k>Demo button</td><td>Shown when the provider offers a demo; plays free with no account</td><td>Shown when available</td><td>—</td></tr><tr><td class=k>Play Now</td><td>Opens Register / Login, then returns to this game</td><td>Starts the real game (enters In-Game Mode)</td><td>—</td></tr><tr><td class=k>Push notifications</td><td>Not used</td><td>Opt-in prompt after the first game session</td><td>In-game banners from Flapjax CRM</td></tr><tr><td class=k>Deposit</td><td>—</td><td>Header button</td><td>Deposit button in the game bar opens the wallet over the game</td></tr></table></div>
+</section>
+
+<section id="gp-page">
+  <span class="eyebrow">Game pages · desktop · logged out</span>
+  <h2>Game page</h2>
+  <figure class="ref" style="margin:0;max-width:720px"><img src="img/gp-desktop.webp" alt="Eastern Fury game page on desktop, logged out: game banner, review, stats, features, review details, tags and similar games" loading="lazy"><figcaption><b>Design</b>Eastern Fury game page on desktop, logged out: game banner, review, stats, features, review details, tags and similar games</figcaption></figure>
+  <div class="dt-grid" style="margin-top:18px">
+    <div class="dt-box"><h4>Page order</h4><ol>
+      <li>Game banner</li><li>Breadcrumb</li><li>Game summary: thumbnail, title, rating, description, 4 stats, 2 buttons</li><li>Game Features</li><li>Game Review Details + score</li><li>Tags</li><li>Similar Games</li></ol></div>
+    <div class="dt-box"><h4>Alignment</h4><table class="dt-al">
+      <tr><td>Banner logo, USP pills, Play Now</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Breadcrumb, title, description</td><td><span class="al al-l">Left</span></td></tr>
+      <tr><td>Stat tiles (icon + label)</td><td><span class="al al-l">Left</span> in tile</td></tr><tr><td>Review score</td><td><span class="al al-c">Centred</span> in box</td></tr><tr><td>Similar Games header</td><td><span class="al al-l">Left</span> / <span class="al al-r">Right</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 main</div><ul>
+      <li><strong>Play Now →</strong> in the banner (cyan, centred)</li><li><strong>Demo ▶</strong> (violet) + <strong>Play Now →</strong> (cyan) in the summary, side by side, equal width</li>
+      <li><strong>See Full Review →</strong> (violet outline pill)</li><li>Tags are links; Similar Games: View All + 2 arrows</li></ul></div>
+  </div>
+
+  <h3>1 · Game banner</h3>
+  <figure class="ref" style="margin:0;"><img src="img/gp-hero.webp" alt="Eastern Fury banner: character left, game logo centre, pagoda and full moon right, three USP pills and Play Now" loading="lazy"><figcaption><b>Banner</b>Eastern Fury banner: character left, game logo centre, pagoda and full moon right, three USP pills and Play Now</figcaption></figure>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Size</td><td>Full content width × ≈ 320px desktop (3.5 : 1); 4 : 3 on phones. Neon wave along the bottom edge.</td></tr><tr><td class=k>Art</td><td>Game key art: character on the left, game logo in the centre, themed scenery on the right. Supplied by the provider or generated (prompt below).</td></tr><tr><td class=k>USP pills</td><td>3 pills in a row (stacked on phones): number + gold icon + label. 1.5px gold border <code>#F5B82E</code>, dark fill, 999px radius, Poppins 600 16px. Number in gold.</td></tr><tr><td class=k>Play Now</td><td>Cyan CTA, 52px high, centred under the pills.</td></tr><tr><td class=k>Editable (CMS)</td><td>The 3 USP labels and icons are global (same on every game page); the art is per game.</td></tr></table></div>
+  <div class="note warn">The third pill reads "Bug Prices Every Day". It should probably be <strong>"Big Prizes Every Day"</strong>. "Fast Payments" should become <strong>"Fast Redemptions"</strong> for a sweepstakes site.</div>
+
+  <h3>2 · Game summary</h3>
+  <figure class="ref" style="margin:0;"><img src="img/gp-info.webp" alt="Thumbnail with AVAILABLE badge, title, star rating, description, RTP, Volatility, Max Win and Provider tiles, Demo and Play Now buttons" loading="lazy"><figcaption><b>Summary</b>Thumbnail with AVAILABLE badge, title, star rating, description, RTP, Volatility, Max Win and Provider tiles, Demo and Play Now buttons</figcaption></figure>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Thumbnail</td><td>≈ 316 × 260, 16px radius, 2px magenta border with glow. Status badge top left: green check + AVAILABLE (other states: COMING SOON, DEMO ONLY).</td></tr><tr><td class=k>Title</td><td>H1 of the page: Poppins 700, 40px. Only one H1 per page.</td></tr><tr><td class=k>Rating</td><td>"Game Review" label, 5 gold stars <code>#FFC531</code>, score "4.6/5", review count in muted text.</td></tr><tr><td class=k>Description</td><td>Body L, max 3 lines on desktop, 160 characters.</td></tr><tr><td class=k>Stat tiles</td><td>4 tiles: RTP (cyan %), Volatility (magenta bars), Max Win (gold trophy), Game Provider (gold crown). Each: 1px border in the icon colour, 12px radius, label Body XS muted + value Body M 700. Values come from the provider feed.</td></tr><tr><td class=k>Buttons</td><td>Demo ▶ (violet filled, white text) and Play Now → (cyan) at equal width, 52px high. If no demo exists, Play Now spans the full width.</td></tr></table></div>
+
+  <h3>3 · Game Features &amp; Review Details</h3>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/gp-features.webp" alt="Game Features panel with Expanding Wilds, Multipliers up to 100x, Free Spins, High Win Potential" loading="lazy"><figcaption><b>Features</b>Game Features panel with Expanding Wilds, Multipliers up to 100x, Free Spins, High Win Potential</figcaption></figure><figure class="ref" style="margin:0;"><img src="img/gp-review.webp" alt="Game Review Details text with See Full Review button, 9.2/10 score and tag pills" loading="lazy"><figcaption><b>Review</b>Game Review Details text with See Full Review button, 9.2/10 score and tag pills</figcaption></figure></div>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Features panel</td><td>Heading with lightning icon, then 4 feature chips (icon + label) in a row; 2 × 2 on phones. Chips: 1px <code>#2A3A58</code> border, 10px radius.</td></tr><tr><td class=k>Review Details</td><td>Heading with document icon, 3–4 lines of review text, <strong>See Full Review →</strong> expands the full review in place (the full text is already in the HTML for SEO).</td></tr><tr><td class=k>Score box</td><td>"9.2/10": gold Poppins 800, 56px, glow; dark box with a 1px border, on the right. Separated from the text by a thin vertical line.</td></tr><tr><td class=k>Tags</td><td>Pill links (Slots, Asian, High RTP…). Each opens All Games with that filter applied.</td></tr></table></div>
+
+  <h3>4 · Similar Games</h3>
+  <figure class="ref" style="margin:0;"><img src="img/gp-similar.webp" alt="Similar Games row with Book of Dead, Le Vampire, Sakura Fortune and Gonzo&#x27;s Quest" loading="lazy"><figcaption><b>Similar Games</b>Similar Games row with Book of Dead, Le Vampire, Sakura Fortune and Gonzo&#x27;s Quest</figcaption></figure>
+  <p>Standard section header + 4 game tiles chosen by shared tags and provider. On phones: View All only, no arrows, 4 small tiles in one row.</p>
+</section>
+
+<section id="gp-auth">
+  <span class="eyebrow">Game pages</span>
+  <h2>Logged out vs logged in</h2>
+  <div class="dt-pair">
+    <figure class="ref" style="margin:0;"><img src="img/gp-auth.webp" alt="Logged-out header: magenta search button, Login outline button, Register cyan button" loading="lazy"><figcaption><b>Logged out header</b>Logged-out header: magenta search button, Login outline button, Register cyan button</figcaption></figure>
+    <figure class="ref" style="margin:0;"><img src="img/header-ticker.webp" alt="Logged-in header: balance, Deposit button and news ticker" loading="lazy"><figcaption><b>Logged in header</b>Logged-in header: balance, Deposit button and news ticker</figcaption></figure>
+  </div>
+  <div class="tbl"><table><tr><th>Element</th><th>Logged out</th><th>Logged in</th></tr><tr><td class=k>Header right</td><td>Search (40px magenta circle) · <strong>Login</strong> (violet outline) · <strong>Register</strong> (cyan filled)</td><td>Wallet balance · <strong>Deposit</strong></td></tr><tr><td class=k>Utility bar (mobile)</td><td>"Welcome to our CASINO · 18+ · Responsible Play" + language picker, above the header</td><td>Hidden; language moves into My Profile</td></tr><tr><td class=k>Banner Play Now</td><td>Opens Register (new visitors) or Login (returning, remembered device)</td><td>Starts the game</td></tr><tr><td class=k>Demo</td><td>Plays the free demo in In-Game Mode, with a small "Demo" label and a Register prompt in the game bar</td><td>Plays the demo</td></tr><tr><td class=k>Play Now (summary)</td><td>Register / Login, then straight back into this game</td><td>Starts the real game</td></tr><tr><td class=k>Favourite</td><td>Hidden</td><td>Heart on the thumbnail, top right</td></tr><tr><td class=k>Review, features, tags, similar games</td><td>Always shown</td><td>Always shown</td></tr></table></div>
+  <div class="note"><strong>No demo?</strong> Hide the Demo button, let Play Now span the full width, and show "Demo not available for this game" in Body XS under it.</div>
+</section>
+
+<section id="gp-mobile">
+  <span class="eyebrow">Game pages · mobile &amp; tablet</span>
+  <h2>Mobile game page</h2>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/gp-phone.webp" alt="Phone version of the game page: utility bar, header, stacked banner pills, summary, 2 by 2 stats, buttons, features, review, tags, similar games" loading="lazy"><figcaption><b>Phone</b>Phone version of the game page: utility bar, header, stacked banner pills, summary, 2 by 2 stats, buttons, features, review, tags, similar games</figcaption></figure><figure class="ref" style="margin:0;"><img src="img/gp-tablet.webp" alt="Tablet version of the game page with four stats in a row and four features in a row" loading="lazy"><figcaption><b>Tablet</b>Tablet version of the game page with four stats in a row and four features in a row</figcaption></figure></div>
+  <div class="tbl"><table><tr><th>Part</th><th>Phone (&lt; 768px)</th><th>Tablet (768–1023px)</th></tr><tr><td class=k>Utility bar</td><td>Welcome · 18+ · Responsible Play + language</td><td>Same, one line</td></tr><tr><td class=k>Banner</td><td>Logo top, 3 pills stacked full width, Play Now</td><td>Same as phone, wider</td></tr><tr><td class=k>Summary</td><td>Thumbnail left (≈ 45%), title + rating + description right</td><td>Same</td></tr><tr><td class=k>Stat tiles</td><td>2 × 2</td><td>4 in a row</td></tr><tr><td class=k>Demo / Play Now</td><td>Side by side, equal width</td><td>Side by side</td></tr><tr><td class=k>Features</td><td>2 × 2</td><td>4 in a row</td></tr><tr><td class=k>Review</td><td>Text and score side by side; score box shrinks to 120px</td><td>Same</td></tr><tr><td class=k>Tags</td><td>Wrap to 2 lines</td><td>One line</td></tr><tr><td class=k>Similar Games</td><td>View All only; 4 small tiles</td><td>View All only</td></tr></table></div>
+</section>
+
+<section id="ig-mode">
+  <span class="eyebrow">In-Game Mode</span>
+  <h2>In-Game Mode</h2>
+  <p>When a player presses Play Now (or Demo), the page switches into In-Game Mode: the game fills the screen, and the site shrinks to a slim header on top and a game bar at the bottom. The player stays inside the game for everything they need: deposit, messages, profile, search.</p>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/ig-playing.webp" alt="Mobile In-Game Mode: header with balance and Deposit, news ticker, Million Drops notification card, Sweet Bonanza 1000 game, game bar at the bottom" loading="lazy"><figcaption><b>Playing</b>Mobile In-Game Mode: header with balance and Deposit, news ticker, Million Drops notification card, Sweet Bonanza 1000 game, game bar at the bottom</figcaption></figure><div>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Header</td><td>Logo, wallet balance, Deposit. Stays visible; 56px.</td></tr><tr><td class=k>News ticker</td><td>One headline at a time, swipes left. Can be hidden by the player.</td></tr><tr><td class=k>Notification slot</td><td>A card under the ticker for CRM messages (see below). Collapses when empty.</td></tr><tr><td class=k>Game frame</td><td>The provider game, full width, filling all remaining height. Never covered by site UI except the wallet sheet.</td></tr><tr><td class=k>Game bar</td><td>Fixed at the bottom, 64px, neon-edge pill. 5 icons: Back · Profile · <strong>Deposit</strong> (centre, raised, cyan border) · Chat (Live Support) · Search.</td></tr></table></div>
+  <figure class="ref" style="margin:0;"><img src="img/ig-bar.webp" alt="Game bar: back, profile, raised centre deposit button, chat and search" loading="lazy"><figcaption><b>Game bar</b>Game bar: back, profile, raised centre deposit button, chat and search</figcaption></figure>
+  </div></div>
+  <h3>Desktop</h3>
+  <p>Not designed yet. Recommended: game frame centred at 16 : 9 under the header, with the same game bar under it (Back · Game info · Favourite · <strong>Deposit</strong> · Full screen · Chat). The wallet opens as a 400px panel from the right instead of a bottom sheet.</p>
+</section>
+
+<section id="ig-deposit">
+  <span class="eyebrow">In-Game Mode</span>
+  <h2>Quick deposit</h2>
+  <p>Depositing must never take the player out of the game. The centre button in the game bar (or the header Deposit button) opens the wallet as a <strong>bottom sheet over the game</strong>. The game behind it is blurred and dimmed but stays loaded, so the player returns exactly where they were.</p>
+  <div class="dt-pair"><figure class="ref" style="margin:0;"><img src="img/ig-wallet.webp" alt="Wallet bottom sheet over the blurred game: Main balance, Deposit and Withdraw buttons, Recent transactions" loading="lazy"><figcaption><b>Wallet sheet</b>Wallet bottom sheet over the blurred game: Main balance, Deposit and Withdraw buttons, Recent transactions</figcaption></figure><div>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Backdrop</td><td>Game blurred 12px, dimmed with <code>rgba(0,4,16,.55)</code>.</td></tr><tr><td class=k>Sheet</td><td>Full width, up to 70% of the screen height, 28px top radius, 2px neon-edge border, fill <code>#060A1A</code>. Drag handle (violet, 48 × 6px) on top; drag down or tap the backdrop to close.</td></tr><tr><td class=k>Header</td><td>"Wallet" (Poppins 700, 32px), currency line in muted text, close button (44px, violet border) top right.</td></tr><tr><td class=k>Balance card</td><td>"Main balance" label + amount (Inter 700, 40px, tabular), 1px violet border, 16px radius.</td></tr><tr><td class=k>Buttons</td><td>Deposit (filled) + Withdraw (outline), equal width, 56px high.</td></tr><tr><td class=k>Recent</td><td>"Recent" + View all link (cyan); last 3 transactions or an empty-state line.</td></tr><tr><td class=k>After deposit</td><td>The coin package picker and payment open inside the same sheet. On success: confetti burst, the balance updates in the header and the sheet closes after 1.5s.</td></tr></table></div>
+  </div></div>
+  <div class="note pink"><strong>Three things to align before build.</strong> (1) The sheet's Deposit button is pink, but the site uses cyan for pay actions; use cyan to keep the colour rule, or make pink the wallet's own accent. (2) For a sweepstakes site: "Deposit" → <strong>Get Coins</strong>, "Withdraw" → <strong>Redeem</strong>, and the balance should show Gold Coins and Sweeps Coins, not USD or USDT. (3) The ticker and notification show € amounts; use SC.</div>
+</section>
+
+<section id="ig-push">
+  <span class="eyebrow">In-Game Mode</span>
+  <h2>Push &amp; in-game notifications</h2>
+  <p>Messages are created and targeted in <strong>Flapjax CRM</strong>. The site's job is to show them in a consistent style and in the right place. There are three kinds:</p>
+  <figure class="ref" style="margin:0;"><img src="img/ig-notice.webp" alt="In-game notification card: gift icon, Million Drops: Movember Arena, €105,000 in drops till 30 Nov" loading="lazy"><figcaption><b>In-game card</b>In-game notification card: gift icon, Million Drops: Movember Arena, €105,000 in drops till 30 Nov</figcaption></figure>
+  <div class="tbl"><table><tr><th>Type</th><th>Where it shows</th><th>Style</th></tr><tr><td class=k>In-game card</td><td>Notification slot under the ticker, while playing</td><td>Violet gradient card <code>#3A1A8A → #5A2AB8</code>, 1.5px <code>#8B5CFF</code> border, 16px radius. 3D icon left (48px), title Body M muted + message Body L 700 white. Tap opens the deep link; swipe to dismiss; auto-hides after 8s.</td></tr><tr><td class=k>Toast</td><td>Top of the screen on any page</td><td>Same style, smaller (one line), slides down, auto-hides after 5s.</td></tr><tr><td class=k>Web push</td><td>Browser / phone notification when the site is closed</td><td>Uses the logo as icon. Title max 40 characters, body max 90.</td></tr></table></div>
+  <div class="tbl"><table><tr><th>Field (sent by Flapjax CRM)</th><th>Rules</th></tr><tr><td class=k>Title</td><td>Max 40 characters.</td></tr><tr><td class=k>Message</td><td>Max 90 characters.</td></tr><tr><td class=k>Icon / image</td><td>From the CMS media library (3D icon style).</td></tr><tr><td class=k>Link</td><td>Any site page or game; opens without leaving In-Game Mode when possible (e.g. wallet sheet).</td></tr><tr><td class=k>Placement</td><td>In-game card · Toast · Web push.</td></tr><tr><td class=k>Expiry</td><td>Message disappears after this time.</td></tr></table></div>
+  <h3>Permission and limits</h3>
+  <ul style="color:#C7D2E0;font-size:14px;padding-left:18px">
+    <li>Never ask for push permission on the first visit. Show a branded pre-prompt ("Get notified about drops and bonuses?") after the player's first game session; only then trigger the browser prompt.</li>
+    <li>Maximum one in-game card per 10 minutes of play, and none during a bonus round if the provider reports it.</li>
+    <li>No marketing messages to players who have self-excluded or set limits. Opt-out lives in My Profile.</li>
+  </ul>
+</section>
+
+<section id="gp-seo">
+  <span class="eyebrow">Game pages</span>
+  <h2>SEO for game pages</h2>
+  <p>The game page is the site's main landing page from search. Everything a search engine should read is in the page HTML when it loads, logged in or not.</p>
+  <div class="tbl"><table><tr><th>Item</th><th>Rule</th></tr><tr><td class=k>Address</td><td><code>/games/[game-name]</code>, lowercase with hyphens; one address per game.</td></tr><tr><td class=k>Title tag</td><td>"[Game] Review & Demo · RTP [x]% · Full Moon Play", max 60 characters.</td></tr><tr><td class=k>Meta description</td><td>From the short description, max 155 characters.</td></tr><tr><td class=k>Headings</td><td>H1 = game name. H2s: Game Features, Game Review Details, Similar Games.</td></tr><tr><td class=k>Review text</td><td>Real HTML text, at least 300 words in the full review. See Full Review only expands it visually.</td></tr><tr><td class=k>Structured data</td><td>BreadcrumbList; SoftwareApplication (applicationCategory "GameApplication") with the editorial rating; FAQPage if the page has FAQs.</td></tr><tr><td class=k>Images</td><td>Alt text on the banner and thumbnail ("Eastern Fury slot game by Pragmatic Play").</td></tr><tr><td class=k>Game frame</td><td>Loaded only after Play Now or Demo, never on page load, so it does not slow the page or get indexed.</td></tr><tr><td class=k>Internal links</td><td>Tags, provider name and Similar Games link to other indexable pages.</td></tr></table></div>
+</section>
+
+<section id="gp-content">
+  <span class="eyebrow">Game pages</span>
+  <h2>Where game page content comes from</h2>
+  <div class="tbl"><table><tr><th>Content</th><th>Source</th><th>Edited by</th></tr><tr><td class=k>Name, thumbnail, RTP, volatility, max win, provider, demo available</td><td>Game provider feed</td><td>Automatic</td></tr><tr><td class=k>Banner art, description, features, full review, score, tags</td><td>CMS: Game collection</td><td>Content editors</td></tr><tr><td class=k>Star rating and review count</td><td>Player reviews</td><td>Automatic</td></tr><tr><td class=k>USP pills</td><td>CMS: global setting</td><td>Content editors</td></tr><tr><td class=k>Similar Games</td><td>Rule: shared tags and provider</td><td>Automatic, can be overridden</td></tr></table></div>
+  <div class="dt-style"><h4>Game banner art style</h4><p>Key art in three zones: the game's hero character on the left pointing or posing toward the viewer, space in the centre for the logo and USP pills, and the game's world on the right (here a pagoda, full moon and cherry blossoms), all under neon light that matches the game's colours, with a neon wave along the bottom.</p>
+  <div class="dt-prompt"><div class="dt-plabel">Game banner (3.5 : 1, plus a 4 : 3 mobile crop)</div><div class="code"><button class="copy" data-target="pr-gp">Copy prompt</button><pre id="pr-gp">Glossy, high-detail 3D casino game key art, wide 3.5:1 banner. LEFT third: [CHARACTER, e.g. a confident man in pink sunglasses and a blue jacket pointing at the viewer], chest-up. CENTRE third: empty dark space for a game logo and three buttons. RIGHT third: [THEMED SCENERY, e.g. a glowing red pagoda, misty mountains and a huge full moon], with [THEME DETAILS, e.g. pink cherry blossom branches] framing the top corners. Neon magenta, violet and cyan lighting, a flowing neon light wave along the bottom edge, deep navy-black sky. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+</section>
+
 <footer class="doc">Neon Sweeps homepage style guide · v7 · Built from the latest homepage plus the High RTP Games, New Games and Favourite Characters close-ups. Values tagged Sampled were read from the screenshots; all other values are matched recommendations.</footer>
 </div></main>
 </div>
