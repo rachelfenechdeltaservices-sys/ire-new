@@ -64,7 +64,7 @@ section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);s
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
 .cover figure{margin:0}
-.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2588;margin:0 auto}
+.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2628;margin:0 auto}
 
 /* panels, figures, tables */
 .panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
@@ -349,7 +349,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
-    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2588">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2628">
     <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
 </header>
@@ -1742,16 +1742,16 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <p>Any game row (High RTP Games, Popular, New Games, seasonal picks) can run in one of two modes. <strong>Normal mode</strong> is the default: just the game cards. <strong>Special mode</strong> adds an <strong>information card</strong> before the games to explain why the row matters. Use it rarely, for a reason worth explaining: a high-RTP feature, or a seasonal or campaign selection such as Halloween Picks or Christmas Picks.</p>
   <div class="md-demo">
     <div class="md-lbl">Normal mode · default</div>
-    <div class="md-row md-normal"><div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div><div class="md-t" style="background-image:url(img/m-g3.webp)"></div><div class="md-t" style="background-image:url(img/m-g4.webp)"></div></div>
+    <div class="md-row md-normal"><div class="md-t" style="background-image:url(img/md-n0.webp)"></div><div class="md-t" style="background-image:url(img/md-n1.webp)"></div><div class="md-t" style="background-image:url(img/md-n2.webp)"></div><div class="md-t" style="background-image:url(img/md-n3.webp)"></div><div class="md-t" style="background-image:url(img/md-n4.webp)"></div></div>
     <div class="md-lbl">Special mode · information card + games</div>
     <div class="md-row md-special">
       <div class="md-info"><div class="md-big">97%+</div><ul><li><span class="md-ck">✓</span>Top Payout Rates</li><li><span class="md-ck">✓</span>Higher Win Potential</li><li><span class="md-ck">✓</span>Player Favorites</li></ul></div>
-      <div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div>
+      <div class="md-t" style="background-image:url(img/md-r0.webp)"></div><div class="md-t" style="background-image:url(img/md-r1.webp)"></div><div class="md-t" style="background-image:url(img/md-r2.webp)"></div>
     </div>
     <div class="md-lbl">Special mode · seasonal (e.g. Halloween Picks)</div>
     <div class="md-row md-special">
       <div class="md-info md-halloween"><div><small>LIMITED TIME</small><div class="md-big" style="font-size:32px">Halloween<br>Picks</div></div><ul><li><span class="md-ck">✓</span>Spooky slots</li><li><span class="md-ck">✓</span>Daily SC drops</li><li><span class="md-ck">✓</span>Ends 31 Oct</li></ul></div>
-      <div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div>
+      <div class="md-t" style="background-image:url(img/md-h0.webp)"></div><div class="md-t" style="background-image:url(img/md-h1.webp)"></div><div class="md-t" style="background-image:url(img/md-h2.webp)"></div>
     </div>
   </div>
   <div class="tbl"><table><tr><th></th><th>Normal mode</th><th>Special mode</th></tr>
@@ -1770,7 +1770,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 .md-row{display:grid;gap:12px;min-width:0}
 .md-normal{grid-template-columns:repeat(5,minmax(0,1fr))}
 .md-special{grid-template-columns:minmax(0,1.9fr) repeat(3,minmax(0,1fr));align-items:center}
-.md-t{aspect-ratio:1.48/1;border-radius:12px;background-size:cover;background-position:center;box-shadow:0 0 0 2px #D84EEF,0 0 10px rgba(216,78,239,.4)}
+.md-t{aspect-ratio:1.2/1;border-radius:12px;background-size:cover;background-position:center;box-shadow:0 0 0 2px #D84EEF,0 0 10px rgba(216,78,239,.4)}
 .md-info{display:flex;align-items:center;justify-content:space-around;gap:14px;padding:14px 16px;border:2px solid transparent;border-radius:16px;background:linear-gradient(120deg,#130620,#04121C) padding-box,linear-gradient(125deg,#04EEDC,#B751FF 58%,#00E9A6) border-box;box-shadow:0 0 14px rgba(4,245,229,.25)}
 .md-big{font:800 48px/1 var(--f-display);color:#FFD21F;text-shadow:0 0 14px rgba(255,150,0,.7)}
 .md-info small{font:700 11px var(--f-body);letter-spacing:.14em;color:#FF9C2A}
@@ -2550,7 +2550,15 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="cms-intro">
   <span class="eyebrow">CMS</span>
   <h2>How content is edited</h2>
-  <p>The site is built from <strong>blocks</strong>. Each page (Home, Promotions, Guides and the rest) is a list of blocks that a content editor can add, remove, reorder and fill in without a developer. The look of every block stays locked to this style guide; editors change the words, images, links, sizes and which devices a block shows on.</p>
+  <div class="note"><strong>Request to the development team.</strong> We ask that the website be built as a <strong>modular, CMS-driven platform</strong>. Our goal is to add and edit as much content as possible ourselves, without commissioning a new page or developer work each time.</div>
+  <p>Specifically, we request that:</p>
+  <ul style="color:#C7D2E0;font-size:14.5px;padding-left:18px;display:grid;gap:6px;max-width:80ch">
+    <li>Every page (Home, Promotions, Guides, game pages and any future page) is assembled from <strong>reusable blocks</strong> that our team can add, remove, reorder and fill in.</li>
+    <li>We can create <strong>new pages</strong> (landing pages, campaigns, seasonal pages) from these existing blocks, with no new build needed.</li>
+    <li>Text, images, links, banner sizes and which devices a block shows on are editable by our team.</li>
+    <li>The visual design of each block stays locked to this style guide, so every page remains on-brand whoever edits it.</li>
+  </ul>
+  <p>The sections below describe the editing capabilities we would like the CMS to support.</p>
   <div class="dt-rules">
     <div><b>Global content</b><span>Header (logo, button label, news ticker), main menu labels and order, footer links, newsletter text, legal bar. Edited once, used on every page.</span></div>
     <div><b>Page content</b><span>The blocks on each page: banners, promo cards, game rows, guide lists, FAQ, text. Each page has its own list.</span></div>
