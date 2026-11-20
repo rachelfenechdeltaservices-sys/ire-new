@@ -286,6 +286,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#s-shows">Game Shows</a>
   <a href="#s-jackpots">Jackpots</a>
   <a href="#s-rtp">High RTP Games</a>
+  <a href="#rtp-modes">Normal / Special mode</a>
   <a href="#s-new">New Games</a>
   <a href="#s-vip">VIP Club</a>
   <a href="#s-providers">Game Providers</a>
@@ -1572,6 +1573,50 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     </table></div>
   </div>
   <div class="note warn">RTP values must come from the provider for the exact game version you host. RTP is a long-run average, so "Higher Win Potential" should be checked with compliance before launch.</div>
+<div id="rtp-modes">
+  <h3>Normal mode and Special mode</h3>
+  <p>Any game row (High RTP Games, Popular, New Games, seasonal picks) can run in one of two modes. <strong>Normal mode</strong> is the default: just the game cards. <strong>Special mode</strong> adds an <strong>information card</strong> before the games to explain why the row matters. Use it rarely, for a reason worth explaining: a high-RTP feature, or a seasonal or campaign selection such as Halloween Picks or Christmas Picks.</p>
+  <div class="md-demo">
+    <div class="md-lbl">Normal mode · default</div>
+    <div class="md-row md-normal"><div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div><div class="md-t" style="background-image:url(img/m-g3.webp)"></div><div class="md-t" style="background-image:url(img/m-g4.webp)"></div></div>
+    <div class="md-lbl">Special mode · information card + games</div>
+    <div class="md-row md-special">
+      <div class="md-info"><div class="md-big">97%+</div><ul><li><span class="md-ck">✓</span>Top Payout Rates</li><li><span class="md-ck">✓</span>Higher Win Potential</li><li><span class="md-ck">✓</span>Player Favorites</li></ul></div>
+      <div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div>
+    </div>
+    <div class="md-lbl">Special mode · seasonal (e.g. Halloween Picks)</div>
+    <div class="md-row md-special">
+      <div class="md-info md-halloween"><div><small>LIMITED TIME</small><div class="md-big" style="font-size:32px">Halloween<br>Picks</div></div><ul><li><span class="md-ck">✓</span>Spooky slots</li><li><span class="md-ck">✓</span>Daily SC drops</li><li><span class="md-ck">✓</span>Ends 31 Oct</li></ul></div>
+      <div class="md-t" style="background-image:url(img/m-g0.webp)"></div><div class="md-t" style="background-image:url(img/m-g1.webp)"></div><div class="md-t" style="background-image:url(img/m-g2.webp)"></div>
+    </div>
+  </div>
+  <div class="tbl"><table><tr><th></th><th>Normal mode</th><th>Special mode</th></tr>
+   <tr><td class="k">When</td><td>Always, by default</td><td>Occasionally: a feature worth explaining, or a season or campaign (Halloween, Christmas, Valentine's, Summer, a provider launch)</td></tr>
+   <tr><td class="k">Layout</td><td>Section header + game cards only</td><td>Section header + information card (≈ 34% width) + game cards; the card count drops by one or two so the row keeps its width</td></tr>
+   <tr><td class="k">Information card</td><td>—</td><td>Big headline or figure (gold, Poppins 800), optional small eyebrow ("LIMITED TIME"), 2–3 checklist lines with green ticks, 2px gradient border, 16px radius. Colours can follow the season (orange and purple for Halloween, red and green for Christmas)</td></tr>
+   <tr><td class="k">How often</td><td>—</td><td>At most one or two rows on the homepage at a time, so the card stays special</td></tr>
+   <tr><td class="k">Schedule</td><td>Always on</td><td>Start and end date in the CMS; the row switches back to normal mode or hides itself afterwards</td></tr>
+   <tr><td class="k">Mobile</td><td>Swipe row</td><td>Information card full width above the swipe row</td></tr>
+  </table></div>
+  <div class="note">Seasonal rows reuse the same Game row block with a different title, icon and game list, for example "Halloween Picks" with a pumpkin icon or "Christmas Picks" with a gift icon. No new component is needed.</div>
+</div>
+<style>
+.md-demo{display:grid;gap:10px;margin:16px 0;padding:18px;border:1px solid var(--line-soft);border-radius:14px;background:var(--bg)}
+.md-lbl{font:600 11.5px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-top:6px}
+.md-row{display:grid;gap:12px;min-width:0}
+.md-normal{grid-template-columns:repeat(5,minmax(0,1fr))}
+.md-special{grid-template-columns:minmax(0,1.9fr) repeat(3,minmax(0,1fr));align-items:center}
+.md-t{aspect-ratio:1.48/1;border-radius:12px;background-size:cover;background-position:center;box-shadow:0 0 0 2px #D84EEF,0 0 10px rgba(216,78,239,.4)}
+.md-info{display:flex;align-items:center;justify-content:space-around;gap:14px;padding:14px 16px;border:2px solid transparent;border-radius:16px;background:linear-gradient(120deg,#130620,#04121C) padding-box,linear-gradient(125deg,#04EEDC,#B751FF 58%,#00E9A6) border-box;box-shadow:0 0 14px rgba(4,245,229,.25)}
+.md-big{font:800 48px/1 var(--f-display);color:#FFD21F;text-shadow:0 0 14px rgba(255,150,0,.7)}
+.md-info small{font:700 11px var(--f-body);letter-spacing:.14em;color:#FF9C2A}
+.md-info ul{flex:0 0 auto;min-width:170px;list-style:none;margin:0;padding:0 0 0 14px;border-left:1px solid #2A3A58;display:grid;gap:8px;font:600 13px var(--f-body)}
+.md-ck{display:inline-grid;place-items:center;width:20px;height:20px;margin-right:8px;border-radius:50%;background:#1CF11D;color:#04120A;font-size:12px;font-weight:900}
+.md-halloween{background:linear-gradient(120deg,#1E0A26,#2A1204) padding-box,linear-gradient(125deg,#FF8A00,#B751FF) border-box;box-shadow:0 0 14px rgba(255,138,0,.3)}
+.md-halloween .md-big{color:#FF9C2A}
+@media(max-width:900px){.md-normal{grid-template-columns:repeat(3,minmax(0,1fr))}.md-special{grid-template-columns:repeat(3,minmax(0,1fr))}.md-info{grid-column:1/-1}}
+@media(max-width:480px){.md-info{flex-direction:column;align-items:flex-start}.md-big{font-size:38px}}
+</style>
 </section>
 
 <section id="s-new">
@@ -2023,6 +2068,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   </div>
   <div class="dt-style"><h4>Image style</h4><p>One iconic symbol per card (open golden book, fiery 7, four-leaf clover, diamond) glowing on a background of the same colour. Simpler than character art, so the RTP number stands out.</p><div class="dt-prompt"><div class="dt-plabel">RTP symbol tile (1.15 : 1)</div><div class="code"><button class="copy" data-target="pr-10">Copy prompt</button><pre id="pr-10">Glossy 3D [open golden book with flames / fiery red lucky seven / emerald four-leaf clover / brilliant blue diamond] symbol, centred in the upper 60%, intense glow and light rays in the same colour, dark background tinted [orange / red / green / blue-violet], bottom 30% kept calm for a logo and badge. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
   
+<div class="note">This row can run in <strong>Normal mode</strong> (games only) or <strong>Special mode</strong> (information card + games). Special mode is used rarely, including for seasonal rows such as Halloween or Christmas Picks. See <a href="#rtp-modes">Normal and Special mode</a>.</div>
 </article><article class="dt" id="d-new">
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>New Games</h3></div>
   <figure class="ref"><img src="img/new-games.webp" alt="Eight portrait new game tiles with NEW badges" loading="lazy"><figcaption><b>Reference</b>Eight portrait new game tiles with NEW badges</figcaption></figure>
@@ -2272,7 +2318,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <h2>How content is edited</h2>
   <p>The site is built from <strong>blocks</strong>. Each page (Home, Promotions, Guides and the rest) is a list of blocks that a content editor can add, remove, reorder and fill in without a developer. The look of every block stays locked to this style guide; editors change the words, images, links, sizes and which devices a block shows on.</p>
   <div class="dt-rules">
-    <div><b>Global content</b><span>Header (logo, button label, news ticker), main menu labels and order, footer links, social links, payment and trust logos, legal text. Edited once, used on every page.</span></div>
+    <div><b>Global content</b><span>Header (logo, button label, news ticker), main menu labels and order, footer links, newsletter text, legal bar. Edited once, used on every page.</span></div>
     <div><b>Page content</b><span>The blocks on each page: banners, promo cards, game rows, guide lists, FAQ, text. Each page has its own list.</span></div>
     <div><b>Collections</b><span>Promotions, Guides (articles, categories, videos), FAQs and ticker items are lists that blocks can pull from automatically.</span></div>
   </div>
@@ -2314,7 +2360,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <span class="eyebrow">CMS</span>
   <h2>Block library</h2>
   <p>Editors build pages from these blocks. Each one matches a section already in this guide.</p>
-  <div class="tbl"><table><tr><th>Block</th><th>Editable content</th><th>Use on</th><th>Example in the designs</th></tr><tr><td class="k">Hero banner</td><td>Carousel of slides: eyebrow, headline, highlight line, feature row, 2 buttons, art, optional stat card</td><td>Homepage top</td><td>Home, subpage tops</td></tr><tr><td class="k">Page header</td><td>Breadcrumb, title (with gradient word), subtitle, header art</td><td>Every subpage</td><td>All Games, Promotions, Guides</td></tr><tr><td class="k">Banner</td><td>Tag, headline (3 lines), text, 1–2 buttons, image, size, alignment</td><td>Anywhere</td><td>Promotions featured offer, Jackpots, VIP</td></tr><tr><td class="k">Promo card grid</td><td>Repeatable promo cards in 2-up or 3-up rows</td><td>Promotions, Home</td><td>Promotions page</td></tr><tr><td class="k">Game row</td><td>Section title, icon, source (manual pick / category / provider / rule like "RTP ≥ 97%"), card style</td><td>Anywhere</td><td>Popular, Casino, Live, New Games</td></tr><tr><td class="k">Category tiles</td><td>Repeatable tiles: icon image + label + link</td><td>Anywhere</td><td>Guide categories</td></tr><tr><td class="k">Article list</td><td>Source (latest / category / manual), count, layout (row / grid)</td><td>Guides, Home</td><td>Latest Guides</td></tr><tr><td class="k">Video list</td><td>Repeatable video cards with LIVE badge option</td><td>Guides</td><td>Popular How To's</td></tr><tr><td class="k">Info panel</td><td>Big figure + checklist (3–4 items)</td><td>Anywhere</td><td>High RTP panel</td></tr><tr><td class="k">Rich text</td><td>Heading, highlight phrase, body, Continue Reading toggle</td><td>Anywhere</td><td>SEO block</td></tr><tr><td class="k">FAQ</td><td>Tabs + question / answer pairs</td><td>Anywhere</td><td>Homepage FAQ, Help page</td></tr><tr><td class="k">Steps</td><td>2–5 steps: icon, title, short text; optional arrows between</td><td>Offer pages, Guides</td><td>How to Claim the Offer</td></tr><tr><td class="k">Details table</td><td>Repeatable rows: icon, label, value</td><td>Offer pages, Game pages</td><td>Offer Details</td></tr><tr><td class="k">Terms</td><td>Numbered rich text, expandable, linked to an offer</td><td>Offer pages</td><td>Terms and Conditions</td></tr><tr><td class="k">CTA</td><td>Label + action (Register / open Wallet / link), centred</td><td>Anywhere</td><td>Claim Welcome Offer Now</td></tr><tr><td class="k">Spacer / divider</td><td>Height (S / M / L), wave decoration on / off</td><td>Anywhere</td><td>Bottom waves</td></tr></table></div>
+  <div class="tbl"><table><tr><th>Block</th><th>Editable content</th><th>Use on</th><th>Example in the designs</th></tr><tr><td class="k">Hero banner</td><td>Carousel of slides: eyebrow, headline, highlight line, feature row, 2 buttons, art, optional stat card</td><td>Homepage top</td><td>Home, subpage tops</td></tr><tr><td class="k">Page header</td><td>Breadcrumb, title (with gradient word), subtitle, header art</td><td>Every subpage</td><td>All Games, Promotions, Guides</td></tr><tr><td class="k">Banner</td><td>Tag, headline (3 lines), text, 1–2 buttons, image, size, alignment</td><td>Anywhere</td><td>Promotions featured offer, Jackpots, VIP</td></tr><tr><td class="k">Promo card grid</td><td>Repeatable promo cards in 2-up or 3-up rows</td><td>Promotions, Home</td><td>Promotions page</td></tr><tr><td class="k">Game row</td><td>Section title, icon, source (manual pick / category / provider / rule like "RTP ≥ 97%"), card style, mode: Normal or Special (adds an information card: headline, eyebrow, 2–3 checklist lines, season colours, start / end date)</td><td>Anywhere</td><td>Popular, Casino, Live, New Games</td></tr><tr><td class="k">Category tiles</td><td>Repeatable tiles: icon image + label + link</td><td>Anywhere</td><td>Guide categories</td></tr><tr><td class="k">Article list</td><td>Source (latest / category / manual), count, layout (row / grid)</td><td>Guides, Home</td><td>Latest Guides</td></tr><tr><td class="k">Video list</td><td>Repeatable video cards with LIVE badge option</td><td>Guides</td><td>Popular How To's</td></tr><tr><td class="k">Info panel</td><td>Big figure + checklist (3–4 items)</td><td>Anywhere</td><td>High RTP panel</td></tr><tr><td class="k">Rich text</td><td>Heading, highlight phrase, body, Continue Reading toggle</td><td>Anywhere</td><td>SEO block</td></tr><tr><td class="k">FAQ</td><td>Tabs + question / answer pairs</td><td>Anywhere</td><td>Homepage FAQ, Help page</td></tr><tr><td class="k">Steps</td><td>2–5 steps: icon, title, short text; optional arrows between</td><td>Offer pages, Guides</td><td>How to Claim the Offer</td></tr><tr><td class="k">Details table</td><td>Repeatable rows: icon, label, value</td><td>Offer pages, Game pages</td><td>Offer Details</td></tr><tr><td class="k">Terms</td><td>Numbered rich text, expandable, linked to an offer</td><td>Offer pages</td><td>Terms and Conditions</td></tr><tr><td class="k">CTA</td><td>Label + action (Register / open Wallet / link), centred</td><td>Anywhere</td><td>Claim Welcome Offer Now</td></tr><tr><td class="k">Spacer / divider</td><td>Height (S / M / L), wave decoration on / off</td><td>Anywhere</td><td>Bottom waves</td></tr></table></div>
   <h3>Banner sizes</h3>
   <p>The Banner block comes in five sizes. Editors choose a size; the CMS asks for a desktop image and, optionally, a separate mobile image at the sizes below.</p>
   <div class="sz-wrap"><div class="sz sz-full"><b>Full</b><span>1290 × 350</span></div><div class="sz sz-large"><b>Large</b><span>1290 × 280</span></div><div class="sz sz-strip"><b>Strip</b><span>1290 × 130</span></div><div class="sz sz-half"><b>Half</b><span>635 × 240</span></div><div class="sz sz-third"><b>Third</b><span>416 × 212</span></div></div>
