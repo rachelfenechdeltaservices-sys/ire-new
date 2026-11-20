@@ -277,6 +277,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#s-menu">Main menu</a>
   <a href="#s-header">Header &amp; ticker</a>
   <a href="#s-hero">Hero</a>
+  <a href="#hero-options">Hero options</a>
   <a href="#s-nav">Category nav</a>
   <a href="#s-promos">Promotions</a>
   <a href="#s-popular">Popular Games</a>
@@ -1267,6 +1268,71 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Dots</td><td>Three 8px dots, centred under the art. Active is white, inactive is outlined.</td></tr>
   </table></div>
   <div class="note warn">The Active Players number must come from real data or be removed. Don't show an invented live count.</div>
+<div id="hero-options">
+  <h3>Hero options</h3>
+  <div class="tbl"><table><tr><th>Slides in the CMS</th><th>What shows</th></tr>
+   <tr><td class="k">1 slide</td><td>A single static hero. <strong>No arrows, no dots, no auto-play.</strong></td></tr>
+   <tr><td class="k">2–5 slides</td><td>A carousel: side arrows (desktop), dots under the art, swipe on touch, auto-advance every 6s, pauses on hover and focus. Off with reduced motion.</td></tr>
+  </table></div>
+  <div class="tbl"><table><tr><th>Slide content</th><th>Rules</th><th>Mobile</th></tr>
+   <tr><td class="k">1 · Big heading</td><td>Required. 1–2 lines, max 24 characters. One word or line can use the cyan → magenta gradient.</td><td>Shown, smaller (36–44px)</td></tr>
+   <tr><td class="k">2 · Tags or description</td><td>Optional. A description (max 120 characters), a row of up to 4 short tags (icon + 1–2 words), or both. Plain text in the CMS.</td><td>Description only, max 1–2 lines; tags hidden</td></tr>
+   <tr><td class="k">3 · Buttons</td><td>1 or 2. The first is always the cyan primary; the second is the ghost style.</td><td>1 button (2 max), full width or side by side</td></tr>
+   <tr><td class="k">Eyebrow</td><td>Optional small line above the heading.</td><td>Hidden</td></tr>
+   <tr><td class="k">Art</td><td>Desktop image (right 55–60%) + optional mobile image.</td><td>Image on top, text below</td></tr>
+   <tr><td class="k">Extra card</td><td>Optional (e.g. Active Players, prize pool, countdown).</td><td>Hidden</td></tr>
+  </table></div>
+
+  <h3>Example 2 · Tournament now live (single slide)</h3>
+  <div class="hx-stage">
+    <div class="md-lbl">Desktop · one slide, so no arrows or dots</div>
+    <div class="hx">
+      <div class="hx-art" style="background-image:url(img/hero-tourney.webp)"></div>
+      <div class="hx-c">
+        <span class="hx-live"><i></i>TOURNAMENT NOW LIVE</span>
+        <h4>WEEKEND<br><em>SLOT RACE</em></h4>
+        <p>Climb the leaderboard on selected slots and share a <b>50,000 SC</b> prize pool. Ends Sunday 23:59 ET.</p>
+        <div class="hx-tags"><span>🏆 Top 100 win</span><span>⚡ Selected slots</span><span>⏱ 2 days left</span></div>
+        <div class="hx-btns"><span class="hx-b1">Join Tournament →</span><span class="hx-b2">View Leaderboard →</span></div>
+      </div>
+      <div class="hx-card"><small>Prize pool</small><b>50,000 SC</b><small>Ends in</small><b class="cd">1d 14h 22m</b></div>
+    </div>
+    <div class="md-lbl">Mobile · minimal: heading, description, one button</div>
+    <div class="hx-m">
+      <div class="hx-m-art" style="background-image:url(img/hero-tourney.webp)"><span class="hx-live"><i></i>LIVE</span></div>
+      <div class="hx-m-c"><h4>WEEKEND<br><em>SLOT RACE</em></h4><p>Share a <b>50,000 SC</b> prize pool. Ends Sunday.</p><span class="hx-b1">Join Tournament →</span></div>
+    </div>
+  </div>
+  <div class="note">Mobile drops the eyebrow, tags, second button and extra card. Keep the heading, one short description line and one button; use a second button only when both actions really matter.</div>
+</div>
+<style>
+.hx-stage{display:grid;gap:10px;margin:16px 0;padding:18px;border:1px solid var(--line-soft);border-radius:14px;background:var(--bg)}
+.hx{position:relative;min-height:330px;border-radius:16px;overflow:hidden;background:#0C0618;display:flex;align-items:center}
+.hx-art{position:absolute;inset:0 0 0 30%;background-size:cover;background-position:center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 30%);mask-image:linear-gradient(90deg,transparent,#000 30%)}
+.hx-c{position:relative;z-index:1;max-width:54%;padding:28px 34px;display:grid;gap:12px;justify-items:start}
+.hx-live{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border:1.5px solid #FF3FD0;border-radius:999px;background:rgba(30,6,30,.7);font:700 12px var(--f-body);letter-spacing:.1em;color:#fff}
+.hx-live i{width:8px;height:8px;border-radius:50%;background:#FF3B5C;box-shadow:0 0 8px #FF3B5C;animation:hxp 1.4s infinite}
+@keyframes hxp{50%{opacity:.3}}
+.hx h4,.hx-m h4{margin:0;font:900 56px/.95 var(--f-display);color:#fff}
+.hx em,.hx-m em{font-style:normal;background:linear-gradient(90deg,#2EF2D0,#8C7BFF,#E93BF2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hx p,.hx-m p{margin:0;font:400 16px/1.5 var(--f-body);color:#D7DCE8;max-width:460px}
+.hx p b,.hx-m p b{color:#FFCE21}
+.hx-tags{display:flex;flex-wrap:wrap;gap:16px;font:700 12px var(--f-display);letter-spacing:.03em;text-transform:uppercase}
+.hx-btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:4px}
+.hx-b1{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:8px;background:linear-gradient(100deg,#00D9C9,#18FFE0);color:#00151C;font:700 15px var(--f-display);box-shadow:0 0 16px rgba(4,245,229,.4)}
+.hx-b2{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border:1.5px solid transparent;border-radius:8px;background:linear-gradient(#0B1230,#0B1230) padding-box,linear-gradient(90deg,#04F5E5,#B44DFF) border-box;color:#fff;font:600 15px var(--f-display)}
+.hx-card{position:absolute;right:22px;bottom:22px;z-index:1;display:grid;gap:2px;padding:12px 16px;border:1.5px solid #F032F4;border-radius:14px;background:rgba(6,10,30,.78);box-shadow:0 0 14px rgba(240,50,244,.4)}
+.hx-card small{font:500 11px var(--f-body);color:#C9CDD6}.hx-card b{font:700 18px Inter,sans-serif;color:#04F5E5;font-variant-numeric:tabular-nums}.hx-card b.cd{color:#FFCE21}
+.hx-m{width:100%;max-width:360px;border-radius:18px;overflow:hidden;border:1px solid #2A3A58;background:#0C0618}
+.hx-m-art{position:relative;aspect-ratio:16/10;background-size:cover;background-position:65% center}
+.hx-m-art .hx-live{position:absolute;left:12px;top:12px;padding:3px 10px;font-size:10px}
+.hx-m-c{display:grid;gap:10px;padding:16px}
+.hx-m h4{font-size:34px}
+.hx-m p{font-size:14px}
+.hx-m .hx-b1{justify-content:center;width:100%}
+@media(max-width:900px){.hx-c{max-width:100%;background:linear-gradient(90deg,rgba(12,6,24,.92),rgba(12,6,24,.5))}.hx-card{display:none}.hx h4{font-size:40px}}
+@media(prefers-reduced-motion:reduce){.hx-live i{animation:none}}
+</style>
 </section>
 
 <section id="s-nav">
@@ -2430,7 +2496,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <span class="eyebrow">CMS</span>
   <h2>Block library</h2>
   <p>Editors build pages from these blocks. Each one matches a section already in this guide.</p>
-  <div class="tbl"><table><tr><th>Block</th><th>Editable content</th><th>Use on</th><th>Example in the designs</th></tr><tr><td class="k">Hero banner</td><td>Carousel of slides: eyebrow, headline, highlight line, feature row, 2 buttons, art, optional stat card</td><td>Homepage top</td><td>Home, subpage tops</td></tr><tr><td class="k">Page header</td><td>Breadcrumb, title (with gradient word), subtitle, header art</td><td>Every subpage</td><td>All Games, Promotions, Guides</td></tr><tr><td class="k">Banner</td><td>Tag, headline (3 lines), text, 1–2 buttons, image, size, alignment</td><td>Anywhere</td><td>Promotions featured offer, Jackpots, VIP</td></tr><tr><td class="k">Promo card grid</td><td>Repeatable promo cards in 2-up or 3-up rows</td><td>Promotions, Home</td><td>Promotions page</td></tr><tr><td class="k">Game row</td><td>Section title, icon, source (manual pick / category / provider / rule like "RTP ≥ 97%"), card style, mode: Normal or Special (adds an information card: headline, eyebrow, 2–3 checklist lines, season colours, start / end date)</td><td>Anywhere</td><td>Popular, Casino, Live, New Games</td></tr><tr><td class="k">Category tiles</td><td>Repeatable tiles: icon image + label + link</td><td>Anywhere</td><td>Guide categories</td></tr><tr><td class="k">Article list</td><td>Source (latest / category / manual), count, layout (row / grid)</td><td>Guides, Home</td><td>Latest Guides</td></tr><tr><td class="k">Video list</td><td>Repeatable video cards with LIVE badge option</td><td>Guides</td><td>Popular How To's</td></tr><tr><td class="k">Info panel</td><td>Big figure + checklist (3–4 items)</td><td>Anywhere</td><td>High RTP panel</td></tr><tr><td class="k">Rich text</td><td>Heading, highlight phrase, body, Continue Reading toggle</td><td>Anywhere</td><td>SEO block</td></tr><tr><td class="k">FAQ</td><td>Tabs + question / answer pairs</td><td>Anywhere</td><td>Homepage FAQ, Help page</td></tr><tr><td class="k">Steps</td><td>2–5 steps: icon, title, short text; optional arrows between</td><td>Offer pages, Guides</td><td>How to Claim the Offer</td></tr><tr><td class="k">Details table</td><td>Repeatable rows: icon, label, value</td><td>Offer pages, Game pages</td><td>Offer Details</td></tr><tr><td class="k">Terms</td><td>Numbered rich text, expandable, linked to an offer</td><td>Offer pages</td><td>Terms and Conditions</td></tr><tr><td class="k">CTA</td><td>Label + action (Register / open Wallet / link), centred</td><td>Anywhere</td><td>Claim Welcome Offer Now</td></tr><tr><td class="k">Image banner</td><td>Uploaded image per device (desktop / tablet / mobile square), link, alt text, frame, schedule; place anywhere</td><td>Any page, any position</td><td>VIP Club square on mobile</td></tr><tr><td class="k">Spacer / divider</td><td>Height (S / M / L), wave decoration on / off</td><td>Anywhere</td><td>Bottom waves</td></tr></table></div>
+  <div class="tbl"><table><tr><th>Block</th><th>Editable content</th><th>Use on</th><th>Example in the designs</th></tr><tr><td class="k">Hero banner</td><td>1 slide = static hero; 2–5 = carousel. Per slide: big heading, tags or description, 1–2 buttons, desktop + mobile art, optional extra card; mobile shows heading, description and 1 button</td><td>Homepage top</td><td>Home, subpage tops</td></tr><tr><td class="k">Page header</td><td>Breadcrumb, title (with gradient word), subtitle, header art</td><td>Every subpage</td><td>All Games, Promotions, Guides</td></tr><tr><td class="k">Banner</td><td>Tag, headline (3 lines), text, 1–2 buttons, image, size, alignment</td><td>Anywhere</td><td>Promotions featured offer, Jackpots, VIP</td></tr><tr><td class="k">Promo card grid</td><td>Repeatable promo cards in 2-up or 3-up rows</td><td>Promotions, Home</td><td>Promotions page</td></tr><tr><td class="k">Game row</td><td>Section title, icon, source (manual pick / category / provider / rule like "RTP ≥ 97%"), card style, mode: Normal or Special (adds an information card: headline, eyebrow, 2–3 checklist lines, season colours, start / end date)</td><td>Anywhere</td><td>Popular, Casino, Live, New Games</td></tr><tr><td class="k">Category tiles</td><td>Repeatable tiles: icon image + label + link</td><td>Anywhere</td><td>Guide categories</td></tr><tr><td class="k">Article list</td><td>Source (latest / category / manual), count, layout (row / grid)</td><td>Guides, Home</td><td>Latest Guides</td></tr><tr><td class="k">Video list</td><td>Repeatable video cards with LIVE badge option</td><td>Guides</td><td>Popular How To's</td></tr><tr><td class="k">Info panel</td><td>Big figure + checklist (3–4 items)</td><td>Anywhere</td><td>High RTP panel</td></tr><tr><td class="k">Rich text</td><td>Heading, highlight phrase, body, Continue Reading toggle</td><td>Anywhere</td><td>SEO block</td></tr><tr><td class="k">FAQ</td><td>Tabs + question / answer pairs</td><td>Anywhere</td><td>Homepage FAQ, Help page</td></tr><tr><td class="k">Steps</td><td>2–5 steps: icon, title, short text; optional arrows between</td><td>Offer pages, Guides</td><td>How to Claim the Offer</td></tr><tr><td class="k">Details table</td><td>Repeatable rows: icon, label, value</td><td>Offer pages, Game pages</td><td>Offer Details</td></tr><tr><td class="k">Terms</td><td>Numbered rich text, expandable, linked to an offer</td><td>Offer pages</td><td>Terms and Conditions</td></tr><tr><td class="k">CTA</td><td>Label + action (Register / open Wallet / link), centred</td><td>Anywhere</td><td>Claim Welcome Offer Now</td></tr><tr><td class="k">Image banner</td><td>Uploaded image per device (desktop / tablet / mobile square), link, alt text, frame, schedule; place anywhere</td><td>Any page, any position</td><td>VIP Club square on mobile</td></tr><tr><td class="k">Spacer / divider</td><td>Height (S / M / L), wave decoration on / off</td><td>Anywhere</td><td>Bottom waves</td></tr></table></div>
   <h3>Banner sizes</h3>
   <p>The Banner block comes in five sizes. Editors choose a size; the CMS asks for a desktop image and, optionally, a separate mobile image at the sizes below.</p>
   <div class="sz-wrap"><div class="sz sz-full"><b>Full</b><span>1290 × 350</span></div><div class="sz sz-large"><b>Large</b><span>1290 × 280</span></div><div class="sz sz-strip"><b>Strip</b><span>1290 × 130</span></div><div class="sz sz-half"><b>Half</b><span>635 × 240</span></div><div class="sz sz-third"><b>Third</b><span>416 × 212</span></div></div>
