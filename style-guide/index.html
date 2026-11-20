@@ -64,7 +64,7 @@ section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);s
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
 .cover figure{margin:0}
-.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2589;margin:0 auto}
+.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2588;margin:0 auto}
 
 /* panels, figures, tables */
 .panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
@@ -349,7 +349,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
-    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2589">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2588">
     <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
 </header>
@@ -1636,7 +1636,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <figure class="ref" style="margin:0"><img src="img/popular-card.webp" alt="Cyberpunk Odyssey card with left-aligned game name and player count" loading="lazy"><figcaption><b>Detail</b>Art + footer.</figcaption></figure>
     <div>
       <p>The only game row with an HTML footer. The art (with the game logo) sits on top. Under it is a footer in <code>#070C1E</code> with the game name (Inter 600, 17px, uppercase, <code>#E6EAF2</code>) and the player count below it (Inter 500, 15px, with a 20px line person icon). Footer text is <strong>left-aligned</strong>, 20px from the edge. The card has a 2px magenta → violet gradient border, 14px radius and a magenta glow.</p>
-      <p>A <span class="badge-hot">HOT</span> tab sits in the top-right corner of the art: magenta <code>#F032F4</code>, white Poppins 800 15px, 6px radius. Build it as HTML, not part of the image.</p>
+      <p>A <span class="badge-hot">HOT</span> badge sits inside the top-right corner of the art, 16px from the top and right edges so it never touches the border: magenta gradient, white Poppins 800 15px, 6px radius. Build it as HTML, not part of the image.</p>
       <div class="note warn">Player counts must be real. If the number isn't available, hide the line rather than show a placeholder.</div>
     </div>
   </div>
@@ -2208,7 +2208,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Popular Games</h3></div>
   <figure class="ref"><img src="img/popular.webp" alt="Four popular game cards with title and player count footers" loading="lazy"><figcaption><b>Homepage</b>Four popular game cards with title and player count footers</figcaption></figure>
   <div class="dt-grid">
-    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>4 cards: art with game logo + footer with title and player count</li><li>Optional HOT badge: magenta tab in the top-right corner</li><li>Card ≈ 1.4 : 1 overall: art on top (≈ 65%), dark footer below (≈ 35%)</li><li>Footer, left-aligned: game name (Inter 600, uppercase) on line 1, person icon + "2,400 Playing" (Inter 500) on line 2</li></ol></div>
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>4 cards: art with game logo + footer with title and player count</li><li>Optional HOT badge: inset 16px from the top-right corner</li><li>Card ≈ 1.4 : 1 overall: art on top (≈ 65%), dark footer below (≈ 35%)</li><li>Footer, left-aligned: game name (Inter 600, uppercase) on line 1, person icon + "2,400 Playing" (Inter 500) on line 2</li></ol></div>
     <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Section title</td><td><span class="al al-l">Left</span></td></tr><tr><td>View All + arrows</td><td><span class="al al-r">Right</span></td></tr><tr><td>Footer title and count</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game logo in art</td><td><span class="al al-c">Centred</span></td></tr></table></div>
     <div class="dt-box"><h4>Buttons</h4><div class="dt-count">3 in header</div><ul><li><strong>View All →</strong></li><li>2 carousel arrows</li><li>Cards themselves are links (no button inside)</li></ul></div>
   </div>
