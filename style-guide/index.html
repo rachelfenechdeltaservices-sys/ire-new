@@ -64,7 +64,7 @@ section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);s
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
 .cover figure{margin:0}
-.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:667/2000;margin:0 auto}
+.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:667/2195;margin:0 auto}
 
 /* panels, figures, tables */
 .panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
@@ -292,7 +292,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#s-search">AI Game Search</a>
   <a href="#s-faq">FAQ</a>
   <a href="#s-seo">SEO content block</a>
-  <a href="#s-footer">Footer &amp; legal bar</a>
+  <a href="#s-footer">Footer</a>
   <h4>Build</h4>
   <a href="#responsive">Responsive</a>
   <a href="#sweeps">Sweepstakes wording</a>
@@ -344,7 +344,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
-    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to hot-pink legal bar" width="667" height="2000">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="667" height="2195">
     <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
 </header>
@@ -361,7 +361,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <li><a href="#s-promos">Promotions · 3</a></li><li><a href="#s-popular">Popular Games · 4</a></li><li><a href="#s-casino">Casino · 4</a></li><li><a href="#s-characters">Favourite Characters · 3</a></li>
     <li><a href="#s-live">Live Casino · 4</a></li><li><a href="#s-shows">Game Shows · 3</a></li><li><a href="#s-jackpots">Jackpots banner</a></li><li><a href="#s-rtp">High RTP · panel + 4</a></li><li><a href="#s-new">New Games · 8</a></li>
     <li><a href="#s-vip">VIP Club banner</a></li><li><a href="#s-providers">Game Providers · 6×3</a></li><li><a href="#s-search">AI Game Search</a></li><li><a href="#s-faq">FAQ</a></li>
-    <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li><li><a href="#s-footer">Legal bar</a></li>
+    <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li>
   </ol>
   <p>The number after each name is how many cards sit in a row at desktop width. Rows of 3 use wide (≈2:1) cards, rows of 4 use medium cards, and New Games uses 8 portrait tiles. This mix of rhythms is deliberate. Keep it when you add sections.</p>
 </section>
@@ -392,8 +392,6 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <button class="sw" data-copy="#A84DFF"><i style="background:#A84DFF"></i><span><b>Purple</b><code>#A84DFF</code><small>Glows, gradients</small></span></button>
     <button class="sw" data-copy="#322571"><i style="background:#322571"></i><span><b>Violet fill</b><code>#322571</code><small><span class="tag s">Sampled</span> FAQ active tab</small></span></button>
     <button class="sw" data-copy="#C709EB"><i style="background:#C709EB"></i><span><b>Search magenta</b><code>#C709EB</code><small><span class="tag s">Sampled</span> AI search button</small></span></button>
-    <button class="sw" data-copy="#F80180"><i style="background:#F80180"></i><span><b>Hot pink</b><code>#F80180</code><small><span class="tag s">Sampled</span> legal bar</small></span></button>
-    <button class="sw" data-copy="#EC097D"><i style="background:#EC097D"></i><span><b>Pink input</b><code>#EC097D</code><small><span class="tag s">Sampled</span> newsletter field</small></span></button>
     <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 97%+</small></span></button>
     <button class="sw" data-copy="#1CF11D"><i style="background:#1CF11D"></i><span><b>Check green</b><code>#1CF11D</code><small>RTP checklist ticks</small></span></button>
     <button class="sw" data-copy="#F4CC1D"><i style="background:#F4CC1D"></i><span><b>Ticker dot</b><code>#F4CC1D</code><small><span class="tag s">Sampled</span> news separators</small></span></button>
@@ -557,7 +555,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">AI Game Search</td><td>2px search-edge gradient</td><td>999px</td><td>Purple</td></tr>
     <tr><td class="k">FAQ item</td><td>1px <code>#2A3A58</code></td><td>10px</td><td>None</td></tr>
     <tr><td class="k">FAQ active tab</td><td>1.5px <code>#8B5CFF</code></td><td>10px</td><td>Violet</td></tr>
-    <tr><td class="k">Newsletter card</td><td>1.5px <code>#E03BA8</code></td><td>16px</td><td>Pink</td></tr>
+    <tr><td class="k">SEO panel &amp; footer</td><td>2px neon-edge gradient</td><td>20px</td><td>Soft cyan + violet</td></tr>
   </table></div>
   <p><strong>Rule of thumb:</strong> things you click or browse get a neon border with a glow. Structure (nav bar, FAQ rows, inputs) gets a quiet 1px line with no glow. Never put a glow on the quiet border.</p>
 </section>
@@ -573,7 +571,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Dense gap</td><td>12–14px</td><td>New Games (8-up), Provider tiles, High RTP cards</td></tr>
     <tr><td class="k">Header → cards</td><td>14–16px</td><td>Between section header and its card row</td></tr>
     <tr><td class="k">Section → section</td><td>28–32px</td><td>From the bottom of one card row to the next header</td></tr>
-    <tr><td class="k">Card inner padding</td><td>16–20px</td><td>Promotions, VIP banner, newsletter card</td></tr>
+    <tr><td class="k">Card inner padding</td><td>16–20px</td><td>Promotions, VIP banner, footer panel</td></tr>
     <tr><td class="k">Header bar height</td><td>72px</td><td>Top bar</td></tr>
     <tr><td class="k">News ticker height</td><td>46px</td><td>Below header</td></tr>
     <tr><td class="k">Hero height</td><td>360–380px</td><td>Including dots</td></tr>
@@ -604,7 +602,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <div class="b-rules">
     <div><i style="background:linear-gradient(100deg,#00D9C9 0%,#18FFE0 100%)"></i><b>Cyan = play or pay</b><span>Deposit, Play Now, promo CTAs, Play Jackpot Games</span></div>
     <div><i style="background:linear-gradient(100deg,#5B087C,#A83CD2 60%,#E6A5FF)"></i><b>Purple = browse</b><span>View All, carousel arrows, VIP</span></div>
-    <div><i style="background:#EC097D"></i><b>Pink = engage</b><span>Search, newsletter, Continue Reading</span></div>
+    <div><i style="background:#EC097D"></i><b>Pink = engage</b><span>AI search, Continue Reading</span></div>
     <div><i style="background:transparent;border:1.5px solid #3A4A66"></i><b>Quiet = navigate</b><span>Wallet, menu, tabs, FAQ rows, hero arrows</span></div>
   </div>
   <style id="button-css">
@@ -695,19 +693,14 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   background:linear-gradient(180deg,#4A0E44,#2A0A2E);font:500 15px Poppins,sans-serif;
   box-shadow:0 0 12px rgba(224,59,168,.35);cursor:pointer}
 .b-read:hover{box-shadow:0 0 20px rgba(224,59,168,.6)}
-.b-news{display:flex;align-items:center;width:100%;max-width:380px;min-height:50px;
-  padding:0 6px 0 22px;border-radius:999px;background:#EC097D;
-  box-shadow:0 0 16px rgba(236,9,125,.5)}
-.b-news input{flex:1;min-width:0;border:0;background:transparent;color:#fff;
-  font:500 14px Poppins,sans-serif;outline:0}
-.b-news input::placeholder{color:#FFD3EA}
-.b-news button{width:40px;height:40px;display:grid;place-items:center;border:0;
-  border-radius:50%;background:transparent;color:#fff;cursor:pointer}
-.b-news button:hover{background:rgba(255,255,255,.15)}
-.b-social{width:36px;height:36px;display:inline-grid;place-items:center;
-  border-radius:8px;color:#fff;text-decoration:none}
-.b-social:hover{background:rgba(255,255,255,.18)}
-/* sits on the legal bar: background:#F80180 */
+.b-socials{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.b-social{display:inline-flex;align-items:center;gap:14px;min-height:36px;
+  color:#fff;font:400 16px Poppins,sans-serif;text-decoration:none}
+.b-social__ic{width:28px;height:28px;display:grid;place-items:center;
+  border-radius:50%;background:#fff;color:#060B1E}
+.b-social__ic svg{width:16px;height:16px}
+.b-social:hover{color:#04F5E5}
+.b-social:hover .b-social__ic{background:#04F5E5}
   </style>
   <h3 class="b-group">Header & navigation</h3><article class="b-row">
     <div class="b-left">
@@ -891,7 +884,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="b-left">
       <div class="b-head"><b>Continue Reading</b><span>SEO content block · centred</span></div>
       <div class="b-stage"><button class="b-read">Continue Reading</button></div>
-      <p class="b-why">Expands the long article in place. Dark plum with a pink edge matches the magenta highlight in the heading above it. Deliberately low-key: reading more is optional.</p>
+      <p class="b-why">Expands the full SEO guide panel in place, directly under the teaser; the label then changes to Show Less. Dark plum with a pink edge matches the magenta highlight in the heading above it. Deliberately low-key: reading more is optional.</p>
     </div>
     <div class="code b-code"><button class="copy" data-target="bcss-17">Copy CSS</button><pre id="bcss-17">.b-read{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
   min-width:240px;padding:0 34px;border:1.5px solid #E03BA8;border-radius:8px;color:#fff;
@@ -900,29 +893,18 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 .b-read:hover{box-shadow:0 0 20px rgba(224,59,168,.6)}</pre></div>
   </article><h3 class="b-group">Footer</h3><article class="b-row">
     <div class="b-left">
-      <div class="b-head"><b>Newsletter submit</b><span>Footer · newsletter card</span></div>
-      <div class="b-stage"><form class="b-news" onsubmit="event.preventDefault()"><label class="sr" for="nl-email">Email</label><input id="nl-email" type="email" placeholder="Enter your email"><button aria-label="Subscribe"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></button></form></div>
-      <p class="b-why">The field and its send button are one pink pill, so signing up looks like a single step. The mail icon is the submit button, with aria-label="Subscribe".</p>
+      <div class="b-head"><b>Social links</b><span>Footer · Socials column</span></div>
+      <div class="b-stage"><ul class="b-socials"><li><a class="b-social" href="#buttons"><span class="b-social__ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></span>Facebook</a></li><li><a class="b-social" href="#buttons"><span class="b-social__ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></span>X / Twitter</a></li><li><a class="b-social" href="#buttons"><span class="b-social__ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>Instagram</a></li><li><a class="b-social" href="#buttons"><span class="b-social__ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></span>YouTube</a></li></ul></div>
+      <p class="b-why">Links to social channels, listed with their names so they read as normal links. A 28px white circle icon plus the label; the whole row is the link.</p>
     </div>
-    <div class="code b-code"><button class="copy" data-target="bcss-18">Copy CSS</button><pre id="bcss-18">.b-news{display:flex;align-items:center;width:100%;max-width:380px;min-height:50px;
-  padding:0 6px 0 22px;border-radius:999px;background:#EC097D;
-  box-shadow:0 0 16px rgba(236,9,125,.5)}
-.b-news input{flex:1;min-width:0;border:0;background:transparent;color:#fff;
-  font:500 14px Poppins,sans-serif;outline:0}
-.b-news input::placeholder{color:#FFD3EA}
-.b-news button{width:40px;height:40px;display:grid;place-items:center;border:0;
-  border-radius:50%;background:transparent;color:#fff;cursor:pointer}
-.b-news button:hover{background:rgba(255,255,255,.15)}</pre></div>
-  </article><article class="b-row">
-    <div class="b-left">
-      <div class="b-head"><b>Social icons</b><span>Legal bar · right</span></div>
-      <div class="b-stage"><span class="b-pinkbar"><a class="b-social" href="#buttons" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a><a class="b-social" href="#buttons" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a class="b-social" href="#buttons" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg></a><a class="b-social" href="#buttons" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a></span></div>
-      <p class="b-why">Links to social channels. White icons with no box, because they sit on the hot-pink bar, which already provides the colour.</p>
-    </div>
-    <div class="code b-code"><button class="copy" data-target="bcss-19">Copy CSS</button><pre id="bcss-19">.b-social{width:36px;height:36px;display:inline-grid;place-items:center;
-  border-radius:8px;color:#fff;text-decoration:none}
-.b-social:hover{background:rgba(255,255,255,.18)}
-/* sits on the legal bar: background:#F80180 */</pre></div>
+    <div class="code b-code"><button class="copy" data-target="bcss-18">Copy CSS</button><pre id="bcss-18">.b-socials{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.b-social{display:inline-flex;align-items:center;gap:14px;min-height:36px;
+  color:#fff;font:400 16px Poppins,sans-serif;text-decoration:none}
+.b-social__ic{width:28px;height:28px;display:grid;place-items:center;
+  border-radius:50%;background:#fff;color:#060B1E}
+.b-social__ic svg{width:16px;height:16px}
+.b-social:hover{color:#04F5E5}
+.b-social:hover .b-social__ic{background:#04F5E5}</pre></div>
   </article>
   <h3 class="b-group">States (all buttons)</h3>
   <div class="tbl"><table>
@@ -933,7 +915,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Disabled</td><td>45% opacity, no glow, no movement.</td><td><code>:disabled{opacity:.45;box-shadow:none;transform:none}</code></td></tr>
     <tr><td class="k">Reduced motion</td><td>Keep the colour change, drop the movement.</td><td><code>@media(prefers-reduced-motion:reduce)</code></td></tr>
   </table></div>
-  <p>Minimum touch size is 44 × 44px. Icon-only buttons (menu, arrows, search, newsletter, social) always need an <code>aria-label</code>.</p>
+  <p>Minimum touch size is 44 × 44px. Icon-only buttons (menu, arrows, search) always need an <code>aria-label</code>.</p>
   <h3 class="b-group">Badges (not buttons)</h3>
   <p>Badges label a card but are not clickable, so they have no hover state.</p>
   <div class="stage">
@@ -1648,26 +1630,27 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="s-seo">
   <span class="eyebrow">Section · content</span>
   <h2>SEO content block</h2>
-  <figure class="ref"><img src="img/seo-block.webp" alt="Centred heading Providing Casino Experience With Intelligent Solutions with a magenta highlight, paragraph and Continue Reading button" loading="lazy"><figcaption><b>Homepage</b>Centred text block.</figcaption></figure>
-  <p>Everything is centred. The heading is 34px / 600 white, with the key phrase in magenta <code>#F032F4</code>. Under it, two lines of 14px muted body text (max 900px wide), then the Continue Reading button, which expands the full article in place. Keep the expanded text in the HTML so search engines can read it.</p>
-  <div class="note pink"><strong>Replace the placeholder copy.</strong> The paragraph is about budgeting and retirement planning. Write real sweepstakes casino copy here: what the site is, how free play works, game variety and safe play.</div>
+  <p>The SEO block has two states. On the homepage it is a short, centred teaser with a <strong>Continue Reading</strong> button. Clicking it expands the full guide panel in place, directly under the teaser, without leaving the page.</p>
+  <h3>1 · Collapsed (homepage default)</h3>
+  <figure class="ref"><img src="img/seo-block.webp" alt="Centred heading with a magenta highlight, two lines of text and a Continue Reading button" loading="lazy"><figcaption><b>Homepage</b>Teaser with Continue Reading.</figcaption></figure>
+  <p>Everything centred. Heading 34px / 600 white with the key phrase in magenta <code>#F032F4</code>; two lines of Body S muted text (max 900px wide); <strong>Continue Reading</strong> button. Replace the placeholder text with a two-line sweepstakes intro.</p>
+  <h3>2 · Expanded (after Continue Reading)</h3>
+  <figure class="ref"><img src="img/seo-expanded.webp" alt="Expanded SEO panel: Why Pick Sweepstakes Casino in USA heading with US map art, intro paragraph, four question accordions, then four topic rows with 3D icons" loading="lazy"><figcaption><b>Reference</b>Full guide panel.</figcaption></figure>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Panel</td><td>Container width, 2px neon-edge border (cyan → violet) with soft glow, 20px radius, fill <code>#060B1E</code>, 32px padding. Opens with a 300ms height animation; the Continue Reading button changes to <strong>Show Less</strong>.</td></tr><tr><td class=k>Heading</td><td>H2, Poppins 700, 36px, white, with the key phrase in cyan → magenta ("Sweepstakes Casino in USA?"). Left aligned.</td></tr><tr><td class=k>Intro</td><td>Body M, white, max 4 lines (≈ 70% width).</td></tr><tr><td class=k>Header art</td><td>US map in stars and stripes, neon chips, coins and a diamond, top right. Transparent background, ≈ 30% width.</td></tr><tr><td class=k>Question accordions</td><td>4 full-width rows, 52px, 1.5px violet border (first / open one cyan with glow), 12px radius, question in Poppins 500 18px, chevron ⌄ on the right. Opening one shows its answer in Body M.</td></tr><tr><td class=k>Topic rows</td><td>4 rows: 3D icon left (≈ 96px), thin magenta vertical divider, then H3 (Poppins 700, 26px) with one highlighted phrase (cyan, magenta or green) and 2–3 lines of Body S. Icons: 777 slot, gift box, shield with tick, gold trophy.</td></tr><tr><td class=k>Alignment</td><td>Heading, intro, accordions, topics <span class="al al-l">Left</span> · art <span class="al al-r">Right</span></td></tr><tr><td class=k>Buttons</td><td>None inside the panel; only Show Less at the end.</td></tr></table></div>
+  <div class="note"><strong>SEO.</strong> The full panel text must be in the page HTML when it loads (hidden with CSS until expanded), so search engines can read it. Mark the four questions up as an FAQPage. The topic text in the design is placeholder ("Lorem ipsum") and needs real copy, at least 600 words in total.</div>
+  <div class="note warn">The intro paragraph in the design has typos from the image generator ("aboy exciting prizes", "needitos", "occessihe", "prdyers"). Use clean copy.</div>
 </section>
 
 <section id="s-footer">
   <span class="eyebrow">Section · site chrome</span>
-  <h2>Footer &amp; legal bar</h2>
-  <figure class="ref"><img src="img/footer.webp" alt="Footer with logo, Games, Rewards and Support link columns, pink newsletter card, and a hot-pink legal bar" loading="lazy"><figcaption><b>Homepage</b>Footer and legal bar.</figcaption></figure>
-  <div class="tbl"><table>
-    <tr><th>Part</th><th>Spec</th></tr>
-    <tr><td class="k">Top edge</td><td>A 1px glowing violet line across the full width.</td></tr>
-    <tr><td class="k">Ground</td><td><code>#060F26</code>, 48px top padding.</td></tr>
-    <tr><td class="k">Logo</td><td>FULL MOON PLAY wordmark, Poppins 700 uppercase, ≈ 28px, white, top left.</td></tr>
-    <tr><td class="k">Columns</td><td>GAMES, REWARDS, SUPPORT. Headings 14px / 700 uppercase white; links 14px muted with 1.9 line height; hover turns cyan.</td></tr>
-    <tr><td class="k">Newsletter card</td><td>≈ 400 × 165. 1.5px <code>#E03BA8</code> border, 16px radius, pink glow, dark fill <code>#070C20</code>. Copy 14px muted, then a pink pill input <code>#EC097D</code> with a white mail icon button on the right.</td></tr>
-    <tr><td class="k">Legal bar</td><td>Full-bleed hot pink <code>#F80180</code>, 56px. Left: All Rights Reserved. Centre: © 2026 ONLINE CASINO (bold). Right: Find Us on Social Media + Facebook, Instagram, X, YouTube icons. All white.</td></tr>
-  </table></div>
-  <div class="stage"><div class="legal-bar"><span>All Rights Reserved</span><b>© 2026 ONLINE CASINO</b><span>Find Us on Social Media</span></div></div>
-  <div class="note pink"><strong>Add before launch:</strong> No Purchase Necessary · Sweepstakes Rules · Terms · Privacy · Responsible Social Gameplay · age requirement (18+ or 21+ depending on your rules) · list of excluded states. The legal bar is a natural place for a one-line version.</div>
+  <h2>Footer</h2>
+  <figure class="ref"><img src="img/footer.webp" alt="Footer panel: FULL MOON PLAY logo, About Us links, Socials with icons, payment method logos, trust badges and legal text" loading="lazy"><figcaption><b>Reference</b>Footer.</figcaption></figure>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Panel</td><td>Container width, 2px neon-edge border (cyan → violet) with soft glow, 20px radius, fill <code>#060B1E</code>, 32px padding.</td></tr><tr><td class=k>Row 1: logo + links</td><td>Three columns split by thin magenta vertical lines. <strong>Logo</strong> (FULL MOON PLAY, Poppins 800, 36px). <strong>About Us</strong>: Terms and Conditions · Responsible Play · Privacy Policy · Contact Us · Sweeps Rules. <strong>Socials</strong>: Facebook · X / Twitter · Instagram · YouTube, each with a 28px white circle icon. Column headings Poppins 700, 18px, cyan, uppercase; links Body M white, hover cyan.</td></tr><tr><td class=k>Divider</td><td>1px line, cyan → violet gradient, fading at both ends.</td></tr><tr><td class=k>Row 2: payment methods</td><td>Visa · Mastercard · IBAN · Apple Pay · Google Pay · Bitcoin · MiFinity · CashtoCode. Official logos, white or brand colours, ≈ 28px high, separated by thin magenta lines. One row on desktop; wraps to 2–3 rows on phones.</td></tr><tr><td class=k>Row 3: trust badges</td><td>18+ · licence / certification seal · SSL Secure · PCI DSS Compliant, ≈ 48px high, centred, separated by thin lines.</td></tr><tr><td class=k>Row 4: legal text</td><td>Centred, Body XS, white / muted: promotion data notice; <strong>NO PURCHASE NECESSARY. VOID WHERE PROHIBITED BY LAW.</strong> with a link to Rules; copyright line with operator name and registered address; "Gameplay may be harmful. Please play responsibly."</td></tr><tr><td class=k>Alignment</td><td>Logo, link columns <span class="al al-l">Left</span> · payment and trust rows <span class="al al-c">Centred</span> · legal text <span class="al al-c">Centred</span></td></tr></table></div>
+  <div class="dt-pair">
+    <figure class="ref" style="margin:0"><img src="img/footer-pay.webp" alt="Payment method logos: Visa, Mastercard, IBAN, Apple Pay, Google Pay, bitcoin, MiFinity, CashtoCode" loading="lazy"><figcaption><b>Detail</b>Payment methods.</figcaption></figure>
+    <figure class="ref" style="margin:0"><img src="img/footer-trust.webp" alt="Trust badges: 18+, certification seal, SSL Secure, PCI DSS compliant" loading="lazy"><figcaption><b>Detail</b>Trust badges.</figcaption></figure>
+  </div>
+  <div class="note pink"><strong>Before launch.</strong> The legal text still says "newlogohere.com" and "New Logo Here"; replace with the real domain and brand name. Only show payment logos and trust seals you actually have contracts or certificates for; the green shield seal should be your real licence or certification badge, linked to its verification page.</div>
 </section>
 
 <!-- ================= BUILD ================= -->
@@ -1697,8 +1680,6 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <tr><td class="k">Wallet</td><td>$100.00</td><td>Two balances with a toggle: GC 250,000 · SC 25.00</td></tr>
     <tr><td class="k">News ticker</td><td>50% up to $1,000</td><td>Coin package amounts (GC + free SC)</td></tr>
     <tr><td class="k">Feature row</td><td>BIG WINS</td><td>BIG PRIZES or keep, if legal approves</td></tr>
-    <tr><td class="k">Footer link</td><td>Deposit &amp; Payouts</td><td>Purchases &amp; Redemptions</td></tr>
-    <tr><td class="k">Footer link</td><td>Responsible Gaming</td><td>Responsible Social Gameplay</td></tr>
     <tr><td class="k">FAQ tab</td><td>Payment</td><td>Coins &amp; Redemptions</td></tr>
   </table></div>
   <p>The Welcome Bonus card and the Jackpots prize boxes already use the right model: "SIGN UP 10K GC + 1 SC · SPEND $9.99 25K GC + 25 SC" and amounts in SC. Use that pattern for every offer and prize.</p>
@@ -1717,7 +1698,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   /* neon */
   --cyan:#04F5E5; --cta-mint:#0FE2D0; --play-mint:#2EF0C8;
   --magenta:#F032F4; --purple:#A84DFF; --violet:#322571;
-  --search:#C709EB; --hotpink:#F80180; --pink-input:#EC097D; --newsletter:#E03BA8;
+  --search:#C709EB;
   --gold:#FFCE21; --check:#1CF11D; --rtp:#00F8E7; --new-badge:#D41BE0; --ticker-dot:#F4CC1D;
   /* jackpot tiers */
   --jp-mini:#FF2E4D; --jp-grand:#FFC531; --jp-major:#19C8FF; --jp-sc:#22C55E;
@@ -1812,12 +1793,12 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div><b>Headings start on the left.</b><span>Every section title pill sits at the left edge. View All and arrows always sit on the right of the same line.</span></div>
   <div><b>Text inside cards starts on the left.</b><span>Promo titles, offers, footers, article titles and banner copy all align left.</span></div>
   <div><b>Logos and labels in art are centred.</b><span>Game names baked into tiles, RTP badges, prize boxes and provider logos are centred.</span></div>
-  <div><b>Only one centred text block.</b><span>The SEO block is the only centred heading + paragraph on the homepage. Pagination is also centred.</span></div>
+  <div><b>Centred text is the exception.</b><span>Only the SEO teaser, the footer legal text, payment and trust rows and pagination are centred. Expanded SEO content goes back to left-aligned.</span></div>
   <div><b>One primary button per card or banner.</b><span>Homepage cards have one CTA or none (the whole card is the link). Hero and Jackpots add a ghost button; Promotions listing cards add a small T&amp;C pill. Each page has only one cyan "main action".</span></div>
   <div><b>Section titles in title case.</b><span>Some close-ups show titles in capitals (POPULAR GAMES, LIVE CASINO, HIGH RTP GAMES) while the homepage uses title case. Use title case everywhere, e.g. "Popular Games".</span></div>
   <div><b>View All + 2 arrows, or nothing.</b><span>Carousel sections get all three controls. Fixed sections (Promotions, VIP, FAQ) get none. Grid pages use View All without arrows.</span></div>
 </div>
-  <div class="tbl"><table><tr><th>Section</th><th>Heading</th><th>Card / body text</th><th>Buttons</th><th>Image style</th></tr><tr><td class="k">Hero</td><td>Left</td><td>—</td><td>2 + arrows/dots</td><td>3D neon object</td></tr><tr><td class="k">Promotions</td><td>Left</td><td>Left</td><td>1 per card</td><td>3D reward object</td></tr><tr><td class="k">Popular Games</td><td>Left</td><td>Left (footer)</td><td>View All + 2</td><td>Character art</td></tr><tr><td class="k">Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Favourite Characters</td><td>Left</td><td>Centred (logo + button)</td><td>View All + 2 · 1 per card</td><td>Character portrait</td></tr><tr><td class="k">Live Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Game Shows</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Presenter + wheel</td></tr><tr><td class="k">Jackpots</td><td>Left</td><td>Left · prize boxes centred</td><td>View All + 2 · 2 in banner</td><td>Fantasy scene + 3D icons</td></tr><tr><td class="k">High RTP</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Single glowing symbol</td></tr><tr><td class="k">New Games</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Saturated poster</td></tr><tr><td class="k">VIP Club</td><td>—</td><td>Left</td><td>1</td><td>Transparent 3D crowns</td></tr><tr><td class="k">Game Providers</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Logos only</td></tr><tr><td class="k">AI Game Search</td><td>—</td><td>Left</td><td>1</td><td>Icons only</td></tr><tr><td class="k">FAQ</td><td>Left</td><td>Left</td><td>5 tabs + rows</td><td>None</td></tr><tr><td class="k">SEO block</td><td>Centred</td><td>Centred</td><td>1</td><td>None</td></tr><tr><td class="k">Footer</td><td>Left</td><td>Left</td><td>1 + 4 social</td><td>None</td></tr></table></div>
+  <div class="tbl"><table><tr><th>Section</th><th>Heading</th><th>Card / body text</th><th>Buttons</th><th>Image style</th></tr><tr><td class="k">Hero</td><td>Left</td><td>—</td><td>2 + arrows/dots</td><td>3D neon object</td></tr><tr><td class="k">Promotions</td><td>Left</td><td>Left</td><td>1 per card</td><td>3D reward object</td></tr><tr><td class="k">Popular Games</td><td>Left</td><td>Left (footer)</td><td>View All + 2</td><td>Character art</td></tr><tr><td class="k">Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Favourite Characters</td><td>Left</td><td>Centred (logo + button)</td><td>View All + 2 · 1 per card</td><td>Character portrait</td></tr><tr><td class="k">Live Casino</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Dealer + table</td></tr><tr><td class="k">Game Shows</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Presenter + wheel</td></tr><tr><td class="k">Jackpots</td><td>Left</td><td>Left · prize boxes centred</td><td>View All + 2 · 2 in banner</td><td>Fantasy scene + 3D icons</td></tr><tr><td class="k">High RTP</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Single glowing symbol</td></tr><tr><td class="k">New Games</td><td>Left</td><td>Centred (in art)</td><td>View All + 2</td><td>Saturated poster</td></tr><tr><td class="k">VIP Club</td><td>—</td><td>Left</td><td>1</td><td>Transparent 3D crowns</td></tr><tr><td class="k">Game Providers</td><td>Left</td><td>Centred</td><td>View All + 2</td><td>Logos only</td></tr><tr><td class="k">AI Game Search</td><td>—</td><td>Left</td><td>1</td><td>Icons only</td></tr><tr><td class="k">FAQ</td><td>Left</td><td>Left</td><td>5 tabs + rows</td><td>None</td></tr><tr><td class="k">SEO block</td><td>Centred (teaser) · Left (expanded)</td><td>Centred · Left</td><td>1 toggle</td><td>3D neon icons</td></tr><tr><td class="k">Footer</td><td>Left</td><td>Left · legal text centred</td><td>Links only</td><td>Official logos</td></tr></table></div>
   <h3>Base prompt (start every image with this)</h3>
   <div class="dt-prompt"><div class="dt-plabel">Shared style</div><div class="code"><button class="copy" data-target="pr-20">Copy prompt</button><pre id="pr-20">Glossy, high-detail 3D casino illustration, cinematic neon rim lighting, deep navy-black background (#000816), rich saturated colour, crisp metallic highlights on gold and gems, soft glow and light trails, high contrast, clean composition with calm space for UI.</pre></div></div>
   <p>Then add the subject line from the section's own prompt below. Every prompt ends with "No text, no logos, no buttons, no borders, no watermarks." because text, logos, borders and buttons are added in HTML or by the designer afterwards.</p>
@@ -1968,24 +1949,22 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   
 </article><article class="dt" id="d-seo">
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>SEO content block</h3></div>
-  <figure class="ref"><img src="img/seo-block.webp" alt="Centred heading, paragraph and Continue Reading button" loading="lazy"><figcaption><b>Homepage</b>Centred heading, paragraph and Continue Reading button</figcaption></figure>
+  <div class="dt-pair"><figure class="ref" style="margin:0"><img src="img/seo-block.webp" alt="Collapsed SEO teaser with Continue Reading" loading="lazy"><figcaption><b>Collapsed</b>Teaser.</figcaption></figure><figure class="ref" style="margin:0"><img src="img/seo-expanded.webp" alt="Expanded SEO guide panel" loading="lazy"><figcaption><b>Expanded</b>After Continue Reading.</figcaption></figure></div>
   <div class="dt-grid">
-    <div class="dt-box"><h4>What it contains</h4><ol><li>Heading with one magenta phrase</li><li>2 lines of body text</li><li>Continue Reading button</li></ol></div>
-    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Heading</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Body text</td><td><span class="al al-c">Centred</span> (max 900px wide)</td></tr><tr><td>Button</td><td><span class="al al-c">Centred</span></td></tr></table></div>
-    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1</div><ul><li><strong>Continue Reading</strong></li></ul></div>
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Collapsed: heading with magenta phrase, 2 lines of text, Continue Reading</li><li>Expanded: heading + intro + US map art</li><li>4 question accordions</li><li>4 topic rows with 3D icons</li><li>Show Less</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Collapsed teaser</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Expanded panel text</td><td><span class="al al-l">Left</span></td></tr><tr><td>Header art</td><td><span class="al al-r">Right</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1</div><ul><li><strong>Continue Reading</strong> / <strong>Show Less</strong> toggle</li><li>4 accordion rows (open / close)</li></ul></div>
   </div>
-  <div class="dt-style"><h4>Image style</h4><p>No images.</p></div>
-  <div class="note">This is the <strong>only centred text block</strong> on the homepage. Everywhere else, text starts on the left.</div>
+  <div class="dt-style"><h4>Image style</h4><p>Glossy 3D neon icons on transparent backgrounds: a US map in stars and stripes with chips and coins for the header, and single icons (777 slot, gift, shield, trophy) for the topic rows.</p></div>
 </article><article class="dt" id="d-footer">
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Footer</h3></div>
-  <figure class="ref"><img src="img/footer.webp" alt="Footer with logo, three link columns, newsletter card and pink legal bar" loading="lazy"><figcaption><b>Homepage</b>Footer with logo, three link columns, newsletter card and pink legal bar</figcaption></figure>
+  <figure class="ref"><img src="img/footer.webp" alt="Footer panel with logo, About Us, Socials, payment logos, trust badges and legal text" loading="lazy"><figcaption><b>Reference</b>Footer.</figcaption></figure>
   <div class="dt-grid">
-    <div class="dt-box"><h4>What it contains</h4><ol><li>Logo</li><li>3 link columns (Games, Rewards, Support)</li><li>Newsletter card with email field</li><li>Hot-pink legal bar</li></ol></div>
-    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Logo and columns</td><td><span class="al al-l">Left</span></td></tr><tr><td>Newsletter copy</td><td><span class="al al-l">Left</span></td></tr><tr><td>Legal bar</td><td><span class="al al-l">Left</span> · <span class="al al-c">Centred</span> · <span class="al al-r">Right</span> (3 parts)</td></tr></table></div>
-    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">1 + 4 social</div><ul><li>Newsletter send (mail icon)</li><li>4 social icon links</li></ul></div>
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Logo</li><li>About Us links (5)</li><li>Socials (4, with icons)</li><li>Payment method logos (8)</li><li>Trust badges (4)</li><li>Legal text</li></ol></div>
+    <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Logo and link columns</td><td><span class="al al-l">Left</span></td></tr><tr><td>Payment and trust rows</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Legal text</td><td><span class="al al-c">Centred</span></td></tr></table></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">0</div><ul><li>Links only: 5 About Us + 4 social links + Rules link</li></ul></div>
   </div>
-  <div class="dt-style"><h4>Image style</h4><p>No images.</p></div>
-  
+  <div class="dt-style"><h4>Image style</h4><p>No artwork. Official payment and certification logos only.</p></div>
 </article>
 </section>
 <section id="dt-pages">
@@ -2136,7 +2115,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <h2>How content is edited</h2>
   <p>The site is built from <strong>blocks</strong>. Each page (Home, Promotions, Guides and the rest) is a list of blocks that a content editor can add, remove, reorder and fill in without a developer. The look of every block stays locked to this style guide; editors change the words, images, links, sizes and which devices a block shows on.</p>
   <div class="dt-rules">
-    <div><b>Global content</b><span>Header (logo, button label, news ticker), main menu labels and order, footer links, newsletter text, legal bar. Edited once, used on every page.</span></div>
+    <div><b>Global content</b><span>Header (logo, button label, news ticker), main menu labels and order, footer links, social links, payment and trust logos, legal text. Edited once, used on every page.</span></div>
     <div><b>Page content</b><span>The blocks on each page: banners, promo cards, game rows, guide lists, FAQ, text. Each page has its own list.</span></div>
     <div><b>Collections</b><span>Promotions, Guides (articles, categories, videos), FAQs and ticker items are lists that blocks can pull from automatically.</span></div>
   </div>
