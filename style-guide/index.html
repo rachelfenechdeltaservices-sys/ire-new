@@ -64,7 +64,7 @@ section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);s
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
 .cover figure{margin:0}
-.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2551;margin:0 auto}
+.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2589;margin:0 auto}
 
 /* panels, figures, tables */
 .panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
@@ -347,7 +347,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
-    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2551">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2589">
     <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
 </header>
@@ -364,7 +364,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <li><a href="#s-promos">Promotions · 3</a></li><li><a href="#s-popular">Popular Games · 4</a></li><li><a href="#s-casino">Casino · 4</a></li><li><a href="#s-characters">Favourite Characters · 3</a></li>
     <li><a href="#s-live">Live Casino · 4</a></li><li><a href="#s-shows">Game Shows · 3</a></li><li><a href="#s-jackpots">Jackpots banner</a></li><li><a href="#s-rtp">High RTP · panel + 4</a></li><li><a href="#s-new">New Games · 8</a></li>
     <li><a href="#s-vip">VIP Club banner</a></li><li><a href="#s-providers">Game Providers · 6×3</a></li><li><a href="#s-search">AI Game Search</a></li><li><a href="#s-faq">FAQ</a></li>
-    <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li>
+    <li><a href="#s-seo">SEO content block</a></li><li><a href="#s-footer">Footer</a></li><li><a href="#s-footer">End-of-page bar</a></li>
   </ol>
   <p>The number after each name is how many cards sit in a row at desktop width. Rows of 3 use wide (≈2:1) cards, rows of 4 use medium cards, and New Games uses 8 portrait tiles. This mix of rhythms is deliberate. Keep it when you add sections.</p>
 </section>
@@ -395,6 +395,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <button class="sw" data-copy="#A84DFF"><i style="background:#A84DFF"></i><span><b>Purple</b><code>#A84DFF</code><small>Glows, gradients</small></span></button>
     <button class="sw" data-copy="#322571"><i style="background:#322571"></i><span><b>Violet fill</b><code>#322571</code><small><span class="tag s">Sampled</span> FAQ active tab</small></span></button>
     <button class="sw" data-copy="#C709EB"><i style="background:#C709EB"></i><span><b>Search magenta</b><code>#C709EB</code><small><span class="tag s">Sampled</span> AI search button</small></span></button>
+    <button class="sw" data-copy="#FF0A6E"><i style="background:#FF0A6E"></i><span><b>Hot pink</b><code>#FF0A6E</code><small>End-of-page bar</small></span></button>
     <button class="sw" data-copy="#FFCE21"><i style="background:#FFCE21"></i><span><b>Gold</b><code>#FFCE21</code><small>VIP, RTP 97%+</small></span></button>
     <button class="sw" data-copy="#1CF11D"><i style="background:#1CF11D"></i><span><b>Check green</b><code>#1CF11D</code><small>RTP checklist ticks</small></span></button>
     <button class="sw" data-copy="#F4CC1D"><i style="background:#F4CC1D"></i><span><b>Ticker dot</b><code>#F4CC1D</code><small><span class="tag s">Sampled</span> news separators</small></span></button>
@@ -1483,11 +1484,12 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="s-casino">
   <span class="eyebrow">Section · game row</span>
   <h2>Casino</h2>
-  <figure class="ref"><img src="img/casino.webp" alt="Casino row with slot games Gonzo's Quest, Raptor 3, Search for Anubis and Oriental Pearls" loading="lazy"><figcaption><b>Homepage</b>Casino = slot games.</figcaption></figure>
+  <figure class="ref"><img src="img/casino.webp" alt="Casino row with slot games Gonzo's Quest, Raptor 3, Sweet Bonanza and The Dog House Megaways" loading="lazy"><figcaption><b>Homepage</b>Casino = slot games.</figcaption></figure>
   <div class="grid2">
     <figure class="ref" style="margin:0"><img src="img/casino-card.webp" alt="Gonzo's Quest slot tile with gold neon border" loading="lazy"><figcaption><b>Detail</b>Game logo is part of the art.</figcaption></figure>
     <div><p><strong>Casino means slot games only.</strong> Table games with a dealer (roulette, blackjack, baccarat) belong in <a href="#s-live">Live Casino</a>.</p><p>Four slot tiles (≈ 1.27 : 1) with no footer, the same tile as All Games and New Games. Each tile's art carries the game logo centred in the lower third. 2px border with a glow in the tile's main colour (gold, amber, magenta, violet), 14px radius. Optional NEW / HOT badge top right.</p><p>Fill the row from the slots catalogue (most played this week); editors can pin games in the CMS.</p></div>
   </div>
+  <div class="note warn"><strong>Licensed titles.</strong> Sweet Bonanza and The Dog House Megaways (Pragmatic Play) are among the most-featured slots at US sweepstakes casinos, so they suit this row. The art shown for them is original placeholder art in the same themes; in production use Pragmatic Play's official game tiles from their media kit, and only list games you have a licence to offer.</div>
 </section>
 
 <section id="s-characters">
@@ -1759,6 +1761,16 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
     <figure class="ref" style="margin:0"><img src="img/footer-trust.webp" alt="Trust badges: 18+, certification seal, SSL Secure, PCI DSS compliant" loading="lazy"><figcaption><b>Detail</b>Trust badges.</figcaption></figure>
   </div>
   <div class="note pink"><strong>Before launch.</strong> The legal text still says "newlogohere.com" and "New Logo Here"; replace with the real domain and brand name. Only show payment logos and trust seals you actually have contracts or certificates for; the green shield seal should be your real licence or certification badge, linked to its verification page.</div>
+  <h3>End-of-page bar</h3>
+  <p>The very last element of every page, directly under the footer panel (the footer itself stays as it is). Full width, edge to edge.</p>
+  <figure class="ref"><img src="img/legal-bar.webp" alt="Hot pink bar: All Rights Reserved, © 2026 FULL MOON PLAY, Find Us on Social Media" loading="lazy"><figcaption><b>Reference</b>End-of-page bar.</figcaption></figure>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr>
+   <tr><td class="k">Bar</td><td>Full-bleed hot pink <code>#FF0A6E</code>, 72px high on desktop (60px on phones), no border or glow. On phones it sits above the bottom menu.</td></tr>
+   <tr><td class="k">Left</td><td>"All Rights Reserved", Inter 500 16px, white.</td></tr>
+   <tr><td class="k">Centre</td><td>"© 2026 FULL MOON PLAY", Inter 700 18px, white. Use the © symbol and update the year automatically.</td></tr>
+   <tr><td class="k">Right</td><td>"Find Us on Social Media", Inter 500 16px, white; links to the Socials in the footer, or add the 4 social icons after it.</td></tr>
+   <tr><td class="k">Phones</td><td>Stacks into three centred lines, 13px.</td></tr>
+  </table></div>
 </section>
 
 <!-- ================= BUILD ================= -->
@@ -2190,7 +2202,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>Footer</h3></div>
   <figure class="ref"><img src="img/footer.webp" alt="Footer panel with logo, About Us, Socials, payment logos, trust badges and legal text" loading="lazy"><figcaption><b>Reference</b>Footer.</figcaption></figure>
   <div class="dt-grid">
-    <div class="dt-box"><h4>What it contains</h4><ol><li>Logo</li><li>About Us links (5)</li><li>Socials (4, with icons)</li><li>Payment method logos (8)</li><li>Trust badges (4)</li><li>Legal text</li></ol></div>
+    <div class="dt-box"><h4>What it contains</h4><ol><li>Logo</li><li>About Us links (5)</li><li>Socials (4, with icons)</li><li>Payment method logos (8)</li><li>Trust badges (4)</li><li>Legal text</li><li>Hot-pink end-of-page bar: All Rights Reserved · © 2026 FULL MOON PLAY · Find Us on Social Media</li></ol></div>
     <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Logo and link columns</td><td><span class="al al-l">Left</span></td></tr><tr><td>Payment and trust rows</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Legal text</td><td><span class="al al-c">Centred</span></td></tr></table></div>
     <div class="dt-box"><h4>Buttons</h4><div class="dt-count">0</div><ul><li>Links only: 5 About Us + 4 social links + Rules link</li></ul></div>
   </div>
