@@ -833,8 +833,8 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   </article><article class="b-row">
     <div class="b-left">
       <div class="b-head"><b>Carousel arrows</b><span>Every section header · after View All</span></div>
-      <div class="b-stage"><button class="b-arrow" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg></button><button class="b-arrow b-arrow--next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg></button></div>
-      <p class="b-why">Scroll the card row left and right. Square with a navy fill and a pointed chevron icon (sharp tip, square ends), not the soft rounded ‹ › characters. The left one has a cyan edge and the right one purple, echoing the cyan-to-magenta direction of every gradient on the site. Hidden below 768px, where rows are swiped.</p>
+      <div class="b-stage"><button class="b-arrow" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.6 2.5 18.6 5.5 12.1 12l6.5 6.5-3 3L6.1 12z"/></svg></button><button class="b-arrow b-arrow--next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.4 2.5 5.4 5.5 11.9 12l-6.5 6.5 3 3L17.9 12z"/></svg></button></div>
+      <p class="b-why">Scroll the card row left and right. Square with a navy fill and a heavy ❮ ❯ chevron icon (drawn as an SVG in that shape so it looks the same on every device), not the thin ‹ › characters. The left one has a cyan edge and the right one purple, echoing the cyan-to-magenta direction of every gradient on the site. Hidden below 768px, where rows are swiped.</p>
     </div>
     <div class="code b-code"><button class="copy" data-target="bcss-12">Copy CSS</button><pre id="bcss-12">.b-arrow{width:44px;height:44px;display:inline-grid;place-items:center;
   border:1.5px solid #10E8F1;border-radius:10px;color:#fff;cursor:pointer;
@@ -949,7 +949,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <div class="stage">
     <div class="sec-head">
       <h3 class="pill-title" style="margin:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 11h4M8 9v4"/><circle cx="15.5" cy="12.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><path d="M7 5h10a5 5 0 0 1 5 5v2a5 5 0 0 1-9 3h-2a5 5 0 0 1-9-3v-2a5 5 0 0 1 5-5z"/></svg>Popular Games</h3>
-      <div class="ctl"><button class="btn-view">View All →</button><button class="btn-arrow" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true"><path d="M15 4 7 12l8 8"/></svg></button><button class="btn-arrow next" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" aria-hidden="true"><path d="M9 4l8 8-8 8"/></svg></button></div>
+      <div class="ctl"><button class="btn-view">View All →</button><button class="btn-arrow" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.6 2.5 18.6 5.5 12.1 12l6.5 6.5-3 3L6.1 12z"/></svg></button><button class="btn-arrow next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.4 2.5 5.4 5.5 11.9 12l-6.5 6.5 3 3L17.9 12z"/></svg></button></div>
     </div>
   </div>
   <div class="tbl"><table>
@@ -981,7 +981,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 .carousel-btn{width:44px;height:44px;display:grid;place-items:center;border:1.5px solid #10E8F1;
   border-radius:10px;background:linear-gradient(125deg,#07162C,#1B2350);color:#fff}
 .carousel-btn--next{border-color:#BD48F5}
-/* icon: pointed chevron, 22px, stroke 2.8, sharp (miter) tip and square ends — not rounded ‹ › */</pre></div>
+/* icon: heavy chevron ❮ ❯ as a filled SVG, 20px (see Buttons). Don't type the ❮ ❯ characters: they render differently per device. */</pre></div>
 </section>
 
 <!-- ================= IMAGERY ================= -->
