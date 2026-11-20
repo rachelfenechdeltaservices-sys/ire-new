@@ -317,6 +317,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#gen-art">Generated content art</a>
   <a href="#d-guidespage">Guides page</a>
   <a href="#guide-article">Guide article page</a>
+  <a href="#guide-widgets">Guide sidebar widgets</a>
   <a href="#d-providers-page">Game Providers pages</a>
   <a href="#d-help">Help &amp; FAQs page</a>
   <h4>CMS</h4>
@@ -2557,12 +2558,57 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
    <tr><td class="k">Breadcrumb</td><td>Home › Guides › [Guide title]</td></tr>
    <tr><td class="k">Guide banner</td><td>Full width, ≈ 4.5 : 1, 2px neon-edge border, 20px radius. <strong>GUIDE</strong> tag (book icon, outline pill), title in 2 lines (white + violet gradient on the second word/line), one-line intro, themed 3D art on the right.</td></tr>
    <tr><td class="k">Body</td><td>H2 headings (Poppins 700, 28px) with Body M text. Supported blocks: numbered steps (bordered cards with a pink number circle), bullet lists (cyan dots), checklists (cyan ticks), "In short" call-out (info icon, cyan border), and a row of game tiles.</td></tr>
-   <tr><td class="k">Sidebar (optional)</td><td>Right column: <strong>Table of Contents</strong> (auto-built from the H2s, current section highlighted in cyan as you scroll) and a <strong>Ready to Play?</strong> card with art and one cyan button. Without a sidebar the article runs full width (Example 2).</td></tr>
+   <tr><td class="k">Sidebar (optional)</td><td>Up to two widgets: <strong>Table of Contents</strong> and a <strong>mini ad</strong> (image only, or image + text + button). See Sidebar widgets below. Without a sidebar the article runs full width (Example 2).</td></tr>
    <tr><td class="k">End buttons</td><td>Two centred buttons: primary <strong>Play … Now →</strong> (cyan) and secondary <strong>Explore … →</strong> (outline). A decorative neon wave closes the page.</td></tr>
    <tr><td class="k">Alignment</td><td>Title, headings and text <span class="al al-l">Left</span>; end buttons <span class="al al-c">Centred</span></td></tr>
    <tr><td class="k">CMS</td><td>Each guide is a CMS entry: title, intro, category, banner art, body built from the blocks above, sidebar on/off, linked games, button labels and links. Related guides and the Guides listing update automatically.</td></tr>
   </table></div>
-  <div class="note warn">Example 2 says "Bigger win potential" and "high-stakes"; have legal check this wording for a sweepstakes site, and add a responsible-play line on strategy guides.</div>
+  <div id="guide-widgets" style="margin-top:18px">
+  <h4 style="margin:0 0 6px">Sidebar widgets (added per guide in the CMS)</h4>
+  <p style="font-size:14px">Each guide can show up to <strong>two widgets</strong> in the right column. Editors switch them on, reorder them, or leave the sidebar off for a full-width article.</p>
+  <div class="gw-demo">
+    <div class="gw-col">
+      <div class="md-lbl">1 · Table of Contents</div>
+      <div class="gw gw-toc"><b>☰ Table of Contents</b>
+        <a class="on"><i></i>What Is Roulette?</a><a><i></i>How to Play Roulette</a><a><i></i>Popular Bet Types</a><a><i></i>Tips for Success</a></div>
+    </div>
+    <div class="gw-col">
+      <div class="md-lbl">2a · Mini ad · image only</div>
+      <a class="gw gw-img" href="#guide-widgets" style="background-image:url(img/gen-cards-m.webp)" aria-label="Welcome Bonus: 250K GC + 25 free SC"><span class="gw-baked"><small>WELCOME BONUS</small><b>250K GC</b><em>+ 25 FREE SC</em><i>CLAIM NOW</i></span></a>
+    </div>
+    <div class="gw-col">
+      <div class="md-lbl">2b · Mini ad · image + text + button</div>
+      <div class="gw gw-ad"><div class="gw-art" style="background-image:url(img/hero-tourney.webp)"></div><b>Ready to Play?</b><p>Join the Weekend Slot Race and share a <span>50,000 SC</span> prize pool.</p><span class="gw-btn">Join Tournament →</span></div>
+    </div>
+  </div>
+  <div class="tbl"><table><tr><th>Widget</th><th>CMS fields</th><th>Rules</th></tr>
+   <tr><td class="k">Table of Contents</td><td>On / off; optional title</td><td>Built automatically from the guide's H2 headings. Sticky while scrolling; the current section is highlighted in cyan. Hidden on phones (or shown as a collapsible list above the article).</td></tr>
+   <tr><td class="k">Mini ad · image</td><td>Image (desktop; optional mobile), link, alt text, start / end date</td><td>One finished image with the text and button designed in, ≈ 4 : 5 (720 × 900 at 2×). The whole card is the link. Alt text must repeat the offer text.</td></tr>
+   <tr><td class="k">Mini ad · image + text + button</td><td>Image, title (max 24 characters), text (max 90), button label (max 22) and link, start / end date</td><td>Image on top, then title, short text and one cyan button. Same card style as the guide (2px violet border, 16px radius). Can link to a game, offer or tournament.</td></tr>
+   <tr><td class="k">Placement</td><td>Choose which widgets and their order</td><td>Max two per guide. On phones the mini ad moves below the article, before the end buttons.</td></tr>
+  </table></div>
+</div>
+<style>
+.gw-demo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start;margin:12px 0 16px;padding:18px;border:1px solid var(--line-soft);border-radius:14px;background:var(--bg)}
+.gw-col{display:grid;gap:8px;min-width:0}
+.gw{display:block;border:1.5px solid #6B3FD0;border-radius:16px;background:#070C22;box-shadow:0 0 12px rgba(139,92,255,.25);color:#fff;text-decoration:none}
+.gw-toc{display:grid;gap:4px;padding:14px}
+.gw-toc b{font:600 16px var(--f-display);margin-bottom:6px}
+.gw-toc a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;font:500 13.5px var(--f-body);color:#D7DCE8;cursor:default}
+.gw-toc a i{width:10px;height:10px;border-radius:50%;border:2px solid #fff;flex:none}
+.gw-toc a.on{border:1.5px solid #04F5E5;background:#041D2A;box-shadow:0 0 10px rgba(4,245,229,.3);color:#fff}
+.gw-toc a.on i{border-color:#04F5E5;background:#04F5E5;box-shadow:0 0 6px #04F5E5}
+.gw-img{position:relative;aspect-ratio:4/5;background-size:cover;background-position:center;overflow:hidden}
+.gw-baked{position:absolute;inset:auto 0 0 0;display:grid;justify-items:center;gap:2px;padding:18px 12px 16px;text-align:center;background:linear-gradient(180deg,transparent,rgba(12,4,24,.92) 40%)}
+.gw-baked small{font:700 12px var(--f-display);letter-spacing:.16em;color:#F7A6FA}.gw-baked b{font:900 38px/1 var(--f-display);background:linear-gradient(90deg,#FFE58A,#F5B82E);-webkit-background-clip:text;background-clip:text;color:transparent}.gw-baked em{font:800 18px var(--f-display);font-style:normal;color:#2EF2D0}.gw-baked i{margin-top:8px;padding:6px 16px;border-radius:999px;background:#FF2D9A;font:800 12px var(--f-display);font-style:normal;letter-spacing:.08em}
+.gw-ad{overflow:hidden;display:grid;gap:8px;padding:0 0 14px}
+.gw-art{aspect-ratio:16/10;background-size:cover;background-position:right center}
+.gw-ad b{padding:0 14px;font:700 18px var(--f-display)}
+.gw-ad p{margin:0;padding:0 14px;font-size:13px}.gw-ad p span{color:#FFCE21;font-weight:600}
+.gw-btn{margin:4px 14px 0;display:flex;justify-content:center;align-items:center;min-height:40px;border-radius:999px;background:linear-gradient(100deg,#00D9C9,#18FFE0);color:#00151C;font:700 14px var(--f-display);box-shadow:0 0 12px rgba(4,245,229,.4)}
+@media(max-width:900px){.gw-demo{grid-template-columns:1fr}.gw-img{max-width:320px}}
+</style>
+<div class="note warn">Example 2 says "Bigger win potential" and "high-stakes"; have legal check this wording for a sweepstakes site, and add a responsible-play line on strategy guides.</div>
 </div>
 </article>
 <article class="dt" id="d-providers-page">
