@@ -400,10 +400,10 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   </div>
   <h3>Jackpot tiers</h3>
   <div class="swatches">
-    <button class="sw" data-copy="#FF3FD0"><i style="background:#FF3FD0"></i><span><b>Mini</b><code>#FF3FD0</code><small><span class="tag m">Matched</span> border, crown, label</small></span></button>
+    <button class="sw" data-copy="#FF2E4D"><i style="background:#FF2E4D"></i><span><b>Mini</b><code>#FF2E4D</code><small><span class="tag m">Matched</span> border, lightning, label</small></span></button>
     <button class="sw" data-copy="#FFC531"><i style="background:#FFC531"></i><span><b>Grand</b><code>#FFC531</code><small><span class="tag m">Matched</span> border, crown, label</small></span></button>
-    <button class="sw" data-copy="#19C8FF"><i style="background:#19C8FF"></i><span><b>Major</b><code>#19C8FF</code><small><span class="tag m">Matched</span> border, gem, label</small></span></button>
-    <button class="sw" data-copy="#B26BFF"><i style="background:#B26BFF"></i><span><b>JACKPOTS word</b><code>#B26BFF</code><small><span class="tag m">Matched</span> headline accent</small></span></button>
+    <button class="sw" data-copy="#19C8FF"><i style="background:#19C8FF"></i><span><b>Major</b><code>#19C8FF</code><small><span class="tag m">Matched</span> border, diamond, label</small></span></button>
+    <button class="sw" data-copy="#22C55E"><i style="background:#22C55E"></i><span><b>SC pill</b><code>#22C55E</code><small><span class="tag s">Sampled</span> SC badge</small></span></button>
   </div>
   <h3>Card accent colours</h3>
   <p>Cards with a solid colour background (New Games) or a themed border (High RTP, Favourite Characters) take their border colour from the artwork's dominant hue. Use these values so the same hues repeat across sections.</p>
@@ -506,7 +506,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Page heading (FAQ, SEO)</td><td>H4</td><td>Inter 400 · 32px</td><td>White, key phrase magenta <code>#F032F4</code></td></tr>
     <tr><td class="k">Subpage page title</td><td>Display</td><td>Poppins 700 · 56–64px · title case</td><td>White into pink-violet gradient</td></tr>
     <tr><td class="k">Promo title</td><td>S1</td><td>Poppins 700 · 26–28px · upper</td><td>White, accent word mint</td></tr>
-    <tr><td class="k">Jackpots headline</td><td>Display</td><td>Poppins 800 · 44px · upper</td><td>White + violet <code>#B26BFF</code></td></tr>
+    <tr><td class="k">Jackpots headline</td><td>Display</td><td>Poppins 900 italic · 64px · upper</td><td>White + magenta → violet gradient</td></tr>
     <tr><td class="k">VIP banner title</td><td>Display</td><td>Poppins 800 italic · 48px · upper</td><td>White</td></tr>
     <tr><td class="k">VIP pitch, subtitles</td><td>Body L</td><td>Poppins 500 · 18px</td><td>White</td></tr>
     <tr><td class="k">Card title</td><td>Body S, bold</td><td>Poppins 600 · 14px · upper</td><td>White</td></tr>
@@ -960,7 +960,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <tr><td class="k">Favourite Characters from Games</td><td>Group of people (filled)</td><td>View All + arrows</td></tr>
     <tr><td class="k">Live Casino</td><td>Live dealer / chip</td><td>View All + arrows</td></tr>
     <tr><td class="k">Game Shows</td><td>Wheel / TV</td><td>View All + arrows</td></tr>
-    <tr><td class="k">Jackpots</td><td>Crown / gem</td><td>View All + arrows</td></tr>
+    <tr><td class="k">Jackpots</td><td>Lightning bolt (gold)</td><td>View All + arrows</td></tr>
     <tr><td class="k">High RTP Games</td><td>Percent sign, green <code>#1CF11D</code></td><td>View All + arrows</td></tr>
     <tr><td class="k">New Games</td><td>Sparkles</td><td>View All + arrows</td></tr>
     <tr><td class="k">Game Providers</td><td>Game controller</td><td>View All + arrows</td></tr>
@@ -1534,24 +1534,24 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 </section>
 
 <section id="s-jackpots">
-  <span class="eyebrow">Section · feature banner · new in v7</span>
+  <span class="eyebrow">Section · feature banner</span>
   <h2>Jackpots</h2>
-  <figure class="ref"><img src="img/jackpots.webp" alt="Jackpots section: Full Moon Jackpots banner with headline, Play Jackpot Games button, howling wolf in front of a full moon, and Mini, Grand and Major prize boxes" loading="lazy"><figcaption><b>Homepage</b>Section header and Full Moon Jackpots banner.</figcaption></figure>
+  <figure class="ref"><img src="img/jackpots.webp" alt="Jackpots section: header with gold lightning icon, Full Moon Jackpots banner with headline, tagline, Play Jackpot Games and Learn More buttons, howling wolf in front of a full moon, and Mini, Grand and Major prize boxes on rocks" loading="lazy"><figcaption><b>Reference</b>Section header and Full Moon Jackpots banner.</figcaption></figure>
   <p>One full-width banner under the standard section header. It is the most theatrical block on the page, so keep everything around it calm.</p>
   <div class="tbl"><table>
     <tr><th>Layer</th><th>Spec</th></tr>
-    <tr><td class="k">Banner</td><td>Container width, ≈ 280px high, 16px radius. 2px neon-edge border (cyan top-left to purple bottom-right) with split glow. Fill: deep navy on the left fading to electric blue-violet <code>#1A1680</code> behind the moon.</td></tr>
-    <tr><td class="k">Eyebrow</td><td>"STEP INTO OUR WORLD OF", white, 16px / 700 uppercase.</td></tr>
-    <tr><td class="k">Headline</td><td>"FULL MOON" white and "JACKPOTS" in violet <code>#B26BFF</code>, two lines, Poppins 800, ≈ 44px, line height 1.</td></tr>
-    <tr><td class="k">Tagline</td><td>"Massive Prizes, Life-Changing Wins, And Non-Stop Action!" in muted 13px, max two lines.</td></tr>
-    <tr><td class="k">Buttons</td><td>Primary: <strong>Play Jackpot Games →</strong>, CTA gradient, 8px radius. Secondary: ghost button, 1.5px violet border, white text + →. The secondary label is unreadable in the screenshot; suggested: <strong>Jackpot Rules →</strong>.</td></tr>
-    <tr><td class="k">Art</td><td>A howling wolf on a rock in front of a glowing full moon, with blue lightning and purple mist. Centre of the banner, between the text and the prize boxes. Supplied as one transparent-edged image.</td></tr>
-    <tr><td class="k">Prize boxes</td><td>Three boxes in the order <strong>Mini · Grand · Major</strong>. Grand is the largest and sits slightly higher. Each has a 2px border and glow in its tier colour, a near-black fill, a 12px radius, and an icon that overlaps the top edge: pink crown (Mini), gold crown (Grand), cyan gem (Major).</td></tr>
-    <tr><td class="k">Prize text</td><td>Tier name in its colour, Poppins 700, 22px. Amount in white/gold, Inter 700, 22px (Grand 26px), tabular numbers, with the "SC" prefix.</td></tr>
-    <tr><td class="k">Bottom strip</td><td>The screenshot shows a faint row of extra buttons along the bottom edge with unreadable labels. Leave it out, or use it for one text link such as "How jackpots work →".</td></tr>
+    <tr><td class="k">Section header</td><td>Standard pill title "Jackpots" with a <strong>gold lightning</strong> icon <code>#F4CC1D</code>; View All + 2 chevron arrows on the right.</td></tr>
+    <tr><td class="k">Banner</td><td>Container width, ≈ 300px high (≈ 4 : 1), 20px radius. 2px neon-edge border (cyan → purple) with split glow. Fill: deep navy on the left, moonlit blue-violet night sky with pine trees behind the art.</td></tr>
+    <tr><td class="k">Eyebrow</td><td>"STEP INTO OUR WORLD OF", white, Poppins 800 italic, 20px uppercase.</td></tr>
+    <tr><td class="k">Headline</td><td>Two lines, Poppins 900 italic, ≈ 64px, line height .95. "FULL MOON" in a white → ice-blue gradient; "JACKPOTS" in a magenta → violet gradient <code>linear-gradient(90deg,#FF3FD0,#B44DFF)</code>.</td></tr>
+    <tr><td class="k">Tagline</td><td>"Chase massive, ever-growing jackpots under the full moon!" Body L, white, max two lines.</td></tr>
+    <tr><td class="k">Buttons</td><td>Primary: <strong>Play Jackpot Games →</strong>, cyan CTA. Secondary: <strong>Learn More →</strong>, ghost (navy fill, 1.5px violet border, white text). Both pills, 52px high, 16px apart.</td></tr>
+    <tr><td class="k">Art</td><td>A howling wolf on a rock in front of a huge glowing full moon, pine forest and purple mist below. Centre of the banner. The three prize boxes stand on rocks of the same scene.</td></tr>
+    <tr><td class="k">Prize boxes</td><td>Order <strong>Mini · Grand · Major</strong>. Grand is the largest and sits highest. Shape: rounded rectangle with notched (cut-in) corners. 3px border and outer glow in the tier colour, near-black fill. Icon overlaps the top: <strong>red lightning</strong> (Mini), <strong>gold crown</strong> (Grand), <strong>cyan diamond</strong> (Major).</td></tr>
+    <tr><td class="k">Prize text</td><td>Tier name in its colour, Poppins 800, 40px (Grand 48px). Amount below: green <strong>SC</strong> pill <code>#22C55E</code> (white bold text, 6px radius) + white amount, Inter 800, 40px (Grand 46px), tabular numbers.</td></tr>
   </table></div>
-  <div class="grid2">
-    <figure class="ref" style="margin:0"><img src="img/jackpot-tiers.webp" alt="Mini SC 8.25, Grand SC 4,342.90 and Major SC 872.50 prize boxes with crown and gem icons" loading="lazy"><figcaption><b>Detail</b>Prize boxes.</figcaption></figure>
+<div class="grid2">
+    <figure class="ref" style="margin:0"><img src="img/jackpot-tiers.webp" alt="Mini SC 9.52, Grand SC 1,442.40 and Major SC 175.28 prize boxes with lightning, crown and diamond icons on rocks" loading="lazy"><figcaption><b>Detail</b>Prize boxes.</figcaption></figure>
     <div><div class="note warn" style="margin-top:0">Prize amounts must come from the live jackpot feed and update in place. Show them in Sweeps Coins (SC), never in dollars, and link the banner to the jackpot rules.</div>
     <div class="code" style="margin-bottom:0"><button class="copy" data-target="code-jackpot">Copy CSS</button><pre id="code-jackpot">.jackpot-tier{position:relative;display:grid;place-items:center;
   gap:4px;padding:26px 20px 14px;border:2px solid var(--tier);
@@ -1563,7 +1563,9 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 .jackpot-tier__amount{font:700 22px Inter,sans-serif;color:#fff;
   font-variant-numeric:tabular-nums}
 .jackpot-tier--grand{transform:translateY(-8px) scale(1.15)}
-/* --tier: #FF3FD0 mini · #FFC531 grand · #19C8FF major */</pre></div></div>
+/* --tier: #FF2E4D mini · #FFC531 grand · #19C8FF major */
+.jackpot-tier__sc{display:inline-grid;place-items:center;margin-right:8px;padding:2px 8px;
+  border-radius:6px;background:#22C55E;color:#fff;font:800 .6em Inter,sans-serif}</pre></div></div>
   </div>
 </section>
 
@@ -1712,7 +1714,7 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   --search:#C709EB; --hotpink:#F80180; --pink-input:#EC097D; --newsletter:#E03BA8;
   --gold:#FFCE21; --check:#1CF11D; --rtp:#00F8E7; --new-badge:#D41BE0; --ticker-dot:#F4CC1D;
   /* jackpot tiers */
-  --jp-mini:#FF3FD0; --jp-grand:#FFC531; --jp-major:#19C8FF; --jp-word:#B26BFF;
+  --jp-mini:#FF2E4D; --jp-grand:#FFC531; --jp-major:#19C8FF; --jp-sc:#22C55E;
   /* card accents */
   --acc-green:#01A200; --acc-blue:#051AF1; --acc-amber:#F9A202;
   --acc-pink:#F9038D; --acc-red:#EE0212; --acc-fuchsia:#EA02AC;
@@ -1894,9 +1896,9 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="dt-grid">
     <div class="dt-box"><h4>What it contains</h4><ol><li>Section header with View All + 2 arrows</li><li>One wide banner: eyebrow, 2-line headline, tagline, 2 buttons (left) · wolf and moon art (centre) · 3 prize boxes (right)</li></ol></div>
     <div class="dt-box"><h4>Text alignment</h4><table class="dt-al"><tr><td>Eyebrow, headline, tagline</td><td><span class="al al-l">Left</span></td></tr><tr><td>Buttons</td><td><span class="al al-l">Left</span></td></tr><tr><td>Prize box name and amount</td><td><span class="al al-c">Centred</span></td></tr></table></div>
-    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">2 + 3 in header</div><ul><li><strong>Play Jackpot Games →</strong> (primary)</li><li><strong>Jackpot Rules →</strong> (ghost)</li><li>Header: View All + 2 arrows</li></ul></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">2 + 3 in header</div><ul><li><strong>Play Jackpot Games →</strong> (primary)</li><li><strong>Learn More →</strong> (ghost)</li><li>Header: View All + 2 arrows</li></ul></div>
   </div>
-  <div class="dt-style"><h4>Image style</h4><p>Night-time fantasy: a howling wolf on a rock in front of a huge glowing full moon, blue lightning and purple mist. Prize icons (crowns, gem) are separate glossy 3D objects.</p><div class="dt-prompt"><div class="dt-plabel">Banner art (≈1.5 : 1, transparent edges)</div><div class="code"><button class="copy" data-target="pr-8">Copy prompt</button><pre id="pr-8">Glossy 3D illustration of a majestic wolf howling on a rocky outcrop in front of an enormous glowing full moon, electric-blue lightning and drifting purple mist, deep blue-violet night sky, rich saturated neon colour, subject centred, edges fading to transparent so it blends into a banner. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">Prize icons (1 : 1, transparent)</div><div class="code"><button class="copy" data-target="pr-9">Copy prompt</button><pre id="pr-9">Glossy 3D [pink crown / golden crown / cyan diamond gem] icon, neon glow in the same colour, centred, transparent background, 1:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
+  <div class="dt-style"><h4>Image style</h4><p>Night-time fantasy: a howling wolf on a rock in front of a huge glowing full moon, blue lightning and purple mist. Prize icons (crowns, gem) are separate glossy 3D objects.</p><div class="dt-prompt"><div class="dt-plabel">Banner art (≈1.5 : 1, transparent edges)</div><div class="code"><button class="copy" data-target="pr-8">Copy prompt</button><pre id="pr-8">Glossy 3D illustration of a majestic wolf howling on a rocky outcrop in front of an enormous glowing full moon, dark pine forest and drifting purple mist below, deep blue-violet night sky, rich saturated neon colour, subject centred, edges fading to transparent so it blends into a banner. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div><div class="dt-prompt"><div class="dt-plabel">Prize icons (1 : 1, transparent)</div><div class="code"><button class="copy" data-target="pr-9">Copy prompt</button><pre id="pr-9">Glossy 3D [red lightning bolt / golden crown / cyan diamond] icon, neon glow in the same colour, centred, transparent background, 1:1. No text, no logos, no buttons, no borders, no watermarks.</pre></div></div></div>
   
 </article><article class="dt" id="d-rtp">
   <div class="dt-head"><span class="eyebrow">Homepage section</span><h3>High RTP Games</h3></div>
