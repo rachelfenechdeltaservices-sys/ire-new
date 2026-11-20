@@ -259,21 +259,6 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 </head>
 <body>
 
-<style id="seo-all-css">
-.seo-req{margin:20px 0 28px;padding:22px 24px;border:2px solid transparent;border-radius:18px;background:linear-gradient(#071027,#071027) padding-box,linear-gradient(100deg,#04F5E5,#B44DFF,#F032F4) border-box;box-shadow:0 0 22px rgba(180,77,255,.25)}
-.seo-req__head{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
-.seo-req__head h3{margin:0}
-.seo-req__tag{align-self:flex-start;padding:4px 12px;border-radius:999px;background:#F032F4;color:#fff;font:700 11px Poppins,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.seo-req__grid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px;align-items:start;margin:14px 0}
-.seo-stack{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.seo-stack__i{display:grid;gap:2px;padding:12px 14px;border-radius:10px;border:1.5px solid #2A3A58;background:#0A1428;font-size:13px;color:#C7D2E0;text-align:center}
-.seo-stack__i b{color:#fff;font:600 15px Poppins,sans-serif}
-.seo-stack__i span{font-size:12px;color:#A8B4C7}
-.seo-stack__i--dim{border-style:dashed;color:#7C8AA3;background:transparent}
-.seo-stack__i--faq{border-color:#8B5CFF;box-shadow:0 0 12px rgba(139,92,255,.35)}
-.seo-stack__i--seo{border-color:#04F5E5;box-shadow:0 0 12px rgba(4,245,229,.3)}
-@media(max-width:900px){.seo-req__grid{grid-template-columns:1fr}.seo-req{padding:16px}}
-</style>
 <style id="about-css">
 .ab-top{grid-template-columns:minmax(0,420px) minmax(0,1fr)}
 .rte{border:1px solid var(--line-soft);border-radius:14px;background:#050C1C;overflow:hidden;margin:14px 0 18px}
@@ -319,6 +304,21 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
 .rte-seg{display:flex;border:1px solid #26385A;border-radius:8px;overflow:hidden;font-size:12.5px}
 .rte-seg span{flex:1;text-align:center;padding:7px 0;color:#C7D2E0}.rte-seg .on{background:#10263A;color:#18FFE0}
 @media(max-width:900px){.ab-top{grid-template-columns:1fr}.rte-wrap{grid-template-columns:1fr}.rte-panel{border-left:0;border-top:1px solid var(--line-soft)}.rte-pop{position:static;width:auto;margin-top:12px}.rte-img{margin-bottom:22px}.rte-page{padding:20px 16px}.rte-btnblock{margin-top:16px}}
+</style>
+<style id="seo-all-css">
+.seo-req{margin:20px 0 28px;padding:22px 24px;border:2px solid transparent;border-radius:18px;background:linear-gradient(#071027,#071027) padding-box,linear-gradient(100deg,#04F5E5,#B44DFF,#F032F4) border-box;box-shadow:0 0 22px rgba(180,77,255,.25)}
+.seo-req__head{display:flex;flex-direction:column;gap:6px;margin-bottom:6px}
+.seo-req__head h3{margin:0}
+.seo-req__tag{align-self:flex-start;padding:4px 12px;border-radius:999px;background:#F032F4;color:#fff;font:700 11px Poppins,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.seo-req__grid{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px;align-items:start;margin:14px 0}
+.seo-stack{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.seo-stack__i{display:grid;gap:2px;padding:12px 14px;border-radius:10px;border:1.5px solid #2A3A58;background:#0A1428;font-size:13px;color:#C7D2E0;text-align:center}
+.seo-stack__i b{color:#fff;font:600 15px Poppins,sans-serif}
+.seo-stack__i span{font-size:12px;color:#A8B4C7}
+.seo-stack__i--dim{border-style:dashed;color:#7C8AA3;background:transparent}
+.seo-stack__i--faq{border-color:#8B5CFF;box-shadow:0 0 12px rgba(139,92,255,.35)}
+.seo-stack__i--seo{border-color:#04F5E5;box-shadow:0 0 12px rgba(4,245,229,.3)}
+@media(max-width:900px){.seo-req__grid{grid-template-columns:1fr}.seo-req{padding:16px}}
 </style>
 
 <div class="shell">
@@ -381,8 +381,8 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#guide-widgets">Guide sidebar widgets</a>
   <a href="#d-providers-page">Game Providers pages</a>
   <a href="#d-help">Help &amp; FAQs page</a>
-  <a href="#d-vippage">VIP Club page</a>
   <a href="#d-about">About Us page</a>
+  <a href="#d-vippage">VIP Club page</a>
   <h4>CMS</h4>
   <a href="#cms-intro">How content is edited</a>
   <a href="#cms-maps">Editable fields</a>
@@ -2783,53 +2783,55 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
   <div class="note warn"><strong>Design notes.</strong> The programme is <strong>invitation only</strong>, so "Join the VIP Club Now" promises something players can't do. Show <b>"Check My VIP Status"</b> to logged-in players (opens their tier and progress) and <b>"Log In to See Your Status"</b> to logged-out players; VIP members see <b>"Contact My VIP Manager"</b>. The design's footer is a simple wordmark: use the site footer.</div>
   <div class="note"><strong>Mobile.</strong> Hero art moves above the title at 80% width; perks bar becomes a 2 × 2 grid; tier cards stack (Full Moon last), or swipe one at a time with dots; the main button is full width; accordions keep the same layout with 16px padding and start closed except the first.</div>
 </article>
+
 <article class="dt" id="d-about">
   <div class="dt-head"><span class="eyebrow">Custom landing</span><h3>About Us page</h3></div>
-  <p>The About Us page at <code>/about</code> is a <strong>special landing page</strong>. It is not built with the standard page blocks that the content team uses for other pages. <strong>We ask the development team to build it as its own template</strong>, to this design. Once it is live, the content team edits all of its text, images, reviews and buttons through the CMS.</p>
+  <p>The About Us page at <code>/about</code> is a <strong>special landing page</strong>. It is not built with the standard page blocks that the content team uses for other pages. <strong>We ask the development team to build it as its own template</strong>, to this design. Once it is live, the content team edits all of its text, images, games, reviews and buttons through the CMS.</p>
   <div class="dt-pair ab-top">
-    <figure class="ref" style="margin:0;"><img src="img/about-page.webp" alt="About Us landing page: header with ticker, hero &quot;Welcome to Our World&quot;, category nav, What We Offer cards, Why Join Us, Players Reviews carousel, Join Today banner and About Our World" loading="lazy"><figcaption><b>Design</b>About Us landing page: header with ticker, hero &quot;Welcome to Our World&quot;, category nav, What We Offer cards, Why Join Us, Players Reviews carousel, Join Today banner and About Our World</figcaption></figure>
+    <figure class="ref" style="margin:0;"><img src="img/about-page.webp" alt="About Us landing page: header with ticker, hero Welcome to Our World with welcome offer box, category nav, Top 5 Slots, Why Join Us cards, A Trusted Social Casino for Game Lovers, Players Reviews carousel, Join Today banner and Play with Us SEO block with Read More" loading="lazy"><figcaption><b>Final design</b>About Us landing page: header with ticker, hero Welcome to Our World with welcome offer box, category nav, Top 5 Slots, Why Join Us cards, A Trusted Social Casino for Game Lovers, Players Reviews carousel, Join Today banner and Play with Us SEO block with Read More</figcaption></figure>
     <div>
       <div class="dt-box" style="margin-bottom:12px"><h4>Page order</h4><ol>
         <li>Top bar + news ticker (site shell)</li>
-        <li>Hero: eyebrow "About Us", 2-line title with gradient word, subtitle, CTA, feature row, slot-machine art</li>
+        <li><b>Hero</b>: eyebrow "About Us", 2-line title with gradient line, subtitle, welcome offer box, Play Now + Explore Games, slot-machine art</li>
         <li>Category nav (site shell)</li>
-        <li><b>What We Offer</b>: 4 cards (icon art, title, text, button)</li>
-        <li><b>Why Join Us</b>: 4 small feature tiles (line icon, title, text)</li>
-        <li><b>Players Reviews</b>: carousel of 3 visible review cards + one CTA</li>
+        <li><b>Top 5 Slots</b>: title, intro, 5 game tiles with Play Now</li>
+        <li><b>Why Join Us</b>: 4 cards (3D art, title, text, button)</li>
+        <li><b>A Trusted Social Casino for Game Lovers</b>: title (2 gradient phrases) + paragraph</li>
+        <li><b>Players Reviews</b>: carousel of 3 visible review cards + Start Playing Now</li>
         <li><b>Join Today</b> banner: title, text, button, treasure-chest art</li>
-        <li><b>About Our World</b>: title + rich text, dice / chips art</li>
+        <li><b>SEO block</b>: "# Play with Us…" title, 2 lines, Read More bar (expands)</li>
         <li>Footer (site shell)</li></ol></div>
       <div class="dt-box"><h4>Alignment</h4><table class="dt-al">
-        <tr><td>Hero text + CTA</td><td><span class="al al-l">Left</span></td></tr><tr><td>Hero art</td><td><span class="al al-r">Right</span></td></tr>
-        <tr><td>Section titles + intro</td><td><span class="al al-l">Left</span></td></tr><tr><td>Offer card content</td><td><span class="al al-c">Centred</span></td></tr>
-        <tr><td>Why Join tiles: icon + text</td><td><span class="al al-l">Left</span></td></tr><tr><td>Review text, name</td><td><span class="al al-l">Left</span></td></tr>
-        <tr><td>"Start Playing Now"</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Join banner text</td><td><span class="al al-l">Left</span></td></tr></table></div>
+        <tr><td>Hero text, offer box</td><td><span class="al al-l">Left</span></td></tr><tr><td>Hero art</td><td><span class="al al-r">Right</span></td></tr>
+        <tr><td>Hero buttons (under the art)</td><td><span class="al al-r">Right</span></td></tr>
+        <tr><td>Section titles + intro</td><td><span class="al al-l">Left</span></td></tr><tr><td>Game tile button, card content</td><td><span class="al al-c">Centred</span></td></tr>
+        <tr><td>Trusted text block</td><td><span class="al al-l">Left</span></td></tr><tr><td>Review text, name</td><td><span class="al al-l">Left</span></td></tr>
+        <tr><td>"Start Playing Now"</td><td><span class="al al-c">Centred</span></td></tr><tr><td>Join banner, SEO block</td><td><span class="al al-l">Left</span></td></tr></table></div>
     </div>
   </div>
   <div class="dt-grid">
-    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">7 + arrows</div><ul><li>Explore Our Story (hero, cyan)</li><li>Play Games (cyan), Learn More (violet), Our Security (cyan), Get Help (violet) on the offer cards</li><li>Start Playing Now (cyan, centred)</li><li>Sign Up &amp; Play Now (cyan, banner)</li><li>Review carousel ❮ ❯ arrows</li></ul></div>
-    <div class="dt-box"><h4>Type</h4><ul><li>Hero title: Display, Poppins 800, white + cyan→violet gradient line</li><li>Section titles: S1, Poppins 700 28px, violet gradient</li><li>Card titles: Body L bold; card text Body S muted</li><li>Review quote: Body S; name Body S bold; "Verified Player" Body XS + green check</li></ul></div>
-    <div class="dt-box"><h4>Cards</h4><ul><li>Offer cards: 16px radius, 1px <code>#2A2F6B</code> border, violet glow on hover</li><li>Review cards: 2px magenta→violet border, 14px radius, 5 gold stars</li><li>Why tiles: 1px border, 12px radius, 24px line icon in violet</li></ul></div>
+    <div class="dt-box"><h4>Buttons</h4><div class="dt-count">13 + arrows</div><ul><li>Hero: Play Now (cyan) + Explore Games (ghost, play icon)</li><li>Top 5 Slots: Play Now on each tile, gift icon, alternating cyan / violet</li><li>Why Join Us: Play Games (cyan), Learn More (violet), Our Security (cyan), Get Help (violet)</li><li>Start Playing Now (cyan, centred) · Sign Up &amp; Play Now (cyan, banner)</li><li>Read More bar (expands the SEO text) · review ❮ ❯ arrows</li></ul></div>
+    <div class="dt-box"><h4>Type</h4><ul><li>Hero title: Display, Poppins 800, white + cyan→violet gradient line</li><li>Section titles: S1, Poppins 700 28px, violet gradient; Trusted title with magenta and violet phrases</li><li>Offer box: kicker cyan 600, offer Poppins 800 24px, note Body S</li><li>Trusted paragraph: Body L; card text Body S muted</li><li>SEO title: S1 with cyan and magenta phrases; text Body S</li></ul></div>
+    <div class="dt-box"><h4>Cards</h4><ul><li>Welcome offer box: 2px magenta→violet border, 16px radius, 3D gift icon left</li><li>Game tiles: ≈ 1 : 1, 14px radius, art fills the tile, game logo in the art, button 16px from the bottom</li><li>Why cards: 16px radius, 1px <code>#2A2F6B</code> border, violet glow on hover</li><li>Review cards: 2px magenta→violet border, 14px radius, 5 gold stars</li><li>SEO block: 1px violet border, 16px radius; Read More bar full width with chevron</li></ul></div>
   </div>
 
   <h3>Sections</h3>
-  <figure class="ref" style="margin:0;"><img src="img/about-hero.webp" alt="About hero: About Us eyebrow, Welcome to Our World, subtitle, Explore Our Story button, feature row Slots / Live Casino / Big Wins / Instant Play, Play Now and Explore Games buttons, neon 777 slot machine with coins" loading="lazy"><figcaption><b>Hero</b>About hero: About Us eyebrow, Welcome to Our World, subtitle, Explore Our Story button, feature row Slots / Live Casino / Big Wins / Instant Play, Play Now and Explore Games buttons, neon 777 slot machine with coins</figcaption></figure>
-  <div class="dt-pair">
-    <figure class="ref" style="margin:0;"><img src="img/about-offer.webp" alt="What We Offer: four cards, Thousands of Games, VIP Rewards, Safe and Secure, 24/7 Support, each with art, text and a button" loading="lazy"><figcaption><b>What We Offer</b>What We Offer: four cards, Thousands of Games, VIP Rewards, Safe and Secure, 24/7 Support, each with art, text and a button</figcaption></figure>
-    <figure class="ref" style="margin:0;"><img src="img/about-why.webp" alt="Why Join Us: four tiles, Big Bonuses, Constant New Games, Instant Play, A Thriving Community" loading="lazy"><figcaption><b>Why Join Us</b>Why Join Us: four tiles, Big Bonuses, Constant New Games, Instant Play, A Thriving Community</figcaption></figure>
-  </div>
+  <figure class="ref" style="margin:0;"><img src="img/about-hero.webp" alt="About hero: About Us eyebrow, Welcome to Our World, subtitle, Welcome Offer box with 150% Extra Coins on your welcome deal, Play Now and Explore Games buttons, neon 777 slot machine with coins" loading="lazy"><figcaption><b>Hero</b>About hero: About Us eyebrow, Welcome to Our World, subtitle, Welcome Offer box with 150% Extra Coins on your welcome deal, Play Now and Explore Games buttons, neon 777 slot machine with coins</figcaption></figure>
+  <figure class="ref" style="margin:0;"><img src="img/about-slots.webp" alt="Top 5 Slots: five game tiles, each with the game art and a Play Now button" loading="lazy"><figcaption><b>Top 5 Slots</b>Top 5 Slots: five game tiles, each with the game art and a Play Now button</figcaption></figure>
+  <figure class="ref" style="margin:0;"><img src="img/about-why.webp" alt="Why Join Us: four cards, Thousands of Games, VIP Rewards, Safe and Secure, 24/7 Support, each with 3D art, text and a button" loading="lazy"><figcaption><b>Why Join Us</b>Why Join Us: four cards, Thousands of Games, VIP Rewards, Safe and Secure, 24/7 Support, each with 3D art, text and a button</figcaption></figure>
+  <figure class="ref" style="margin:0;"><img src="img/about-trust.webp" alt="A Trusted Social Casino for Game Lovers title and paragraph" loading="lazy"><figcaption><b>Trusted text block</b>A Trusted Social Casino for Game Lovers title and paragraph</figcaption></figure>
   <div class="dt-pair">
     <figure class="ref" style="margin:0;"><img src="img/about-reviews.webp" alt="Players Reviews: three five-star review cards with Verified Player, carousel arrows and Start Playing Now button" loading="lazy"><figcaption><b>Players Reviews</b>Players Reviews: three five-star review cards with Verified Player, carousel arrows and Start Playing Now button</figcaption></figure>
     <figure class="ref" style="margin:0;"><img src="img/about-join.webp" alt="Join Today and Get Exclusive Welcome Rewards banner with Sign Up and Play Now button and treasure chest art" loading="lazy"><figcaption><b>Join banner</b>Join Today and Get Exclusive Welcome Rewards banner with Sign Up and Play Now button and treasure chest art</figcaption></figure>
   </div>
-  <figure class="ref" style="margin:0;max-width:820px"><img src="img/about-world.webp" alt="About Our World: title, paragraph and neon dice and casino chip art" loading="lazy"><figcaption><b>About Our World</b>About Our World: title, paragraph and neon dice and casino chip art</figcaption></figure>
+  <figure class="ref" style="margin:0;"><img src="img/about-seo.webp" alt="SEO block: Play with Us, Get Free Coins and Play Free Games in the USA, two lines of text and a Read More bar" loading="lazy"><figcaption><b>SEO block</b>SEO block: Play with Us, Get Free Coins and Play Free Games in the USA, two lines of text and a Read More bar</figcaption></figure>
 
   <h3>Managed in the CMS</h3>
-  <p>The layout is fixed in the template; every text, image and link below is a CMS field.</p>
-  <div class="tbl"><table><tr><th>CMS block</th><th>Fields</th><th>Limits</th></tr><tr><td class=k>Hero</td><td>Eyebrow, title line 1, title line 2 (gradient), subtitle, button label + link, feature row (up to 4: icon + label), art desktop / mobile</td><td>Title ≤ 22 chars per line; subtitle ≤ 90</td></tr><tr><td class=k>What We Offer</td><td>Section title, intro; 4 cards: art (square PNG, transparent), title, text, button label, link, button style (cyan or violet)</td><td>Card text ≤ 80 chars</td></tr><tr><td class=k>Why Join Us</td><td>Section title, intro; 4 tiles: Lucide icon, title, text</td><td>Tile text ≤ 50 chars</td></tr><tr><td class=k>Players Reviews</td><td>Section title, intro; reviews collection: stars (1–5), quote, first name + initial, "Verified Player" on/off, order; CTA label + link</td><td>Quote ≤ 120 chars; 3 visible, up to 12</td></tr><tr><td class=k>Join banner</td><td>Title, highlight words, text, button label + link, art desktop / tablet / mobile (same rules as the VIP image banner)</td><td>Text ≤ 90 chars</td></tr><tr><td class=k>About Our World</td><td>Title, rich text (paragraphs, links, bold), art</td><td>≤ 600 chars</td></tr><tr><td class=k>SEO</td><td>Meta title, meta description, share image</td><td>—</td></tr></table></div>
-  <div class="dt-style"><h4>Image style</h4><p>Same 3D neon look as the homepage: deep navy background, cyan and violet light trails, glossy gold coins, diamonds and casino objects (slot reels, treasure chest, dice, chips). No people, no real logos. Offer card icons are 3D objects on a transparent background, about 140 × 110px.</p></div>
-  <div class="note warn"><strong>Design notes.</strong> The hero has two CTA groups (Explore Our Story, and Play Now + Explore Games beside the feature row). Keep one: Explore Our Story as the primary, with Play Now as an optional second button. Reviews must be real player reviews, with permission.</div>
-  <div class="note"><strong>Mobile.</strong> Hero art moves above the text and shrinks to 70% width; offer cards stack 1 per row (2 per row on tablet); Why tiles 2 × 2 then 1 per row below 480px; reviews become a swipe carousel with one card visible and dots; the Join banner uses its square mobile image with the text below.</div>
+  <p>The layout is fixed in the template; every text, image, game and link below is a CMS field.</p>
+  <div class="tbl"><table><tr><th>CMS block</th><th>Fields</th><th>Limits</th></tr><tr><td class=k>Hero</td><td>Eyebrow, title line 1, title line 2 (gradient), subtitle, 2 buttons (label, link, style), art desktop / mobile</td><td>Title ≤ 22 chars per line; subtitle ≤ 90</td></tr><tr><td class=k>Welcome offer box</td><td>Kicker, offer line, small note, icon, link (whole box clickable), show / hide</td><td>Offer line ≤ 24 chars</td></tr><tr><td class=k>Top 5 Slots</td><td>Title (highlight word), intro; 5 games picked from the game library (art and link come from the game), button label</td><td>Exactly 5 games</td></tr><tr><td class=k>Why Join Us</td><td>Title, intro; 4 cards: art (transparent PNG), title, text, button label, link, style (cyan or violet)</td><td>Card text ≤ 80 chars</td></tr><tr><td class=k>Trusted text block</td><td>Title with up to 2 highlighted phrases, paragraph (rich text)</td><td>≤ 400 chars</td></tr><tr><td class=k>Players Reviews</td><td>Title, intro; reviews collection: stars (1–5), quote, first name + initial, "Verified Player" on/off, order; CTA label + link</td><td>Quote ≤ 120 chars; 3 visible, up to 12</td></tr><tr><td class=k>Join banner</td><td>Title, highlight words, text, button label + link, art desktop / tablet / mobile (same rules as the VIP image banner)</td><td>Text ≤ 90 chars</td></tr><tr><td class=k>SEO block</td><td>Title with highlights, teaser (2 lines), full content (rich text), FAQs — see <a href="#seo-every-page">FAQs + SEO on every page</a></td><td>Teaser ≤ 220 chars</td></tr><tr><td class=k>SEO</td><td>Meta title, meta description, share image</td><td>—</td></tr></table></div>
+  <div class="dt-style"><h4>Image style</h4><p>Same 3D neon look as the homepage: deep navy background, cyan and violet light trails, glossy gold coins, diamonds and casino objects (slot reels, treasure chest, chips). No people, no real logos. Why Join Us art is 3D objects on a transparent background, about 140 × 110px. Game tiles use each game's official art.</p></div>
+  <div class="note warn"><strong>Design notes.</strong> The text in the design is placeholder: several words are misspelt (for example "Thousands of Comes", "fu n", "varrity") and the review quotes are garbled. Use real copy from the CMS. Reviews must be real player reviews, with permission. The Top 5 Slots tiles show game names as part of the art; use the real game tiles from the game library.</div>
+  <div class="note"><strong>Mobile.</strong> Hero art moves above the text at 70% width, the offer box and both buttons go full width under the text; Top 5 Slots becomes a swipe row (2.3 tiles visible); Why cards stack 1 per row (2 per row on tablet); reviews become a swipe carousel with one card visible and dots; the Join banner uses its square mobile image with the text below; the SEO block keeps the Read More bar.</div>
 </article>
 
 </section>
