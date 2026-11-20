@@ -64,7 +64,7 @@ section{padding-top:56px;margin-top:56px;border-top:1px solid var(--line-soft);s
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 .meta span{font:600 11.5px var(--f-body);border:1px solid #23506A;color:#9FEDE7;padding:4px 11px;border-radius:999px}
 .cover figure{margin:0}
-.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2628;margin:0 auto}
+.cover figure.ref img{width:100%;max-width:400px;height:auto;max-height:none;aspect-ratio:707/2640;margin:0 auto}
 
 /* panels, figures, tables */
 .panel{background:var(--doc-panel);border:1px solid var(--line-soft);border-radius:14px;padding:20px;margin:18px 0}
@@ -265,6 +265,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <div class="brand">FULL MOON PLAY<span>SWEEPSTAKES CASINO STYLE GUIDE</span></div>
   <h4>Start</h4>
   <a href="#overview">Overview</a>
+  <a href="#topbar">Header: logged out / in</a>
   <a href="#anatomy">Page anatomy</a>
   <h4>Foundations</h4>
   <a href="#color">Colour</a>
@@ -352,11 +353,65 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
     <div class="note"><strong>How to read the values.</strong> <span class="tag s">Sampled</span> means the colour was read from a pixel in the screenshot. <span class="tag m">Matched</span> means it was matched by eye, because glows, gradients and fonts can't be recovered exactly from a flat image. Sizes are measured from the screenshot and scaled to a 1440px canvas, so treat them as ±4px.</div>
   </div>
   <figure class="ref">
-    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2628">
+    <img src="img/homepage-full.webp" alt="Full final homepage of the neon sweepstakes casino, from header to footer" width="707" height="2640">
     <figcaption><b>Reference 1</b>Latest homepage. The master reference for layout, order and colour.</figcaption>
   </figure>
     <a class="figma-link" href="https://www.figma.com/design/IQVB9dyxGfH6y8QF14JI9H/Full-Moon-Play?node-id=4-2&amp;p=f" target="_blank" rel="noopener"><svg viewBox="0 0 38 57" aria-hidden="true"><path fill="#1ABCFE" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0ACF83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#FF7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#F24E1E" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#A259FF" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></svg><span><b>Open in Figma</b><small>Full Moon Play design file ↗</small></span></a>
 </header>
+
+<section id="topbar">
+  <span class="eyebrow">Header</span>
+  <h2>Header: logged out and logged in</h2>
+  <p>The header changes once a player signs in. Both versions keep the notice line on top and the menu and logo on the left; only the right-hand group changes. All buttons use the styles in <a href="#buttons">Buttons</a>.</p>
+  <div class="tb-stage">
+    <div class="md-lbl">Logged out · desktop</div><div class="tb-bar" id="out"><div class="tb-util"><span>Welcome to our <b>CASINO</b> … 18+ Notice here</span><i></i><span class="tb-lang"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>English <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></div><div class="tb-row"><div class="tb-left"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg><b class="tb-logo">FULL MOON PLAY</b></div><div class="tb-grp"><span class="tb-srch"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span><span class="tb-login">Login</span><span class="tb-reg">Register</span></div></div></div>
+    <div class="md-lbl">Logged in · desktop</div><div class="tb-bar" id="in"><div class="tb-util"><span>Welcome to our <b>CASINO</b> … 18+ Notice here</span><i></i><span class="tb-lang"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></svg>English <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span></div><div class="tb-row"><div class="tb-left"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg><b class="tb-logo">FULL MOON PLAY</b></div><div class="tb-grp"><span class="tb-srch"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span><span class="tb-bal"><span class="tb-coin">GC</span><span><small>Gold Coins</small><b>250,000</b></span><i class="tb-sep"></i><span class="tb-coin tb-sc">SC</span><span><small>Sweeps Coins</small><b>25.00</b></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6" /></svg></span><span class="tb-dep"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg>Deposit</span><span class="tb-ib"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></svg><em>3</em></span><span class="tb-ib tb-v"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1" /><path d="M12 8v13" /><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" /><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5" /></svg></span><span class="tb-ib tb-v"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg></span></div></div></div>
+    <div class="md-lbl">Mobile · logged out / logged in</div><div class="tb-mobs"><div class="tb-m" id="mout"><div class="tb-row"><div class="tb-left"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg><b class="tb-logo">FULL MOON PLAY</b></div><div class="tb-grp tb-m-g"><span class="tb-srch"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span><span class="tb-login">Login</span><span class="tb-reg">Register</span></div></div></div><div class="tb-m" id="min"><div class="tb-row"><div class="tb-left"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg><b class="tb-logo">FULL MOON PLAY</b></div><div class="tb-grp tb-m-g"><span class="tb-srch"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span><span class="tb-bal tb-sm"><span class="tb-coin tb-sc">SC</span><b>25.00</b></span><span class="tb-dep tb-sq"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="M12 5v14" /></svg></span></div></div></div></div>
+  </div>
+  <div class="tbl"><table><tr><th>Part</th><th>Logged out</th><th>Logged in</th></tr>
+   <tr><td class="k">Notice line</td><td colspan="2">Above the header on every page: short welcome / legal notice (e.g. "Welcome to our <b style="color:#22C55E">CASINO</b> … 18+ Notice here") in Body XS muted, a thin divider, then the language picker (globe icon + "English" + ▾). Text is editable in the CMS; keep it to one line. Hidden on phones (language moves into the menu).</td></tr>
+   <tr><td class="k">Left</td><td colspan="2">☰ menu button · FULL MOON PLAY logo</td></tr>
+   <tr><td class="k">Search</td><td colspan="2">Magenta gradient pill (AI search button style), 56 × 44. Opens search.</td></tr>
+   <tr><td class="k">Account</td><td><strong>Login</strong> (outline, cyan→violet border) + <strong>Register</strong> (cyan, primary)</td><td><strong>Balance</strong> (wallet style: Gold Coins + Sweeps Coins, ▾ opens the wallet) + <strong>Deposit</strong> (cyan, "+")</td></tr>
+   <tr><td class="k">Icon buttons</td><td>—</td><td>3 square buttons (carousel-arrow style, 44 × 44): <strong>Notifications</strong> (with a magenta unread count), <strong>Gift</strong> (rewards / daily bonus), <strong>User</strong> (profile menu)</td></tr>
+   <tr><td class="k">Mobile</td><td>Search · Login · Register</td><td>Search · Sweeps Coins balance · "+" Deposit. Notifications, gift and profile move to the bottom menu and ☰ menu.</td></tr>
+  </table></div>
+  <style>.tb-bar{width:100%;padding:10px 26px 14px;background:#050B1E;border-bottom:1px solid #141E38;border-radius:10px}
+.tb-util{display:flex;align-items:center;gap:16px;font:400 12.5px Poppins;color:#8C95AB;padding-bottom:6px}
+.tb-util b{color:#22C55E;font-weight:600}.tb-util i{width:1px;height:14px;background:#3A4560}
+.tb-lang{display:inline-flex;align-items:center;gap:6px;color:#fff}
+.tb-row{display:flex;align-items:center;justify-content:space-between}
+.tb-left{display:flex;align-items:center;gap:22px}.tb-logo{font:800 26px Poppins;letter-spacing:.01em}
+.tb-grp{display:flex;align-items:center;gap:12px}
+.tb-srch{width:56px;height:44px;display:grid;place-items:center;border-radius:999px;background:linear-gradient(135deg,#B01CE8,#E21FD0);box-shadow:0 0 16px rgba(199,9,235,.6)}
+.tb-login{display:inline-flex;align-items:center;height:44px;padding:0 24px;border:1.5px solid transparent;border-radius:8px;background:linear-gradient(#0B1230,#0B1230) padding-box,linear-gradient(90deg,#04F5E5,#B44DFF) border-box;box-shadow:0 0 12px rgba(143,92,255,.35);font:600 15px Poppins}
+.tb-reg{display:inline-flex;align-items:center;height:44px;padding:0 24px;border-radius:8px;background:linear-gradient(100deg,#00D9C9,#18FFE0);color:#00151C;font:600 15px Poppins;box-shadow:0 0 16px rgba(4,245,229,.4)}
+.tb-bal{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 14px;border:1px solid #233650;border-radius:12px;background:#061326}
+.tb-bal small{display:block;font:500 10.5px Poppins;color:#A8B4C7;line-height:1.1}.tb-bal b{font:700 16px Inter,sans-serif;font-variant-numeric:tabular-nums}
+.tb-bal .tb-sep{width:1px;height:26px;background:#233650}
+.tb-coin{width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE58A,#F5B82E 60%,#B9770E);color:#5A3300;font:800 9.5px Inter}
+.tb-coin.tb-sc{background:radial-gradient(circle at 35% 30%,#7FFFF2,#04BFB2 60%,#037A72);color:#00302C}
+.tb-dep{display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 24px;border-radius:8px;background:linear-gradient(100deg,#00D9C9,#18FFE0);color:#00151C;font:600 15px Poppins;box-shadow:0 0 16px rgba(4,245,229,.4)}
+.tb-ib{position:relative;width:44px;height:44px;display:grid;place-items:center;border:1.5px solid #10E8F1;border-radius:10px;background:linear-gradient(125deg,#07162C,#1B2350)}
+.tb-ib:nth-of-type(n){}
+.tb-ib.tb-v{border-color:#BD48F5}
+.tb-ib em{position:absolute;top:-7px;right:-7px;min-width:18px;height:18px;padding:0 4px;border-radius:6px;background:#F032F4;font:800 10.5px Inter;font-style:normal;display:grid;place-items:center;box-shadow:0 0 8px rgba(240,50,244,.7)}
+.tb-m{width:390px;padding:12px 14px;background:#050B1E;border-radius:10px}
+.tb-m .tb-left{gap:10px}.tb-m .tb-logo{font-size:15px}.tb-m .tb-left svg{width:22px;height:22px}
+.tb-m-g{gap:6px;padding:0;border:0;background:none}
+.tb-m .tb-srch{width:40px;height:34px}.tb-m .tb-srch svg{width:16px}
+.tb-m .tb-login{height:34px;padding:0 11px;font-size:12.5px}.tb-m .tb-reg{height:34px;padding:0 11px;font-size:12.5px}
+.tb-bal.tb-sm{height:34px;padding:0 10px;gap:6px}.tb-bal.tb-sm b{font-size:13px}.tb-bal.tb-sm .tb-coin{width:20px;height:20px;font-size:7.5px}
+.tb-dep.tb-sq{height:34px;width:34px;padding:0;justify-content:center}
+.tb-mobs{display:flex;gap:24px}
+.tb-stage{display:grid;gap:12px;margin:16px 0;padding:18px;border:1px solid var(--line-soft);border-radius:14px;background:var(--bg);overflow-x:auto}
+.tb-stage .tb-bar{width:1290px;zoom:.76}
+@media(max-width:1300px){.tb-stage .tb-bar{zoom:.62}}
+@media(max-width:900px){.tb-stage .tb-bar{zoom:.5}}
+.tb-mobs{display:flex;flex-wrap:wrap;gap:16px}
+.tb-m{max-width:100%}</style>
+</section>
+
 
 
 
@@ -1249,9 +1304,9 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
 <section id="s-header">
   <span class="eyebrow">Section · site chrome</span>
   <h2>Header &amp; news ticker</h2>
-  <figure class="ref"><img src="img/header-ticker.webp" alt="Header with menu icon, FULL MOON PLAY logo, $100.00 wallet and cyan Deposit button, above a rounded news ticker" loading="lazy"><figcaption><b>Homepage</b>Header and ticker.</figcaption></figure>
+  <figure class="ref"><img src="img/header-ticker.webp" alt="Notice line, logged-in header with search, balance, Deposit and three icon buttons, above the news ticker" loading="lazy"><figcaption><b>Homepage</b>Notice line, header (logged in) and news ticker.</figcaption></figure>
   <div class="grid2">
-    <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the <strong>FULL MOON PLAY</strong> wordmark (white, Poppins 700, uppercase, ≈ 30px, faint cyan glow). Right: the wallet pill (coin icon, balance, chevron; 1px <code>#233650</code>, 12px radius, <code>#061326</code> fill) and the Deposit button. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
+    <div><h3>Header · 72px</h3><p>Left: a 24px menu icon, then the <strong>FULL MOON PLAY</strong> wordmark (white, Poppins 700, uppercase, ≈ 30px, faint cyan glow). Right: search, the balance (Gold Coins + Sweeps Coins), Deposit, then the notifications, gift and user buttons when logged in; search, Login and Register when logged out. See <a href="#topbar">Header: logged out and logged in</a>. A one-line notice bar with the language picker sits above the header. Transparent background over <code>#000816</code>, with no bottom border.</p></div>
     <div><h3>News ticker · 46px</h3><p>A full-width pill with a 1.5px cyan-to-violet border. "NEWS:" in cyan Poppins 700 with a megaphone icon, then items separated by small gold dots <code>#F4CC1D</code>. Items are plain white Body S (Poppins 14px / 500) with no icons. A » control on the right. Scroll the text slowly, pause it on hover and focus, and stop it for reduced motion.</p></div>
   </div>
 </section>
