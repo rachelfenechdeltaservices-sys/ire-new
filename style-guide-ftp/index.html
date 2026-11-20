@@ -316,6 +316,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#d-offer">Offer Detail page</a>
   <a href="#gen-art">Generated content art</a>
   <a href="#d-guidespage">Guides page</a>
+  <a href="#guide-article">Guide article page</a>
   <a href="#d-providers-page">Game Providers pages</a>
   <a href="#d-help">Help &amp; FAQs page</a>
   <h4>CMS</h4>
@@ -2545,6 +2546,24 @@ No text except the game logo. No buttons, prices, RTP numbers, borders or waterm
  <tr><td class="k">Video card</td><td>5 across, ≈ 1.1 : 1. Title over the art, bottom left, Body L 600. 44px round play button bottom right. Optional LIVE badge top right.</td></tr>
  </table></div>
 <div class="note">Article thumbnails and guide headers can also use the <a href="#gen-art">generated content art</a> style shown under Promotions, cropped to 2.1 : 1.</div>
+<div class="gen-art" id="guide-article" style="border-color:#23506A;background:#06121F">
+  <h4>Guide article page (after clicking a guide)</h4>
+  <p>Clicking any guide card opens its article page at <code>/guides/[guide-name]</code>. Every guide uses the same template; only the content changes. Two examples:</p>
+  <div class="dt-pair">
+    <figure class="ref" style="margin:0"><img src="img/guide-roulette.webp" alt="How to Play Roulette guide: banner with roulette wheel, What Is Roulette, 3 numbered steps, Popular Bet Types, Tips for Success, Table of Contents and Ready to Play panel, two buttons" loading="lazy"><figcaption><b>Example 1 · How-to guide</b>How to Play Roulette guide: banner with roulette wheel, What Is Roulette, 3 numbered steps, Popular Bet Types, Tips for Success, Table of Contents and Ready to Play panel, two buttons</figcaption></figure>
+    <figure class="ref" style="margin:0"><img src="img/guide-volatility.webp" alt="High Volatility Slots to Try guide: banner with 777 slot, explanation, In short call-out, Why Play checklist, 4 game tiles, Tips for Playing, two buttons" loading="lazy"><figcaption><b>Example 2 · List guide</b>High Volatility Slots to Try guide: banner with 777 slot, explanation, In short call-out, Why Play checklist, 4 game tiles, Tips for Playing, two buttons</figcaption></figure>
+  </div>
+  <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr>
+   <tr><td class="k">Breadcrumb</td><td>Home › Guides › [Guide title]</td></tr>
+   <tr><td class="k">Guide banner</td><td>Full width, ≈ 4.5 : 1, 2px neon-edge border, 20px radius. <strong>GUIDE</strong> tag (book icon, outline pill), title in 2 lines (white + violet gradient on the second word/line), one-line intro, themed 3D art on the right.</td></tr>
+   <tr><td class="k">Body</td><td>H2 headings (Poppins 700, 28px) with Body M text. Supported blocks: numbered steps (bordered cards with a pink number circle), bullet lists (cyan dots), checklists (cyan ticks), "In short" call-out (info icon, cyan border), and a row of game tiles.</td></tr>
+   <tr><td class="k">Sidebar (optional)</td><td>Right column: <strong>Table of Contents</strong> (auto-built from the H2s, current section highlighted in cyan as you scroll) and a <strong>Ready to Play?</strong> card with art and one cyan button. Without a sidebar the article runs full width (Example 2).</td></tr>
+   <tr><td class="k">End buttons</td><td>Two centred buttons: primary <strong>Play … Now →</strong> (cyan) and secondary <strong>Explore … →</strong> (outline). A decorative neon wave closes the page.</td></tr>
+   <tr><td class="k">Alignment</td><td>Title, headings and text <span class="al al-l">Left</span>; end buttons <span class="al al-c">Centred</span></td></tr>
+   <tr><td class="k">CMS</td><td>Each guide is a CMS entry: title, intro, category, banner art, body built from the blocks above, sidebar on/off, linked games, button labels and links. Related guides and the Guides listing update automatically.</td></tr>
+  </table></div>
+  <div class="note warn">Example 2 says "Bigger win potential" and "high-stakes"; have legal check this wording for a sweepstakes site, and add a responsible-play line on strategy guides.</div>
+</div>
 </article>
 <article class="dt" id="d-providers-page">
   <div class="dt-head"><span class="eyebrow">Subpage</span><h3>Game Providers: listing and provider page</h3></div>
