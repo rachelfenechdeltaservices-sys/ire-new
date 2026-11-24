@@ -341,7 +341,7 @@ function cms_github_problem(): string
     $repo = cms_repo();
     $branch = cms_branch();
     $fix = "Open cms-config.php and check the 'repo' line. It should be exactly: 'repo' => 'owner/repository-name', "
-         . "e.g. 'rachelfenechdeltaservices-sys/ire-new' (no https://, no .git).";
+         . "e.g. 'infoyasska-design/irenew' (no https://, no .git).";
     if (!preg_match('#^[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+$#', $repo)) {
         return "The repository \"$repo\" in cms-config.php is not in the form owner/repository-name. $fix";
     }
@@ -366,7 +366,7 @@ function cms_github_problem(): string
     $b = cms_github_get('/repos/' . $repo . '/branches/' . rawurlencode($branch), $token);
     if ($b !== null && $b[0] === 404) {
         return "The branch \"$branch\" doesn't exist in \"$repo\". Check the 'branch' line in cms-config.php "
-             . "(currently the website uses 'adding-cms').";
+             . "(for example 'main').";
     }
     $root = cms_root_dir();
     $contentPath = ($root !== '' ? $root . '/' : '') . 'content/settings.json';

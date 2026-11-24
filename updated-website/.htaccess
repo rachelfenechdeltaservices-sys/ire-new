@@ -13,6 +13,20 @@ ErrorDocument 404 /404.html
     </IfModule>
 </FilesMatch>
 
+# Repository files that are not part of the public website (the same folder is used for GitHub and public_html)
+<IfModule mod_alias.c>
+    RedirectMatch 404 ^/(\.git|\.github|_cms|content|cms-private)(/|$)
+</IfModule>
+<FilesMatch "^(\.gitignore|\.gitattributes|CMS-SETUP\.md|CMS-LOGIN-GUIDE\.html|UPDATE-STEPS\.txt|README\.md)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
 # Offer short links (/link1, /link2, ...). Add hand-written redirects here, outside the CMS block.
 <IfModule mod_rewrite.c>
 RewriteEngine On
