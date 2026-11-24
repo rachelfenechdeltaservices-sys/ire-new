@@ -76,5 +76,7 @@ jobs:
             **/__pycache__/**
             content/**
             _cms/**
+            cms-config.php
             admin/cms-config.php
+            cms-private/**
             admin/.cms-login-attempts.json

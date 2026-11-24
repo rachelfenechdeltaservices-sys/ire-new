@@ -10,8 +10,8 @@
  *        /home/<your-cpanel-user>/cms-private/cms-config.php      <- here
  *        /home/<your-cpanel-user>/public_html/                     <- the website (index.html, admin/ …)
  *
- *     (If your host doesn't allow that, put it in public_html/admin/cms-config.php instead –
- *      the admin/.htaccess file blocks it from being downloaded.)
+ *     (It also works directly in public_html/cms-config.php – the website's .htaccess file
+ *      blocks it from being opened or downloaded.)
  *
  *  3. Fill in the values below and save.
  *

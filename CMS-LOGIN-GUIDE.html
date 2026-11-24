@@ -188,8 +188,9 @@
     <li>Click <strong>+ Folder</strong> and create <code>cms-private</code>.</li>
     <li>Open it and <strong>Upload</strong> your edited <code>cms-config.php</code>.</li>
   </ol>
-  <div class="note"><strong>If your host doesn't allow folders outside public_html:</strong> upload the file to
-    <code>public_html/admin/cms-config.php</code> instead. The <code>admin/.htaccess</code> file blocks anyone from downloading it.</div>
+  <div class="note"><strong>Already put it in public_html?</strong> That works too: the CMS also finds
+    <code>public_html/cms-config.php</code> (or <code>public_html/admin/cms-config.php</code>). The website's <code>.htaccess</code> blocks
+    anyone from opening or downloading it there; make sure that <code>.htaccess</code> is the new one from the download.</div>
 </section>
 
 <section id="s6" class="step">
@@ -243,11 +244,11 @@
   <h2>If something doesn't work</h2>
   <table>
     <tr><th>You see…</th><th>Fix</th></tr>
-    <tr><td>An error box straight away on <code>/admin/</code></td><td><code>cms-config.php</code> wasn't found. Check its name and that it's in <code>cms-private/</code> next to <code>public_html</code> (step 5).</td></tr>
+    <tr><td>An error box straight away on <code>/admin/</code></td><td><code>cms-config.php</code> wasn't found. Check its name and that it's in <code>cms-private/</code> next to <code>public_html</code>, or directly in <code>public_html</code> (step 5).</td></tr>
     <tr><td>"The GitHub access token … has not been filled in yet"</td><td>Paste your token into <code>'token'</code> (step 3) and upload the file again.</td></tr>
     <tr><td>"No CMS users are set up"</td><td>Paste your login line into <code>'users'</code> (step 4).</td></tr>
     <tr><td>"Incorrect username or password"</td><td>Usernames ignore capital letters; passwords don't. Create a new line at make-password.php if unsure.</td></tr>
-    <tr><td>"Too many failed attempts"</td><td>Wait 15 minutes, or delete <code>.cms-login-attempts.json</code> in the <code>cms-private</code> folder.</td></tr>
+    <tr><td>"Too many failed attempts"</td><td>Wait 15 minutes (if <code>cms-config.php</code> is in <code>cms-private</code>, you can also delete <code>.cms-login-attempts.json</code> there).</td></tr>
     <tr><td>Signed in, then an error about access or "Bad credentials"</td><td>The token is wrong, expired, or doesn't have <em>Contents: Read and write</em> on <code>ire-new</code>. Make a new one (step 2).</td></tr>
     <tr><td>Saved, but the website didn't change</td><td>On GitHub open <strong>Actions</strong> and look at the latest <em>Build &amp; deploy website</em> run. Step 7 may be missing.</td></tr>
     <tr><td>The sign-in window doesn't open</td><td>Allow pop-ups for the site in your browser.</td></tr>

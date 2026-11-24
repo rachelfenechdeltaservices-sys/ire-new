@@ -8,7 +8,8 @@
  *   1. The path in the CMS_CONFIG_FILE environment variable (if your host lets you set one)
  *   2. <folder above the website root>/cms-private/cms-config.php      <- recommended
  *   3. <website root>/../cms-private/cms-config.php                     (same, found from this file)
- *   4. <website root>/admin/cms-config.php                              (fallback, blocked by .htaccess)
+ *   4. <website root>/cms-config.php, <website root>/cms-private/cms-config.php or
+ *      <website root>/admin/cms-config.php                             (blocked by .htaccess)
  */
 
 declare(strict_types=1);
@@ -29,7 +30,12 @@ function cms_config_candidates(): array
         $list[] = dirname(rtrim((string) $_SERVER['DOCUMENT_ROOT'], '/\\')) . '/cms-private/cms-config.php';
     }
     $list[] = dirname(__DIR__, 3) . '/cms-private/cms-config.php';
-    $list[] = dirname(__DIR__) . '/cms-config.php';
+    // Inside the website folder (public_html): blocked from download by .htaccess, and PHP
+    // files only ever return their settings to the CMS, they never print them.
+    $webRoot = dirname(__DIR__, 2);
+    $list[] = $webRoot . '/cms-config.php';                 // public_html/cms-config.php
+    $list[] = $webRoot . '/cms-private/cms-config.php';     // public_html/cms-private/cms-config.php
+    $list[] = dirname(__DIR__) . '/cms-config.php';         // public_html/admin/cms-config.php
     return array_values(array_unique($list));
 }
 
@@ -133,6 +139,12 @@ function cms_attempts_file(): string
 {
     $config = cms_config();
     $dir = $config && !empty($config['_path']) ? dirname($config['_path']) : sys_get_temp_dir();
+    // Never write the log inside the public website folder.
+    $webRoot = realpath(dirname(__DIR__, 2));
+    $realDir = realpath($dir);
+    if ($webRoot && $realDir && strpos($realDir . '/', $webRoot . '/') === 0) {
+        $dir = sys_get_temp_dir();
+    }
     if (!is_writable($dir)) {
         $dir = sys_get_temp_dir();
     }

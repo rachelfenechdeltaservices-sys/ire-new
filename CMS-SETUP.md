@@ -55,8 +55,9 @@ Signed in to GitHub **as the account that owns or can write to `rachelfenechdelt
    /home/<your-cpanel-user>/public_html/                  ← the website
    ```
 
-   If your host doesn't let you create folders outside `public_html`, put it at
-   `public_html/admin/cms-config.php` instead – `admin/.htaccess` blocks it from being downloaded.
+   It can also go directly in `public_html/cms-config.php` (or `public_html/admin/cms-config.php`):
+   the `.htaccess` files block it from being opened or downloaded, and the login-attempt log is then
+   kept in the server's temporary folder instead of the public folder.
 
 > **Never commit `cms-config.php` to GitHub or email it.** `.gitignore` already keeps it out of the repository.
 

@@ -8,7 +8,7 @@
   "intro": {
     "subtitle": "Who We Are",
     "heading": "Irish players deserve better information.",
-    "body": "{{site_name}} started from one simple belief. For years, gambling review sites have put affiliate commissions ahead of honesty — pushing the highest-paying brands to the top regardless of quality, and ignoring good operators simply because they pay less. We set out to build something different: a resource where every recommendation is earned, never bought.\n\nOur team brings together experienced gambling journalists, former sportsbook professionals and committed player advocates who, between them, have tested hundreds of platforms across Europe and beyond. Just as importantly, we're sportsbook players ourselves — so we know exactly what matters when you're the one placing the bet. Every sportsbook we cover is reviewed by a real person who signs up, deposits, plays, contacts support and requests a withdrawal.\n\nThat's the only honest way to understand what a platform is really like for the person on the other side of the screen. No shortcuts and no assumptions — just first-hand experience turned into practical advice.",
+    "body": "{{site_name}} started from one simple belief. For years, gambling review sites have let affiliate commissions shape their verdicts — praising the highest-paying brands regardless of quality, and ignoring good operators simply because they pay less. We set out to build something different: a resource where every rating is earned, never bought.\n\nOur team brings together experienced gambling journalists, former sportsbook professionals and committed player advocates who, between them, have tested hundreds of platforms across Europe and beyond. Just as importantly, we're sportsbook players ourselves — so we know exactly what matters when you're the one placing the bet. Every sportsbook we cover is reviewed by a real person who signs up, deposits, plays, contacts support and requests a withdrawal.\n\nThat's the only honest way to understand what a platform is really like for the person on the other side of the screen. No shortcuts and no assumptions — just first-hand experience turned into practical advice.",
     "stats": [
       {
         "value": "40+",
@@ -20,7 +20,7 @@
       },
       {
         "value": "0",
-        "label": "Paid placements in our scores"
+        "label": "Ratings paid for by operators"
       },
       {
         "value": "18+",
@@ -63,7 +63,7 @@
       {
         "icon": "balance-scale",
         "title": "Independence",
-        "text": "Commissions never decide a score or a ranking position."
+        "text": "Commissions never decide a score or a review verdict."
       },
       {
         "icon": "shield-check",

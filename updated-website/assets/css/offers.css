@@ -1019,3 +1019,15 @@
   .offer-licence { font-size: 11px; white-space: nowrap; }
   .offer-grid { grid-template-columns: 180px 1fr 120px; }
 }
+
+/*====== Top bar: keep badge, text and link on the same line(s) ======*/
+@media (min-width: 768px) {
+  .site-topbar .topbar-full { display: inline; }
+}
+
+/*====== Links inside intro paragraphs ======*/
+.text-box p a, .offers-intro p a, .t10ic-content-box p a, .criteria-box p a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -35,7 +35,7 @@
   "guide": {
     "subtitle": "Our 2026 Guide",
     "heading": "Honest rankings for Irish punters",
-    "body": "Choosing an online bookmaker in Ireland has never been simple. The market is packed with brands making big promises, inflated bonus claims and terms that hide the real conditions deep in the small print. That's the problem {{site_name}} was built to solve.\n\nWe're an independent editorial team of experienced gambling analysts and former industry insiders. We spend our time filtering out the noise so you only see platforms that are properly licensed, thoroughly tested and proven to pay out without hassle. Whether you're after value on Premier League prices, a flutter on the GAA or an each-way bet at Leopardstown, our rankings are built on real testing — never on paid placement.",
+    "body": "Choosing an online bookmaker in Ireland has never been simple. The market is packed with brands making big promises, inflated bonus claims and terms that hide the real conditions deep in the small print. That's the problem {{site_name}} was built to solve.\n\nWe're an independent editorial team of experienced gambling analysts and former industry insiders. We spend our time filtering out the noise so you only see platforms that are properly licensed, thoroughly tested and proven to pay out without hassle. Whether you're after value on Premier League prices, a flutter on the GAA or an each-way bet at Leopardstown, our ratings are built on real testing and are never paid for.",
     "button_label": "Read our gambling guide",
     "button_link": "gambling-guide.html",
     "stats": [
@@ -60,7 +60,7 @@
   "how_we_rate": {
     "subtitle": "How We Rate",
     "heading": "How we score Irish betting sites",
-    "intro": "Every operator goes through a detailed, multi-step review before it can appear in our rankings. Our specialists — with more than 40 years' combined experience — open real accounts, deposit real money, test withdrawals and question customer support. Nobody can pay to be listed, and commercial deals never change a score.",
+    "intro": "Every operator goes through a detailed, multi-step review before it can appear in our rankings. Our specialists — with more than 40 years' combined experience — open real accounts, deposit real money, test withdrawals and question customer support. Commercial relationships never change a score — see our [affiliate disclosure](affiliate-disclosure.html) for how we're funded.",
     "criteria": [
       {
         "icon": "shield-check",

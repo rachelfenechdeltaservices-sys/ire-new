@@ -8,7 +8,7 @@
   "updated": "November 2026",
   "year": "2026",
   "header": {
-    "topbar_full": "We only list operators licensed for Ireland. We may earn a commission from featured brands, which can affect where they appear. Not every provider is included.",
+    "topbar_full": "We only list operators licensed for Ireland. We may earn a commission from featured brands, which can affect which brands appear and in what order — but never our ratings or reviews. Not every provider is included.",
     "topbar_short": "Licensed Irish operators only. We may earn commission.",
     "topbar_link_label": "Learn more",
     "button_label": "TOP OFFERS",
@@ -39,7 +39,7 @@
     "more_info": "More info",
     "less_info": "Less info",
     "review_link": "Read {{brand}} review",
-    "disclaimer": "**Strictly 18+.** Please play responsibly. Terms & conditions apply and offers may carry additional requirements. Ratings reflect our editorial opinion; we may receive a commission when you sign up through our links."
+    "disclaimer": "**Strictly 18+.** Please play responsibly. Terms & conditions apply and offers may carry additional requirements. We may receive a commission when you sign up through our links, which can affect the order offers appear in. Our ratings come from our own testing and are never paid for."
   },
   "rg_cta": {
     "subtitle": "Play Responsibly",
