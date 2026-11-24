@@ -112,8 +112,24 @@ collections:
           label: Advantage
           widget: string
       - name: url
-        label: Visit link (affiliate URL)
+        label: Short link
         widget: string
+        pattern:
+        - ^(/[A-Za-z0-9._~/-]+|https?://.+)$
+        - Use a short link like /link1 (or a full https:// address)
+        hint: The link the Visit buttons use, e.g. /link1. Each offer needs its own short link; it is
+          redirected to the affiliate URL by the .htaccess file.
+      - name: redirect_to
+        label: Affiliate destination (optional)
+        widget: string
+        required: false
+        pattern:
+        - ^(https?://.+)?$
+        - Must start with https:// or http://
+        hint: If filled in, the redirect from the short link to this URL is written into .htaccess automatically
+          when the site is rebuilt. Leave empty if you manage the redirect in .htaccess yourself. Put
+          {gclid} where the Google Ads click ID should go (e.g. https://partner.example/?c={gclid}); otherwise
+          the visitor's query string is passed on.
       - name: tracking_id
         label: Tracking label
         widget: string
@@ -209,8 +225,24 @@ collections:
           label: Advantage
           widget: string
       - name: url
-        label: Visit link (affiliate URL)
+        label: Short link
         widget: string
+        pattern:
+        - ^(/[A-Za-z0-9._~/-]+|https?://.+)$
+        - Use a short link like /link1 (or a full https:// address)
+        hint: The link the Visit buttons use, e.g. /link1. Each offer needs its own short link; it is
+          redirected to the affiliate URL by the .htaccess file.
+      - name: redirect_to
+        label: Affiliate destination (optional)
+        widget: string
+        required: false
+        pattern:
+        - ^(https?://.+)?$
+        - Must start with https:// or http://
+        hint: If filled in, the redirect from the short link to this URL is written into .htaccess automatically
+          when the site is rebuilt. Leave empty if you manage the redirect in .htaccess yourself. Put
+          {gclid} where the Google Ads click ID should go (e.g. https://partner.example/?c={gclid}); otherwise
+          the visitor's query string is passed on.
       - name: tracking_id
         label: Tracking label
         widget: string
@@ -294,7 +326,7 @@ collections:
     hint: You can use **bold** and [link text](page.html). {{site_name}}, {{email}}, {{domain}} and {{helpline}}
       are filled in automatically.
   - name: visit_url
-    label: Visit link (only used if no offer links to this review)
+    label: Visit link, e.g. /link4 (only used if no offer links to this review)
     widget: string
     required: false
   - name: score

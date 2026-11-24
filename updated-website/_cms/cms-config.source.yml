@@ -151,7 +151,17 @@ x-offer-fields: &offer_fields
     widget: list
     hint: The first 3 are shown on mobile; the rest appear under "More info".
     field: { name: feature, label: Advantage, widget: string }
-  - { name: url, label: Visit link (affiliate URL), widget: string }
+  - name: url
+    label: Short link
+    widget: string
+    pattern: ['^(/[A-Za-z0-9._~/-]+|https?://.+)$', 'Use a short link like /link1 (or a full https:// address)']
+    hint: "The link the Visit buttons use, e.g. /link1. Each offer needs its own short link; it is redirected to the affiliate URL by the .htaccess file."
+  - name: redirect_to
+    label: Affiliate destination (optional)
+    widget: string
+    required: false
+    pattern: ['^(https?://.+)?$', 'Must start with https:// or http://']
+    hint: "If filled in, the redirect from the short link to this URL is written into .htaccess automatically when the site is rebuilt. Leave empty if you manage the redirect in .htaccess yourself. Put {gclid} where the Google Ads click ID should go (e.g. https://partner.example/?c={gclid}); otherwise the visitor's query string is passed on."
   - name: tracking_id
     label: Tracking label
     widget: string
@@ -267,7 +277,7 @@ collections:
       - { name: invert_logo, label: Invert logo colours, widget: boolean, default: false, required: false }
       - { name: licence, label: Licence number, widget: string }
       - { name: lead, label: Introduction, widget: text, hint: *inline_md }
-      - { name: visit_url, label: "Visit link (only used if no offer links to this review)", widget: string, required: false }
+      - { name: visit_url, label: "Visit link, e.g. /link4 (only used if no offer links to this review)", widget: string, required: false }
       - { name: score, label: Editor score (out of 10), widget: number, value_type: float, min: 0, max: 10, step: 0.1 }
       - name: scores
         label: Score breakdown

@@ -109,6 +109,7 @@ the window that opens.
   - *Review page* links an offer to a review: it adds the "Read … review" link, and the review page shows that
     offer's welcome bonus and visit buttons.
   - *Operator terms* – paste the operator's significant terms exactly as supplied.
+  - *Short link* – the address the Visit buttons use, e.g. `/link1` (see **Offer short links** below).
 - **Reviews** – edit, add (**New Review**) or delete operator reviews. Each review gets its own page and is
   added to the *Reviews* menu and the footer automatically. *Position in menu* sets the menu order.
 - **Pages** – the text of the homepage, casino page, About, FAQ page, Contact, guide, responsible
@@ -122,6 +123,45 @@ with the values from *Site settings*, so changing the email there updates it eve
 Text boxes accept **bold** (`**bold**`) and links (`[link text](page.html)`).
 
 Click **Save** to publish. Sign out from the account menu when you're on a shared computer.
+
+---
+
+## Offer short links (`/link1`, `/link2` …) and `.htaccess`
+
+Every Visit / Claim button links to a short address on your own site, which `updated-website/.htaccess`
+redirects to the affiliate URL. Each offer keeps its own short link when you reorder offers.
+
+| Short link | Offer | Short link | Offer |
+|---|---|---|---|
+| `/link1` | 3et (sportsbook) | `/link8` | QuinnCasino (casino) |
+| `/link2` | QuinnBet (sportsbook) | `/link9` | Novibet (casino) |
+| `/link3` | Novibet (sportsbook) | `/link10` | NetBet (casino) |
+| `/link4` | NetBet (sportsbook) | `/link11` | LiveScore Vegas (casino) |
+| `/link5` | LiveScore Bet (sportsbook) | `/link12` | TonyBet (casino) |
+| `/link6` | Midnite (sportsbook) | `/link13` | Midnite (casino) |
+| `/link7` | TonyBet (sportsbook) | | |
+
+Review pages use the same short link as the linked offer.
+
+You can set up the redirects in either of two ways:
+
+1. **From the CMS (recommended):** fill in the offer's **Affiliate destination**. On the next rebuild the
+   redirect is written into `.htaccess` automatically, inside the block marked
+   `# BEGIN CMS offer links` … `# END CMS offer links`.
+   - Put `{gclid}` where the Google Ads click ID belongs, e.g. `https://partner.example/?c={gclid}`.
+   - Without `{gclid}`, the visitor's query string (including `?gclid=…`) is passed on to the destination.
+2. **By hand:** leave *Affiliate destination* empty and add your own rule to `updated-website/.htaccess`
+   **outside** the generated block, for example:
+
+   ```apache
+   RewriteRule ^link1/?$ https://partner.example/track?c=123 [R=302,L,NE,QSA]
+   ```
+
+   Rules outside the block are never changed by the build.
+
+Redirects are temporary (302), so browsers don't cache an old destination when an affiliate link changes.
+For a new offer, pick the next free number (`/link14`, …). If two offers share a short link but point to
+different destinations, the build keeps only the first and prints a warning.
 
 ---
 
