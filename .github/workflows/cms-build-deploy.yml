@@ -1,9 +1,13 @@
 # Rebuilds the website whenever content changes (for example after saving in Sveltia CMS),
 # commits the regenerated HTML pages, and uploads the site to your web host over FTP.
 #
+# Works with both repository layouts:
+#   - website at the top level of the repository (index.html, content/, _cms/, admin/ …)
+#   - website inside an updated-website/ folder
+#
 # One-time setup (GitHub → this repository → Settings → Secrets and variables → Actions):
 #   Secrets:    FTP_SERVER, FTP_USERNAME, FTP_PASSWORD          (from your hosting control panel)
-#   Variables:  DEPLOY_BRANCH   branch to publish, default: adding-cms
+#   Variables:  DEPLOY_BRANCH   branch to publish, default: the repository's default branch (e.g. main)
 #               FTP_SERVER_DIR  folder on the server, default: public_html/
 #               FTP_PROTOCOL    ftps (default) or ftp
 # Without the FTP secrets the workflow still rebuilds and commits the pages; it just skips the upload.
@@ -12,9 +16,6 @@ name: Build & deploy website
 
 on:
   push:
-    paths:
-      - "updated-website/**"
-      - ".github/workflows/cms-build-deploy.yml"
   workflow_dispatch:
 
 permissions:
@@ -29,12 +30,26 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FTP_SERVER: ${{ secrets.FTP_SERVER }}
-      DEPLOY_BRANCH: ${{ vars.DEPLOY_BRANCH || 'adding-cms' }}
+      DEPLOY_BRANCH: ${{ vars.DEPLOY_BRANCH || github.event.repository.default_branch }}
     steps:
       - name: Check out
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Find the website folder
+        id: layout
+        run: |
+          if [ -f updated-website/_cms/build.py ]; then
+            echo "site_dir=updated-website" >> "$GITHUB_OUTPUT"
+            echo "local_dir=./updated-website/" >> "$GITHUB_OUTPUT"
+          elif [ -f _cms/build.py ]; then
+            echo "site_dir=." >> "$GITHUB_OUTPUT"
+            echo "local_dir=./" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::No _cms/build.py found (looked in the repository root and in updated-website/)."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -45,16 +60,18 @@ jobs:
         run: pip install "markdown>=3.5,<4" "PyYAML>=6,<7"
 
       - name: Build pages from content
-        run: python updated-website/_cms/build.py
+        run: python "${{ steps.layout.outputs.site_dir }}/_cms/build.py"
 
       - name: Commit regenerated pages
+        env:
+          SITE_DIR: ${{ steps.layout.outputs.site_dir }}
         run: |
-          if [ -z "$(git status --porcelain -- updated-website)" ]; then
+          if [ -z "$(git status --porcelain -- "$SITE_DIR")" ]; then
             echo "Pages already up to date."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A updated-website
+            git add -A -- "$SITE_DIR"
             git commit -m "Rebuild website pages from CMS content"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
@@ -68,15 +85,20 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ${{ vars.FTP_PROTOCOL || 'ftps' }}
-          local-dir: ./updated-website/
+          local-dir: ${{ steps.layout.outputs.local_dir }}
           server-dir: ${{ vars.FTP_SERVER_DIR || 'public_html/' }}
           exclude: |
             **/.git*
             **/.git*/**
             **/__pycache__/**
+            .github/**
             content/**
             _cms/**
+            cms-private/**
+            updated-website/**
             cms-config.php
             admin/cms-config.php
-            cms-private/**
             admin/.cms-login-attempts.json
+            CMS-SETUP.md
+            CMS-LOGIN-GUIDE.html
+            README.md

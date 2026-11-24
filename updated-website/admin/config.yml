@@ -5,7 +5,6 @@
 
 backend:
   name: github
-  root_dir: updated-website
   auth_methods:
   - oauth
   commit_messages:

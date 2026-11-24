@@ -32,6 +32,10 @@ return [
         // The branch the live website is built from
         'branch' => 'adding-cms',
 
+        // The folder in the repository that holds the website (content/, admin/, index.html …).
+        // Use '' (empty) if those files are at the top level of the repository.
+        'root_dir' => 'updated-website',
+
         // A GitHub fine-grained personal access token for the account above:
         //   GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
         //   → Generate new token

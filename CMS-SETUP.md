@@ -47,6 +47,8 @@ Signed in to GitHub **as the account that owns or can write to `rachelfenechdelt
 2. In it, fill in:
    - `'repo'` – `rachelfenechdeltaservices-sys/ire-new` (already filled in)
    - `'branch'` – the branch the live site is published from (`adding-cms` for now)
+   - `'root_dir'` – the folder in the repository that holds the website: `updated-website` here, or `''`
+     if the website files (`content/`, `admin/`, `index.html` …) are at the top level of the repository
    - `'token'` – the token from step 1
 3. Upload it with cPanel **File Manager** (or FTP) to a folder named **`cms-private` next to – not inside – `public_html`**:
 
@@ -82,7 +84,7 @@ In GitHub → repository **Settings** → **Secrets and variables** → **Action
 | Secret | `FTP_PASSWORD` | FTP password |
 | Variable (optional) | `FTP_SERVER_DIR` | Folder on the server, default `public_html/` |
 | Variable (optional) | `FTP_PROTOCOL` | `ftps` (default) or `ftp` if your host doesn't support FTPS |
-| Variable (optional) | `DEPLOY_BRANCH` | Branch to publish, default `adding-cms` |
+| Variable (optional) | `DEPLOY_BRANCH` | Branch to publish, default: the repository's default branch (e.g. `main`) |
 
 Also check **Settings → Actions → General → Workflow permissions** allows *Read and write permissions*.
 

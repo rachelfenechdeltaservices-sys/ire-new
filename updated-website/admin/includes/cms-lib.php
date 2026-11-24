@@ -269,6 +269,17 @@ function cms_repo(): string
     return cms_normalize_repo((string) ($config['github']['repo'] ?? ''));
 }
 
+/**
+ * Folder inside the repository that holds the website (the folder with content/, admin/, index.html …).
+ * Default "updated-website". Use '' when those files are at the top level of the repository.
+ */
+function cms_root_dir(): string
+{
+    $config = cms_config() ?? [];
+    $dir = array_key_exists('root_dir', $config['github'] ?? []) ? (string) $config['github']['root_dir'] : 'updated-website';
+    return trim(str_replace('\\', '/', $dir), "/ \t");
+}
+
 function cms_branch(): string
 {
     $config = cms_config() ?? [];
@@ -355,6 +366,18 @@ function cms_github_problem(): string
     if ($b !== null && $b[0] === 404) {
         return "The branch \"$branch\" doesn't exist in \"$repo\". Check the 'branch' line in cms-config.php "
              . "(currently the website uses 'adding-cms').";
+    }
+    $root = cms_root_dir();
+    $contentPath = ($root !== '' ? $root . '/' : '') . 'content/settings.json';
+    $encoded = implode('/', array_map('rawurlencode', explode('/', $contentPath)));
+    $c = cms_github_get('/repos/' . $repo . '/contents/' . $encoded . '?ref=' . rawurlencode($branch), $token);
+    if ($c !== null && $c[0] === 404) {
+        $where = $root !== '' ? "inside the folder \"$root\"" : 'at the top level';
+        return "The website's content files were not found $where of \"$repo\" (branch \"$branch\"): "
+             . "GitHub has no \"$contentPath\". If the website files (content/, admin/, index.html …) are at the top "
+             . "of the repository, set 'root_dir' => '' in cms-config.php; if they are in a folder, put that folder's "
+             . "name there. If the repository doesn't contain the website's content/ folder yet, it has to be "
+             . "copied in first.";
     }
     return '';
 }

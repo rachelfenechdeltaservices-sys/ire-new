@@ -7,7 +7,7 @@
 backend:
   name: github
   # repo, branch, base_url and auth_endpoint are added by backend.php
-  root_dir: updated-website
+  # root_dir (the repository folder that holds the website) is also added by backend.php
   auth_methods: [oauth]
   commit_messages:
     create: 'CMS: create {{collection}} "{{slug}}"'

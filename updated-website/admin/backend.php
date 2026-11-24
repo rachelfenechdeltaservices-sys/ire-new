@@ -43,7 +43,7 @@ echo json_encode([
         'branch' => $branch,
         'base_url' => $origin,
         'auth_endpoint' => ltrim($adminPath . '/auth.php', '/'),
-    ],
+    ] + (cms_root_dir() !== '' ? ['root_dir' => cms_root_dir()] : []),
     'site_url' => $origin . $sitePath . '/',
     'display_url' => $origin . $sitePath . '/',
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
