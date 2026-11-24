@@ -245,3 +245,116 @@ function cms_check_login(string $username, string $password): bool
     $ok = password_verify($password, $hash ?? $dummy);
     return $ok && $hash !== null;
 }
+
+// ------------------------------------------------------------------------------------------------
+// GitHub settings helpers
+// ------------------------------------------------------------------------------------------------
+
+/**
+ * Accept the repository written in several ways and return "owner/name":
+ *   owner/name, owner/name.git, https://github.com/owner/name(.git), git@github.com:owner/name.git
+ */
+function cms_normalize_repo(string $repo): string
+{
+    $repo = trim($repo);
+    $repo = preg_replace('#^(https?://)?(www\.)?github\.com/#i', '', $repo);
+    $repo = preg_replace('#^git@github\.com:#i', '', $repo);
+    $repo = preg_replace('#\.git$#i', '', rtrim($repo, '/'));
+    return trim($repo, '/');
+}
+
+function cms_repo(): string
+{
+    $config = cms_config() ?? [];
+    return cms_normalize_repo((string) ($config['github']['repo'] ?? ''));
+}
+
+function cms_branch(): string
+{
+    $config = cms_config() ?? [];
+    $branch = trim((string) ($config['github']['branch'] ?? ''));
+    return $branch !== '' ? $branch : 'main';
+}
+
+/** GET a GitHub API path with the token. Returns [status, decoded body] or null if the server can't reach GitHub. */
+function cms_github_get(string $path, string $token): ?array
+{
+    $base = getenv('CMS_GITHUB_API') ?: 'https://api.github.com';   // override only used for testing
+    $url = rtrim($base, '/') . $path;
+    $headers = [
+        'Accept: application/vnd.github+json',
+        'Authorization: Bearer ' . $token,
+        'User-Agent: Top10IrishCasino-CMS',
+        'X-GitHub-Api-Version: 2022-11-28',
+    ];
+    if (function_exists('curl_init')) {
+        $ch = curl_init($url);
+        curl_setopt_array($ch, [
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => $headers,
+            CURLOPT_TIMEOUT => 8,
+            CURLOPT_CONNECTTIMEOUT => 5,
+        ]);
+        $body = curl_exec($ch);
+        $status = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+        if ($body === false || $status === 0) {
+            return null;
+        }
+        return [$status, json_decode((string) $body, true)];
+    }
+    if (filter_var(ini_get('allow_url_fopen'), FILTER_VALIDATE_BOOLEAN)) {
+        $ctx = stream_context_create(['http' => [
+            'method' => 'GET', 'header' => implode("\r\n", $headers), 'timeout' => 8, 'ignore_errors' => true,
+        ]]);
+        $body = @file_get_contents($url, false, $ctx);
+        if ($body === false || empty($http_response_header[0])) {
+            return null;
+        }
+        preg_match('#\s(\d{3})\s#', $http_response_header[0] . ' ', $m);
+        return [(int) ($m[1] ?? 0), json_decode($body, true)];
+    }
+    return null;
+}
+
+/**
+ * Check the repository, branch and token in cms-config.php with GitHub.
+ * Returns a plain-English problem description, or '' if everything is fine (or GitHub can't be reached
+ * from the server, in which case the CMS itself will report any problem).
+ */
+function cms_github_problem(): string
+{
+    $config = cms_config() ?? [];
+    $token = (string) ($config['github']['token'] ?? '');
+    $repo = cms_repo();
+    $branch = cms_branch();
+    $fix = "Open cms-config.php and check the 'repo' line. It should be exactly: 'repo' => 'owner/repository-name', "
+         . "e.g. 'rachelfenechdeltaservices-sys/ire-new' (no https://, no .git).";
+    if (!preg_match('#^[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+$#', $repo)) {
+        return "The repository \"$repo\" in cms-config.php is not in the form owner/repository-name. $fix";
+    }
+    $r = cms_github_get('/repos/' . $repo, $token);
+    if ($r === null) {
+        return '';
+    }
+    [$status, $body] = $r;
+    if ($status === 401) {
+        return 'GitHub did not accept the access token in cms-config.php: it is mistyped, expired or was deleted. '
+             . 'Create a new fine-grained token (Contents: Read and write) and paste it into the \'token\' line.';
+    }
+    if ($status === 404 || $status === 403) {
+        return "GitHub can't find the repository \"$repo\" with this token. Either the name is wrong, or the token "
+             . "wasn't given access to it (fine-grained token → Repository access → Only select repositories → "
+             . "choose this repository). $fix";
+    }
+    if ($status >= 200 && $status < 300 && empty($body['permissions']['push'])) {
+        return "The access token can read \"$repo\" but can't save to it. Edit the token on GitHub and set "
+             . 'Repository permissions → Contents to "Read and write".';
+    }
+    $b = cms_github_get('/repos/' . $repo . '/branches/' . rawurlencode($branch), $token);
+    if ($b !== null && $b[0] === 404) {
+        return "The branch \"$branch\" doesn't exist in \"$repo\". Check the 'branch' line in cms-config.php "
+             . "(currently the website uses 'adding-cms').";
+    }
+    return '';
+}

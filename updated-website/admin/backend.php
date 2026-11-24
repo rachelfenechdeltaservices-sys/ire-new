@@ -25,8 +25,8 @@ if ($config === null || empty($config['github']['repo'])) {
     exit;
 }
 
-$repo = (string) $config['github']['repo'];
-$branch = (string) ($config['github']['branch'] ?? 'main');
+$repo = cms_repo();          // accepts owner/name, owner/name.git or a github.com address
+$branch = cms_branch();
 if (!preg_match('#^[A-Za-z0-9_.\-]+/[A-Za-z0-9_.\-]+$#', $repo)) {
     http_response_code(500);
     echo json_encode(['error' => 'cms-config.php: github.repo must look like "owner/repository".']);

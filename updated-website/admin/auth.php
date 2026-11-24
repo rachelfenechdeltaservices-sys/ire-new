@@ -43,7 +43,12 @@ if ($provider !== 'github') {
         if ($username !== '' && $password !== '' && cms_check_login($username, $password)) {
             cms_clear_failures();
             session_regenerate_id(true);
-            $success = true;
+            $problem = cms_github_problem();   // checks repository, branch and token with GitHub
+            if ($problem === '') {
+                $success = true;
+            } else {
+                $error = 'Your username and password are correct, but the GitHub settings need fixing: ' . $problem;
+            }
         } else {
             cms_record_failure();
             usleep(random_int(400000, 900000));   // slow down guessing
@@ -126,7 +131,7 @@ $jsonFlags = JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_
 <?php if ($error !== ''): ?>
   <div class="error" role="alert"><?= h($error) ?></div>
 <?php endif; ?>
-<?php if ($error === '' || $error === 'Incorrect username or password.' || strpos($error, 'expired') !== false): ?>
+<?php if ($error === '' || $error === 'Incorrect username or password.' || strpos($error, 'expired') !== false || strpos($error, 'GitHub settings') !== false): ?>
   <form method="post" action="auth.php?provider=github" autocomplete="on">
     <input type="hidden" name="csrf" value="<?= h((string) $_SESSION['csrf']) ?>">
     <label for="username">Username</label>
