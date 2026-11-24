@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CMS Login Setup – Top 10 Irish Casino</title>
+<style>
+  :root { --bg:#0E0F11; --card:#18191B; --card2:#1f2023; --border:#313131; --text:#b4b5b6; --muted:#8a8b8c;
+          --white:#fff; --green:#9CFE4F; --amber:#ffcc66; --red:#ff7a7f; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:880px; margin:0 auto; padding:40px 16px 80px; }
+  header { border-bottom:1px solid var(--border); padding-bottom:24px; margin-bottom:28px; }
+  .brand { display:inline-block; font-weight:800; color:var(--white); letter-spacing:.2px; }
+  .brand b { color:var(--green); }
+  h1 { color:var(--white); font-size:34px; line-height:1.2; margin:10px 0 8px; }
+  h2 { color:var(--white); font-size:22px; margin:0 0 6px; }
+  h3 { color:var(--white); font-size:17px; margin:22px 0 6px; }
+  p { margin:10px 0; }
+  a { color:var(--green); }
+  strong { color:var(--white); }
+  code, .path { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.92em; color:var(--white);
+                background:var(--card2); border:1px solid var(--border); border-radius:6px; padding:1px 6px; }
+  .lead { font-size:18px; color:var(--text); }
+  .toc { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; padding:0; list-style:none; }
+  .toc a { display:inline-block; text-decoration:none; color:var(--white); border:1px solid var(--border); border-radius:30px;
+           padding:5px 12px; font-size:14px; }
+  .toc a:hover { border-color:var(--green); }
+  .step { background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; margin:20px 0; }
+  .step-head { display:flex; gap:14px; align-items:center; margin-bottom:6px; }
+  .num { flex:0 0 36px; height:36px; border-radius:50%; background:var(--green); color:#111; font-weight:800;
+         display:flex; align-items:center; justify-content:center; }
+  .who { font-size:13px; color:var(--muted); margin-left:auto; white-space:nowrap; }
+  ol, ul { padding-left:22px; margin:10px 0; }
+  li { margin:6px 0; }
+  pre { position:relative; background:#0a0b0c; border:1px solid var(--border); border-radius:12px; padding:16px; overflow:auto;
+        color:#e6e6e6; font:13.5px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; margin:12px 0; }
+  pre .hl { background:rgba(156,254,79,.14); color:var(--white); display:inline-block; width:100%; border-left:3px solid var(--green);
+            margin-left:-16px; padding-left:13px; }
+  pre .c { color:#7d7f82; }
+  .copy { position:absolute; top:8px; right:8px; background:var(--card2); color:var(--white); border:1px solid var(--border);
+          border-radius:8px; font-size:12px; padding:4px 10px; cursor:pointer; }
+  .copy:hover { border-color:var(--green); }
+  .note, .warn { border-radius:12px; padding:12px 16px; margin:14px 0; font-size:15px; }
+  .note { background:rgba(156,254,79,.08); border:1px solid rgba(156,254,79,.45); }
+  .warn { background:rgba(255,204,102,.08); border:1px solid rgba(255,204,102,.5); }
+  .warn strong { color:var(--amber); }
+  table { width:100%; border-collapse:collapse; margin:12px 0; font-size:15px; }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--border); vertical-align:top; }
+  th { color:var(--white); font-weight:600; }
+  .tag { display:inline-block; font-size:12px; border-radius:20px; padding:1px 8px; border:1px solid var(--border); color:var(--white); }
+  .tag.must { border-color:var(--green); color:var(--green); }
+  .tag.done { color:var(--muted); }
+  .check { list-style:none; padding:0; }
+  .check li { padding-left:30px; position:relative; }
+  .check li::before { content:""; position:absolute; left:0; top:4px; width:18px; height:18px; border:2px solid var(--green); border-radius:5px; }
+  .tree { white-space:pre; }
+  footer { margin-top:40px; font-size:14px; color:var(--muted); border-top:1px solid var(--border); padding-top:16px; }
+  td code { word-break:break-all; }
+  @media (max-width:600px) {
+    h1 { font-size:27px; } .step { padding:18px 16px; } .who { display:none; }
+    table { font-size:14px; } th, td { padding:8px 5px; }
+    table.status, table.status tbody, table.status tr, table.status td { display:block; width:100%; }
+    table.status tr:first-child { display:none; }
+    table.status tr { border-bottom:1px solid var(--border); padding:8px 0; }
+    table.status td { border:0; padding:2px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="brand">Top <b>10</b> Irish Casino</span>
+  <h1>How to set up your CMS login</h1>
+  <p class="lead">Five steps to sign in at <strong>top10irishcasino.site/admin</strong> with your own username and password,
+    and one optional step so your changes go live automatically. Takes about 20 minutes.</p>
+  <ul class="toc">
+    <li><a href="#what">What to update</a></li>
+    <li><a href="#s1">1. Upload the website</a></li>
+    <li><a href="#s2">2. GitHub token</a></li>
+    <li><a href="#s3">3. Fill in cms-config.php</a></li>
+    <li><a href="#s4">4. Create your login</a></li>
+    <li><a href="#s5">5. Upload cms-config.php</a></li>
+    <li><a href="#s6">6. Sign in</a></li>
+    <li><a href="#s7">7. Auto-publish</a></li>
+    <li><a href="#help">Problems?</a></li>
+  </ul>
+</header>
+
+<section id="what" class="step">
+  <h2>At a glance: what you need to update</h2>
+  <p>Everything for the login lives in <strong>one private file</strong>, <code>cms-config.php</code>. It's in the download at
+    <code>cms-private/cms-config.php</code>, already filled in with your repository and branch. You only need to change two things:</p>
+  <table class="status">
+    <tr><th>Setting in cms-config.php</th><th>What to put there</th><th></th></tr>
+    <tr><td><code>'token'</code></td><td>Your GitHub access token (step 2). It starts with <code>github_pat_</code></td><td><span class="tag must">Update</span></td></tr>
+    <tr><td><code>'users'</code></td><td>One line per person who can sign in (step 4)</td><td><span class="tag must">Update</span></td></tr>
+    <tr><td><code>'repo'</code></td><td><code>rachelfenechdeltaservices-sys/ire-new</code></td><td><span class="tag done">Already set</span></td></tr>
+    <tr><td><code>'branch'</code></td><td><code>adding-cms</code></td><td><span class="tag done">Already set</span></td></tr>
+  </table>
+  <p>Then upload that file to your hosting in a folder <strong>next to</strong> <code>public_html</code>, not inside it (step 5).</p>
+</section>
+
+<section id="s1" class="step">
+  <div class="step-head"><span class="num">1</span><h2>Upload the website</h2><span class="who">Hosting control panel</span></div>
+  <p>Open the download <strong>top10irishcasino-website.zip</strong>. It has two folders that mirror your hosting account:</p>
+<pre class="tree">top10irishcasino-website.zip
+├── public_html/        ← the website: upload everything inside it to your public_html
+│   ├── index.html, casino.html, … (all pages)
+│   ├── .htaccess       ← short links /link1 … and security settings
+│   ├── admin/          ← the CMS
+│   └── assets/
+├── cms-private/
+│   └── cms-config.php  ← the private settings file (steps 3–5)
+└── CMS-LOGIN-GUIDE.html</pre>
+  <ol>
+    <li>In your hosting control panel (e.g. cPanel) open <strong>File Manager</strong> → <code>public_html</code>.</li>
+    <li>Upload the <em>contents</em> of the zip's <code>public_html</code> folder there. The easiest way is to upload the zip,
+      <strong>Extract</strong> it, then move the files out of the extracted <code>public_html</code> folder.</li>
+    <li>Make sure hidden files such as <code>.htaccess</code> were uploaded. In cPanel: <em>Settings → Show Hidden Files</em>.</li>
+  </ol>
+  <div class="note">Check it worked: <a href="https://top10irishcasino.site/">top10irishcasino.site</a> shows the new website and
+    <a href="https://top10irishcasino.site/admin/">/admin/</a> shows the CMS start screen. Signing in won't work yet.</div>
+</section>
+
+<section id="s2" class="step">
+  <div class="step-head"><span class="num">2</span><h2>Create a GitHub access token</h2><span class="who">github.com</span></div>
+  <p>This lets the CMS save your edits to the GitHub repository. Sign in to GitHub as the account that owns
+    <code>rachelfenechdeltaservices-sys/ire-new</code>, then:</p>
+  <ol>
+    <li>Click your profile picture (top right) → <strong>Settings</strong>.</li>
+    <li>At the bottom of the left menu: <strong>Developer settings</strong> → <strong>Personal access tokens</strong> →
+      <strong>Fine-grained tokens</strong> → <strong>Generate new token</strong>.</li>
+    <li><strong>Token name:</strong> <code>Top 10 Irish Casino CMS</code></li>
+    <li><strong>Expiration:</strong> choose up to 1 year, and put a reminder in your calendar to renew it.</li>
+    <li><strong>Repository access:</strong> <em>Only select repositories</em> → choose <code>ire-new</code>.</li>
+    <li><strong>Permissions → Repository permissions → Contents:</strong> set to <strong>Read and write</strong>.
+      (<em>Metadata: Read-only</em> is added automatically. Nothing else is needed.)</li>
+    <li>Click <strong>Generate token</strong> and <strong>copy it straight away</strong>. GitHub only shows it once.</li>
+  </ol>
+  <div class="warn"><strong>Keep the token secret.</strong> Anyone with it can change the website's content. Don't email it
+    or paste it into chats; it only goes into <code>cms-config.php</code>.</div>
+</section>
+
+<section id="s3" class="step">
+  <div class="step-head"><span class="num">3</span><h2>Put the token in cms-config.php</h2><span class="who">Text editor</span></div>
+  <p>Open <code>cms-private/cms-config.php</code> from the download in a plain text editor (Notepad, TextEdit in plain-text mode,
+    or the cPanel File Manager editor). Replace the highlighted placeholder with your token:</p>
+<pre><button class="copy" data-copy="'token'  => 'github_pat_PASTE_YOUR_TOKEN_HERE',">Copy</button>'github' => [
+    'repo'   => 'rachelfenechdeltaservices-sys/ire-new',
+    'branch' => 'adding-cms',
+<span class="hl">    'token'  => 'github_pat_PASTE_YOUR_TOKEN_HERE',</span>   <span class="c">← paste your token between the quotes</span>
+],</pre>
+  <p>Example once filled in: <code>'token' =&gt; 'github_pat_11ABCDEF…',</code>. Keep the quotes and the comma at the end.</p>
+</section>
+
+<section id="s4" class="step">
+  <div class="step-head"><span class="num">4</span><h2>Create your username and password</h2><span class="who">Your website</span></div>
+  <ol>
+    <li>Go to <a href="https://top10irishcasino.site/admin/make-password.php">top10irishcasino.site/admin/make-password.php</a>.</li>
+    <li>Type the <strong>username</strong> and <strong>password</strong> you want to sign in with (at least 12 characters), then click
+      <strong>Create login line</strong>.</li>
+    <li>It shows a line like this. Copy it:
+<pre>'rachel' => '$2y$10$Jx3k…long scrambled text…',</pre></li>
+    <li>Paste it inside the <code>'users' =&gt; [ … ]</code> list in <code>cms-config.php</code>:
+<pre>'users' => [
+<span class="hl">    'rachel' => '$2y$10$Jx3k…long scrambled text…',</span>   <span class="c">← your pasted line</span>
+],</pre></li>
+  </ol>
+  <div class="note">Your password is never stored; only this one-way scrambled version is. To add more people, repeat this step and paste
+    one line per person. To remove someone, delete their line.</div>
+</section>
+
+<section id="s5" class="step">
+  <div class="step-head"><span class="num">5</span><h2>Upload cms-config.php to your hosting</h2><span class="who">Hosting File Manager</span></div>
+  <p>The file must go in a folder called <code>cms-private</code> <strong>next to</strong> <code>public_html</code>, not inside it, so it can
+    never be opened from the web:</p>
+<pre class="tree">/home/your-account/
+├── cms-private/
+│   └── cms-config.php     ← upload it here
+└── public_html/           ← the website (step 1)
+    ├── index.html
+    └── admin/</pre>
+  <ol>
+    <li>In File Manager go to your home folder (one level <em>above</em> <code>public_html</code>).</li>
+    <li>Click <strong>+ Folder</strong> and create <code>cms-private</code>.</li>
+    <li>Open it and <strong>Upload</strong> your edited <code>cms-config.php</code>.</li>
+  </ol>
+  <div class="note"><strong>If your host doesn't allow folders outside public_html:</strong> upload the file to
+    <code>public_html/admin/cms-config.php</code> instead. The <code>admin/.htaccess</code> file blocks anyone from downloading it.</div>
+</section>
+
+<section id="s6" class="step">
+  <div class="step-head"><span class="num">6</span><h2>Sign in</h2><span class="who">Your website</span></div>
+  <ol>
+    <li>Open <a href="https://top10irishcasino.site/admin/">top10irishcasino.site/admin/</a>.</li>
+    <li>Click <strong>Sign In with Username &amp; Password</strong>. A small window opens.</li>
+    <li>Enter the username and password from step 4 → <strong>Sign in</strong>. The window closes and the CMS opens.</li>
+  </ol>
+  <p>You'll see <strong>Offers</strong>, <strong>Reviews</strong>, <strong>Pages</strong>, <strong>FAQ</strong> and
+    <strong>Site settings</strong>. To change the order of offers, open <em>Offers → Sportsbook offers</em> and drag them
+    (or use <em>Move Up / Move Down</em>), then click <strong>Save</strong>.</p>
+  <div class="warn"><strong>Allow pop-ups</strong> for top10irishcasino.site if the sign-in window doesn't appear.
+    On a shared computer, use <strong>Sign Out</strong> (account menu, top right) when you're done.</div>
+</section>
+
+<section id="s7" class="step">
+  <div class="step-head"><span class="num">7</span><h2>Optional: make saves go live automatically</h2><span class="who">github.com</span></div>
+  <p>When you click <strong>Save</strong>, your change is stored on GitHub. Add your FTP details once, and GitHub will rebuild the
+    pages and upload them to your hosting after every save (live in about 1–2 minutes):</p>
+  <ol>
+    <li>On GitHub open the <code>ire-new</code> repository → <strong>Settings</strong> → <strong>Secrets and variables</strong> →
+      <strong>Actions</strong> → <strong>New repository secret</strong>. Add these three (from your hosting panel's <em>FTP Accounts</em>):
+      <table>
+        <tr><th>Name</th><th>Value</th></tr>
+        <tr><td><code>FTP_SERVER</code></td><td>e.g. <code>ftp.top10irishcasino.site</code></td></tr>
+        <tr><td><code>FTP_USERNAME</code></td><td>your FTP username</td></tr>
+        <tr><td><code>FTP_PASSWORD</code></td><td>your FTP password</td></tr>
+      </table></li>
+    <li>Still in <strong>Settings</strong>: <strong>Actions → General → Workflow permissions</strong> → choose
+      <strong>Read and write permissions</strong> → <strong>Save</strong>.</li>
+    <li>If your host doesn't support secure FTP (FTPS): on the <em>Variables</em> tab add <code>FTP_PROTOCOL</code> = <code>ftp</code>.</li>
+  </ol>
+  <p>Without this step you can still sign in and save. You'd then re-upload the website by hand to publish changes.</p>
+</section>
+
+<section class="step">
+  <h2>Checklist</h2>
+  <ul class="check">
+    <li>Website uploaded to <code>public_html</code>, including <code>.htaccess</code></li>
+    <li>GitHub token created (Contents: Read and write, repository <code>ire-new</code> only)</li>
+    <li>Token pasted into <code>cms-config.php</code></li>
+    <li>Your login line pasted into the <code>'users'</code> list</li>
+    <li><code>cms-config.php</code> uploaded to <code>cms-private/</code>, next to <code>public_html</code></li>
+    <li>Signed in at <code>/admin/</code></li>
+    <li>(Optional) FTP secrets added on GitHub for automatic publishing</li>
+  </ul>
+</section>
+
+<section id="help" class="step">
+  <h2>If something doesn't work</h2>
+  <table>
+    <tr><th>You see…</th><th>Fix</th></tr>
+    <tr><td>An error box straight away on <code>/admin/</code></td><td><code>cms-config.php</code> wasn't found. Check its name and that it's in <code>cms-private/</code> next to <code>public_html</code> (step 5).</td></tr>
+    <tr><td>"The GitHub access token … has not been filled in yet"</td><td>Paste your token into <code>'token'</code> (step 3) and upload the file again.</td></tr>
+    <tr><td>"No CMS users are set up"</td><td>Paste your login line into <code>'users'</code> (step 4).</td></tr>
+    <tr><td>"Incorrect username or password"</td><td>Usernames ignore capital letters; passwords don't. Create a new line at make-password.php if unsure.</td></tr>
+    <tr><td>"Too many failed attempts"</td><td>Wait 15 minutes, or delete <code>.cms-login-attempts.json</code> in the <code>cms-private</code> folder.</td></tr>
+    <tr><td>Signed in, then an error about access or "Bad credentials"</td><td>The token is wrong, expired, or doesn't have <em>Contents: Read and write</em> on <code>ire-new</code>. Make a new one (step 2).</td></tr>
+    <tr><td>Saved, but the website didn't change</td><td>On GitHub open <strong>Actions</strong> and look at the latest <em>Build &amp; deploy website</em> run. Step 7 may be missing.</td></tr>
+    <tr><td>The sign-in window doesn't open</td><td>Allow pop-ups for the site in your browser.</td></tr>
+  </table>
+</section>
+
+<footer>Top 10 Irish Casino CMS (Sveltia CMS 0.268.0). Full technical notes: <code>CMS-SETUP.md</code> in the repository (branch <code>adding-cms</code>).</footer>
+</div>
+<script>
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy');
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+        b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1500);
+      }, function () { b.textContent = 'Select & copy'; });
+    });
+  });
+</script>
+</body>
+</html>

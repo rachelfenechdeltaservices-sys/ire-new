@@ -25,8 +25,9 @@ if ($provider !== 'github') {
     $error = 'Unsupported sign-in provider.';
 } elseif ($config === null) {
     $error = 'The CMS is not set up yet: the private settings file cms-config.php was not found. See CMS-SETUP.md.';
-} elseif (empty($config['github']['token']) || empty($config['github']['repo'])) {
-    $error = 'The GitHub repository or access token is missing from cms-config.php.';
+} elseif (empty($config['github']['token']) || empty($config['github']['repo'])
+    || strpos((string) $config['github']['token'], 'PASTE_YOUR') !== false) {
+    $error = 'The GitHub access token in cms-config.php has not been filled in yet (see the CMS login guide).';
 } elseif (empty($config['users']) || !is_array($config['users'])) {
     $error = 'No CMS users are set up in cms-config.php.';
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -125,7 +126,7 @@ $jsonFlags = JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_
 <?php if ($error !== ''): ?>
   <div class="error" role="alert"><?= h($error) ?></div>
 <?php endif; ?>
-<?php if ($config !== null && $provider === 'github' && !empty($config['users']) && !empty($config['github']['token'])): ?>
+<?php if ($error === '' || $error === 'Incorrect username or password.' || strpos($error, 'expired') !== false): ?>
   <form method="post" action="auth.php?provider=github" autocomplete="on">
     <input type="hidden" name="csrf" value="<?= h((string) $_SESSION['csrf']) ?>">
     <label for="username">Username</label>
