@@ -1,5 +1,5 @@
 # GENERATED FILE - do not edit by hand.
-# Edit updated-website/_cms/cms-config.source.yml and run: python updated-website/_cms/build.py
+# Edit _cms/cms-config.source.yml and run: python _cms/build.py
 # The backend part (GitHub repository, branch, login URL) is added at runtime by backend.php
 # from your private cms-config.php file.
 

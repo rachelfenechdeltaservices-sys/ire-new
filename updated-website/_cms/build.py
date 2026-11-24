@@ -580,7 +580,7 @@ def write_cms_config():
     for key in [k for k in cfg if k.startswith("x-")]:
         del cfg[key]
     header = ("# GENERATED FILE - do not edit by hand.\n"
-              "# Edit updated-website/_cms/cms-config.source.yml and run: python updated-website/_cms/build.py\n"
+              "# Edit _cms/cms-config.source.yml and run: python _cms/build.py\n"
               "# The backend part (GitHub repository, branch, login URL) is added at runtime by backend.php\n"
               "# from your private cms-config.php file.\n\n")
     os.makedirs(os.path.join(SITE_DIR, "admin"), exist_ok=True)

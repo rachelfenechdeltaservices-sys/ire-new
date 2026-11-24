@@ -271,12 +271,13 @@ function cms_repo(): string
 
 /**
  * Folder inside the repository that holds the website (the folder with content/, admin/, index.html …).
- * Default "updated-website". Use '' when those files are at the top level of the repository.
+ * Default '' = the top level of the repository.
  */
 function cms_root_dir(): string
 {
     $config = cms_config() ?? [];
-    $dir = array_key_exists('root_dir', $config['github'] ?? []) ? (string) $config['github']['root_dir'] : 'updated-website';
+    // Not set = website files at the top level of the repository (e.g. infoyasska-design/irenew).
+    $dir = (string) ($config['github']['root_dir'] ?? '');
     return trim(str_replace('\\', '/', $dir), "/ \t");
 }
 
