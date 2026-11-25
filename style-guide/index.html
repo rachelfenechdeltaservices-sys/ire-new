@@ -420,6 +420,7 @@ footer.doc{margin-top:80px;font-size:12px;color:var(--dim)}
   <a href="#gp-auth">Logged out vs in</a>
   <a href="#gp-mobile">Mobile game page</a>
   <a href="#ig-mode">In-Game Mode</a>
+  <a href="#ig-pregame">Mobile: before the game loads</a>
   <a href="#ig-desktop">In-Game Mode desktop</a>
   <a href="#ig-views">Game view buttons</a>
   <a href="#ig-deposit">Quick deposit</a>
@@ -3176,7 +3177,26 @@ c.classList.add('on');c.setAttribute('aria-pressed','true');b.className=c.datase
   <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Header</td><td>Logo, wallet balance, Deposit. Stays visible; 56px.</td></tr><tr><td class=k>News ticker</td><td>One headline at a time, swipes left. Can be hidden by the player.</td></tr><tr><td class=k>Notification slot</td><td>A card under the ticker for CRM messages (see below). Collapses when empty.</td></tr><tr><td class=k>Game frame</td><td>The provider game, full width, filling all remaining height. Never covered by site UI except the wallet sheet.</td></tr><tr><td class=k>Game bar</td><td>Fixed at the bottom, 64px, neon-edge pill. 5 icons: Back · Profile · <strong>Deposit</strong> (centre, raised, cyan border) · Chat (Live Support) · Search.</td></tr></table></div>
   <figure class="ref" style="margin:0;"><img src="img/ig-bar.webp" alt="Game bar: back, profile, raised centre deposit button, chat and search" loading="lazy"><figcaption><b>Game bar</b>Game bar: back, profile, raised centre deposit button, chat and search</figcaption></figure>
   </div></div>
-<!--igd--><div id="ig-desktop">
+  <!--igm--><div id="ig-pregame">
+  <h3>Mobile: before the game loads</h3>
+  <p>When a logged-in player opens a game page on a phone, the game does <strong>not</strong> start on its own. The game area shows a poster with <strong>Play Now</strong>, and the review is stacked underneath, so the player can read about the game first. Tapping Play Now loads the game and switches to the In-Game Mode shown above.</p>
+  <div class="dt-pair">
+    <figure class="ref" style="margin:0"><img src="img/igm-pregame.webp" alt="Mobile game page before the game loads: header with balance and Deposit, news ticker, breadcrumb, dimmed game poster with Play Now and Demo buttons, review card with View Full Review, stats panel, Similar Games, FAQs, SEO block and bottom menu with the Deposit button in the centre" loading="lazy"><figcaption><b>Phone · game not loaded</b>Mobile game page before the game loads: header with balance and Deposit, news ticker, breadcrumb, dimmed game poster with Play Now and Demo buttons, review card with View Full Review, stats panel, Similar Games, FAQs, SEO block and bottom menu with the Deposit button in the centre</figcaption></figure>
+    <div style="min-width:0">
+      <div class="dt-box" style="margin-bottom:12px"><h4>Stacking order</h4><ol>
+        <li>Header: menu, logo, balance, <b>Deposit</b> (stays fixed while scrolling)</li>
+        <li>News ticker, breadcrumb</li>
+        <li>Game poster with <b>Play Now →</b> and <b>Demo</b></li>
+        <li>Review card: thumbnail, title, 3-line summary, <b>View Full Review →</b></li>
+        <li>Stats panel: Game Type, Volatility, RTP, Reels</li>
+        <li>Similar Games (swipe row) + View All</li>
+        <li>Game FAQs, then SEO content with Continue Reading</li>
+        <li>Bottom menu with the raised <b>Deposit</b> button in the centre</li></ol></div>
+      <div class="tbl"><table><tr><th>Part</th><th>Spec</th></tr><tr><td class=k>Game poster</td><td>Full width, 4 : 3, 16px radius, neon-edge border. Game key art darkened to about 45% brightness so the buttons stand out. Nothing loads from the provider until Play Now or Demo is tapped.</td></tr><tr><td class=k>Play Now</td><td>Cyan CTA, 48px high, centred on the poster. Starts the real game and enters In-Game Mode.</td></tr><tr><td class=k>Demo</td><td>Ghost pill (navy, cyan→violet border), 36px, under Play Now. Hidden when the provider has no demo.</td></tr><tr><td class=k>Review card</td><td>Stacked, full width: 72px thumbnail + title (S3 bold) on one row, summary Body S, full-width View Full Review button. The full review opens in place under the card, in one column.</td></tr><tr><td class=k>Stats panel</td><td>Under the review card, full width, 4 rows of 44px. Same data as desktop.</td></tr><tr><td class=k>Deposit</td><td>Visible in the header and in the bottom menu at all times, as on every game view.</td></tr></table></div>
+    </div>
+  </div>
+</div><!--/igm-->
+  <!--igd--><div id="ig-desktop">
   <h3>Desktop: game + review</h3>
   <p>On desktop, In-Game Mode keeps the icon rail and header, and adds a short game review card under the game. The player can read the <strong>full detailed review without leaving the game</strong>: the review card's button opens it in place under the card and closes it again. This works the same way as the review on the <a href="#gp-page">Game page</a>.</p>
   <div class="dt-pair">
